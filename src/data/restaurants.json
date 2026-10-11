@@ -1,0 +1,3078 @@
+{
+  "verifiedOn": "2026-10-11",
+  "categories": [
+    {
+      "id": "chinese",
+      "name": "中餐",
+      "short": "中餐"
+    },
+    {
+      "id": "japanese",
+      "name": "日料",
+      "short": "日料"
+    },
+    {
+      "id": "korean",
+      "name": "韩餐",
+      "short": "韩餐"
+    },
+    {
+      "id": "se-asian",
+      "name": "东南亚",
+      "short": "东南亚"
+    },
+    {
+      "id": "indian",
+      "name": "印度 / 斯里兰卡",
+      "short": "印度"
+    },
+    {
+      "id": "middle-east",
+      "name": "中东 / 地中海",
+      "short": "中东"
+    },
+    {
+      "id": "italian",
+      "name": "意大利 / 披萨",
+      "short": "意大利"
+    },
+    {
+      "id": "european-bistro",
+      "name": "法餐 / 欧陆小馆",
+      "short": "法餐 / 欧陆"
+    },
+    {
+      "id": "modern-au",
+      "name": "现代澳洲",
+      "short": "现代澳洲"
+    },
+    {
+      "id": "seafood",
+      "name": "海鲜",
+      "short": "海鲜"
+    },
+    {
+      "id": "steak-grill",
+      "name": "牛排 / 烧烤",
+      "short": "牛排烧烤"
+    },
+    {
+      "id": "brunch-dessert",
+      "name": "早午餐 / 甜品",
+      "short": "早午餐 / 甜品"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "lee-ho-fook",
+      "name": "Lee Ho Fook Sydney",
+      "nameZh": "",
+      "category": "chinese",
+      "rank": 1,
+      "suburb": "CBD",
+      "price": "$$$$",
+      "badges": [
+        "SMH 2026 两顶帽",
+        "Time Out 4/5"
+      ],
+      "tags": [
+        "现代中餐",
+        "烤鸭",
+        "纪念日"
+      ],
+      "intro": "墨尔本名店 Lee Ho Fook 的悉尼分店，2025 年 9 月在 Porter House 开业，随即拿下 Good Food Guide 2026 两顶帽。主厨 Victor Liong 用清淡克制的手法做中国各地风味，必点脆炸茄子和北京烤鸭。",
+      "booking": "建议提前网上订位，热门时段较难订",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://trippaswhitegroup.com.au/whats-on/lee-ho-fook-at-porter-house",
+      "accolades": [
+        "SMH Good Food Guide 2026: 2 hats",
+        "Time Out Sydney: 4/5"
+      ],
+      "sources": [
+        "https://trippaswhitegroup.com.au/news/le-ho-fook-sydney-awarded-two-hats-in-the-2026-good-food-guide/",
+        "https://www.timeout.com/sydney/restaurants/lee-ho-fook",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/lee-ho-fook-sydney-review/",
+        "https://concreteplayground.com/sydney/restaurants/lee-ho-fook-sydney/amp"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "grandfathers",
+      "name": "Grandfathers",
+      "nameZh": "",
+      "category": "chinese",
+      "rank": 2,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [
+        "SMH 2026 新晋得帽",
+        "Time Out 5/5"
+      ],
+      "tags": [
+        "粤菜",
+        "川菜",
+        "北京烤鸭"
+      ],
+      "intro": "Clam Bar 和 Pellegrino 2000 团队在 Angel Place 开的 140 座中餐厅，灵感来自主厨的华人祖父，融合粤菜和川菜。必点凉拌海蜇、饺子和整只北京烤鸭，氛围热烈又复古。",
+      "booking": "OpenTable 可订，有约 $138 的套餐",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.opentable.com.au/restaurant/profile/298343",
+      "accolades": [
+        "SMH Good Food Guide 2026: newly hatted (hat count not confirmed)",
+        "Time Out Sydney: 5/5; listed in Time Out's best Chinese restaurants in Sydney"
+      ],
+      "sources": [
+        "https://www.russh.com/new-hatted-restaurants-sydney-2026/",
+        "https://www.opentable.com.au/lists/good-food-guide",
+        "https://timeout.com/sydney/restaurants/grandfathers",
+        "https://www.timeout.com/sydney/restaurants/the-best-chinese-restaurants-in-sydney"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "mr-wong",
+      "name": "Mr. Wong",
+      "nameZh": "",
+      "category": "chinese",
+      "rank": 3,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [
+        "AGFG 13/20"
+      ],
+      "tags": [
+        "粤菜",
+        "点心",
+        "北京烤鸭"
+      ],
+      "intro": "Merivale 旗下的老牌粤菜馆，开在 Bridge Lane 一栋两层仓库风建筑里，气氛热闹。午市点心和北京烤鸭是招牌，晚市是丰富的粤菜单点。价格偏高，但出品稳定。",
+      "booking": "建议提前网上订位，点心以午市为主",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://merivale.com/mrwong",
+      "accolades": [
+        "AGFG Chef Hat Award 13/20"
+      ],
+      "sources": [
+        "https://www.agfg.com.au/restaurants/sydney/sydney-city/chinese-cuisine",
+        "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d3294245-Reviews-Mr_Wong-Sydney_New_South_Wales.html",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/mr-wong-sydney-restaurant-review-4263/",
+        "https://timeout.com/sydney/restaurants/mr-wong"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "xopp",
+      "name": "XOPP by Golden Century",
+      "nameZh": "",
+      "category": "chinese",
+      "rank": 4,
+      "suburb": "Haymarket",
+      "price": "$$$",
+      "badges": [
+        "Broadsheet 最佳中餐",
+        "Gourmet Traveller 推荐"
+      ],
+      "tags": [
+        "粤菜",
+        "饮茶",
+        "活海鲜"
+      ],
+      "intro": "唐人街老字号金唐海鲜酒家（原店已结业）家族开的新店，在 Darling Square，店名来自招牌 XO 酱炒蚬。点心、活海鲜和现代粤菜都有，适合家庭聚餐和周末饮茶。",
+      "booking": "建议提前订位，周末较忙",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://xopp.com.au",
+      "accolades": [
+        "Broadsheet: The Best Chinese Restaurants in Sydney",
+        "Gourmet Traveller review: 'a glimpse into the future of Cantonese dining'"
+      ],
+      "sources": [
+        "https://www.sydneytravelguide.com.au/news/review-xopp-yum-cha-signature-dishes/",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/xopp-restaurant-review-18070/",
+        "https://www.broadsheet.com.au/sydney/guides/best-chinese-restaurants",
+        "https://concreteplayground.com/sydney/food-drink/xopp-darling-square"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "spice-temple",
+      "name": "Spice Temple",
+      "nameZh": "",
+      "category": "chinese",
+      "rank": 5,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [
+        "AGFG 12/20",
+        "Time Out 最佳饮茶"
+      ],
+      "tags": [
+        "川菜",
+        "湘菜",
+        "地下餐厅"
+      ],
+      "intro": "由 Neil Perry 创立、现属 Rockpool Dining Group 的地下中餐厅，主打中国各地辣味菜，灯光昏暗很有氛围。周末有不推车的饮茶，椒盐银鱼和虾饼口碑好。",
+      "booking": "可网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://spicetemple.com.au",
+      "accolades": [
+        "AGFG Chef Hat Award 12/20",
+        "Time Out Sydney: best yum cha in Sydney list"
+      ],
+      "sources": [
+        "https://www.agfg.com.au/restaurants/sydney/sydney-city/chinese-cuisine",
+        "https://www.weekendnotes.com/mothers-day-2026-spice-temple-sydney-cbd/",
+        "https://www.timeout.com/sydney/restaurants/the-best-breakfast-yum-cha-in-sydney",
+        "https://sitchu.com.au/sydney/restaurants/best-chinese-restaurants-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "the-chairman",
+      "name": "The Chairman",
+      "nameZh": "",
+      "category": "chinese",
+      "rank": 6,
+      "suburb": "Darlinghurst",
+      "price": "$$",
+      "badges": [
+        "Broadsheet 最佳中餐"
+      ],
+      "tags": [
+        "湘菜",
+        "烟熏腊肉",
+        "红烧肉"
+      ],
+      "intro": "Kensington 湘菜名店 Chairman Mao 原班人马开设，在海德公园对面的 College Street。招牌是米烟熏制的湖南腊肉，配熏笋或熏豆干，还有多年不变的红烧肉。",
+      "booking": "OpenTable 可订，营业日以官网为准",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://thechairmanrestaurant.com.au",
+      "accolades": [
+        "Broadsheet: The Best Chinese Restaurants in Sydney"
+      ],
+      "sources": [
+        "https://www.opentable.com.au/r/the-chairman-darlinghurst",
+        "https://www.broadsheet.com.au/sydney/darlinghurst/restaurants/chairman",
+        "https://www.broadsheet.com.au/sydney/guides/best-chinese-restaurants",
+        "https://www.sbs.com.au/food/article/find-the-heat-and-heart-of-hunan-cuisine-here/wd8gfmtmd"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "golden-sands",
+      "name": "Golden Sands",
+      "nameZh": "金沙酒楼",
+      "category": "chinese",
+      "rank": 7,
+      "suburb": "Hurstville",
+      "price": "$$",
+      "badges": [
+        "Broadsheet 饮茶之王"
+      ],
+      "tags": [
+        "粤菜",
+        "饮茶",
+        "港式点心"
+      ],
+      "intro": "Hurstville 的人气粤式酒楼，点心超过 100 款。必点丝滑肠粉、黑米肠粉和烧卖。服务和价格评价不一，周末很快满座。",
+      "booking": "周末建议早到排队",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://sydney.com/destinations/sydney/sydney-south/food-and-drink/golden-sands-hurstville",
+      "accolades": [
+        "Broadsheet: 'yum cha king of the south-west'",
+        "Destination NSW: one of the most delicious yum cha restaurants in Sydney"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/hurstville/restaurants/golden-sands",
+        "https://sydney.com/articles/best-yum-cha-in-sydney",
+        "https://pegfeeds.com/2026/05/25/golden-sands-%E9%87%91%E6%B2%99%E9%85%92%E6%A5%BC-hurstville-nsw-restaurant-review/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "palace",
+      "name": "Palace Chinese Restaurant",
+      "nameZh": "",
+      "category": "chinese",
+      "rank": 8,
+      "suburb": "CBD",
+      "price": "$$",
+      "badges": [
+        "Broadsheet 最佳饮茶"
+      ],
+      "tags": [
+        "粤菜",
+        "推车饮茶",
+        "老字号"
+      ],
+      "intro": "Piccadilly Tower 一楼的红金色传统酒楼，是 CBD 最有代表性的推车饮茶之一。点心新鲜、推车转得快，叉烧包和肠粉必点。",
+      "booking": "多为现场排队，周末建议早到",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://stockland.com.au/shopping-centres/centres/stockland-piccadilly/stores/palace-chinese-restaurant",
+      "accolades": [
+        "Broadsheet: Best Yum Cha in Sydney"
+      ],
+      "sources": [
+        "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d4779612-Reviews-Palace_Chinese_Restaurant-Sydney_New_South_Wales.html",
+        "https://www.yelp.com/biz/palace-chinese-restaurant-sydney",
+        "https://www.broadsheet.com.au/sydney/guides/best-yum-cha",
+        "https://www.dishcult.com/articles/where-to-find-the-best-yum-cha-in-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "xian-eatery",
+      "name": "Xi’an Eatery",
+      "nameZh": "",
+      "category": "chinese",
+      "rank": 9,
+      "suburb": "Burwood",
+      "price": "$",
+      "badges": [
+        "Time Out 5/5"
+      ],
+      "tags": [
+        "陕西面食",
+        "biangbiang 面",
+        "平价"
+      ],
+      "intro": "Burwood 人气陕西面馆，被 Time Out 称为悉尼最好的 biangbiang 面之一。宽面每天手工拉，上桌前泼一勺热油，大碗约 17 澳元。",
+      "booking": "随到随吃，出发前建议确认营业",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://broadsheet.com.au/sydney/burwood/restaurants/xi-eatery",
+      "accolades": [
+        "Time Out Sydney: 5/5",
+        "Time Out World's Coolest Neighbourhoods 2025 (Burwood): recommended pick"
+      ],
+      "sources": [
+        "https://timeout.com/sydney/restaurants/xian-eatery",
+        "https://www.timeout.com/australia/news/two-of-the-worlds-coolest-neighbourhoods-are-in-australia-and-they-might-surprise-you-092625",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/local-knowledge-xi-eatery",
+        "https://order.online/en-AU/store/23154778"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "haidilao",
+      "name": "Haidilao Hotpot",
+      "nameZh": "海底捞火锅",
+      "category": "chinese",
+      "rank": 10,
+      "suburb": "Darling Square",
+      "price": "$$",
+      "badges": [
+        "Sitchu 最佳火锅"
+      ],
+      "tags": [
+        "火锅",
+        "川味",
+        "聚餐"
+      ],
+      "intro": "海底捞在 Darling Square 的门店。锅底选择多，服务员会在桌边表演甩面，等位还送零食，适合多人聚餐。",
+      "booking": "可电话或网上订位，周末建议提前",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://darlingharbour.com/eat-drink/haidilao-hotpot",
+      "accolades": [
+        "Sitchu: The Best Hot Pot in Sydney"
+      ],
+      "sources": [
+        "https://www.scape.com.au/scape-stories/student-life/where-to-find-the-best-chinese-hot-pot-in-sydney/",
+        "https://sitchu.com.au/sydney/restaurants/best-hot-pot-sydney",
+        "https://darlingharbour.com/eat-drink/haidilao-hotpot"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "yoshii",
+      "name": "Yoshii’s Omakase at Nobu",
+      "nameZh": "",
+      "category": "japanese",
+      "rank": 1,
+      "suburb": "Barangaroo",
+      "price": "$$$$",
+      "badges": [
+        "AGFG 16/20"
+      ],
+      "tags": [
+        "Omakase",
+        "寿司",
+        "板前 10 席"
+      ],
+      "intro": "寿司大师 Ryuichi Yoshii 在 Crown Sydney 的 Nobu 里开的 10 席板前，菜单全由主厨决定，是悉尼日料里分数最高的之一，每位约 400 澳元。",
+      "booking": "名额极少，需尽早在官网预订",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.crownsydney.com.au/restaurants/food/omakase",
+      "accolades": [
+        "AGFG 2026 Chef Hat Award 16/20"
+      ],
+      "sources": [
+        "https://www.agfg.com.au/awards/sydney",
+        "https://restaurantsforkings.com/blog/best-sushi-restaurants-sydney-2026",
+        "https://www.barangaroo.com/eat-drink/yoshii",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/yoshiis-omakase-sydney-review-21271/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "kisuke",
+      "name": "Kisuke",
+      "nameZh": "",
+      "category": "japanese",
+      "rank": 2,
+      "suburb": "Potts Point",
+      "price": "$$$$",
+      "badges": [
+        "Broadsheet 最佳日料 2026"
+      ],
+      "tags": [
+        "Omakase",
+        "怀石风",
+        "6 席"
+      ],
+      "intro": "主厨 Yusuke Morita 夫妇经营的 6 席 omakase，一餐约 2.5 小时，从汤、刺身、蒸物、烤物到 11 贯寿司和稻庭乌冬，被称为不出悉尼最接近东京的体验。",
+      "booking": "仅 6 席，需提前数周订位",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.broadsheet.com.au/sydney/potts-point/restaurants/kisuke",
+      "accolades": [
+        "Broadsheet: Sydney's Best Japanese Restaurants 2026",
+        "Broadsheet: Best Omakase Restaurants in Sydney"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/guides/best-japanese-restaurants",
+        "https://www.broadsheet.com.au/sydney/guides/best-omakase-restaurants",
+        "https://thebrag.com/potts-points-kisuke-the-omakase-restaurant-with-a-40-day-waitlist"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "haco",
+      "name": "Haco",
+      "nameZh": "",
+      "category": "japanese",
+      "rank": 3,
+      "suburb": "Surry Hills",
+      "price": "$$$$",
+      "badges": [
+        "AGFG 15/20"
+      ],
+      "tags": [
+        "天妇罗",
+        "Omakase",
+        "12 席"
+      ],
+      "intro": "Chaco Bar 主厨 Keita Abe 和 Kensuke Yada 合开的 12 席天妇罗 omakase，约 20 道菜当面现炸，轻盈不腻。晚餐约 210 澳元。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.opentable.com.au/r/haco-sydney",
+      "accolades": [
+        "AGFG 2026 Chef Hat Award 15/20"
+      ],
+      "sources": [
+        "https://www.agfg.com.au/awards/sydney",
+        "https://www.opentable.com.au/r/haco-sydney",
+        "https://www.sydney.com/destinations/sydney/sydney-city/city-centre/food-and-drink/haco-omakase"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "kuro",
+      "name": "Kuro Bar & Dining",
+      "nameZh": "",
+      "category": "japanese",
+      "rank": 4,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [
+        "AGFG 15/20"
+      ],
+      "tags": [
+        "现代日料",
+        "主厨餐桌",
+        "Omakase"
+      ],
+      "intro": "Kent Street 上的现代日料餐厅兼咖啡吧，设有 10 席主厨餐桌，食客称赞鱼和牛肉料理。omakase 约 135 澳元起。",
+      "booking": "建议提前网上订位",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://venuenow.com/au/sydney/venue/kuro-bar-dining-6398",
+      "accolades": [
+        "AGFG 2026 Chef Hat Award 15/20",
+        "Broadsheet: Best Omakase Restaurants in Sydney"
+      ],
+      "sources": [
+        "https://www.agfg.com.au/awards/sydney",
+        "https://www.broadsheet.com.au/sydney/guides/best-omakase-restaurants",
+        "https://venuenow.com/au/sydney/venue/kuro-bar-dining-6398"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "sushi-oe",
+      "name": "Sushi Oe",
+      "nameZh": "",
+      "category": "japanese",
+      "rank": 5,
+      "suburb": "Pyrmont",
+      "price": "$$$$",
+      "badges": [
+        "AGFG 14/20"
+      ],
+      "tags": [
+        "Omakase",
+        "江户前寿司",
+        "8 席"
+      ],
+      "intro": "寿司师傅 Oe 主理的 8 席板前，已从 Cammeray 搬到新悉尼鱼市场片区。约 27 贯的 omakase 用料顶级，每位约 350 澳元。",
+      "booking": "OpenTable 预订，出发前确认新地址",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.opentable.com.au/r/sushi-oe-cammeray",
+      "accolades": [
+        "AGFG Chef Hat Award 14/20"
+      ],
+      "sources": [
+        "https://www.opentable.com.au/r/sushi-oe-cammeray",
+        "https://www.agfg.com.au/restaurants/sydney/japanese-cuisine",
+        "https://www.broadsheet.com.au/sydney/guides/best-japanese-restaurants"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "sokyo",
+      "name": "Sokyo",
+      "nameZh": "",
+      "category": "japanese",
+      "rank": 6,
+      "suburb": "Pyrmont",
+      "price": "$$$$",
+      "badges": [
+        "Broadsheet 最佳日料 2026"
+      ],
+      "tags": [
+        "现代日料",
+        "炉端烧",
+        "Omakase"
+      ],
+      "intro": "The Star 里的人气日料，怀石风料理、炉端烤串和顶级海鲜都受欢迎。另有 6 席 omakase 吧台，最多 23 道菜，适合约会或庆祝。",
+      "booking": "建议提前网上订位",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.broadsheet.com.au/sydney/guides/best-japanese-restaurants",
+      "accolades": [
+        "Broadsheet: Sydney's Best Japanese Restaurants 2026",
+        "Broadsheet: Best Omakase Restaurants in Sydney"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/guides/best-japanese-restaurants",
+        "https://www.broadsheet.com.au/sydney/guides/best-omakase-restaurants"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "tokyo-bird",
+      "name": "Tokyo Bird",
+      "nameZh": "",
+      "category": "japanese",
+      "rank": 7,
+      "suburb": "Surry Hills",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "烧鸟",
+        "居酒屋",
+        "日本威士忌"
+      ],
+      "intro": "Surry Hills 的烧鸟小酒吧，炭烤串烧火候好，清酒、日本威士忌和鸡尾酒选择都多，人均约 40 澳元。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.opentable.com.au/r/tokyo-bird-surry-hills",
+      "accolades": [],
+      "sources": [
+        "https://www.opentable.com.au/r/tokyo-bird-surry-hills",
+        "https://www.opentable.ca/cuisine/best-yakitori-restaurants-sydney-surry-hills"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "allta",
+      "name": "Allta",
+      "nameZh": "",
+      "category": "korean",
+      "rank": 1,
+      "suburb": "Surry Hills",
+      "price": "$$$$",
+      "badges": [
+        "SMH 两顶帽（2024–25）",
+        "AGFG 15/20"
+      ],
+      "tags": [
+        "现代韩餐",
+        "品鉴菜单",
+        "12 席"
+      ],
+      "intro": "主厨 Jung-su Chang 主理的 12 席开放厨房韩式高级餐厅，用当代手法演绎韩国风味，品鉴菜单约 279 澳元起，是悉尼规格最高的韩餐。",
+      "booking": "需提前在 OpenTable 订位",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.opentable.com.au/r/allta-sydney",
+      "accolades": [
+        "SMH Good Food Guide: 2 hats (2024 & 2025); listed on OpenTable's GFG 2026 NSW & ACT awardees list (2026 hat count not confirmed)",
+        "AGFG 2026 Chef Hat Award 15/20"
+      ],
+      "sources": [
+        "https://www.opentable.com.au/r/allta-sydney",
+        "https://www.opentable.com.au/lists/good-food-guide",
+        "https://www.agfg.com.au/awards/sydney",
+        "https://www.sydney.com/articles/the-best-korean-restaurants-in-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "sang",
+      "name": "Sáng by Mabasa",
+      "nameZh": "",
+      "category": "korean",
+      "rank": 2,
+      "suburb": "Surry Hills",
+      "price": "$$",
+      "badges": [
+        "Time Out 最佳韩餐"
+      ],
+      "tags": [
+        "韩式家常",
+        "韩式炸鸡",
+        "家族经营"
+      ],
+      "intro": "孙氏一家经营的小馆，坚持传统韩国家常做法，摆盘精致。必点韩式炸鸡、烤牛肉和泡菜煎饼，也有品鉴菜单。",
+      "booking": "建议提前订位，周一休息",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.timeout.com/sydney/restaurants/sang-by-mabasa",
+      "accolades": [
+        "Time Out Sydney: one of Sydney's best Korean spots"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/sang-by-mabasa",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/sang-by-mabasa-19460/",
+        "https://www.yelp.com/biz/sang-by-mabasa-surry-hills",
+        "https://happymenu.com.au/sang-by-mabasa-menu/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "danjee",
+      "name": "Danjee",
+      "nameZh": "",
+      "category": "korean",
+      "rank": 3,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [
+        "Broadsheet 最佳韩烤"
+      ],
+      "tags": [
+        "韩式烤肉",
+        "石锅拌饭",
+        "烧酒"
+      ],
+      "intro": "Pitt Street 老牌韩餐 Madang 团队开设，在 Albion Place，比一般韩式烤肉高一个档次。必点酱腌牛排骨和石锅拌饭，人均约 50–80 澳元。",
+      "booking": "可订位，周末晚市建议提前",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://broadsheet.com.au/sydney/restaurants/danjee",
+      "accolades": [
+        "Broadsheet: Best Korean Barbeque in Sydney"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/guides/korean-barbeque-sydney",
+        "https://broadsheet.com.au/sydney/restaurants/danjee",
+        "https://citiesinsider.com/country/australia/sydney/good-korean-restaurants/zh"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "soul-dining",
+      "name": "SOUL Dining",
+      "nameZh": "",
+      "category": "korean",
+      "rank": 4,
+      "suburb": "Wynyard",
+      "price": "$$$",
+      "badges": [
+        "悉尼首家得帽韩餐"
+      ],
+      "tags": [
+        "现代韩餐",
+        "砂锅饭",
+        "品鉴菜单"
+      ],
+      "intro": "悉尼第一家拿到厨师帽的韩餐厅，2024 年搬到 Wynyard。招牌是大虾辣炒年糕、泡菜水黄尾鱼和砂锅饭，有 10 道菜的品鉴菜单。",
+      "booking": "建议提前网上订位，出发前确认营业",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://sydney.com/destinations/sydney/sydney-city/city-centre/food-and-drink/soul-dining",
+      "accolades": [
+        "Destination NSW: first Korean restaurant in Sydney to earn a Chef's Hat (historical; current hat status not confirmed)"
+      ],
+      "sources": [
+        "https://concreteplayground.com/sydney/food-drink/soul-dining-wynyard-reopening",
+        "https://www.sydney.com/articles/the-best-korean-restaurants-in-sydney",
+        "https://www.timeout.com/sydney/restaurants/soul-dining",
+        "https://www.hospitalitymagazine.com.au/?p=51212"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "porkfat",
+      "name": "Porkfat",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 1,
+      "suburb": "Haymarket",
+      "price": "$$",
+      "badges": [
+        "Time Out 5/5",
+        "RUSSH 悉尼最佳泰餐"
+      ],
+      "tags": [
+        "泰国菜",
+        "唐人街",
+        "热闹小店"
+      ],
+      "intro": "唐人街约 30 座的小店，主厨 Jack Kulasai 出自 David Thompson 门下，用猪油烹调，泰菜火辣地道，晚餐常提前订满。",
+      "booking": "晚餐常订满，午餐较易订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "RUSSH: No.1 pick, 'The best Thai restaurant in Sydney'",
+        "Time Out Sydney review: 5/5 stars",
+        "Featured on Netflix's Somebody Feed Phil (per Broadsheet)",
+        "Described as hatted (SMH Good Food Guide) by Sitchu and a third-party menu site; edition year not confirmed"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/porkfat",
+        "https://www.russh.com/thai-restaurant-sydney/",
+        "https://sitchu.com.au/sydney/restaurants/best-thai-restaurants-sydney",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/tiny-haymarket-thai-restaurant-now-starring-one-netflixs-biggest-food-shows",
+        "https://menupedia.us/porkfat-menu/",
+        "https://foodle.pro/restaurants/sydney/porkfat-thai-restaurant-sydney",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/porkfat-haymarket-review-21266/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "viand",
+      "name": "Viand",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 2,
+      "suburb": "Woolloomooloo",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "泰国菜",
+        "品鉴菜单",
+        "特别场合"
+      ],
+      "intro": "前 Long Chim 行政主厨 Annita Potter 的泰餐品鉴餐厅，八道式菜单约 145 澳元，另有素食版，刻意避开绿咖喱等俗套菜式。",
+      "booking": "建议提前网上订位",
+      "meals": [
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Chef Annita Potter: SMH Good Food Guide Oceania Cruises Chef of the Year (sources differ on 2022 vs 2023)"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/viand",
+        "https://www.vividsydney.com/event/food/vivid-fire-kitchen-Tuesday-2-June-2026",
+        "https://www.goodfood.com.au/goodfood/eating-out/new-topnotch-thai-restaurant-viand-pushes-green-curry-off-the-menu-20220225-h21z4b.html",
+        "https://sitchu.com.au/sydney/restaurants/best-thai-restaurants-sydney",
+        "https://blog.resy.com/2022/06/i-dont-want-to-do-green-curry-at-viand-annita-potter-forges-her-own-path-in-thai-cuisine/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "ho-jiak",
+      "name": "Ho Jiak",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 3,
+      "suburb": "Haymarket / Town Hall",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "马来西亚菜",
+        "槟城风味",
+        "叻沙"
+      ],
+      "intro": "主厨 Junda Khoo 的马来西亚菜馆，Haymarket 店致敬祖母的家常菜，Town Hall 店的叻沙炸弹和虾面炸弹最出名。",
+      "booking": "可网上订位，周末建议提前",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/restaurants/ho-jiak-haymarket",
+        "https://www.broadsheet.com.au/sydney/cbd/restaurants/ho-jiak-town-hall",
+        "https://www.broadsheet.com.au/sydney/event/dine-out-2026-dimsimlim-nipcooks-manu-ho-jiak",
+        "https://www.goodfood.com.au/eat-out/news/ho-jiak-town-hall-serves-the-food-everyone-wants-right-now-20200604-h1oiw8"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "spice-i-am",
+      "name": "Spice I Am",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 4,
+      "suburb": "Surry Hills",
+      "price": "$$",
+      "badges": [
+        "Time Out 4/5"
+      ],
+      "tags": [
+        "泰国菜",
+        "老字号",
+        "可自带酒水"
+      ],
+      "intro": "Surry Hills 老牌泰餐，辣度纯正不打折扣，午餐超值，可自带酒水。",
+      "booking": "不接受预订，建议早到排队",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.spiceiam.com",
+      "accolades": [
+        "Time Out Sydney review: 4/5 stars, 'one of the best Thai restaurants in Sydney'",
+        "Time Out Sydney: 16 best Thai restaurants in Sydney list"
+      ],
+      "sources": [
+        "https://prod.gcp.timeout.com/sydney/restaurants/spice-i-am",
+        "https://www.yelp.com/biz/spice-i-am-surry-hills",
+        "https://www.spiceiam.com/",
+        "https://sitchu.com.au/sydney/restaurants/best-thai-restaurants-sydney"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "temu-kangen",
+      "name": "Temu Kangen",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 5,
+      "suburb": "Haymarket",
+      "price": "$",
+      "badges": [
+        "Time Out 5/5"
+      ],
+      "tags": [
+        "印尼菜",
+        "巴东菜",
+        "清真"
+      ],
+      "intro": "2026 年 3 月开业的印尼餐厅，与 CBD 苏门答腊名店 Medan Ciak 同一主厨，全清真，巴东饭、仁当牛肉和沙爹鸡地道实惠。",
+      "booking": "OpenTable 可订，也可随到随吃",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney review: 5/5 stars"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/temu-kangen",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/temu-kangen-indonesian-haymarket-open",
+        "https://www.opentable.com.au/r/temu-kangen-haymarket"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "khao-pla",
+      "name": "Khao Pla",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 6,
+      "suburb": "Chatswood",
+      "price": "$$",
+      "badges": [
+        "Time Out 4/5"
+      ],
+      "tags": [
+        "泰国菜",
+        "车士活",
+        "咖喱"
+      ],
+      "intro": "车士活人气泰餐，以辣度十足、有新意的经典泰菜著称，必点牛肉玛莎曼咖喱和粘糯猪肋排。",
+      "booking": "OpenTable 可订，周末较忙",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney review: 4/5 stars",
+        "OpenTable diner rating 4.4/5 (about 172 reviews)"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/khao-pla",
+        "https://www.opentable.com.au/r/khao-pla-chatswood",
+        "https://wanderlog.com/place/details/735482/khao-pla",
+        "https://www.timeout.com/sydney/restaurants/the-best-thai-restaurants-in-sydney"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "mamak",
+      "name": "Mamak",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 7,
+      "suburb": "Haymarket",
+      "price": "$",
+      "badges": [],
+      "tags": [
+        "马来西亚菜",
+        "印度煎饼",
+        "排队名店"
+      ],
+      "intro": "唐人街排队名店，现场甩制的 roti canai 酥软拉丝，蘸咖喱一绝；椰浆饭和马来炸鸡同样必点，营业到深夜。",
+      "booking": "一般不接受预订，高峰需排队",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.mamak.com.au",
+      "accolades": [],
+      "sources": [
+        "https://www.yelp.com/search?find_desc=Malaysian&find_loc=Sydney+New+South+Wales",
+        "https://www.yelp.com/search?cflt=malaysian&find_loc=Sydney+New+South+Wales"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "tan-viet",
+      "name": "Tan Viet Noodle House",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 8,
+      "suburb": "Cabramatta",
+      "price": "$",
+      "badges": [
+        "Time Out 推荐"
+      ],
+      "tags": [
+        "越南菜",
+        "卡市",
+        "脆皮鸡面"
+      ],
+      "intro": "卡市老牌越南面馆，招牌脆皮鸡蛋面汤，鸡皮酥脆、汤头清甜。Eastwood 和 Darling Square 也有分店。",
+      "booking": "随到随吃",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://tanviet.com.au",
+      "accolades": [
+        "Time Out Sydney: crispy chicken called 'one of the best things I've eaten all year'"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/tan-viet-noodle-house",
+        "https://www.yelp.com/biz/tan-viet-noodle-house-cabramatta-3",
+        "https://tanviet.com.au/menu/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "chat-thai",
+      "name": "Chat Thai",
+      "nameZh": "",
+      "category": "se-asian",
+      "rank": 9,
+      "suburb": "Haymarket",
+      "price": "$$",
+      "badges": [
+        "Time Out 最佳泰餐榜"
+      ],
+      "tags": [
+        "泰国菜",
+        "街头小吃",
+        "唐人街"
+      ],
+      "intro": "1989 年创立的悉尼泰餐老字号，青木瓜沙拉、咸鱼炒饭和烤串必点，营业到深夜，胜在地道不贵。",
+      "booking": "高峰期通常需现场排队",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.chatthai.com.au",
+      "accolades": [
+        "Time Out Sydney review (Campbell St, Haymarket): 3/5 stars",
+        "Time Out Sydney: 16 best Thai restaurants in Sydney list"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/chat-thai",
+        "https://www.opentable.co.uk/r/chat-thai-haymarket",
+        "https://www.yelp.com/biz/chat-thai-haymarket-2",
+        "https://www.timeout.com/sydney/restaurants/the-best-thai-restaurants-in-sydney"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "urban-tadka",
+      "name": "Urban Tadka",
+      "nameZh": "",
+      "category": "indian",
+      "rank": 1,
+      "suburb": "Terrey Hills",
+      "price": "$$$",
+      "badges": [
+        "AGFG 得帽餐厅"
+      ],
+      "tags": [
+        "印度菜",
+        "精致餐饮",
+        "度假风"
+      ],
+      "intro": "Terrey Hills 的度假风印度餐厅，是悉尼少数获 AGFG 厨师帽的印度餐厅，传统菜做得细腻，适合周末专程前往。",
+      "booking": "OpenTable 可订，建议提前",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "AGFG Chef Hat (first awarded 2019 per Indian Link; current edition not confirmed)",
+        "Sitchu: Sydney's standout for refined Indian dining",
+        "Concrete Playground: best Indian restaurants in Sydney list"
+      ],
+      "sources": [
+        "https://indianlink.com.au/?p=84761",
+        "https://www.opentable.com.au/r/urban-tadka-terrey-hills",
+        "https://www.firsttable.com.au/sydney/northern-beaches/terrey-hills/urban-tadka",
+        "https://sitchu.com.au/sydney/restaurants/best-indian-restaurants-sydney",
+        "https://concreteplayground.com/sydney/best-of/best-indian-restaurants-sydney"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "chatkazz",
+      "name": "Chatkazz",
+      "nameZh": "",
+      "category": "indian",
+      "rank": 2,
+      "suburb": "Harris Park",
+      "price": "$",
+      "badges": [
+        "Time Out 5/5",
+        "Time Out 2026 平价提名"
+      ],
+      "tags": [
+        "印度菜",
+        "素食",
+        "街头小吃"
+      ],
+      "intro": "哈里斯公园的印度素食街头小吃名店，开业逾十年，chole bhature、papdi chaat 和多萨饼都是人气之选。",
+      "booking": "随到随吃",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney review: 5/5 stars",
+        "Time Out Sydney Food & Drink Awards 2026: Affordable Eat nominee"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/chatkazz",
+        "https://www.timeout.com/sydney/food-and-drink-awards-2026-affordable-eat-nominees",
+        "https://www.timeout.com/sydney/restaurants/the-12-best-indian-restaurants-in-harris-park-and-parramatta"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "malabar",
+      "name": "Malabar",
+      "nameZh": "",
+      "category": "indian",
+      "rank": 3,
+      "suburb": "Darlinghurst",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "南印度菜",
+        "多萨饼",
+        "海鲜咖喱"
+      ],
+      "intro": "达令赫斯特经营二十多年的南印度名店，以多萨饼和沿海海鲜咖喱见长，果阿鱼咖喱、喀拉拉炸鸡受欢迎，午餐有塔利套餐。",
+      "booking": "建议提前预订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://malabarcuisine.com.au",
+      "accolades": [],
+      "sources": [
+        "https://www.rwebay.com.au/?p=2231514",
+        "https://www.timeout.com/sydney/restaurants/malabar-darlinghurst",
+        "https://sydney.com/destinations/sydney/inner-sydney/darlinghurst/food-and-drink/malabar-indian-restaurant-darlinghurst",
+        "https://www.agfg.com.au/restaurant/malabar-1778"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "pinky-ji",
+      "name": "Pinky Ji",
+      "nameZh": "",
+      "category": "indian",
+      "rank": 4,
+      "suburb": "CBD",
+      "price": "$$",
+      "badges": [
+        "RUSSH 最佳印度菜"
+      ],
+      "tags": [
+        "现代印度菜",
+        "霓虹氛围",
+        "塔利套餐"
+      ],
+      "intro": "Jessi Singh 在 CBD 开的“不正宗”印度菜馆，霓虹灯配红丝绒，招牌蟹肉可乐饼、镬炒泥蟹，工作日有 20 澳元塔利。",
+      "booking": "可网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Sitchu: highlighted for modern/reinterpreted Indian dining",
+        "RUSSH: 12 best Indian restaurants in Sydney list"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/restaurants/pinky-ji",
+        "https://www.firsttable.com.au/sydney/city-centre/sydney-city-centre/pinky-ji",
+        "https://www.globalindian.com/story/cover-story/horn-please-pinki-ji-dont-tell-aunty-how-jessi-singh-turned-indian-dining-into-a-global-party/",
+        "https://sitchu.com.au/sydney/restaurants/best-indian-restaurants-sydney",
+        "https://www.russh.com/indian-restaurants-sydney/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "dosa-hut",
+      "name": "Dosa Hut",
+      "nameZh": "",
+      "category": "indian",
+      "rank": 5,
+      "suburb": "Harris Park",
+      "price": "$",
+      "badges": [
+        "Time Out 推荐"
+      ],
+      "tags": [
+        "南印度菜",
+        "多萨饼",
+        "平价"
+      ],
+      "intro": "哈里斯公园起家的南印度连锁，50 多种多萨饼，多数菜品在 20 澳元以内，适合家庭随意聚餐。",
+      "booking": "无需预订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney: best Indian restaurants in Harris Park & Parramatta",
+        "RUSSH: 12 best Indian restaurants in Sydney list"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/the-12-best-indian-restaurants-in-harris-park-and-parramatta",
+        "https://www.russh.com/indian-restaurants-sydney/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "aalia",
+      "name": "Aalia",
+      "nameZh": "",
+      "category": "middle-east",
+      "rank": 1,
+      "suburb": "CBD",
+      "price": "$$$$",
+      "badges": [
+        "GT 2026 百佳",
+        "SMH 2025 两顶帽"
+      ],
+      "tags": [
+        "中东菜",
+        "北非菜",
+        "精致餐饮"
+      ],
+      "intro": "Martin Place 的中东北非菜精致餐厅，入选 GT 2026 全澳百佳。创店主厨 Paul Farag 已于 2026 年 3 月离任。",
+      "booking": "建议提前数周网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.aaliarestaurant.com",
+      "accolades": [
+        "Gourmet Traveller 2026 Restaurant Guide: 100 best restaurants in Australia (NSW)",
+        "Gourmet Traveller Restaurant Awards 2023: NSW state winner",
+        "SMH Good Food Guide 2025: 2 hats",
+        "SMH Good Food Guide 2025: Chef of the Year (Paul Farag)",
+        "AGFG 2026 Chef Hat Award (score not confirmed)"
+      ],
+      "sources": [
+        "https://gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://glamadelaide.com.au/winners-announced-for-2023-gourmet-traveller-annual-restaurant-awards/",
+        "https://www.jimboombatimes.com.au/story/8817555/good-food-guide-2025-list-of-hatted-restaurants-award-winners/",
+        "https://www.ordermate.com.au/blog/hats-off-to-these-ordermate-venues-agfg-chef-hat-winners-2026",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/paul-farag-aalia-news",
+        "https://www.aaliarestaurant.com/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "olympus",
+      "name": "Olympus Dining",
+      "nameZh": "",
+      "category": "middle-east",
+      "rank": 2,
+      "suburb": "Redfern",
+      "price": "$$$",
+      "badges": [
+        "GT 2026 百佳",
+        "SMH 一顶帽"
+      ],
+      "tags": [
+        "希腊菜",
+        "大酒馆",
+        "Meze 分享"
+      ],
+      "intro": "The Apollo 团队在 Redfern Wunderlich Lane 开的现代希腊大酒馆，经典 meze 适合多人分享。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Gourmet Traveller 2026 Restaurant Guide: 100 best restaurants in Australia (NSW)",
+        "Host venue of the 2026 Gourmet Traveller Restaurant Awards (17 Aug 2026)",
+        "SMH Good Food Guide: 1 hat (per OpenTable listing badge; edition not confirmed)",
+        "Time Out Sydney: best Greek restaurants list"
+      ],
+      "sources": [
+        "https://gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://www.aremedia.com.au/gourmet-traveller-celebrates-60-years-at-the-2026-restaurant-of-the-year-awards/",
+        "https://www.opentable.com.au/r/olympus-surry-hills",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/olympus-dining-restaurant-review/",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/tenjo-redfern-japanese-apollo-coming-soon",
+        "https://www.timeout.com/sydney/restaurants/the-best-greek-restaurants-in-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nour",
+      "name": "Nour",
+      "nameZh": "",
+      "category": "middle-east",
+      "rank": 3,
+      "suburb": "Surry Hills",
+      "price": "$$$",
+      "badges": [
+        "SMH 得帽餐厅"
+      ],
+      "tags": [
+        "黎巴嫩菜",
+        "现代中东",
+        "Mezze 分享"
+      ],
+      "intro": "Surry Hills 的现代黎巴嫩餐厅，用现代手法演绎经典风味，适合多人分享 mezze，周日另有早午餐。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "SMH Good Food Guide: hatted (per Concrete Playground, Nov 2024, and The AU Review; current edition not confirmed)"
+      ],
+      "sources": [
+        "https://www.opentable.com.au/r/nour-surry-hills",
+        "https://concreteplayground.com/sydney/food-drink/food-2/a-look-inside-surry-hills-new-contemporary-lebanese-restaurant-nour/amp",
+        "https://www.theaureview.com/travel/review-nour-surry-hills-sydney/",
+        "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d11686953-Reviews-Nour-Sydney_New_South_Wales.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nomad",
+      "name": "Nomad",
+      "nameZh": "",
+      "category": "middle-east",
+      "rank": 4,
+      "suburb": "Surry Hills",
+      "price": "$$$",
+      "badges": [
+        "SMH 曾连续五年得帽"
+      ],
+      "tags": [
+        "中东菜",
+        "地中海风味",
+        "Mezze 分享"
+      ],
+      "intro": "Al 与 Rebecca Yazbek 夫妇创办的中东地中海风味名店，现于 Foster St 营业，2026 年 9 月推出周日家庭式早午餐。",
+      "booking": "建议提前网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "SMH Good Food Guide: hatted five consecutive years to 2019 (per Good Food); current hat status not confirmed"
+      ],
+      "sources": [
+        "https://www.notquitenigella.com/nomad-brunch",
+        "https://www.goodfood.com.au/eat-out/news/sydneys-hatted-nomad-is-opening-in-melbourne-20191129-h1k15j",
+        "https://www.pedestrian.tv/bites/sydney-nomad-surry-hills-new-home/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "olympic-meats",
+      "name": "Olympic Meats",
+      "nameZh": "",
+      "category": "middle-east",
+      "rank": 5,
+      "suburb": "Marrickville",
+      "price": "$",
+      "badges": [
+        "Time Out 5/5"
+      ],
+      "tags": [
+        "希腊菜",
+        "炭烤",
+        "平价"
+      ],
+      "intro": "马里克维尔的希腊炭烤小馆，鸡肉 gyros 和炭烤肉类香气十足，多数菜品不超过 21 澳元，可自带酒水。",
+      "booking": "多为现场排队",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney review: 5/5 stars",
+        "Time Out Sydney: best Greek restaurants list"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/olympic-meats",
+        "https://www.broadsheet.com.au/sydney/marrickville/restaurants/olympic-meats",
+        "https://neoskosmos.com/en/2025/09/04/life/food-drink/olympic-meats-teams-with-messina-for-two-day-greek-fest-in-marrickville/",
+        "https://www.timeout.com/sydney/restaurants/time-out-social-club-x-olympic-meats"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "al-yasmin",
+      "name": "Al Yasmin",
+      "nameZh": "",
+      "category": "middle-east",
+      "rank": 6,
+      "suburb": "Punchbowl",
+      "price": "$",
+      "badges": [
+        "Time Out 5/5",
+        "Time Out 2026 平价提名"
+      ],
+      "tags": [
+        "黎巴嫩菜",
+        "家常菜",
+        "分量大"
+      ],
+      "intro": "Punchbowl 的黎巴嫩家常馆，上菜前免费送面包和酱料，分量足、性价比高。",
+      "booking": "无需预订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney review: 5/5 stars",
+        "Time Out Sydney Food & Drink Awards 2026: Affordable Eat nominee"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/food-and-drink-awards-2026-affordable-eat-nominees"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "babas-place",
+      "name": "Baba’s Place",
+      "nameZh": "",
+      "category": "middle-east",
+      "rank": 7,
+      "suburb": "Marrickville",
+      "price": "$$$",
+      "badges": [
+        "SMH 2025 开拓者奖"
+      ],
+      "tags": [
+        "移民家常菜",
+        "仓库餐厅"
+      ],
+      "intro": "马里克维尔仓库改造的热闹餐厅，以西悉尼移民家庭的怀旧家常菜为灵感，网评褒贬不一。",
+      "booking": "建议提前预订",
+      "meals": [
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "SMH Good Food Guide Awards 2025: Bill Granger Trailblazer Award",
+        "Broadsheet Sydney Hot List",
+        "Time Out Sydney review"
+      ],
+      "sources": [
+        "https://greekherald.com.au/?p=154926",
+        "https://www.broadsheet.com.au/sydney/restaurants/babas-place",
+        "https://phoenix.danielpe.edsqa01.aws.sbs.com.au/food/article/babas-place-is-home-to-chinese-spag-bol-and-lebanese-filet-o-fish/2yf38gh43",
+        "https://www.timeout.com/sydney/restaurants/babas-place",
+        "https://www.tripadvisor.com.au/Restaurant_Review-g1754380-d23740812-Reviews-Baba_s_Place-Marrickville_New_South_Wales.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "sahtein",
+      "name": "Sahtein",
+      "nameZh": "",
+      "category": "middle-east",
+      "rank": 8,
+      "suburb": "The Rocks",
+      "price": "$$$",
+      "badges": [
+        "Concrete Playground 推荐"
+      ],
+      "tags": [
+        "黎巴嫩菜",
+        "炭火烧烤",
+        "清真"
+      ],
+      "intro": "2026 年 2 月在 The Rocks 历史建筑 Argyle Stores 开业的贝鲁特风黎巴嫩餐厅，柴火炭火烹调，全清真。",
+      "booking": "可网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://sahteintherocks.com.au",
+      "accolades": [
+        "Concrete Playground review"
+      ],
+      "sources": [
+        "https://concreteplayground.com/sydney/restaurants/sahtein",
+        "https://therocks.com/eat-drink/sahtein",
+        "https://www.sydney.com/destinations/sydney/sydney-city/the-rocks/food-and-drink/sahtein",
+        "https://restaurantguru.com/Sahtein-The-Rocks",
+        "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d34117068-Reviews-Sahtein_The_Rocks-Sydney_New_South_Wales.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "gigis",
+      "name": "Gigi’s Balmain",
+      "nameZh": "",
+      "category": "italian",
+      "rank": 1,
+      "suburb": "Balmain",
+      "price": "$$",
+      "badges": [
+        "50 Top Pizza 全球第 16",
+        "年度披萨师"
+      ],
+      "tags": [
+        "那不勒斯披萨",
+        "性价比"
+      ],
+      "intro": "巴尔曼的那不勒斯披萨店，2026 年 50 Top Pizza 全球第 16、亚太并列第 3，“脆感当代那不勒斯”饼底独树一帜，是悉尼目前评价最高的披萨。",
+      "booking": "建议提前订位",
+      "meals": [
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "50 Top Pizza World 2026: #16 in the world (highest-ranked Australian pizzeria)",
+        "50 Top Pizza World 2026: Pizza Maker of the Year (Daniel Semrani)",
+        "50 Top Pizza Asia-Pacific 2026: equal 3rd (with Fiata, Hong Kong); Asia-Pacific Pizza Maker of the Year (Daniel Semrani)"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/news/this-sydney-pizzeria-was-named-16th-best-in-the-world-by-this-renowned-global-guide-092226",
+        "https://www.timeout.com/australia/news/two-australian-pizzerias-have-made-the-worlds-50-top-pizza-list-for-2026-092126",
+        "https://www.50toppizza.it/50-top-pizza-asia-pacific-2026-ristopizza-by-napoli-sta-ca-in-tokyo-is-the-best-pizzeria-in-the-asia-pacific-area-for-the-year-2026/",
+        "https://www.broadsheet.com.au/sydney/balmain/restaurants/gigis-balmain",
+        "https://foodserviceaustralia.com.au/speaker/daniel-semrani"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "beppis",
+      "name": "Beppi’s",
+      "nameZh": "",
+      "category": "italian",
+      "rank": 2,
+      "suburb": "East Sydney",
+      "price": "$$$",
+      "badges": [
+        "GT 2026 恒久卓越奖"
+      ],
+      "tags": [
+        "意大利菜",
+        "七十年老店",
+        "酒窖"
+      ],
+      "intro": "1956 年开业的东悉尼意大利老字号，七十年坚持经典意菜，配窖藏好酒，老派氛围十足。",
+      "booking": "电话或网上预订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.beppis.com.au",
+      "accolades": [
+        "Gourmet Traveller Restaurant Awards 2026: Enduring Excellence award (reader-voted)"
+      ],
+      "sources": [
+        "https://www.gourmettraveller.com.au/dining-out/restaurant-awards-winners-2026/",
+        "https://www.destinationnsw.com.au/newsroom/nsw-winners-announced-at-2026-gourmet-traveller-restaurant-awards"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "cibaria",
+      "name": "Cibaria Manly",
+      "nameZh": "",
+      "category": "italian",
+      "rank": 3,
+      "suburb": "Manly",
+      "price": "$$$",
+      "badges": [
+        "SMH 2026 一顶帽",
+        "Time Out 5/5"
+      ],
+      "tags": [
+        "意大利菜",
+        "海滩景观"
+      ],
+      "intro": "曼利海滩边 Manly Pacific 酒店内的意大利餐厅，出自 Ormeggio 的 Pavoni 夫妇，开业约一年即获帽，适合周末海景午餐。",
+      "booking": "可网上订位，周末建议提前",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "SMH Good Food Guide 2026: 1 hat (newly hatted)",
+        "Time Out Sydney: 5/5 stars",
+        "Time Out Sydney Food & Drink Awards 2026: Best Restaurant nominee"
+      ],
+      "sources": [
+        "https://www.russh.com/new-hatted-restaurants-sydney-2026/",
+        "https://www.timeout.com/sydney/food-and-drink-awards-2026-best-restaurant-nominees"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "otto",
+      "name": "OTTO Sydney",
+      "nameZh": "",
+      "category": "italian",
+      "rank": 4,
+      "suburb": "Woolloomooloo",
+      "price": "$$$$",
+      "badges": [
+        "SMH 2026 一顶帽"
+      ],
+      "tags": [
+        "高端意菜",
+        "码头海景",
+        "海鲜"
+      ],
+      "intro": "伍尔卢莫卢码头上的高端意大利餐厅，临水而坐，海鲜和手工意面出色，适合商务宴请或庆祝。",
+      "booking": "建议提前 1–2 周订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.ottoristorante.com.au",
+      "accolades": [
+        "SMH Good Food Guide 2026: 1 hat (per Brguide listing; score not confirmed)",
+        "SMH Good Food Guide 2024: 1 hat (15/20, per Fink Group)"
+      ],
+      "sources": [
+        "https://brguide.com/restaurants/otto-ristorante-sydney",
+        "https://finkgroup.com.au/good-food-guide-awards-2024",
+        "https://www.opentable.es/r/otto-ristorante-woolloomooloo"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "pellegrino",
+      "name": "Pellegrino 2000",
+      "nameZh": "",
+      "category": "italian",
+      "rank": 5,
+      "suburb": "Surry Hills",
+      "price": "$$$",
+      "badges": [
+        "Time Out 5/5",
+        "Broadsheet 最佳意菜"
+      ],
+      "tags": [
+        "手工意面",
+        "约会"
+      ],
+      "intro": "Surry Hills 的复古意式小馆，必点焦黄油鼠尾草虾仁意式饺和配面包的松露黄油，很适合约会。",
+      "booking": "周末很难订，建议提前约 2 周",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney: 5/5 stars",
+        "Gourmet Traveller review",
+        "Broadsheet: The Best Italian Restaurants in Sydney guide",
+        "OpenTable diner rating 4.6-4.7 (about 1,370-1,410 reviews), not a Google rating"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/pellegrino-2000",
+        "https://www.broadsheet.com.au/sydney/surry-hills/restaurants/pellegrino-2000",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/pellegrino-2000-sydney-review-20189/",
+        "https://www.broadsheet.com.au/sydney/guides/best-italian-restaurants",
+        "https://www.opentable.com.au/restaurant/profile/165665"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fratelli",
+      "name": "Fratelli Paradiso",
+      "nameZh": "",
+      "category": "italian",
+      "rank": 6,
+      "suburb": "Potts Point",
+      "price": "$$$",
+      "badges": [
+        "Broadsheet 最佳意菜"
+      ],
+      "tags": [
+        "意式小馆",
+        "手工意面",
+        "老牌名店"
+      ],
+      "intro": "波茨角 2001 年开业的意式小馆，招牌肉酱千层面 lasagnette，绿树成荫的街角热闹又有欧洲味。",
+      "booking": "人气很高，建议提前订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://fratelliparadiso.com",
+      "accolades": [
+        "Broadsheet: The Best Italian Restaurants in Sydney guide",
+        "OpenTable diner rating 4.8 (339 reviews), not a Google rating"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/guides/best-italian-restaurants",
+        "https://www.broadsheet.com.au/sydney/restaurants/fratelli-paradiso",
+        "https://www.opentable.com.au/r/fratelli-paradiso-potts-point"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "al-taglio",
+      "name": "Al Taglio",
+      "nameZh": "",
+      "category": "italian",
+      "rank": 7,
+      "suburb": "Surry Hills",
+      "price": "$",
+      "badges": [
+        "50 Top Pizza 亚太第 16"
+      ],
+      "tags": [
+        "切片披萨",
+        "平价"
+      ],
+      "intro": "Surry Hills 的人气罗马式切片披萨，饼底酥脆、配料丰富，适合快速午餐。",
+      "booking": "无需预订，可外带",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "50 Top Pizza Asia-Pacific 2026: #16 (also 17th in 2025 and equal 5th in 2024)"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/news/this-sydney-pizzeria-has-just-been-named-the-3rd-best-in-asia-pacific-by-a-renowned-global-guide-031926",
+        "https://joinpearl.co/lists/2026-50-top-pizza-asia-pacific",
+        "https://www.timeout.com/sydney/restaurants/al-taglio"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "porcine",
+      "name": "Porcine",
+      "nameZh": "",
+      "category": "european-bistro",
+      "rank": 1,
+      "suburb": "Paddington",
+      "price": "$$$",
+      "badges": [
+        "GT 2026 百佳",
+        "50 Best Discovery"
+      ],
+      "tags": [
+        "法式小馆",
+        "每日黑板菜单"
+      ],
+      "intro": "帕丁顿的法式小馆，主打从头吃到尾的猪肉与肉食料理，菜单每天更换写在黑板上。",
+      "booking": "座位少，需提前 2–3 周",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Gourmet Traveller Restaurant Guide 2026: NSW list",
+        "World's 50 Best Discovery 2026: debut listing (per Concrete Playground)",
+        "Chef Nik Hill: Gourmet Traveller Chef of the Year, peer-voted (per Concrete Playground and Melbourne Food and Wine; one listing dates it 2025)",
+        "Chef Nik Hill: Bocuse d'Or Australia 2025 Golden Knife (per Forbes Australia)",
+        "Broadsheet: The Best French Restaurants in Sydney",
+        "Australian Traveller best French restaurants Sydney 2026: hidden gem",
+        "OpenTable diner rating 4.9 (177 reviews), not a Google rating"
+      ],
+      "sources": [
+        "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-nsw-20144/",
+        "https://gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://concreteplayground.com/sydney/restaurants/porcine",
+        "https://www.forbes.com.au/covers/magazine/grease-grit-and-the-golden-knife-inside-nik-hills-rise-to-the-bocuse-dor-golden-knife-australia/",
+        "https://www.broadsheet.com.au/sydney/guides/best-french-restaurants",
+        "https://australiantraveller.com/nsw/sydney/best-french-restaurant-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "armorica",
+      "name": "Armorica Grande Brasserie",
+      "nameZh": "",
+      "category": "european-bistro",
+      "rank": 2,
+      "suburb": "Surry Hills",
+      "price": "$$$$",
+      "badges": [
+        "Time Out 2023 最佳高级餐厅"
+      ],
+      "tags": [
+        "法式大饭馆",
+        "海鲜塔",
+        "牛排薯条"
+      ],
+      "intro": "Surry Hills 的气派法式大饭馆，海鲜塔和牛排薯条是招牌，甜点“巧克力宝箱”很出片。",
+      "booking": "需提前 1–2 周订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney Food & Drink Awards 2023: Best Fine Dining Restaurant (as reported in search summaries)",
+        "Australian Traveller best French restaurants Sydney 2026: best for fine dining",
+        "Broadsheet: The Best French Restaurants in Sydney"
+      ],
+      "sources": [
+        "https://australiantraveller.com/nsw/sydney/best-french-restaurant-sydney",
+        "https://concreteplayground.com/australia/restaurants/armorica",
+        "https://www.timeout.com/sydney/restaurants/armorica-grande-brasserie",
+        "https://www.broadsheet.com.au/sydney/collections/best-french-restaurants",
+        "https://www.goodfood.com.au/goodfood/sydney-eating-out/chocolate-treasure-chest-a-must-try-at-surry-hills-new-brasserie-armorica-20230511-p5d7lq.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "bar-copains",
+      "name": "Bar Copains",
+      "nameZh": "",
+      "category": "european-bistro",
+      "rank": 3,
+      "suburb": "Surry Hills",
+      "price": "$$",
+      "badges": [
+        "Time Out 5/5",
+        "Time Out 2023 最佳酒吧"
+      ],
+      "tags": [
+        "葡萄酒吧",
+        "法式小盘"
+      ],
+      "intro": "阿尔比恩街街角的葡萄酒吧兼小馆，炸猪肉丝配 gribiche 酱、明火烤墨累鳕等小盘出色，酒单逾 300 款。",
+      "booking": "座位紧张，建议提前订或早到",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Time Out Sydney: 5/5 stars",
+        "Time Out Sydney Food & Drink Awards 2023: Best Wine Bar",
+        "World's 50 Best Discovery listing"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/bars/bar-copains",
+        "https://timeout.com/sydney/time-out-food-drink-awards-2023-wine-bar-winner",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/bar-copains-20811/",
+        "https://www.broadsheet.com.au/sydney/surry-hills/bars/bar-copains",
+        "https://theworlds50best.com/discovery/Establishments/Australia/Sydney/Bar-Copains.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "hubert",
+      "name": "Restaurant Hubert",
+      "nameZh": "",
+      "category": "european-bistro",
+      "rank": 4,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [
+        "AGFG 13/20",
+        "全球汉堡榜 第 16"
+      ],
+      "tags": [
+        "法餐",
+        "现场爵士",
+        "复古"
+      ],
+      "intro": "CBD 地下的经典法式餐厅，复古楼梯、剧场感空间和现场爵士乐是它的灵魂，汉堡还上了 2026 全球榜。",
+      "booking": "必须提前订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.restauranthubert.com",
+      "accolades": [
+        "Australian Good Food Guide (AGFG) 2026 NSW Chef Hat Awards: score 13",
+        "World's 101 Best Burgers 2026: #16 (per Canberra Times)",
+        "Gourmet Traveller review: 'outstanding results' under exec chef Brendan Fong"
+      ],
+      "sources": [
+        "https://www.agfg.com.au/awards/nsw",
+        "https://www.canberratimes.com.au/story/9288874/australia-dominates-worlds-101-best-burgers-2026-ranking/",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/restaurant-hubert-6971/",
+        "https://www.timeout.com/sydney/restaurants/hubert"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "loulou",
+      "name": "Loulou Bistro",
+      "nameZh": "",
+      "category": "european-bistro",
+      "rank": 5,
+      "suburb": "Milsons Point",
+      "price": "$$$",
+      "badges": [
+        "Broadsheet 最佳法餐"
+      ],
+      "tags": [
+        "法式小馆",
+        "面包坊",
+        "烤鸡"
+      ],
+      "intro": "米尔森斯角的法式小馆兼面包坊和熟食铺，招牌烤鸡和法式甜点很受欢迎，从早到晚都营业。",
+      "booking": "晚餐建议提前订位",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Broadsheet: The Best French Restaurants in Sydney",
+        "Australian Traveller best French restaurants Sydney 2026: hottest dining gem"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/loulou",
+        "https://www.aqualand.com.au/news/from-milsons-point-to-martin-place-etymon-projects-welcomes-a-new-loulou-bistro-in-the-heart-of-the-cbd/",
+        "https://www.timeout.com/sydney/news/sydneys-cbd-has-welcomed-a-new-french-bistro-with-a-2-happy-hour-and-steak-frites-baguette-072325",
+        "https://australiantraveller.com/nsw/sydney/best-french-restaurant-sydney",
+        "https://www.broadsheet.com.au/sydney/guides/best-french-restaurants"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "franca",
+      "name": "Franca",
+      "nameZh": "",
+      "category": "european-bistro",
+      "rank": 6,
+      "suburb": "Potts Point",
+      "price": "$$$",
+      "badges": [
+        "Broadsheet 最佳法餐"
+      ],
+      "tags": [
+        "法式餐厅",
+        "约会",
+        "葡萄酒"
+      ],
+      "intro": "波茨角的人气法式餐厅，菜单游走于法国各地与地中海沿岸，适合约会晚餐。",
+      "booking": "建议提前订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.franca.com.au",
+      "accolades": [
+        "Broadsheet: The Best French Restaurants in Sydney",
+        "Australian Traveller best French restaurants Sydney 2026: best for Francophiles"
+      ],
+      "sources": [
+        "https://concreteplayground.com/sydney/restaurants/franca/amp",
+        "https://www.broadsheet.com.au/sydney/guides/best-french-restaurants",
+        "https://australiantraveller.com/nsw/sydney/best-french-restaurant-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "sixpenny",
+      "name": "Sixpenny",
+      "nameZh": "",
+      "category": "modern-au",
+      "rank": 1,
+      "suburb": "Stanmore",
+      "price": "$$$$",
+      "badges": [
+        "SMH 2026 三顶帽",
+        "AGFG 19/20"
+      ],
+      "tags": [
+        "品鉴菜单",
+        "34 座小店"
+      ],
+      "intro": "主厨 Daniel Puskas 的 34 座小店，时令品鉴菜单细腻克制，食材与火候都很讲究，适合安排一顿悠长的精致晚餐。",
+      "booking": "仅 34 座，需提前数周网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.sixpenny.com.au",
+      "accolades": [
+        "SMH Good Food Guide 2026: 3 hats（据 Sydney Tourism / Restaurants for Kings）",
+        "AGFG 2026 Chef Hat Awards: 19/20"
+      ],
+      "sources": [
+        "https://restaurantsforkings.com/city/sydney/sixpenny.html",
+        "https://www.agfg.com.au/awards/sydney",
+        "https://www.sydneytourism.org/fine-dining-restaurants-sydney/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "aria",
+      "name": "ARIA Sydney",
+      "nameZh": "",
+      "category": "modern-au",
+      "rank": 2,
+      "suburb": "Circular Quay",
+      "price": "$$$$",
+      "badges": [
+        "AGFG 18/20",
+        "SMH 2026 两顶帽"
+      ],
+      "tags": [
+        "歌剧院景观",
+        "品鉴菜单",
+        "纪念日"
+      ],
+      "intro": "Matt Moran 旗舰店，正对歌剧院与海港大桥，现由 Tom Gorringe 掌勺，5 道菜品鉴 A$240，适合纪念日与商务宴请。",
+      "booking": "OpenTable 可订，窗边景观位尽早",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.ariasydney.com.au",
+      "accolades": [
+        "AGFG 2026 Chef Hat Awards: 18/20",
+        "SMH Good Food Guide 2026: 2 hats（据 Sydney Tourism）"
+      ],
+      "sources": [
+        "https://www.agfg.com.au/awards/sydney",
+        "https://restaurantsforkings.com/city/sydney/aria.html",
+        "https://www.ariasydney.com.au/tasting-menu",
+        "https://www.sydneytourism.org/fine-dining-restaurants-sydney/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "bennelong",
+      "name": "Bennelong",
+      "nameZh": "",
+      "category": "modern-au",
+      "rank": 3,
+      "suburb": "Sydney Opera House",
+      "price": "$$$$",
+      "badges": [
+        "SMH 2026 两顶帽",
+        "AGFG 17/20"
+      ],
+      "tags": [
+        "歌剧院内",
+        "澳洲本土食材"
+      ],
+      "intro": "坐落悉尼歌剧院帆形屋顶之下，Peter Gilmore 以澳洲本土食材演绎当代澳菜，2026 年还拿了年度侍酒师奖。景观无敌，也有人觉得价格偏高。",
+      "booking": "OpenTable 可订；18:15 前的早场菜单有限制",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.bennelong.com.au",
+      "accolades": [
+        "SMH Good Food Guide 2026: 2 hats (16.5/20)",
+        "SMH Good Food Guide 2026 Sommelier of the Year（Amanda Yallop）",
+        "AGFG 2026 Chef Hat Awards: 17/20"
+      ],
+      "sources": [
+        "https://www.bennelong.com.au/good-food-guide-two-hats/",
+        "https://finkgroup.com.au/good-food-guide-awards-2026/",
+        "https://www.opentable.com.au/restaurant/profile/20846",
+        "https://www.agfg.com.au/awards/sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "lumi",
+      "name": "LuMi Bar & Dining",
+      "nameZh": "",
+      "category": "modern-au",
+      "rank": 4,
+      "suburb": "Pyrmont",
+      "price": "$$$$",
+      "badges": [
+        "AGFG 17/20",
+        "SMH 2026 两顶帽"
+      ],
+      "tags": [
+        "意日融合",
+        "品鉴菜单",
+        "水岸"
+      ],
+      "intro": "主厨 Federico Zanellato 把意式手工面与日式技法结合，16 道菜品鉴约 A$280，坐落 Pyrmont 水边。",
+      "booking": "晚餐周四至周日，午餐周六日",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.lumidining.com",
+      "accolades": [
+        "AGFG 2026 Chef Hat Awards: 17/20",
+        "SMH Good Food Guide 2026: 2 hats（据 Sydney Tourism；OpenTable 显示2024、2025年两帽）"
+      ],
+      "sources": [
+        "https://www.opentable.com.au/r/lumi-dining-pyrmont",
+        "https://www.agfg.com.au/awards/sydney",
+        "https://www.ordermate.com.au/blog/hats-off-to-these-ordermate-venues-agfg-chef-hat-winners-2026",
+        "https://www.sydneytourism.org/fine-dining-restaurants-sydney/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "ester",
+      "name": "Ester",
+      "nameZh": "",
+      "category": "modern-au",
+      "rank": 5,
+      "suburb": "Chippendale",
+      "price": "$$$",
+      "badges": [
+        "SMH 2026 两顶帽",
+        "GT 2026 百佳"
+      ],
+      "tags": [
+        "柴火料理",
+        "分享菜"
+      ],
+      "intro": "Chippendale 柴火烤炉名店，招牌土豆面包配鲣鱼冻与鱼子酱，分享式点菜，两帽水准但氛围轻松热闹。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.ester-restaurant.com.au",
+      "accolades": [
+        "SMH Good Food Guide 2026: 2 hats（据 Sydney Tourism）",
+        "Gourmet Traveller 2026 Top 100 Restaurants（NSW）"
+      ],
+      "sources": [
+        "https://www.sydneytourism.org/fine-dining-restaurants-sydney/",
+        "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://www.timeout.com/sydney/restaurants/ester-restaurant-and-bar",
+        "https://www.opentable.ca/r/ester-chippendale?lang=fr-ca"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "berowra",
+      "name": "Berowra Waters Inn",
+      "nameZh": "",
+      "category": "modern-au",
+      "rank": 6,
+      "suburb": "Berowra Waters",
+      "price": "$$$$",
+      "badges": [
+        "AGFG 17/20"
+      ],
+      "tags": [
+        "河谷秘境",
+        "水上飞机",
+        "品鉴菜单"
+      ],
+      "intro": "藏身霍克斯伯里河谷、需乘船或水上飞机抵达的传奇餐厅，主厨 Brian Geraghty 提供六道菜品鉴。",
+      "booking": "需提前订位；水上飞机套餐周四至周日",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.berowrawatersinn.com",
+      "accolades": [
+        "AGFG 2026 Chef Hat Awards: 17/20"
+      ],
+      "sources": [
+        "https://www.agfg.com.au/awards/sydney",
+        "https://www.timeout.com/sydney/restaurants/berowra-waters-inn",
+        "https://www.seaplanes.com.au/packages/berowra-waters-inn"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "seans",
+      "name": "Sean’s",
+      "nameZh": "",
+      "category": "modern-au",
+      "rank": 7,
+      "suburb": "North Bondi",
+      "price": "$$$",
+      "badges": [
+        "GT 2026 百佳",
+        "SMH 2026 一顶帽"
+      ],
+      "tags": [
+        "邦迪海景",
+        "家常时令",
+        "老牌名店"
+      ],
+      "intro": "北邦迪海边经营二十多年的老牌餐厅，主打朴实不做作的时令菜，服务专业又放松。",
+      "booking": "座位不多，建议提前订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Gourmet Traveller 2026 Top 100 Restaurants（NSW）",
+        "SMH Good Food Guide 2026: 1 hat（据 Sydney Tourism）"
+      ],
+      "sources": [
+        "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://www.nationalgeographic.com/travel/article/where-to-eat-in-sydney-according-to-josh-niland",
+        "https://www.sydneytourism.org/fine-dining-restaurants-sydney/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "bathers",
+      "name": "Bathers’ Pavilion",
+      "nameZh": "",
+      "category": "modern-au",
+      "rank": 8,
+      "suburb": "Balmoral",
+      "price": "$$$",
+      "badges": [
+        "GT 2026 百佳"
+      ],
+      "tags": [
+        "海滩景观",
+        "文物建筑",
+        "全天营业"
+      ],
+      "intro": "Balmoral 海滩边的文物建筑餐厅，设休闲 Bistro 与精致餐厅，从早到晚都能用餐，招牌藏红花黄油淡水小龙虾。",
+      "booking": "精致餐厅建议提前订位；Bistro 较易订",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.batherspavilion.com.au",
+      "accolades": [
+        "Gourmet Traveller 2026 Top 100 Restaurants（NSW）"
+      ],
+      "sources": [
+        "https://www.gourmettraveller.com.au/restaurant-reviews/bathers-pavilion-restaurant/",
+        "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://brguide.com/restaurants/bathers-pavilion"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "saint-peter",
+      "name": "Saint Peter",
+      "nameZh": "",
+      "category": "seafood",
+      "rank": 1,
+      "suburb": "Paddington",
+      "price": "$$$$",
+      "badges": [
+        "SMH 2026 三顶帽",
+        "AGFG 17/20"
+      ],
+      "tags": [
+        "全鱼料理",
+        "品鉴菜单"
+      ],
+      "intro": "Josh Niland “从鳍到鳞”的全鱼料理圣地，现位于 Paddington 的 Grand National 酒店。干式熟成鱼和金枪鱼芝士汉堡闻名世界。",
+      "booking": "需提前数周网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.saintpeter.com.au",
+      "accolades": [
+        "SMH Good Food Guide 2026: 3 hats",
+        "AGFG 2026 Chef Hat Awards: 17/20",
+        "Gourmet Traveller 2026 Top 100 Restaurants",
+        "SMH Good Food Guide 2025 Restaurant of the Year"
+      ],
+      "sources": [
+        "https://www.hunterhunter.com.au/newcastle/eat-drink/smh-good-food-guide-awards/",
+        "https://www.agfg.com.au/guide/awards/",
+        "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://www.lightspeedhq.com/au/blog/good-food-awards-2025/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "margaret",
+      "name": "Margaret",
+      "nameZh": "",
+      "category": "seafood",
+      "rank": 2,
+      "suburb": "Double Bay",
+      "price": "$$$$",
+      "badges": [
+        "全球牛排榜 第 2",
+        "GT 2026 百佳"
+      ],
+      "tags": [
+        "当日海鲜",
+        "牛排",
+        "Neil Perry"
+      ],
+      "intro": "Neil Perry 的 Double Bay 旗舰店，以渔民直供的当日海鲜为主，牛排同样顶级，曾获 SMH 2024 年度餐厅。",
+      "booking": "OpenTable 可订，周末需提前",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://margaretdoublebay.com",
+      "accolades": [
+        "World's 101 Best Steak Restaurants 2026: 全球第2 / 澳洲第1",
+        "Gourmet Traveller 2026 Top 100 Restaurants",
+        "SMH Good Food Guide 2024 NSW Restaurant of the Year"
+      ],
+      "sources": [
+        "https://www.enprimeurclub.com/lists/2026-worlds-best-steaks-101-best-steak-restaurants",
+        "https://www.bosshunting.com.au/lifestyle/eat/worlds-101-best-steak-restaurants-australia-2026/",
+        "https://www.goodfood.com.au/margaret-double-bay",
+        "https://www.mediaweek.com.au/sydney-morning-herald-good-food-guide-2024/",
+        "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://www.opentable.co.uk/r/margaret-double-bay"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "pilu",
+      "name": "Pilu at Freshwater",
+      "nameZh": "",
+      "category": "seafood",
+      "rank": 3,
+      "suburb": "Freshwater",
+      "price": "$$$",
+      "badges": [
+        "AGFG 16/20"
+      ],
+      "tags": [
+        "撒丁岛菜",
+        "海鲜",
+        "海滩景观"
+      ],
+      "intro": "Freshwater 海滩上开业二十年的撒丁岛菜餐厅，龙虾撒丁珍珠面、炭烤章鱼都是招牌，坐拥北部海滩海景。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.pilu.com.au",
+      "accolades": [
+        "AGFG 2026 Chef Hat Awards: 16/20",
+        "Good Food Guide 2 hats（2024、2025，据 OpenTable）"
+      ],
+      "sources": [
+        "https://www.opentable.hk/r/pilu-at-freshwater",
+        "https://www.agfg.com.au/awards/sydney",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/pilu-at-freshwater-6950/",
+        "https://manlyobserver.com.au/pilu-at-freshwater-celebrates-20-years/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "catalina",
+      "name": "Catalina",
+      "nameZh": "",
+      "category": "seafood",
+      "rank": 4,
+      "suburb": "Rose Bay",
+      "price": "$$$$",
+      "badges": [],
+      "tags": [
+        "海港景观",
+        "海鲜",
+        "周末午餐"
+      ],
+      "intro": "1994 年起家族经营的玫瑰湾海港餐厅，泥蟹脆饼、悉尼岩蚝和煎鲷鱼口碑极佳，适合悠长的周末海港午餐。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.catalinarosebay.com.au",
+      "accolades": [],
+      "sources": [
+        "https://www.opentable.com.au/r/catalina-rose-bay",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/catalina-6736/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "hamsi",
+      "name": "Hamsi Taverna",
+      "nameZh": "",
+      "category": "seafood",
+      "rank": 5,
+      "suburb": "Sydney Fish Market",
+      "price": "$$",
+      "badges": [
+        "Time Out 2026 新店推荐"
+      ],
+      "tags": [
+        "土耳其菜",
+        "炭烤海鲜",
+        "鱼市场"
+      ],
+      "intro": "2026 年 1 月随新悉尼鱼市场开业的土耳其海鲜酒馆，炭烤沙丁鱼串和酥丝大虾很出彩，全天营业，价格亲民。",
+      "booking": "每日 11:30–22:00，建议网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.sydneyfishmarket.com.au/retailer/hamsi-taverna/",
+      "accolades": [
+        "Time Out Sydney 2026 新开餐厅推荐"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/hamsi-taverna-fish-market-open",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/hamsi-taverna/",
+        "https://www.notquitenigella.com/2026/02/03/hamsi-taverna-sydney-fish-market",
+        "https://www.sydneyfishmarket.com.au/retailer/hamsi-taverna/",
+        "https://www.timeout.com/sydney/restaurants/new-restaurants-cafes-and-bars-in-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "fich",
+      "name": "Fich at Petersham",
+      "nameZh": "",
+      "category": "seafood",
+      "rank": 6,
+      "suburb": "Petersham",
+      "price": "$$",
+      "badges": [
+        "Broadsheet 推荐"
+      ],
+      "tags": [
+        "炸鱼薯条",
+        "可持续海鲜",
+        "高性价比"
+      ],
+      "intro": "Petersham 的高级炸鱼薯条店，外带与堂食两种模式，坚持可持续澳新海鱼，脆浆轻薄酥脆。",
+      "booking": "餐厅区可订；外带无需预订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Broadsheet《悉尼厨师私藏炸鱼薯条》推荐（2021）"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/where-sydney-chefs-eat-fish-n-chips-2021",
+        "https://www.broadsheet.com.au/sydney/restaurants/fich-petersham",
+        "https://www.opentable.co.uk/r/fich-at-petersham"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "fish-rocks",
+      "name": "Fish at the Rocks",
+      "nameZh": "",
+      "category": "seafood",
+      "rank": 7,
+      "suburb": "The Rocks",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "炸鱼薯条",
+        "岩石区",
+        "平价"
+      ],
+      "intro": "岩石区的老牌海鲜小馆，啤酒脆浆鲷鱼和焗鱼派最受推荐，逛完岩石区与环形码头后的平价好选择。",
+      "booking": "建议提前订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [],
+      "sources": [
+        "https://pixidia.com/restauration/fish-at-the-rocks/",
+        "https://www.tripadvisor.com/Restaurants-g255060-zfd10901-Sydney_New_South_Wales-Fish_and_Chips.html",
+        "https://uk.trip.com/travel-guide/foods/Millers%20Point-2126570-restaurant/Fish%20at%20The%20Rocks-489834"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "doyles",
+      "name": "Doyles on the Beach",
+      "nameZh": "",
+      "category": "seafood",
+      "rank": 8,
+      "suburb": "Watsons Bay",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "炸鱼薯条",
+        "海滩",
+        "渡轮直达"
+      ],
+      "intro": "沃森斯湾的海鲜老字号，从环形码头搭渡轮直达门口。风景满分，菜品评价褒贬不一。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.doyles.com.au",
+      "accolades": [],
+      "sources": [
+        "https://www.opentable.com.au/r/doyles-on-the-beach-watsons-bay",
+        "https://www.opentable.com/lists/best-seafood-restaurants-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "firedoor",
+      "name": "Firedoor",
+      "nameZh": "",
+      "category": "steak-grill",
+      "rank": 1,
+      "suburb": "Surry Hills",
+      "price": "$$$$",
+      "badges": [
+        "全球牛排榜 第 11",
+        "SMH 2026 两顶帽"
+      ],
+      "tags": [
+        "柴火料理",
+        "干式熟成牛排",
+        "订位难"
+      ],
+      "intro": "Lennox Hastie 的纯柴火餐厅，所有菜品按单以柴火烹制，干式熟成牛排享誉世界，订位极难。",
+      "booking": "每月第一个周三中午放出约 6 个月后的座位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.firedoor.com.au",
+      "accolades": [
+        "World's 101 Best Steak Restaurants 2026: 全球第11 / 澳洲第2",
+        "SMH Good Food Guide 2026: 2 hats（据 Sydney Tourism）",
+        "SMH Good Food Guide 2023 NSW Restaurant of the Year"
+      ],
+      "sources": [
+        "https://www.enprimeurclub.com/lists/2026-worlds-best-steaks-101-best-steak-restaurants",
+        "https://www.bosshunting.com.au/lifestyle/eat/worlds-101-best-steak-restaurants-australia-2026/",
+        "https://restaurantsforkings.com/city/sydney/firedoor.html",
+        "https://www.sydneytourism.org/fine-dining-restaurants-sydney/",
+        "https://nineforbrands.com.au/?p=28189"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "the-grill",
+      "name": "The Grill at The International",
+      "nameZh": "",
+      "category": "steak-grill",
+      "rank": 2,
+      "suburb": "CBD",
+      "price": "$$$$",
+      "badges": [
+        "SMH 2026 两顶帽",
+        "全球牛排榜 澳洲第 9"
+      ],
+      "tags": [
+        "炭烤牛排",
+        "商务午餐"
+      ],
+      "intro": "25 Martin Place 的两帽烧烤餐厅，Kidman 裙带牛排与 Rangers Valley 菲力是招牌。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "SMH Good Food Guide 2026: 2 hats（据 RUSSH）",
+        "World's 101 Best Steak Restaurants 2026: 澳洲第9"
+      ],
+      "sources": [
+        "https://www.25martinplace.com.au/offers/quick-fire-at-the-grill--1.html",
+        "https://www.russh.com/new-hatted-restaurants-sydney-2026/",
+        "https://www.timeout.com/australia/news/the-30-best-steak-restaurants-in-australia-have-been-named-heres-the-full-list-022426",
+        "https://esquire.com.au/the-grill-summer-menu/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "eleven-barrack",
+      "name": "Eleven Barrack",
+      "nameZh": "",
+      "category": "steak-grill",
+      "rank": 3,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [
+        "SMH 2026 年度新餐厅",
+        "GT 2026 百佳"
+      ],
+      "tags": [
+        "炭火烧烤",
+        "老银行大楼"
+      ],
+      "intro": "Bentley 团队在 CBD 老银行大楼里开的炭火烧烤餐厅，F1 和牛 T 骨、炭烤墨累鳕鱼和战斧猪排是招牌。",
+      "booking": "可网上订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.bentleyrestaurantgroup.com.au/elevenbarrack",
+      "accolades": [
+        "SMH Good Food Guide 2026 New Restaurant of the Year（据餐厅官网）",
+        "Gourmet Traveller 2026 Top 100 Restaurants（NSW）",
+        "World's 101 Best Steak Restaurants 2026: 澳洲第22"
+      ],
+      "sources": [
+        "https://www.bentleyrestaurantgroup.com.au/elevenbarrack",
+        "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/eleven-barrack-sydney/",
+        "https://www.timeout.com/australia/news/the-30-best-steak-restaurants-in-australia-have-been-named-heres-the-full-list-022426"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "porteno",
+      "name": "Porteño",
+      "nameZh": "",
+      "category": "steak-grill",
+      "rank": 4,
+      "suburb": "Surry Hills",
+      "price": "$$$",
+      "badges": [
+        "全球牛排榜 澳洲第 10"
+      ],
+      "tags": [
+        "阿根廷烤肉",
+        "炭烤",
+        "热闹"
+      ],
+      "intro": "Surry Hills 的阿根廷炭烤名店，明火 asado 与 parrilla 烤炉就在眼前，炭烤裙带牛排和慢烤乳猪是招牌。",
+      "booking": "OpenTable 可订",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.porteno.com.au",
+      "accolades": [
+        "World's 101 Best Steak Restaurants 2026: 澳洲第10"
+      ],
+      "sources": [
+        "https://www.bosshunting.com.au/lifestyle/eat/worlds-101-best-steak-restaurants-australia-2026/",
+        "https://www.broadsheet.com.au/sydney/event/dine-out-2026-porteno-humble",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/porteno-sydney-restaurant-review-4216/",
+        "https://www.opentable.co.uk/r/porteno-surry-hills"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "rockpool",
+      "name": "Rockpool Bar & Grill",
+      "nameZh": "",
+      "category": "steak-grill",
+      "rank": 5,
+      "suburb": "CBD",
+      "price": "$$$$",
+      "badges": [
+        "全球牛排榜 澳洲第 11"
+      ],
+      "tags": [
+        "经典牛排馆",
+        "干式熟成"
+      ],
+      "intro": "悉尼经典牛排馆，牛肉全部店内干式熟成，Cape Grim 菲力与 Blackmore 和牛是招牌，装潢气派。",
+      "booking": "高峰时段建议提前 4–6 周",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.rockpoolbarandgrill.com.au",
+      "accolades": [
+        "World's 101 Best Steak Restaurants 2026: 澳洲第11"
+      ],
+      "sources": [
+        "https://www.bosshunting.com.au/lifestyle/eat/worlds-101-best-steak-restaurants-australia-2026/",
+        "https://www.timeout.com/sydney/restaurants/rockpool",
+        "https://restaurantsforkings.com/blog/best-steakhouse-restaurants-sydney-2026"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "gidley",
+      "name": "The Gidley",
+      "nameZh": "",
+      "category": "steak-grill",
+      "rank": 6,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [
+        "全球牛排榜 澳洲第 12",
+        "Time Out 4/5"
+      ],
+      "tags": [
+        "纽约风牛排馆",
+        "鸡尾酒",
+        "无手机用餐"
+      ],
+      "intro": "King Street 地下室的纽约风牛排馆，入座需把手机封存进皮袋，Spinalis 肋眼盖和 Prime rib 必点。",
+      "booking": "建议提前订位",
+      "meals": [
+        "dinner"
+      ],
+      "website": "https://www.thegidley.com",
+      "accolades": [
+        "World's 101 Best Steak Restaurants 2026: 澳洲第12",
+        "Time Out Sydney 4/5星"
+      ],
+      "sources": [
+        "https://www.bosshunting.com.au/lifestyle/eat/worlds-101-best-steak-restaurants-australia-2026/",
+        "https://www.gourmettraveller.com.au/restaurant-reviews/the-gidley-19461/",
+        "https://www.timeout.com/sydney/restaurants/the-gidley",
+        "https://qantas.com/travelinsider/en/explore/australia/new-south-wales/sydney/the-gidley-restaurant-review.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "20-chapel",
+      "name": "20 Chapel",
+      "nameZh": "",
+      "category": "steak-grill",
+      "rank": 7,
+      "suburb": "Marrickville",
+      "price": "$$$",
+      "badges": [
+        "全球牛排榜 澳洲第 13"
+      ],
+      "tags": [
+        "和牛",
+        "柴火烤炉",
+        "内西区"
+      ],
+      "intro": "Marrickville 的社区牛排馆，用定制柴火烤炉烤制店内干式熟成的 Blackmore 和牛。",
+      "booking": "一般较易订，周末晚提前约一周",
+      "meals": [
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "World's 101 Best Steak Restaurants 2026: 澳洲第13"
+      ],
+      "sources": [
+        "https://www.timeout.com/australia/news/the-30-best-steak-restaurants-in-australia-have-been-named-heres-the-full-list-022426",
+        "https://joinpearl.co/restaurants/sydney/20-chapel",
+        "https://www.broadsheet.com.au/sydney/marrickville/restaurants/20-chapel"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "magma",
+      "name": "Magma by Dany Karam",
+      "nameZh": "",
+      "category": "steak-grill",
+      "rank": 8,
+      "suburb": "Canley Vale",
+      "price": "$$$",
+      "badges": [
+        "全球牛排榜 第 61"
+      ],
+      "tags": [
+        "炭火牛排",
+        "黎巴嫩风味"
+      ],
+      "intro": "西南悉尼 Canley Vale 的炭火牛排馆，融合黎巴嫩家常风味与日式技法，600 克和牛三重奏是招牌。",
+      "booking": "建议提前网上订位",
+      "meals": [
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "World's 101 Best Steak Restaurants 2026: 澳洲第14 / 全球第61"
+      ],
+      "sources": [
+        "https://www.gourmettraveller.com.au/dining-out/magma-by-dany-karam-restaurant-western-sydney/",
+        "https://www.broadsheet.com.au/national/food-and-drink/article/australian-restaurants-worlds-101-best-steak-restaurants-list-2026",
+        "https://concreteplayground.com/sydney/restaurants/magma-by-dany-karam/amp"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "lune",
+      "name": "Lune Croissanterie",
+      "nameZh": "",
+      "category": "brunch-dessert",
+      "rank": 1,
+      "suburb": "Rosebery",
+      "price": "$",
+      "badges": [],
+      "tags": [
+        "可颂",
+        "烘焙",
+        "排队名店"
+      ],
+      "intro": "源自墨尔本的顶级可颂店，Rosebery 旗舰店可隔着玻璃看师傅现做，每个可颂要做三天，周末通常要排队。",
+      "booking": "不接受预订，售完即止",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "website": "https://www.lunecroissanterie.com",
+      "accolades": [
+        "Not Quite Nigella review (Dec 2024): 'Sydney's top croissants'"
+      ],
+      "sources": [
+        "https://www.notquitenigella.com/2024/12/22/lune-croissanterie-sydney/",
+        "https://cityhub.com.au/staggering-lines-as-lune-croissanterie-opens-flagship-bakery-in-sydney/",
+        "https://manofmany.com/culture/food/lune-croissanterie-sydney-cbd",
+        "https://concreteplayground.com/sydney/food-drink/lune-sydney-martin-place"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "messina",
+      "name": "Gelato Messina",
+      "nameZh": "",
+      "category": "brunch-dessert",
+      "rank": 2,
+      "suburb": "Darlinghurst 等多店",
+      "price": "$",
+      "badges": [
+        "Time Out 最佳 gelato"
+      ],
+      "tags": [
+        "意式冰淇淋",
+        "创意口味",
+        "夜宵"
+      ],
+      "intro": "悉尼最受欢迎的意式冰淇淋之一，常备约 40 种口味，每周有特供，晚上排队也值得。",
+      "booking": "不接受预订，晚间常排队",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://gelatomessina.com",
+      "accolades": [
+        "Time Out Sydney best gelato guide listing"
+      ],
+      "sources": [
+        "https://www.timeout.com/sydney/restaurants/the-best-gelato-in-sydney",
+        "https://www.pedestrian.tv/tag/gelato-messina/",
+        "https://www.theurbanlist.com/sydney/a-list/where-to-find-the-best-gelato-in-sydney"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "flour-stone",
+      "name": "Flour and Stone",
+      "nameZh": "",
+      "category": "brunch-dessert",
+      "rank": 3,
+      "suburb": "Woolloomooloo",
+      "price": "$",
+      "badges": [
+        "Broadsheet 主厨最爱面包店"
+      ],
+      "tags": [
+        "烘焙甜品",
+        "拉明顿",
+        "蛋糕"
+      ],
+      "intro": "伍尔卢莫卢的人气烘焙店，招牌是浸满意式奶冻的拉明顿蛋糕和柠檬糖霜蛋糕，常常上午就卖完。",
+      "booking": "不接受预订，建议上午早去",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "website": "https://www.flourandstone.com.au",
+      "accolades": [
+        "Broadsheet: 15 Top Chefs Share Their Favourite Sydney Bakeries (March 2026)",
+        "Broadsheet: The Best Bakeries in Sydney"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/best-sydney-bakeries-chefs-picks",
+        "https://www.broadsheet.com.au/sydney/guides/best-bakeries-sydney",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/sydney-sweets-essential-guide",
+        "https://bakingbusiness.com.au/reworking-the-classics/",
+        "https://www.timeout.com/sydney/restaurants/flour-and-stone"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "bills",
+      "name": "bills",
+      "nameZh": "",
+      "category": "brunch-dessert",
+      "rank": 4,
+      "suburb": "Surry Hills / Bondi",
+      "price": "$$",
+      "badges": [
+        "Sydney Tourism 2026 早午餐"
+      ],
+      "tags": [
+        "早午餐",
+        "松饼",
+        "澳式早餐"
+      ],
+      "intro": "Bill Granger 创办的早午餐名店，招牌乳清干酪松饼闻名全澳，邦迪店周末常要排队。",
+      "booking": "部分门店可订，周末建议早到",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "website": "https://www.bills.com.au",
+      "accolades": [
+        "Sitchu Best Cafes in Sydney 2026: all-rounder pick",
+        "Sydney Tourism best brunch spots 2026"
+      ],
+      "sources": [
+        "https://sitchu.com.au/sydney/eat-drink/best-cafes-in-sydney-our-editor-curated-guide-for-2026",
+        "https://www.sydneytourism.org/best-brunch-spots-in-sydney/",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/bills-surry-hills-move-23-years",
+        "https://www.timeout.com/sydney/news/bills-darlinghurst-is-closing-indefinitely-092120"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "black-star",
+      "name": "Black Star Pastry",
+      "nameZh": "黑星甜品",
+      "category": "brunch-dessert",
+      "rank": 5,
+      "suburb": "Newtown 等多店",
+      "price": "$",
+      "badges": [],
+      "tags": [
+        "网红蛋糕",
+        "草莓西瓜蛋糕"
+      ],
+      "intro": "纽敦起家的甜品店，招牌草莓西瓜蛋糕清爽带玫瑰香，Chippendale、Rosebery 和 CBD 也有门店。",
+      "booking": "无需预订",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "website": "https://www.blackstarpastry.com.au",
+      "accolades": [
+        "Man of Many best desserts in Sydney (2025): ranked #1"
+      ],
+      "sources": [
+        "https://manofmany.com/culture/food/best-dessert-sydney",
+        "https://www.timeout.com/sydney/restaurants/black-star-pastry",
+        "https://www.theaureview.com/travel/black-star-pastry-newtown/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "cow-moon",
+      "name": "Cow and the Moon",
+      "nameZh": "",
+      "category": "brunch-dessert",
+      "rank": 6,
+      "suburb": "Enmore",
+      "price": "$",
+      "badges": [
+        "Gelato World Tour 冠军"
+      ],
+      "tags": [
+        "意式冰淇淋",
+        "店内自制"
+      ],
+      "intro": "恩莫尔路上的家庭式冰淇淋店，2014 年凭杏仁阿芙佳朵口味夺得世界冰淇淋巡回赛冠军，每天约 26 种口味。",
+      "booking": "无需预订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Gelato World Tour 2014 champion (Rimini)",
+        "Sydney Royal Cheese & Dairy Produce Show 2022: gelato champion",
+        "Broadsheet: The Best Ice-Cream and Gelato in Sydney",
+        "Time Out Sydney best gelato guide"
+      ],
+      "sources": [
+        "https://www.broadsheet.com.au/sydney/guides/best-gelato-ice-cream",
+        "https://www.thenewdaily.com.au/life/2014/09/08/sydney-cafe-wins-worlds-best-gelato-title/",
+        "https://www.sydney.com/node/139096",
+        "https://www.timeout.com/sydney/restaurants/the-best-gelato-in-sydney"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "grounds",
+      "name": "The Grounds of Alexandria",
+      "nameZh": "",
+      "category": "brunch-dessert",
+      "rank": 7,
+      "suburb": "Alexandria",
+      "price": "$$",
+      "badges": [
+        "Sydney Tourism 2026 早午餐"
+      ],
+      "tags": [
+        "花园咖啡",
+        "早午餐",
+        "拍照打卡"
+      ],
+      "intro": "旧工业厂房改建的花园式全天咖啡馆，早午餐分量足，环境很出片，适合周末带家人朋友来逛。",
+      "booking": "可网上订位，周末建议提前",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "website": "https://thegrounds.com.au",
+      "accolades": [
+        "Sydney Tourism best brunch spots 2026"
+      ],
+      "sources": [
+        "https://www.sydneytourism.org/best-brunch-spots-in-sydney/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "ciccone",
+      "name": "Ciccone & Sons",
+      "nameZh": "",
+      "category": "brunch-dessert",
+      "rank": 8,
+      "suburb": "Redfern",
+      "price": "$",
+      "badges": [
+        "Concrete Playground 推荐"
+      ],
+      "tags": [
+        "手工冰淇淋",
+        "时令口味"
+      ],
+      "intro": "雷德芬的小批量手工冰淇淋店，用娟姗牛奶每日现做，酪乳百香果、黑芝麻等口味很受欢迎。",
+      "booking": "无需预订，下午才开门",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://cicconeandsons.com.au",
+      "accolades": [
+        "Concrete Playground: among the best gelato in Sydney",
+        "Time Out Sydney listing"
+      ],
+      "sources": [
+        "https://karryon.com.au/?p=106239",
+        "https://www.timeout.com/sydney/restaurants/ciccone-and-sons-gelateria",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/redfern-gets-gelato",
+        "https://www.google.com.au/amp/s/concreteplayground.com/sydney/food-drink/the-ten-best-ice-cream-joints-in-sydney/amp"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}
