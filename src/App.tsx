@@ -28,6 +28,8 @@ interface Toast {
   short: string;
   hint?: string;
   day: number;
+  /** Element to return focus to when the toast is closed. */
+  returnTo?: string;
 }
 
 function formatVerified(iso: string): string {
@@ -62,7 +64,13 @@ export default function App() {
         const name = pick.kind === 'restaurant' ? (RESTAURANT_BY_ID.get(pick.id)?.name ?? '') : pick.name;
         const label = MEALS.find((m) => m.key === meal)!.label;
         const when = `${dateLabel(YEAR, MONTH_INDEX, d)} ${label}`;
-        setToast({ text: `已把 ${name} 加到 ${when}`, short: `已加到 ${when}`, hint: dayInfo(d).plan, day: d });
+        setToast({
+          text: `已把 ${name} 加到 ${when}`,
+          short: `已加到 12月${d}日${label}`,
+          hint: dayInfo(d).plan,
+          day: d,
+          returnTo: pick.kind === 'restaurant' ? `addbtn-${pick.id}` : undefined,
+        });
         setToastHeld(false);
       }
     },
@@ -88,6 +96,8 @@ export default function App() {
   };
 
   const dismissToast = () => {
+    const back = (toast?.returnTo && document.getElementById(toast.returnTo)) || (toast && dayCellElement(toast.day));
+    back?.focus({ preventScroll: true });
     setToast(null);
     setToastHeld(false);
   };
@@ -180,8 +190,9 @@ export default function App() {
               <span className="toast__short">{toast.short}</span>
               {toast.hint && <span className="toast__hint">{toast.hint}</span>}
             </div>
-            <button type="button" className="toast__btn" onClick={() => showDay(toast.day)}>
-              在日历中查看
+            <button type="button" className="toast__btn" aria-label="在日历中查看" onClick={() => showDay(toast.day)}>
+              <span className="toast__btn-long">在日历中查看</span>
+              <span className="toast__btn-short">查看</span>
             </button>
             <button type="button" className="toast__close" aria-label="关闭提示" onClick={dismissToast}>
               <CloseIcon size={16} />

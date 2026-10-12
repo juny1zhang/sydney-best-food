@@ -178,7 +178,16 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
           ) : (
             <div className="empty">
               <p>这个价位暂时没有{categoryOf(category).name}。</p>
-              <button type="button" className="btn btn--outline" onClick={() => setPrice('all')}>
+              <button
+                type="button"
+                className="btn btn--outline"
+                onClick={() => {
+                  setPrice('all');
+                  requestAnimationFrame(() =>
+                    sectionRef.current?.querySelector<HTMLElement>('.segmented--pill [aria-pressed="true"]')?.focus({ preventScroll: true }),
+                  );
+                }}
+              >
                 查看全部价位
               </button>
             </div>

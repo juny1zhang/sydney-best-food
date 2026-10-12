@@ -519,9 +519,8 @@ p {
   cursor: pointer;
   font-weight: 600;
   width: fit-content;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
+  padding: 12px 0;
+  line-height: 20px;
 }
 .sources ul {
   margin: 6px 0 0;
@@ -647,6 +646,7 @@ p {
   border: 0;
   padding: 10px 0;
   min-height: 44px;
+  min-width: 44px;
   color: var(--blue);
   font-size: 14px;
   font-weight: 600;
@@ -779,6 +779,9 @@ button.cell:hover {
   font-weight: 700;
   color: var(--holiday);
   white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cell__loc {
   font-size: 12px;
@@ -925,7 +928,9 @@ button.cell:hover {
 .slot__links a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 44px;
+  min-width: 44px;
 }
 .slot__actions {
   display: flex;
@@ -1102,7 +1107,8 @@ button.cell:hover {
   min-width: 0;
   flex: 1;
 }
-.toast__short {
+.toast__short,
+.toast__btn-short {
   display: none;
 }
 .toast__hint {
@@ -1312,16 +1318,38 @@ button.cell:hover {
     border-radius: 2px;
     background: var(--nz-ink);
   }
-  .toast__long {
+  .toast__long,
+  .toast__btn-long {
     display: none;
   }
-  .toast__short {
+  .toast__short,
+  .toast__btn-short {
     display: block;
+  }
+  .toast__hint {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .cell[aria-pressed='true'] {
     box-shadow: 0 0 0 2.5px var(--ink);
   }
   .panel__head h3 {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 380px) {
+  .page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .tabs {
+    margin: 0 -12px;
+    padding: 0 12px 4px;
+  }
+  .month__head,
+  .month__grid {
+    gap: 3px;
   }
 }

@@ -35,3 +35,15 @@ describe('search keywords', () => {
     expect(searchRestaurants('brunch').some((r) => r.id === 'bills')).toBe(true);
   });
 });
+
+describe('search ranking', () => {
+  it('puts places that really match ahead of category-only matches', () => {
+    expect(searchRestaurants('火锅')[0].id).toBe('haidilao');
+    expect(searchRestaurants('hot pot')[0].id).toBe('haidilao');
+    expect(searchRestaurants('vietnamese').map((r) => r.id)).toEqual(['tan-viet']);
+    expect(searchRestaurants('yum cha').every((r) => r.category === 'chinese')).toBe(true);
+    const japanese = searchRestaurants('japanese');
+    expect(japanese.length).toBe(7);
+    expect(japanese.every((r) => r.category === 'japanese')).toBe(true);
+  });
+});

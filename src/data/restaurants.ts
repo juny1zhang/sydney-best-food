@@ -32,30 +32,91 @@ export function mapsUrl(name: string, place: string): string {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name} ${place}`)}`;
 }
 
-/** Extra words people search a category by, in English and Chinese. */
-const CATEGORY_KEYWORDS: Record<CategoryId, string> = {
-  chinese: 'chinese cantonese sichuan yum cha dim sum hot pot 粤菜 川菜 点心 饮茶 火锅 中国',
-  japanese: 'japanese sushi omakase izakaya ramen tempura yakitori 寿司 日本 居酒屋 天妇罗',
-  korean: 'korean kbbq korean bbq 韩国 烤肉',
-  'se-asian': 'thai vietnamese malaysian indonesian southeast asian 泰国 越南 马来 印尼 叻沙',
-  indian: 'indian sri lankan curry dosa 印度 斯里兰卡 咖喱',
-  'middle-east': 'middle eastern lebanese turkish greek mediterranean 黎巴嫩 土耳其 希腊 地中海',
-  italian: 'italian pasta pizza 意大利 意面 披萨',
-  'european-bistro': 'french bistro brasserie european wine bar 法国 法式 欧洲 酒吧',
-  'modern-au': 'modern australian fine dining degustation tasting menu 澳洲 品鉴 精致',
-  seafood: 'seafood fish oyster fish and chips 海鲜 鱼 生蚝 炸鱼薯条',
-  'steak-grill': 'steak steakhouse grill bbq 牛排 烧烤',
-  'brunch-dessert': 'brunch breakfast cafe coffee bakery dessert gelato ice cream croissant 早午餐 早餐 咖啡 甜品 面包 冰淇淋 可颂',
+/** Words that name a whole category, so a match only says "this kind of place". */
+const CATEGORY_WORDS: Record<CategoryId, string> = {
+  chinese: 'chinese 中国 中餐 中菜',
+  japanese: 'japanese 日本 日料 日餐',
+  korean: 'korean 韩国 韩餐',
+  'se-asian': 'southeast asian asian 东南亚',
+  indian: 'indian 印度',
+  'middle-east': 'middle eastern mediterranean 中东 地中海',
+  italian: 'italian 意大利 意餐',
+  'european-bistro': 'european bistro 欧陆 欧洲',
+  'modern-au': 'modern australian fine dining 澳洲 现代澳洲',
+  seafood: 'seafood 海鲜',
+  'steak-grill': 'steakhouse grill 烧烤',
+  'brunch-dessert': 'brunch dessert 早午餐 甜品',
 };
 
-/** Case-insensitive search over name, Chinese name, suburb, category, tags and intro. */
+/** English words mapped to the Chinese the tags and intros use. */
+const SYNONYMS: [string, string[]][] = [
+  ['vietnamese', ['越南']],
+  ['thai', ['泰']],
+  ['malaysian', ['马来']],
+  ['indonesian', ['印尼']],
+  ['sri lankan', ['斯里兰卡']],
+  ['lebanese', ['黎巴嫩']],
+  ['turkish', ['土耳其']],
+  ['greek', ['希腊']],
+  ['french', ['法式', '法餐', '法国']],
+  ['cantonese', ['粤菜']],
+  ['sichuan', ['川菜']],
+  ['yum cha', ['饮茶']],
+  ['dim sum', ['点心']],
+  ['hot pot', ['火锅']],
+  ['hotpot', ['火锅']],
+  ['peking duck', ['烤鸭']],
+  ['duck', ['烤鸭']],
+  ['noodle', ['面馆', '面汤', '拉面', 'biangbiang']],
+  ['sushi', ['寿司']],
+  ['tempura', ['天妇罗']],
+  ['yakitori', ['烧鸟']],
+  ['kbbq', ['韩式烤肉']],
+  ['korean bbq', ['韩式烤肉']],
+  ['pizza', ['披萨']],
+  ['pasta', ['意面', '意式饺', '千层面']],
+  ['steak', ['牛排']],
+  ['bbq', ['烤']],
+  ['curry', ['咖喱']],
+  ['dosa', ['多萨']],
+  ['oyster', ['蚝']],
+  ['fish and chips', ['炸鱼薯条']],
+  ['burger', ['汉堡']],
+  ['brunch', ['早午餐']],
+  ['cafe', ['咖啡']],
+  ['coffee', ['咖啡']],
+  ['bakery', ['烘焙', '面包']],
+  ['croissant', ['可颂']],
+  ['gelato', ['冰淇淋']],
+  ['ice cream', ['冰淇淋']],
+  ['dessert', ['甜品', '蛋糕']],
+  ['wine bar', ['葡萄酒吧']],
+  ['tasting menu', ['品鉴']],
+  ['degustation', ['品鉴']],
+  ['view', ['景观', '海景']],
+];
+
+function terms(q: string): string[] {
+  const out = [q];
+  for (const [en, zh] of SYNONYMS) if (q.includes(en)) out.push(...zh);
+  return out;
+}
+
+/**
+ * Case-insensitive search. Places whose own name, suburb, tags or intro match come first,
+ * best ranked first; places that only match because of their category follow.
+ */
 export function searchRestaurants(query: string): Restaurant[] {
   const q = query.trim().toLowerCase();
   if (!q) return [];
-  return RESTAURANTS.filter((r) => {
-    const hay = [r.name, r.nameZh, r.suburb, categoryOf(r.category).name, CATEGORY_KEYWORDS[r.category], ...r.tags, r.intro]
-      .join(' ')
-      .toLowerCase();
-    return hay.includes(q);
-  }).sort((a, b) => a.rank - b.rank);
+  const words = terms(q);
+  const direct: Restaurant[] = [];
+  const byCategory: Restaurant[] = [];
+  for (const r of RESTAURANTS) {
+    const own = [r.name, r.nameZh, r.suburb, ...r.tags, r.intro].join(' ').toLowerCase();
+    if (words.some((w) => own.includes(w))) direct.push(r);
+    else if (`${categoryOf(r.category).name} ${CATEGORY_WORDS[r.category]}`.toLowerCase().includes(q)) byCategory.push(r);
+  }
+  const byRank = (a: Restaurant, b: Restaurant) => a.rank - b.rank;
+  return [...direct.sort(byRank), ...byCategory.sort(byRank)];
 }

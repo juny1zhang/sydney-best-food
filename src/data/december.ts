@@ -72,7 +72,7 @@ export const DAYS: Record<number, DayInfo> = {
   25: { region: 'syd', holiday: '圣诞节', plan: '很多餐厅圣诞当天休息，订之前先确认' },
   26: { region: 'syd', holiday: '节礼日' },
   27: { region: 'syd' },
-  28: { region: 'syd', holiday: '节礼日补假', plan: '节礼日补假（NSW 公众假期），部分餐厅休息或加收附加费，订之前先确认' },
+  28: { region: 'syd', holiday: '补假日', plan: '节礼日补假（NSW 公众假期），部分餐厅休息或加收附加费，订之前先确认' },
   29: { region: 'syd' },
   30: { region: 'syd' },
   31: { region: 'syd', holiday: '跨年夜', plan: '跨年夜餐厅多为套餐，通常要提前订' },

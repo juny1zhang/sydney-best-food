@@ -1,4 +1,4 @@
-import { useRef, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
 import { CATEGORIES, categoryOf, mapsUrl, restaurantsIn, searchRestaurants } from '../data/restaurants';
 import type { Meal, Restaurant } from '../data/types';
@@ -40,6 +40,11 @@ export function DayPanel({ day, picks, boardCategory, titleId, onChoose, onClear
 
   // Actions below unmount the control that was pressed, so park focus on the day heading.
   const refocus = () => requestAnimationFrame(() => headingRef.current?.focus());
+
+  // Nothing left to write to (both meals filled elsewhere): drop the custom form.
+  useEffect(() => {
+    if (target === null) setCustomOpen(false);
+  }, [target]);
 
   const choose = (m: Meal, pick: Pick) => {
     onChoose(day, m, pick);
@@ -89,6 +94,7 @@ export function DayPanel({ day, picks, boardCategory, titleId, onChoose, onClear
             setReplacing(m.key);
             setMeal(m.key);
             setCustomOpen(false);
+            requestAnimationFrame(() => document.getElementById(`picker-q-${day}`)?.focus());
           }}
           onClear={() => {
             onClear(day, m.key);
