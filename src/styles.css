@@ -395,8 +395,10 @@ p {
   min-width: 0;
   font-size: 13px;
 }
-.block__item .badge {
-  align-self: flex-start;
+.block__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 .block__name {
   font-size: 17px;
@@ -1102,6 +1104,98 @@ button.cell:hover {
   font-size: 14px;
   line-height: 1.6;
   color: var(--nz-deep);
+}
+
+/* ---------- xiaohongshu ---------- */
+.xhs-chip {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  line-height: 1.3;
+  border: 1px solid;
+  white-space: nowrap;
+}
+.xhs-chip--recommend {
+  color: #1d6b45;
+  background: #e8f5ee;
+  border-color: #b9dfc9;
+}
+.xhs-chip--mixed {
+  color: #8a5a00;
+  background: #fff6e0;
+  border-color: #f0d79a;
+}
+.xhs-chip--avoid {
+  color: #a3261d;
+  background: #fdecea;
+  border-color: #f2bdb7;
+}
+.ta-chip {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  line-height: 1.3;
+  white-space: nowrap;
+  color: #0b5c49;
+  background: #e3f4ef;
+  border: 1px solid #b3dccf;
+}
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 12px;
+}
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.review-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.review-card__head h3 {
+  font-size: 17px;
+  font-weight: 800;
+}
+.review-card__summary {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.review-points h4 {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.review-points ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.review-card__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 /* ---------- restaurant page ---------- */

@@ -7,6 +7,16 @@
       "short": "中餐"
     },
     {
+      "id": "hotpot",
+      "name": "火锅",
+      "short": "火锅"
+    },
+    {
+      "id": "bbq",
+      "name": "烤肉",
+      "short": "烤肉"
+    },
+    {
       "id": "japanese",
       "name": "日料",
       "short": "日料"
@@ -48,8 +58,8 @@
     },
     {
       "id": "steak-grill",
-      "name": "牛排 / 烧烤",
-      "short": "牛排烧烤"
+      "name": "牛排馆",
+      "short": "牛排"
     },
     {
       "id": "brunch-dessert",
@@ -92,7 +102,32 @@
         "https://www.gourmettraveller.com.au/restaurant-reviews/lee-ho-fook-sydney-review/",
         "https://concreteplayground.com/sydney/restaurants/lee-ho-fook-sydney/amp"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": null,
+        "rating": null,
+        "reviews": null,
+        "rank": null,
+        "summary": "TripAdvisor 上暂无悉尼店页面，只有墨尔本本店（4.3 分）。",
+        "praise": [],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "虾多士、烤鸭和泥蟹肠粉有人夸，但口味偏澳式、贵、上菜慢，踩雷帖不少",
+        "praise": [
+          "虾多士配咸蛋黄酱、北京烤鸭熟成皮脆被多次夸",
+          "手拆泥蟹肠粉、宫保虾刀削面、清蒸牙鱼好评",
+          "红砖老建筑环境有格调，适合约会",
+          "XO酱福建炒饭比多数粤菜馆好"
+        ],
+        "complaints": [
+          "偏澳式改良口味，甜咸都重，华人觉得不正宗",
+          "价格高：茄子$29仅6条，云南鳕鱼$62份量极少",
+          "上菜慢，有人等主菜近一小时，服务难叫到人",
+          "出品不稳定，配不上两帽的吐槽多"
+        ]
+      }
     },
     {
       "id": "grandfathers",
@@ -129,7 +164,39 @@
         "https://www.timeout.com/sydney/restaurants/the-best-chinese-restaurants-in-sydney",
         "https://www.opentable.com.au/restaurant/profile/298343"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d33419931-Reviews-Grandfather_s-Sydney_New_South_Wales.html",
+        "rating": 4.5,
+        "reviews": 4,
+        "rank": "悉尼 5,770 家餐厅里排第 1,497",
+        "summary": "新店评论很少但几乎全好评，服务和酒水被夸，唯一差评嫌贵。",
+        "praise": [
+          "服务高效、店员懂菜",
+          "鸡尾酒和酒单出色",
+          "装修氛围好",
+          "分量足"
+        ],
+        "complaints": [
+          "人均约 110 澳元，偏贵"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "氛围和虾多士、XO蛤蜊、鸡尾酒被夸，但有人嫌太咸、蒸鱼不新鲜，口碑两极",
+        "praise": [
+          "昏暗红灯复古港风氛围好，适合约会小酌",
+          "虾多士、点心拼盘、XO炒蛤蜊、乳鸽多次被夸",
+          "麻辣凉菜如花椒拌海蜇意外好吃",
+          "中西结合的鸡尾酒有创意，人均约$80-100"
+        ],
+        "complaints": [
+          "有人觉得整体过咸，辣子鸡像隔夜炸鸡",
+          "清蒸星斑不新鲜、豆苗老、腐乳空心菜没味",
+          "苹果派是炸年糕包苹果，黏牙评价两极",
+          "四川刺身一般；灯光红暗有人觉得诡异"
+        ]
+      }
     },
     {
       "id": "mr-wong",
@@ -163,7 +230,42 @@
         "https://www.gourmettraveller.com.au/restaurant-reviews/mr-wong-sydney-restaurant-review-4263/",
         "https://timeout.com/sydney/restaurants/mr-wong"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d3294245-Reviews-Mr_Wong-Sydney_New_South_Wales.html",
+        "rating": 4.4,
+        "reviews": 4429,
+        "rank": "悉尼 4,786 家餐厅里排第 58",
+        "summary": "评论量大、口碑稳，点心烤鸭受赞，但贵、吵、被催是常见抱怨。",
+        "praise": [
+          "点心和北京烤鸭出色",
+          "仓库风装修有气氛",
+          "酒单很强",
+          "菜单选择丰富"
+        ],
+        "complaints": [
+          "价格高、性价比一般",
+          "很吵",
+          "翻台快、有被催感",
+          "订位受限需排队"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "点心、烤鸭、虾馄饨和炒饭多被夸，但价格高、偏甜偏西式，华人吐槽“糊弄老外”",
+        "praise": [
+          "点心拼盘、烧卖、虾馄饨（一只大虾）被夸",
+          "烤鸭、炸物酥脆，炒饭推荐",
+          "老香港复古装修有氛围，有人说比墨尔本粤菜强",
+          "两人约$255也有人觉得跻身悉尼中餐前排"
+        ],
+        "complaints": [
+          "贵：两人$480，周日加收10%服务费",
+          "鱼香脆茄子$43被打叉，蟹膏炒饭一般",
+          "满场老外很吵，口味偏甜，被说是骗老外的中餐",
+          "不订位很难进，walk-in要等两小时"
+        ]
+      }
     },
     {
       "id": "xopp",
@@ -199,7 +301,40 @@
         "https://www.broadsheet.com.au/sydney/guides/best-chinese-restaurants",
         "https://concreteplayground.com/sydney/food-drink/xopp-darling-square"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d17829989-Reviews-Xopp-Sydney_New_South_Wales.html",
+        "rating": 3.3,
+        "reviews": 55,
+        "rank": "悉尼 5,771 家餐厅里排第 2,277",
+        "summary": "招牌 XO 蚬受赞，但服务和账单问题拖低评分，口碑两极。",
+        "praise": [
+          "招牌 XO 酱炒蚬分量足",
+          "北京烤鸭和生菜包受欢迎"
+        ],
+        "complaints": [
+          "服务差、态度冷",
+          "账单多收或乱加费",
+          "分量偏小",
+          "氛围一般"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "乳鸽、XO酱pipi米粉和大龙虾是招牌，份量大，但海鲜价高，评论有人嫌贵又一般",
+        "praise": [
+          "乳鸽（约$50）、蒜片虾球、炸馒头是回头客固定搭配",
+          "XO酱炒pipi配米粉底是招牌，评论也认可",
+          "龙虾刺身+牛油黑松露意面两吃、金沙泥蟹份量很大",
+          "服务好，适合家庭和多人聚餐"
+        ],
+        "complaints": [
+          "海鲜很贵：一只大龙虾约$900，一餐$1920被说太坑",
+          "有人觉得挑的龙虾不够活",
+          "评论有人说整体一般，只有pipi米粉好吃",
+          "近一两年的帖子不多，最新口碑信号有限"
+        ]
+      }
     },
     {
       "id": "spice-temple",
@@ -235,7 +370,42 @@
         "https://www.timeout.com/sydney/restaurants/the-best-breakfast-yum-cha-in-sydney",
         "https://sitchu.com.au/sydney/restaurants/best-chinese-restaurants-sydney"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d1510760-Reviews-Spice_Temple_Sydney-Sydney_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 1097,
+        "rank": "悉尼 4,747 家餐厅里排第 82",
+        "summary": "氛围和酒水好评多，但 2026 年多条评论嫌菜退步、偏贵。",
+        "praise": [
+          "地下暗调氛围独特",
+          "怪味鸡、脆皮五花等招牌菜",
+          "鸡尾酒和酒单好",
+          "店员会推荐菜"
+        ],
+        "complaints": [
+          "价格偏高、性价比低",
+          "2026 年多条嫌菜油腻或失准",
+          "菜单改动、老菜下架",
+          "座位挤、偏吵"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "暗黑酒吧氛围和辣子猪受夸，但不少华人嫌太西化偏甜，觉得不如去唐人街",
+        "praise": [
+          "辣子猪（带皮猪肉）、牛肉有惊喜，新年菜单好评",
+          "份量很大，烤鸭饼皮给得多，海鲜炒饭量足",
+          "地下暗黑酒吧风装修，出片、鸡尾酒值得试",
+          "有评论说烤鸭比Mr Wong好吃"
+        ],
+        "complaints": [
+          "口味太西化偏甜，甜品齁甜",
+          "炒面是脆炸面浇汁，鱼有腥味，叉烧有猪臊味",
+          "包厢有最低消费，人均$100-120性价比低",
+          "有人说随便去唐人街都比这里满足"
+        ]
+      }
     },
     {
       "id": "the-chairman",
@@ -269,7 +439,38 @@
         "https://www.broadsheet.com.au/sydney/guides/best-chinese-restaurants",
         "https://www.sbs.com.au/food/article/find-the-heat-and-heart-of-hunan-cuisine-here/wd8gfmtmd"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d26699730-Reviews-The_Chairman-Sydney_New_South_Wales.html",
+        "rating": 2.5,
+        "reviews": 2,
+        "rank": "悉尼 5,713 家餐厅里排第 3,610",
+        "summary": "仅 2 条评论且偏负面，样本太少且多来自旧址，参考价值低。",
+        "praise": [
+          "装修好看"
+        ],
+        "complaints": [
+          "红烧肉、炒饭失准",
+          "价格偏贵",
+          "服务不够热情",
+          "桌面不干净"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "华人口中的“湖南人”十年老店，烟笋腊肉、自制泡菜锅气足够正宗，就是偏贵、位置偏",
+        "praise": [
+          "烟笋炒腊肉、雪菜蚕豆必点，腊肉香肠老板娘自制",
+          "自制泡菜、泡菜土鸡、豆腐蒸鱼酸辣开胃很正宗",
+          "现炒锅气足无预制，水煮鱼、香辣蟹被评论夸绝",
+          "辣度可调，不吃辣也能适应，服务热情"
+        ],
+        "complaints": [
+          "价格比一般中餐馆贵",
+          "搬到Botany，离市区远需开车",
+          "个别评论说厨师换了、不如从前"
+        ]
+      }
     },
     {
       "id": "golden-sands",
@@ -304,7 +505,40 @@
         "https://pegfeeds.com/2026/05/25/golden-sands-%E9%87%91%E6%B2%99%E9%85%92%E6%A5%BC-hurstville-nsw-restaurant-review/",
         "https://sydney.com/destinations/sydney/sydney-south/food-and-drink/golden-sands-hurstville"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1127153-d12881013-Reviews-Golden_Sands_Restaurant-Hurstville_Greater_Sydney_New_South_Wales.html",
+        "rating": 3.8,
+        "reviews": 21,
+        "rank": "Hurstville 215 家餐厅里排第 32",
+        "summary": "评论不多，近期多夸点心和服务，差评集中在 2020–22 年。",
+        "praise": [
+          "点心出品好、上菜快",
+          "店员礼貌友善",
+          "分量足、场地大"
+        ],
+        "complaints": [
+          "比附近酒楼贵",
+          "偶有上菜慢或漏单",
+          "个别菜上桌不够热"
+        ]
+      },
+      "xhs": {
+        "verdict": "avoid",
+        "summary": "仍有人夸烧卖、流沙包和烧鹅，但近一年“越做越差、贵、态度差”的吐槽占多数",
+        "praise": [
+          "鲜虾烧卖、流沙包、榴莲酥、干炒牛河有人推荐",
+          "晚市烧鹅外酥里嫩、蒸排骨嫩，套餐够吃",
+          "镇江骨酸甜得宜、炸排骨不错",
+          "Westfield停车方便，平日中午不用排队"
+        ],
+        "complaints": [
+          "多条评论说越做越差、点心缩水、价格贵",
+          "老板态度差，带小孩被嫌弃",
+          "海鲜有被指龙虾不新鲜、缺斤少两",
+          "烧鸭像回热、鸡爪没热透，$129套餐一般"
+        ]
+      }
     },
     {
       "id": "palace",
@@ -339,7 +573,42 @@
         "https://www.dishcult.com/articles/where-to-find-the-best-yum-cha-in-sydney",
         "https://stockland.com.au/shopping-centres/centres/stockland-piccadilly/stores/palace-chinese-restaurant"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d4779612-Reviews-Palace_Chinese_Restaurant-Sydney_New_South_Wales.html",
+        "rating": 3.8,
+        "reviews": 233,
+        "rank": "悉尼 4,783 家餐厅里排第 420",
+        "summary": "推车饮茶和点心新鲜受好评，服务不稳和吵是主要扣分点。",
+        "praise": [
+          "保留推车式饮茶",
+          "点心新鲜、选择多",
+          "海鲜新鲜",
+          "排队快、管理有序"
+        ],
+        "complaints": [
+          "服务时好时坏、偶有冷淡",
+          "大厅吵",
+          "点心酱料普通",
+          "饮茶价格不低"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "华人叫它“杏园”，推车点心新鲜落胃、人均$35-45不贵，少数人嫌一般、餐具卫生待改",
+        "praise": [
+          "阿姨推车老式茶楼，虾饺烧卖虾大、不像速冻",
+          "叉烧肠粉、凤爪、排骨、虾多士、广式蛋挞被夸",
+          "酥皮叉烧包、杨枝甘露、菠菜饺必点，甜品车选择多",
+          "人均$35-45在CBD很实惠，翻台快"
+        ],
+        "complaints": [
+          "高峰期要等约20分钟，座位较密",
+          "有人指出餐具卫生需要改进",
+          "芋泥香酥鸭网红菜被评普通",
+          "评论有少数人说不好吃、怀疑预制"
+        ]
+      }
     },
     {
       "id": "xian-eatery",
@@ -375,40 +644,39 @@
         "https://order.online/en-AU/store/23154778",
         "https://broadsheet.com.au/sydney/burwood/restaurants/xi-eatery"
       ],
-      "confidence": "low"
-    },
-    {
-      "id": "haidilao",
-      "name": "Haidilao Hotpot",
-      "nameZh": "海底捞火锅",
-      "category": "chinese",
-      "rank": 10,
-      "suburb": "Darling Square",
-      "price": "$$",
-      "badges": [
-        "Sitchu 最佳火锅"
-      ],
-      "tags": [
-        "火锅",
-        "川味",
-        "聚餐"
-      ],
-      "intro": "海底捞在 Darling Square 的门店。锅底选择多，服务员会在桌边表演甩面，等位还送零食，适合多人聚餐。",
-      "booking": "可电话或网上订位，周末建议提前",
-      "meals": [
-        "lunch",
-        "dinner"
-      ],
-      "website": "",
-      "accolades": [
-        "Sitchu: The Best Hot Pot in Sydney"
-      ],
-      "sources": [
-        "https://www.scape.com.au/scape-stories/student-life/where-to-find-the-best-chinese-hot-pot-in-sydney/",
-        "https://sitchu.com.au/sydney/restaurants/best-hot-pot-sydney",
-        "https://darlingharbour.com/eat-drink/haidilao-hotpot"
-      ],
-      "confidence": "medium"
+      "confidence": "low",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1899976-d14939542-Reviews-Xi_an_Eatery-Burwood_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.1,
+        "reviews": 7,
+        "rank": "Burwood 121 家餐厅里排第 37",
+        "summary": "评论仅 7 条，宽面一致受赞，其他菜评价一般。",
+        "praise": [
+          "biangbiang 宽面筋道够辣",
+          "价格实惠",
+          "出餐快、店面干净"
+        ],
+        "complaints": [
+          "羊肉菜一般",
+          "孜然肉夹馍孜然过重",
+          "店员英文有限"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "中文名“西安诱惑”，biangbiang面和凉皮尚可，但炒菜被骂、量小上菜慢，华人更推斜对面程记",
+        "praise": [
+          "biangbiang面（含菠菜面）劲道，评论多说还不错",
+          "凉皮、烤肉拌面、酸汤水饺、大盘鸡面有人夸",
+          "店员服务热情，会跟外国客人耐心介绍"
+        ],
+        "complaints": [
+          "量小吃不饱，出面慢（有人等了31分钟）",
+          "小酥肉硬、辣子鸡不香、老碗鱼贵且鱼少",
+          "常有上错菜，只能转账不能刷卡",
+          "多位华人说不正宗、吃一次不会回头"
+        ]
+      }
     },
     {
       "id": "yoshii",
@@ -441,7 +709,38 @@
         "https://www.barangaroo.com/eat-drink/yoshii",
         "https://www.gourmettraveller.com.au/restaurant-reviews/yoshiis-omakase-sydney-review-21271/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g28146167-d29016056-Reviews-Yoshii_s_Omakase-Barangaroo_Greater_Sydney_New_South_Wales.html",
+        "rating": 5.0,
+        "reviews": 1,
+        "rank": "Barangaroo 12 家餐厅里排第 6",
+        "summary": "只有 1 条满分评论，样本太少；订位难是唯一被提到的问题。",
+        "praise": [
+          "omakase 体验出色",
+          "仅 10 席、很私密"
+        ],
+        "complaints": [
+          "很难订到位",
+          "价格高（约 380 澳元）"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "周杰伦同款，柚子刺身头盘、寿司和主厨聊天体验被夸，但已涨到$398且难订",
+        "praise": [
+          "柚子盛的双层刺身头盘很惊艳，食材新鲜",
+          "海胆手卷、龙虾藕饼、tuna泥寿司、栗子甜品好评",
+          "主厨很健谈，气氛轻松不拘谨",
+          "分量足，吃完很饱"
+        ],
+        "complaints": [
+          "已涨价到每位$398",
+          "和牛shabu被说太腻/有点拉，鳗鱼照烧酱太重",
+          "鹅肝配豆腐皮等新菜搭配违和",
+          "很难订，常要提前一个月或私信预约"
+        ]
+      }
     },
     {
       "id": "kisuke",
@@ -475,7 +774,38 @@
         "https://thebrag.com/potts-points-kisuke-the-omakase-restaurant-with-a-40-day-waitlist",
         "https://www.broadsheet.com.au/sydney/potts-point/restaurants/kisuke"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d33151173-Reviews-Kisuke-Sydney_New_South_Wales.html",
+        "rating": 5.0,
+        "reviews": 1,
+        "rank": "悉尼 4,750 家餐厅里排第 3,174",
+        "summary": "仅 1 条满分评论，信息很少，基本无法从 TA 判断。",
+        "praise": [
+          "板前小店、主厨现切生鱼",
+          "食材当天新鲜、无固定菜单"
+        ],
+        "complaints": [
+          "必须提前订位",
+          "人均约 200 澳元"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "日本夫妻店6席omakase，$220在悉尼算亲民好订，手艺稳、氛围温馨，食材不算顶级",
+        "praise": [
+          "$220/18道含10贯寿司，在悉尼算入门价且网上就能订",
+          "夫妻经营、老板娘穿和服，6席板前很有日本感",
+          "鱼蟹肉丸、味噌三文鱼、海胆手卷印象深",
+          "菜单约三个月换一次，出品稳、份量刚好"
+        ],
+        "complaints": [
+          "食材偏普通，靠手艺弥补",
+          "只有6席很安静，两人聊天会尴尬",
+          "有人觉得toro、鱿鱼处理不如Yoshii",
+          "个别评论说份量小、结账多算，Potts Point难停车"
+        ]
+      }
     },
     {
       "id": "haco",
@@ -508,7 +838,36 @@
         "https://www.opentable.com.au/r/haco-sydney",
         "https://www.sydney.com/destinations/sydney/sydney-city/city-centre/food-and-drink/haco-omakase"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d26336792-Reviews-Haco-Sydney_New_South_Wales.html",
+        "rating": 4.0,
+        "reviews": 1,
+        "rank": "悉尼 5,773 家餐厅里排第 2,938",
+        "summary": "仅 1 条 2026 年好评，夸服务和安静氛围，样本太少。",
+        "praise": [
+          "环境安静不吵",
+          "服务周到、主动添酒",
+          "冰淇淋甜品出彩"
+        ],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "天妇罗omakase性价比不错，鲍鱼天妇罗和茶碗蒸被夸，但也有人觉得平平无奇、不会二刷",
+        "praise": [
+          "鲍鱼天妇罗配鲍鱼汁是公认亮点",
+          "茶碗蒸、大虾天妇罗蘸抹茶盐，炸衣薄不油",
+          "约$180-190在悉尼omakase里算便宜，能吃撑",
+          "收尾小拉面和甜品好评，吊灯NFC结账有趣"
+        ],
+        "complaints": [
+          "有人觉得味道平平无奇，吃过日本的会失望",
+          "前菜中规中矩，和牛鹅肝等后段一般",
+          "部分蘸料（咖喱粉、蟹膏味噌）偏咸",
+          "另收5% surcharge，酒水另算"
+        ]
+      }
     },
     {
       "id": "kuro",
@@ -542,7 +901,42 @@
         "https://www.broadsheet.com.au/sydney/guides/best-omakase-restaurants",
         "https://venuenow.com/au/sydney/venue/kuro-bar-dining-6398"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d19433027-Reviews-Kuro_Bar_Dining-Sydney_New_South_Wales.html",
+        "rating": 3.6,
+        "reviews": 22,
+        "rank": "悉尼 4,706 家餐厅里排第 2,312",
+        "summary": "装修氛围好，但性价比和服务稳定性争议大，评分中等。",
+        "praise": [
+          "装修和氛围出众",
+          "和牛等主厨特选好评",
+          "摆盘和口感细致",
+          "吧台服务好"
+        ],
+        "complaints": [
+          "套餐偏贵、性价比低",
+          "服务水平不稳定",
+          "鸭肉等个别菜失准",
+          "结账出过差错"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "环境出片、牛舌和升级的和牛西冷/金枪鱼排被夸，但小菜普通、上菜极慢，有人直说巨普",
+        "praise": [
+          "炭烤牛舌配两种酱、莲藕片被强推",
+          "升级主菜金枪鱼katsu和MB9+和牛西冷很出色",
+          "刺身、生蚝、秘鲁风ceviche新鲜酸辣",
+          "仓库装修好看适合生日拍照，周末也不难订"
+        ],
+        "complaints": [
+          "上菜慢，有人前菜到主菜等了近一小时",
+          "黑色炸鸡、熟成鸭有腥味，担担面浓而无特色",
+          "菲力牛排柴、只有芥末一种酱，整体无功无过",
+          "评论有人说其实偏难吃，性价比存疑"
+        ]
+      }
     },
     {
       "id": "sushi-oe",
@@ -574,7 +968,34 @@
         "https://www.agfg.com.au/restaurants/sydney/japanese-cuisine",
         "https://www.broadsheet.com.au/sydney/guides/best-japanese-restaurants"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g23143306-d34241468-Reviews-Sushi_Oe-Pyrmont_New_South_Wales.html",
+        "rating": 1.0,
+        "reviews": 1,
+        "rank": null,
+        "summary": "新址页面仅 1 条 1 星评论且内容不详，几乎无参考价值。",
+        "praise": [],
+        "complaints": [
+          "唯一评论称体验极差（具体原因不详）"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "搬到新鱼市后食材被夸顶级、26道吃遍好货，但$350贵、节奏慢，7月主厨醉酒新闻让部分人抵制",
+        "praise": [
+          "食材顶级：塔州蓝鳍金枪鱼、北海道海胆、石蟹等",
+          "萤火鱿鱼、煎大鱼、渐变金枪鱼摆盘印象深",
+          "器皿讲究、米量精准，主厨亲切爱聊",
+          "搬鱼市后可用OpenTable订（每月15号放位）"
+        ],
+        "complaints": [
+          "每位约$350（Cammeray时期约$260）",
+          "一人捏寿司加到10席，节奏很慢吃到10点半",
+          "有人觉得调味不出众、某季鱼货一般",
+          "2026年7月主厨醉酒与急救员冲突上新闻，有人避雷"
+        ]
+      }
     },
     {
       "id": "sokyo",
@@ -607,7 +1028,42 @@
         "https://www.broadsheet.com.au/sydney/guides/best-japanese-restaurants",
         "https://www.broadsheet.com.au/sydney/guides/best-omakase-restaurants"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d2620219-Reviews-Sokyo-Sydney_New_South_Wales.html",
+        "rating": 4.5,
+        "reviews": 1444,
+        "rank": "悉尼 6,392 家餐厅里排第 21",
+        "summary": "出品长期受赞、排名靠前，但 2026 年服务和性价比抱怨增多。",
+        "praise": [
+          "菜品精致、食材新鲜",
+          "寿司吧台看主厨现做",
+          "品鉴套餐丰富",
+          "早餐自助加单点好评"
+        ],
+        "complaints": [
+          "价格高、性价比争议",
+          "2026 年多条抱怨服务慢没人理",
+          "分量小",
+          "音乐偏吵"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "单点生蚝、和牛塔塔、天妇罗还不错，氛围适合约会，但$215品鉴套餐被批食材普通、不值",
+        "praise": [
+          "生蚝配梅酒青柠汁、和牛塔塔被夸最好吃",
+          "虎虾、墨鱼天妇罗面衣薄，牛肋排下饭",
+          "环境暗调高级，适合约会纪念日",
+          "单点上菜快、份量不错，人均约$100-160"
+        ],
+        "complaints": [
+          "$215七道品鉴+鱼子酱+10%附加费，被批食材普通",
+          "有人说像普通日料店set、吃完想去麦当劳",
+          "海鲜锅太咸，脆米金枪鱼调味怪",
+          "整体稳但不惊艳，性价比一般"
+        ]
+      }
     },
     {
       "id": "tokyo-bird",
@@ -634,7 +1090,40 @@
         "https://www.opentable.com.au/r/tokyo-bird-surry-hills",
         "https://www.opentable.ca/cuisine/best-yakitori-restaurants-sydney-surry-hills"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d8318225-Reviews-Tokyo_Bird-Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 64,
+        "rank": "悉尼 4,786 家餐厅里排第 643",
+        "summary": "更像喝酒配串的小酒吧，酒单和串烧受赞，酒价偏贵。",
+        "praise": [
+          "日本威士忌和鸡尾酒选择多",
+          "烤鸡串、鸡肝串火候好",
+          "店员懂酒、服务热情",
+          "巷子小酒吧氛围好"
+        ],
+        "complaints": [
+          "酒水价格偏贵",
+          "个别串烧上桌偏凉",
+          "当正餐吃略显普通"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "日威和鸡尾酒单很强、氛围热闹，但串烧出品不稳，有人祛魅说烤糊、更像喝酒的地方",
+        "praise": [
+          "日本威士忌和创意鸡尾酒选择极多",
+          "鸡翅、葱烧鸡腿、三文鱼串、炸菜花被夸",
+          "金枪鱼塔塔、抹茶芝士蛋糕好评",
+          "气氛热闹适合下班小酌，人均约$70"
+        ],
+        "complaints": [
+          "出品不稳：鸡皮烤糊发苦、和牛串柴还凉",
+          "鸡肉丸寡淡、香肠过咸，有人说烧鸟不合格",
+          "店里嘈杂不适合聊天，常要排队"
+        ]
+      }
     },
     {
       "id": "allta",
@@ -669,7 +1158,32 @@
         "https://www.agfg.com.au/awards/sydney",
         "https://www.sydney.com/articles/the-best-korean-restaurants-in-sydney"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1076516-d33881149-Reviews-Allta-Kirribilli_North_Sydney_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.8,
+        "reviews": 36,
+        "rank": null,
+        "summary": "新址页面只有星级评分、没有文字评论，口碑无从判断。",
+        "praise": [],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "海胆塔、鸭肉、鱼类和人参甜品有人夸“没一道凑数”，但$325偏贵、不太饱，也有人觉得一般",
+        "praise": [
+          "海胆tart、脆皮鸭、甜虾/金枪鱼/牙鱼被点名好吃",
+          "韩餐元素做得清爽高级，不是传统重口",
+          "Moreton Bay Bug、人参甜品回甘有余韵",
+          "适合生日纪念日，配酒选择好"
+        ],
+        "complaints": [
+          "15道$325/人，价格高",
+          "分量偏小，有人吃完还饿",
+          "生蚝过咸、菲力焦糖味重，热菜被说一般",
+          "搬到Surry Hills后装修不如旧店出片"
+        ]
+      }
     },
     {
       "id": "sang",
@@ -703,7 +1217,42 @@
         "https://www.yelp.com/biz/sang-by-mabasa-surry-hills",
         "https://happymenu.com.au/sang-by-mabasa-menu/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d15361085-Reviews-Sang_by_Mabasa-Sydney_New_South_Wales.html",
+        "rating": 3.9,
+        "reviews": 22,
+        "rank": null,
+        "summary": "评论少且偏旧，菜品受赞但服务和等待评价两极。",
+        "praise": [
+          "家庭经营、小店温馨",
+          "饺子、土豆饼、石锅拌饭好吃",
+          "品鉴套餐受好评",
+          "可自带酒水"
+        ],
+        "complaints": [
+          "上菜慢、等候久",
+          "长桌拼座、拥挤",
+          "价格偏贵",
+          "曾有与店主不愉快经历"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "韩国家庭小馆，自制泡菜、锅巴拌饭和鲷鱼锅饭温和不重口，像去韩国奶奶家吃饭，就是偏贵",
+        "praise": [
+          "自家腌泡菜不咸，生腌虾、牛肚前菜下酒",
+          "石锅拌饭锅巴香，午市面片汤暖胃",
+          "晚市Feed me吃到扶墙，鲷鱼锅饭最受欢迎",
+          "口味清淡温和，适合不想吃重口韩餐的人"
+        ],
+        "complaints": [
+          "小菜另点、份量小，晚市有$55/人最低消费",
+          "厨师少，上菜偏慢",
+          "LA牛小排腌料太重",
+          "不是第一口惊艳型，例汤性价比一般"
+        ]
+      }
     },
     {
       "id": "matkim",
@@ -745,46 +1294,32 @@
         "https://broadsheet.com.au/sydney/guides/korean-restaurants-sydney",
         "https://hospitalitymagazine.com.au/korean-omakase-restaurant-matkim-joins-sydney-place"
       ],
-      "confidence": "high"
-    },
-    {
-      "id": "bornga",
-      "name": "Bornga Korean BBQ",
-      "nameZh": "",
-      "category": "korean",
-      "rank": 4,
-      "suburb": "Haymarket",
-      "price": "$$",
-      "badges": [
-        "Time Out 最佳韩烤",
-        "Sitchu 最佳韩烤 2026"
-      ],
-      "tags": [
-        "韩式烤肉",
-        "薄切牛五花",
-        "和牛"
-      ],
-      "intro": "韩国名厨白钟元旗下烤肉连锁的悉尼店，在 Haymarket 二楼，装修比一般韩烤讲究，被 Time Out 视为全城最高档的韩烤之一。招牌是薄切腌牛五花，小菜可无限续加。",
-      "booking": "QueueTix 网上订位，每桌限时 90 分钟",
-      "meals": [
-        "lunch",
-        "dinner"
-      ],
-      "website": "",
-      "accolades": [
-        "Time Out Sydney: The best Korean barbecue in Sydney (May 2025), called the fanciest Korean BBQ in Sydney",
-        "Sitchu: The Best Korean BBQ in Sydney (July 2026), listed first",
-        "Sydney.com (Destination NSW): best Korean barbecue restaurants in Sydney, described as one of the city's highest-quality Korean BBQs"
-      ],
-      "sources": [
-        "https://www.timeout.com/sydney/restaurants/the-best-korean-barbecue-in-sydney",
-        "https://www.timeout.com/sydney/restaurants/bornga",
-        "https://sitchu.com.au/best-korean-bbq-sydney",
-        "https://www.sydney.com/articles/best-korean-barbecue-in-sydney",
-        "https://queuetix.com/index.php/borngas",
-        "https://posnet.web.app/order?projectId=borngasyd"
-      ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1076516-d27591420-Reviews-Matkim-Kirribilli_North_Sydney_Greater_Sydney_New_South_Wales.html",
+        "rating": null,
+        "reviews": 0,
+        "rank": null,
+        "summary": "TripAdvisor 有页面但还没有任何评论。",
+        "praise": [],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "8席韩式omakase口碑很稳，秋季菜单被夸有创意、调味平衡、没踩雷，约$279-300一位",
+        "praise": [
+          "主厨健谈有创意，每道菜都讲灵感来源",
+          "海鲜、干式熟成肉和火候处理细，调味平衡",
+          "把冷面、刀削面、石锅饭、鲍鱼粥融进套餐",
+          "不必整晚吃韩牛，不吃刺身也适合"
+        ],
+        "complaints": [
+          "每位约$279-300，价格高",
+          "个别菜（粥）偏咸",
+          "以海鲜为主，不吃海鲜要提前说",
+          "有帖称主厨准备退居二线，12月出品待观察"
+        ]
+      }
     },
     {
       "id": "porkfat",
@@ -825,7 +1360,42 @@
         "https://foodle.pro/restaurants/sydney/porkfat-thai-restaurant-sydney",
         "https://www.gourmettraveller.com.au/restaurant-reviews/porkfat-haymarket-review-21266/"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d25152138-Reviews-Porkfat-Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 22,
+        "rank": "悉尼 4,785 家餐厅里排第 823",
+        "summary": "菜和服务受赞，但分量小、价格高、用餐被赶是常见抱怨。",
+        "praise": [
+          "和牛胸肉帕能咖喱",
+          "炸整条尖吻鲈出色",
+          "团队热情好客",
+          "泰菜地道"
+        ],
+        "complaints": [
+          "分量偏小",
+          "酒水很贵",
+          "用餐节奏偏赶",
+          "整体定价偏高"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "帖子不多但都说好吃：锅气足，青咖喱猪脸颊、烤猪颈肉、罗望子鸡翅被夸，就是偏贵偏辣",
+        "praise": [
+          "开放厨房现炒锅气足，炒芥兰被夸比多数饭店好",
+          "青咖喱猪脸颊肉、烤猪颈肉、脆五花被推荐",
+          "罗望子炸鸡翼、软壳蟹、蟹肉炒饭好吃",
+          "有人称是悉尼吃过最贵但最好吃的泰餐"
+        ],
+        "complaints": [
+          "价格偏高：主菜$40-56，两人约$130",
+          "偏辣，不能吃辣要注意",
+          "个别特餐（丛林红咖喱鸡）咖喱味不足",
+          "需提前订位，周日有附加费"
+        ]
+      }
     },
     {
       "id": "viand",
@@ -857,7 +1427,38 @@
         "https://sitchu.com.au/sydney/restaurants/best-thai-restaurants-sydney",
         "https://blog.resy.com/2022/06/i-dont-want-to-do-green-curry-at-viand-annita-potter-forges-her-own-path-in-thai-cuisine/"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d27604942-Reviews-Viand-Sydney_New_South_Wales.html",
+        "rating": 4.0,
+        "reviews": 7,
+        "rank": "悉尼 5,721 家餐厅里排第 1,485",
+        "summary": "评论仅 7 条，多数认可风味和讲解，也有人觉得水准不稳。",
+        "praise": [
+          "五道菜风味足",
+          "主厨逐道讲解",
+          "开放厨房",
+          "甜品出彩"
+        ],
+        "complaints": [
+          "菜品水准有起伏",
+          "用餐中被频繁打断"
+        ]
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "小红书几乎没有2024年后的帖子；旧帖夸口味地道不迎合，也有标题吐槽上菜慢、偏贵",
+        "praise": [
+          "主厨师从David Thompson，咖喱、安康鱼汤香料层次足",
+          "不做Pad Thai等套路菜，口味不向甜妥协",
+          "季节性菜单、用椰糖代替白糖，配酒有惊喜"
+        ],
+        "complaints": [
+          "性价比被认为是弱点",
+          "2022-23年旧帖标题有“两小时上四道菜”“踩雷贵价餐厅”",
+          "近两年几乎无新帖，现状难判断"
+        ]
+      }
     },
     {
       "id": "ho-jiak",
@@ -887,7 +1488,42 @@
         "https://www.broadsheet.com.au/sydney/event/dine-out-2026-dimsimlim-nipcooks-manu-ho-jiak",
         "https://www.goodfood.com.au/eat-out/news/ho-jiak-town-hall-serves-the-food-everyone-wants-right-now-20200604-h1oiw8"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d13372384-Reviews-Ho_Jiak_Haymarket-Sydney_New_South_Wales.html",
+        "rating": 3.9,
+        "reviews": 185,
+        "rank": "悉尼 4,786 家餐厅里排第 497",
+        "summary": "Haymarket 店口碑两极，招牌菜受赞，但偏咸、偏贵、限时用餐常被吐槽。",
+        "praise": [
+          "仁当牛肉、叻沙炸弹受赞",
+          "炒粿条地道",
+          "服务热情",
+          "复古南洋装修"
+        ],
+        "complaints": [
+          "偏咸、口味重",
+          "价格偏高",
+          "限时用餐、不订位要排队",
+          "楼上加座区很吵"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "Town Hall店牛肋排捞面、蟹肉煲仔饭被夸，但贵、偏咸，Haymarket店被骂，评论说两店差距大",
+        "praise": [
+          "牛肋排捞面软烂浓郁，和牛蟹肉煲仔饭有锅巴",
+          "御膳蒸蛋、马来通菜、肠粉稳妥好吃",
+          "可调咸度辣度，适合带小孩聚餐",
+          "多条评论说Town Hall店比Haymarket店好"
+        ],
+        "complaints": [
+          "Haymarket店被批又贵又咸、上菜慢、环境油腻",
+          "海鲜按时价很贵：龙虾$288/kg，咸蛋黄做法太咸",
+          "煲仔饭和蒸蛋上桌只温热，松露加$58不值",
+          "评论吐槽量少、像忽悠游客"
+        ]
+      }
     },
     {
       "id": "spice-i-am",
@@ -922,7 +1558,40 @@
         "https://www.spiceiam.com/",
         "https://sitchu.com.au/sydney/restaurants/best-thai-restaurants-sydney"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d738174-Reviews-Spice_I_Am-Sydney_New_South_Wales.html",
+        "rating": 4.1,
+        "reviews": 717,
+        "rank": "悉尼 排第 106",
+        "summary": "地道够辣、价格实惠的老店，常年好评，缺点是小店拥挤要等位。",
+        "praise": [
+          "辣度地道不打折",
+          "蟹肉炒饭、蒜香鸡受赞",
+          "性价比高、可自带酒",
+          "出餐快"
+        ],
+        "complaints": [
+          "有时辣到吃不出味道",
+          "店小拥挤、不接受订位",
+          "服务偶尔急促生硬",
+          "附近难停车"
+        ]
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "小红书帖子极少；仅有的一篇强推普吉风Pad Cha鸡和脆皮五花，但辣度很高、要排队",
+        "praise": [
+          "Pad Cha鸡用现捣香料+辣脆茄子，像在普吉岛吃",
+          "罗勒炒脆皮五花、炒河粉锅气足",
+          "上菜快、翻台快，泰国街头小炒氛围"
+        ],
+        "complaints": [
+          "辣度很高，记得提前要求调辣",
+          "店小，6点多就要排队约15分钟",
+          "谷歌评分仅4.2，小红书讨论很少"
+        ]
+      }
     },
     {
       "id": "temu-kangen",
@@ -955,7 +1624,31 @@
         "https://www.broadsheet.com.au/sydney/food-and-drink/article/temu-kangen-indonesian-haymarket-open",
         "https://www.opentable.com.au/r/temu-kangen-haymarket"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": null,
+        "rating": null,
+        "reviews": 0,
+        "rank": null,
+        "summary": "TripAdvisor 有页面（33 Ultimo Rd）但还没有评论。",
+        "praise": [],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "新店帖子很少；唯一一篇说味道稳、性价比高，香兰椰香饭和沙嗲串不错，适合印尼菜入门",
+        "praise": [
+          "香兰椰香饭香蕉叶包装好看、配菜丰富",
+          "沙嗲鸡肉串分量足、调味平衡",
+          "一桌5道菜+2杯饮料约$95，CBD里很实惠",
+          "午市满座，口味稳定不浮夸"
+        ],
+        "complaints": [
+          "沙嗲花生酱偏甜",
+          "蔬菜炸饼不够酥、多吃腻",
+          "汤类不算惊艳；小红书讨论太少"
+        ]
+      }
     },
     {
       "id": "khao-pla",
@@ -990,7 +1683,41 @@
         "https://wanderlog.com/place/details/735482/khao-pla",
         "https://www.timeout.com/sydney/restaurants/the-best-thai-restaurants-in-sydney"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g261607-d4552177-Reviews-Khao_Pla-Chatswood_Willoughby_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.1,
+        "reviews": 356,
+        "rank": "Chatswood 166 家餐厅里排第 3",
+        "summary": "车士活长期排名前列的泰餐，菜地道受赞，排队和拥挤是主要缺点。",
+        "praise": [
+          "泰菜地道、辣度不妥协",
+          "罗望子猪肋排招牌",
+          "香蕉花沙拉",
+          "性价比不错"
+        ],
+        "complaints": [
+          "热门要排队约 15 分钟",
+          "座位挤、偏吵",
+          "个别菜偏甜或偏油",
+          "分量偏小"
+        ]
+      },
+      "xhs": {
+        "verdict": "avoid",
+        "summary": "华人评价偏负面：偏甜偏咸、份量少、服务态度差被反复吐槽，只有少数人夸烤五花",
+        "praise": [
+          "烤五花皮脆多汁、九层塔炒菜香",
+          "炒饭还不错，蔬菜炒得入味",
+          "店面扩大过，老客说以前好吃"
+        ],
+        "complaints": [
+          "口味偏甜又咸，被说迎合鬼佬，绿咖喱像调料包",
+          "份量少：咖喱里只有半个土豆",
+          "服务态度差，忙时被指优先招呼外国客人",
+          "上菜慢，有评论说近年变难吃"
+        ]
+      }
     },
     {
       "id": "mamak",
@@ -1018,7 +1745,26 @@
         "https://www.yelp.com/search?find_desc=Malaysian&find_loc=Sydney+New+South+Wales",
         "https://www.yelp.com/search?cflt=malaysian&find_loc=Sydney+New+South+Wales"
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d807420-Reviews-Mamak-Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 1765,
+        "rank": "悉尼 4,786 家餐厅里排第 56",
+        "summary": "评论量大口碑稳，煎饼咖喱是招牌，排队和嘈杂是常态。",
+        "praise": [
+          "印度煎饼酥脆拉丝",
+          "沙爹和咖喱受赞",
+          "价格实惠",
+          "排队但翻台快"
+        ],
+        "complaints": [
+          "不能订位、排队久",
+          "店内很吵、简陋",
+          "清洁一般",
+          "2025 年有人嫌退步"
+        ]
+      }
     },
     {
       "id": "tan-viet",
@@ -1052,7 +1798,26 @@
         "https://www.yelp.com/biz/tan-viet-noodle-house-cabramatta-3",
         "https://tanviet.com.au/menu/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1783085-d5067112-Reviews-Tan_Viet_Noodle_House-Cabramatta_Fairfield_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 115,
+        "rank": "Cabramatta 65 家餐厅里排第 1",
+        "summary": "卡市排名第一，脆皮鸡几乎人人推荐，但评论多是几年前的。",
+        "praise": [
+          "招牌脆皮鸡皮酥肉嫩",
+          "配蛋面或番茄饭都好",
+          "价格实惠",
+          "排队但走得快"
+        ],
+        "complaints": [
+          "菜单选择少、无牛肉河粉",
+          "服务较冷淡",
+          "环境一般",
+          "个别菜寡淡"
+        ]
+      }
     },
     {
       "id": "chat-thai",
@@ -1087,7 +1852,26 @@
         "https://www.yelp.com/biz/chat-thai-haymarket-2",
         "https://www.timeout.com/sydney/restaurants/the-best-thai-restaurants-in-sydney"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d866763-Reviews-Chat_Thai_Haymarket-Sydney_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 1218,
+        "rank": "悉尼 4,786 家餐厅里排第 83",
+        "summary": "老字号口碑仍好，但 2025–26 年服务和性价比抱怨明显增多。",
+        "praise": [
+          "菜品地道、选择多",
+          "炒河粉、沙爹受赞",
+          "泰式甜品多",
+          "营业到深夜"
+        ],
+        "complaints": [
+          "2026 年多条抱怨服务乱、上菜慢",
+          "价格变贵、性价比下降",
+          "不订位要排队",
+          "上错菜或账单加费"
+        ]
+      }
     },
     {
       "id": "aalia",
@@ -1128,54 +1912,49 @@
         "https://www.broadsheet.com.au/sydney/food-and-drink/article/paul-farag-aalia-news",
         "https://www.aaliarestaurant.com/"
       ],
-      "confidence": "medium"
-    },
-    {
-      "id": "olympus",
-      "name": "Olympus Dining",
-      "nameZh": "",
-      "category": "middle-east",
-      "rank": 2,
-      "suburb": "Redfern",
-      "price": "$$$",
-      "badges": [
-        "GT 2026 百佳",
-        "SMH 曾获一顶帽"
-      ],
-      "tags": [
-        "希腊菜",
-        "大酒馆",
-        "Meze 分享"
-      ],
-      "intro": "The Apollo 团队在 Redfern Wunderlich Lane 开的现代希腊大酒馆，经典 meze 适合多人分享。",
-      "booking": "OpenTable 可订",
-      "meals": [
-        "lunch",
-        "dinner"
-      ],
-      "website": "https://olympusdining.com.au",
-      "accolades": [
-        "Gourmet Traveller 2026 Restaurant Guide: 100 best restaurants in Australia (NSW)",
-        "Host venue of the 2026 Gourmet Traveller Restaurant Awards (17 Aug 2026)",
-        "SMH Good Food Guide: 1 hat (per OpenTable listing badge; edition not confirmed)",
-        "Time Out Sydney: best Greek restaurants list"
-      ],
-      "sources": [
-        "https://gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
-        "https://www.aremedia.com.au/gourmet-traveller-celebrates-60-years-at-the-2026-restaurant-of-the-year-awards/",
-        "https://www.opentable.com.au/r/olympus-surry-hills",
-        "https://www.gourmettraveller.com.au/restaurant-reviews/olympus-dining-restaurant-review/",
-        "https://www.broadsheet.com.au/sydney/food-and-drink/article/tenjo-redfern-japanese-apollo-coming-soon",
-        "https://www.timeout.com/sydney/restaurants/the-best-greek-restaurants-in-sydney"
-      ],
-      "confidence": "high"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d23885299-Reviews-Aalia_Restaurant-Sydney_New_South_Wales.html",
+        "rating": 4.9,
+        "reviews": 806,
+        "rank": "悉尼 4,786 家餐厅里排第 8",
+        "summary": "评分极高、近况仍好评如潮，主要槽点是贵和酒价。",
+        "praise": [
+          "菜式有创意、风味足",
+          "服务专业、讲解细致",
+          "环境典雅",
+          "套餐分量足"
+        ],
+        "complaints": [
+          "价格高",
+          "酒水加价狠",
+          "个别肉菜上桌偏凉",
+          "牛排选择少"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "熟成鸭、鹌鹑和pita曾被夸爆，但换新菜单后差评明显变多，嫌贵不值两帽",
+        "praise": [
+          "干式熟成鸭皮脆肉嫩，多数人点名必点",
+          "现烤pita、炭烤章鱼被夸惊艳",
+          "鸡尾酒有特色，暖木色环境适合约会",
+          "服务讲解细致，节奏舒服"
+        ],
+        "complaints": [
+          "新主厨换菜单后招牌鹌鹑腿下架，差评增多",
+          "人均$100-150，不少人觉得不值两帽",
+          "上主菜慢，有人遇到羊肉和饼上桌常温",
+          "香料味偏冲，海胆紫苏饭和叶子饭被吐槽"
+        ]
+      }
     },
     {
       "id": "nour",
       "name": "Nour",
       "nameZh": "",
       "category": "middle-east",
-      "rank": 3,
+      "rank": 2,
       "suburb": "Surry Hills",
       "price": "$$$",
       "badges": [
@@ -1202,14 +1981,48 @@
         "https://www.theaureview.com/travel/review-nour-surry-hills-sydney/",
         "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d11686953-Reviews-Nour-Sydney_New_South_Wales.html"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d11686953-Reviews-Nour-Sydney_New_South_Wales.html",
+        "rating": 4.8,
+        "reviews": 1247,
+        "rank": "悉尼 4,785 家餐厅里排第 2",
+        "summary": "悉尼 TA 排名第二，菜、服务、氛围几乎全面好评。",
+        "praise": [
+          "菜式创意、摆盘漂亮",
+          "环境温馨有格调",
+          "服务周到",
+          "章鱼、羊肩等招牌菜"
+        ],
+        "complaints": [
+          "繁忙时有被催感",
+          "酒价偏高",
+          "店内偏吵"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "Surry Hills中东漂亮饭稳定好评，茄子、哈罗米、羊颈和鸭都被夸，个别菜偏咸偏酸",
+        "praise": [
+          "炭烤茄子酱、哈罗米芝士、炸花菜多次被点名",
+          "羊颈/羊肩、二次烹饪香料鸭和和牛很嫩",
+          "$139 set menu量大，适合3-4人share",
+          "环境精致适合约会，服务在线，生日有贺卡"
+        ],
+        "complaints": [
+          "生金枪鱼配芝麻叶被说踩雷别点",
+          "蘑菇偏咸/金针菇太酸，整体偏酸口",
+          "set menu甜点香料味太重",
+          "扇贝调料颗粒大，有人觉得一般"
+        ]
+      }
     },
     {
       "id": "nomad",
       "name": "Nomad",
       "nameZh": "",
       "category": "middle-east",
-      "rank": 4,
+      "rank": 3,
       "suburb": "Surry Hills",
       "price": "$$$",
       "badges": [
@@ -1235,14 +2048,33 @@
         "https://www.goodfood.com.au/eat-out/news/sydneys-hatted-nomad-is-opening-in-melbourne-20191129-h1k15j",
         "https://www.pedestrian.tv/bites/sydney-nomad-surry-hills-new-home/"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d4713192-Reviews-NOMAD-Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 963,
+        "rank": "悉尼 4,786 家餐厅里排第 43",
+        "summary": "整体好评居多，招牌菜受赞，但 2026 年也有贵且服务慢的差评。",
+        "praise": [
+          "炸西葫芦花招牌",
+          "扇贝、橄榄油冰淇淋",
+          "店员专业热情",
+          "仓库风装修有气氛"
+        ],
+        "complaints": [
+          "上菜慢、人手不足",
+          "性价比和酒价被吐槽",
+          "个别菜偏咸",
+          "松露早午餐令人失望"
+        ]
+      }
     },
     {
       "id": "olympic-meats",
       "name": "Olympic Meats",
       "nameZh": "",
       "category": "middle-east",
-      "rank": 5,
+      "rank": 4,
       "suburb": "Marrickville",
       "price": "$",
       "badges": [
@@ -1270,14 +2102,23 @@
         "https://neoskosmos.com/en/2025/09/04/life/food-drink/olympic-meats-teams-with-messina-for-two-day-greek-fest-in-marrickville/",
         "https://www.timeout.com/sydney/restaurants/time-out-social-club-x-olympic-meats"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": null,
+        "rating": 4.0,
+        "reviews": 1,
+        "rank": null,
+        "summary": "TA 上只有 1 条评论、4 分，几乎无参考价值。",
+        "praise": [],
+        "complaints": []
+      }
     },
     {
       "id": "al-yasmin",
       "name": "Al Yasmin",
       "nameZh": "",
       "category": "middle-east",
-      "rank": 6,
+      "rank": 5,
       "suburb": "Punchbowl",
       "price": "$",
       "badges": [
@@ -1303,14 +2144,23 @@
       "sources": [
         "https://www.timeout.com/sydney/food-and-drink-awards-2026-affordable-eat-nominees"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": null,
+        "rating": null,
+        "reviews": null,
+        "rank": null,
+        "summary": "TripAdvisor 上没有找到这家店。",
+        "praise": [],
+        "complaints": []
+      }
     },
     {
       "id": "babas-place",
       "name": "Baba’s Place",
       "nameZh": "",
       "category": "middle-east",
-      "rank": 7,
+      "rank": 6,
       "suburb": "Marrickville",
       "price": "$$$",
       "badges": [
@@ -1339,14 +2189,31 @@
         "https://www.timeout.com/sydney/restaurants/babas-place",
         "https://www.tripadvisor.com.au/Restaurant_Review-g1754380-d23740812-Reviews-Baba_s_Place-Marrickville_New_South_Wales.html"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1754380-d23740812-Reviews-Baba_s_Place-Marrickville_New_South_Wales.html",
+        "rating": 3.2,
+        "reviews": 29,
+        "rank": "Marrickville 175 家餐厅里排第 97",
+        "summary": "评分偏低，装修被夸，但价格贵、分量小是普遍抱怨。",
+        "praise": [
+          "仓库改造装修有个性",
+          "有人觉得菜有新意好吃"
+        ],
+        "complaints": [
+          "价格很贵、分量小",
+          "性价比极低",
+          "酒价高",
+          "服务不稳定"
+        ]
+      }
     },
     {
       "id": "sahtein",
       "name": "Sahtein",
       "nameZh": "",
       "category": "middle-east",
-      "rank": 8,
+      "rank": 7,
       "suburb": "The Rocks",
       "price": "$$$",
       "badges": [
@@ -1374,7 +2241,23 @@
         "https://restaurantguru.com/Sahtein-The-Rocks",
         "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d34117068-Reviews-Sahtein_The_Rocks-Sydney_New_South_Wales.html"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d34117068-Reviews-Sahtein_The_Rocks-Sydney_New_South_Wales.html",
+        "rating": 4.8,
+        "reviews": 4,
+        "rank": "悉尼 5,743 家餐厅里排第 1,617",
+        "summary": "新店仅 4 条评论且全好评，样本太少。",
+        "praise": [
+          "环境漂亮、座位舒适",
+          "素食选择多",
+          "腌辣椒酱、烤鸡串等好评"
+        ],
+        "complaints": [
+          "菜一次全上、桌子挤",
+          "价格不便宜"
+        ]
+      }
     },
     {
       "id": "gigis",
@@ -1410,7 +2293,24 @@
         "https://www.broadsheet.com.au/sydney/balmain/restaurants/gigis-balmain",
         "https://foodserviceaustralia.com.au/speaker/daniel-semrani"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g552083-d28045631-Reviews-Gigi_s_Balmain-Balmain_New_South_Wales.html",
+        "rating": 3.3,
+        "reviews": 8,
+        "rank": "Balmain 71 家餐厅里排第 59",
+        "summary": "评论仅 8 条且两极，披萨饼底受赞，服务和其他菜被吐槽。",
+        "praise": [
+          "饼底出色、口感轻",
+          "有人称吃过最好的披萨",
+          "橄榄油品质好"
+        ],
+        "complaints": [
+          "服务慢、曾等一小时",
+          "除披萨外其他菜一般",
+          "不如同街竞争者"
+        ]
+      }
     },
     {
       "id": "beppis",
@@ -1442,7 +2342,25 @@
         "https://www.gourmettraveller.com.au/dining-out/restaurant-awards-winners-2026/",
         "https://www.destinationnsw.com.au/newsroom/nsw-winners-announced-at-2026-gourmet-traveller-restaurant-awards"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d722322-Reviews-Beppi_s-Sydney_New_South_Wales.html",
+        "rating": 4.1,
+        "reviews": 373,
+        "rank": "悉尼 5,772 家餐厅里排第 235",
+        "summary": "老字号氛围和酒窖受赞，2026 年评价两极，主要嫌贵。",
+        "praise": [
+          "自制意面和酱汁出色",
+          "酒窖包间很有特色",
+          "服务老练、适合聚餐",
+          "老派意式氛围"
+        ],
+        "complaints": [
+          "价格高、性价比一般",
+          "菜品水准不稳定",
+          "晚间有时冷清"
+        ]
+      }
     },
     {
       "id": "cibaria",
@@ -1476,7 +2394,26 @@
         "https://www.russh.com/new-hatted-restaurants-sydney-2026/",
         "https://www.timeout.com/sydney/food-and-drink-awards-2026-best-restaurant-nominees"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g552103-d32862936-Reviews-Cibaria_Manly-Manly_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.0,
+        "reviews": 43,
+        "rank": "Manly 235 家餐厅里排第 55",
+        "summary": "服务和甜品口碑好，部分人嫌贵且出品不稳。",
+        "praise": [
+          "服务热情",
+          "提拉米苏和意式冰淇淋",
+          "黑胡椒奶酪意面出色",
+          "开放厨房吧台座"
+        ],
+        "complaints": [
+          "价格偏贵",
+          "牛排熟度等出品不稳",
+          "部分意面酱汁偏重",
+          "不够传统意式"
+        ]
+      }
     },
     {
       "id": "otto",
@@ -1510,7 +2447,26 @@
         "https://finkgroup.com.au/good-food-guide-awards-2024",
         "https://www.opentable.es/r/otto-ristorante-woolloomooloo"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d727531-Reviews-Otto_Ristorante-Sydney_New_South_Wales.html",
+        "rating": 4.0,
+        "reviews": 1019,
+        "rank": "悉尼 5,772 家餐厅里排第 96",
+        "summary": "海景和海鲜受赞，但性价比是最大槽点，2026 年评价两极。",
+        "praise": [
+          "码头临水景观",
+          "龙虾等海鲜出色",
+          "套餐摆盘精致",
+          "服务周到"
+        ],
+        "complaints": [
+          "价格高、性价比低",
+          "饮品另收费引不满",
+          "个别菜失准",
+          "室内桌距窄"
+        ]
+      }
     },
     {
       "id": "pellegrino",
@@ -1547,7 +2503,26 @@
         "https://www.broadsheet.com.au/sydney/guides/best-italian-restaurants",
         "https://www.opentable.com.au/restaurant/profile/165665"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g23197656-d25165009-Reviews-Pellegrino_2000-Surry_Hills_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 26,
+        "rank": "悉尼 4,779 家餐厅里排第 713",
+        "summary": "氛围和招牌意面受赞，样本不大，主要嫌贵。",
+        "praise": [
+          "虾仁意式饺惊艳",
+          "山羊肉酱意面",
+          "氛围热闹复古",
+          "服务贴心"
+        ],
+        "complaints": [
+          "性价比偏低",
+          "个别意面平淡",
+          "需提前订位",
+          "账单出过差错"
+        ]
+      }
     },
     {
       "id": "fratelli",
@@ -1581,7 +2556,25 @@
         "https://www.broadsheet.com.au/sydney/restaurants/fratelli-paradiso",
         "https://www.opentable.com.au/r/fratelli-paradiso-potts-point"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d755589-Reviews-Fratelli_Paradiso-Sydney_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 523,
+        "rank": "悉尼 4,783 家餐厅里排第 148",
+        "summary": "老牌热闹意餐馆，鱿鱼和意面口碑好，但被嫌贵且吵",
+        "praise": [
+          "鱿鱼和意面是招牌",
+          "蛤蜊吉他面、生火腿受好评",
+          "气氛热闹有活力"
+        ],
+        "complaints": [
+          "价格偏贵、份量小",
+          "酒单百元以下选择少",
+          "晚市不订位需排队",
+          "人多时嘈杂、服务忙乱"
+        ]
+      }
     },
     {
       "id": "al-taglio",
@@ -1612,7 +2605,25 @@
         "https://joinpearl.co/lists/2026-50-top-pizza-asia-pacific",
         "https://www.timeout.com/sydney/restaurants/al-taglio"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d9712258-Reviews-Al_Taglio-Sydney_New_South_Wales.html",
+        "rating": 4.4,
+        "reviews": 108,
+        "rank": "悉尼 4,760 家餐厅里排第 458",
+        "summary": "轻薄酥脆的罗马方块披萨受好评，但出品不太稳定",
+        "praise": [
+          "饼底轻薄酥脆",
+          "配料讲究、口味地道",
+          "服务友好热情",
+          "有无麸质饼底选择"
+        ],
+        "complaints": [
+          "偶有上菜偏凉、味道寡淡",
+          "酒水价格偏高",
+          "外卖份量小性价比低"
+        ]
+      }
     },
     {
       "id": "porcine",
@@ -1654,7 +2665,21 @@
         "https://www.broadsheet.com.au/sydney/guides/best-french-restaurants",
         "https://australiantraveller.com/nsw/sydney/best-french-restaurant-sydney"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d23470191-Reviews-Porcine-Sydney_New_South_Wales.html",
+        "rating": 5.0,
+        "reviews": 10,
+        "rank": "悉尼 4,785 家餐厅里排第 920",
+        "summary": "仅约10条评论但满分，猪肉菜和酒单最受赞",
+        "praise": [
+          "猪肉拼盘和香肠出色",
+          "酒单用心、杯卖选择多",
+          "法式小酒馆氛围地道",
+          "主菜分量大适合分享"
+        ],
+        "complaints": []
+      }
     },
     {
       "id": "armorica",
@@ -1691,7 +2716,23 @@
         "https://www.broadsheet.com.au/sydney/collections/best-french-restaurants",
         "https://www.goodfood.com.au/goodfood/sydney-eating-out/chocolate-treasure-chest-a-must-try-at-surry-hills-new-brasserie-armorica-20230511-p5d7lq.html"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g23197656-d26209842-Reviews-Armorica_Brasserie-Surry_Hills_New_South_Wales.html",
+        "rating": 3.8,
+        "reviews": 24,
+        "rank": "Surry Hills 109 家餐厅里排第 8",
+        "summary": "装潢和牛排口碑好，但服务和性价比常被诟病",
+        "praise": [
+          "牛排和生蚝品质高",
+          "酱汁出色",
+          "装潢华丽像在巴黎"
+        ],
+        "complaints": [
+          "服务不稳定、上酒慢",
+          "价格高、性价比低"
+        ]
+      }
     },
     {
       "id": "bar-copains",
@@ -1728,7 +2769,18 @@
         "https://www.broadsheet.com.au/sydney/surry-hills/bars/bar-copains",
         "https://theworlds50best.com/discovery/Establishments/Australia/Sydney/Bar-Copains.html"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g23197656-d33338754-Reviews-Copains-Surry_Hills_New_South_Wales.html",
+        "rating": 1.0,
+        "reviews": 1,
+        "rank": "Surry Hills 69 家餐厅里排第 67",
+        "summary": "仅一条差评，抱怨久等无人服务，参考价值很低",
+        "praise": [],
+        "complaints": [
+          "点酒等候很久、无人招呼"
+        ]
+      }
     },
     {
       "id": "hubert",
@@ -1765,7 +2817,24 @@
         "https://www.gourmettraveller.com.au/restaurant-reviews/restaurant-hubert-6971/",
         "https://www.timeout.com/sydney/restaurants/hubert"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d10227181-Reviews-Restaurant_Hubert-Sydney_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 549,
+        "rank": "悉尼 5,772 家餐厅里排第 58",
+        "summary": "复古法式地下餐厅氛围出众，价格和订位是槽点",
+        "praise": [
+          "复古巴黎氛围加现场爵士",
+          "鱼子酱、肝酱等菜受赞",
+          "服务专业"
+        ],
+        "complaints": [
+          "价格偏高",
+          "电话难打、订位困难",
+          "高峰期上菜慢"
+        ]
+      }
     },
     {
       "id": "loulou",
@@ -1802,7 +2871,25 @@
         "https://australiantraveller.com/nsw/sydney/best-french-restaurant-sydney",
         "https://www.broadsheet.com.au/sydney/guides/best-french-restaurants"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g552105-d23839134-Reviews-Loulou_Bistro-Milsons_Point_North_Sydney_Greater_Sydney_New_South_Wales.html",
+        "rating": 3.3,
+        "reviews": 41,
+        "rank": "Milsons Point 22 家餐厅里排第 9",
+        "summary": "评分偏低，菜品尚可但性价比和服务被多次批评",
+        "praise": [
+          "鳟鱼和鞑靼牛肉受好评",
+          "卡座舒适、法式小馆氛围",
+          "部分服务友好"
+        ],
+        "complaints": [
+          "酒水服务不规范、偏贵",
+          "面包配菜另收费",
+          "宴会套餐份量小",
+          "员工不够灵活"
+        ]
+      }
     },
     {
       "id": "sixpenny",
@@ -1836,7 +2923,25 @@
         "https://www.agfg.com.au/awards/sydney",
         "https://www.sydneytourism.org/fine-dining-restaurants-sydney/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g3741475-d3318554-Reviews-Sixpenny-Stanmore_New_South_Wales.html",
+        "rating": 4.6,
+        "reviews": 289,
+        "rank": "Stanmore 23 家餐厅里排第 1",
+        "summary": "斯坦莫尔第一名的品鉴菜单餐厅，服务口碑极佳",
+        "praise": [
+          "服务极其周到",
+          "厨师亲自讲解每道菜",
+          "面包和配酒出色"
+        ],
+        "complaints": [
+          "价格高、只有套餐",
+          "环境硬朗偏吵",
+          "份量和酒量偏小",
+          "刷卡收附加费"
+        ]
+      }
     },
     {
       "id": "aria",
@@ -1872,7 +2977,24 @@
         "https://www.ariasydney.com.au/tasting-menu",
         "https://www.sydneytourism.org/fine-dining-restaurants-sydney/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d757695-Reviews-Aria_Restaurant_Sydney-Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 3319,
+        "rank": "悉尼 4,785 家餐厅里排第 26",
+        "summary": "海港景观顶级的高端餐厅，适合纪念日，价格高",
+        "praise": [
+          "歌剧院和海港景观绝佳",
+          "品鉴菜单摆盘精致",
+          "侍酒师专业周到"
+        ],
+        "complaints": [
+          "价格昂贵",
+          "部分菜偏咸",
+          "偶有上菜间隔长"
+        ]
+      }
     },
     {
       "id": "bennelong",
@@ -1908,7 +3030,25 @@
         "https://www.opentable.com.au/restaurant/profile/20846",
         "https://www.agfg.com.au/awards/sydney"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d8394963-Reviews-Bennelong-Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 1585,
+        "rank": "悉尼 4,786 家餐厅里排第 47",
+        "summary": "歌剧院里的地标餐厅，环境服务好，但份量小价格高",
+        "praise": [
+          "歌剧院内用餐、景观震撼",
+          "服务精致周到",
+          "帆形巴甫洛娃甜点"
+        ],
+        "complaints": [
+          "份量偏小",
+          "价格高、性价比一般",
+          "挑高空间偏吵",
+          "演出延误影响订位"
+        ]
+      }
     },
     {
       "id": "lumi",
@@ -1944,7 +3084,25 @@
         "https://www.ordermate.com.au/blog/hats-off-to-these-ordermate-venues-agfg-chef-hat-winners-2026",
         "https://www.sydneytourism.org/fine-dining-restaurants-sydney/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d7112857-Reviews-LuMi_Bar_Dining-Sydney_New_South_Wales.html",
+        "rating": 4.6,
+        "reviews": 475,
+        "rank": "悉尼 4,785 家餐厅里排第 45",
+        "summary": "评分很高的日意融合品鉴餐厅，节奏慢和嘈杂是槽点",
+        "praise": [
+          "日意融合品鉴菜单有创意",
+          "配酒出色",
+          "码头边景观好",
+          "每道菜讲解清楚"
+        ],
+        "complaints": [
+          "上菜节奏慢",
+          "餐厅嘈杂难交谈",
+          "部分人觉得不值价"
+        ]
+      }
     },
     {
       "id": "ester",
@@ -1979,7 +3137,25 @@
         "https://www.timeout.com/sydney/restaurants/ester-restaurant-and-bar",
         "https://www.opentable.ca/r/ester-chippendale?lang=fr-ca"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d5452878-Reviews-Ester_Restaurant-Sydney_New_South_Wales.html",
+        "rating": 4.4,
+        "reviews": 408,
+        "rank": "悉尼 5,772 家餐厅里排第 78",
+        "summary": "柴火料理口碑好、服务佳，但有人嫌热嫌贵",
+        "praise": [
+          "服务热情周到",
+          "柴火料理和套餐出色",
+          "自然酒单有特色"
+        ],
+        "complaints": [
+          "用餐区偏热",
+          "套餐选择受限",
+          "价格偏高",
+          "部分人觉得名不副实"
+        ]
+      }
     },
     {
       "id": "berowra",
@@ -2012,7 +3188,24 @@
         "https://www.timeout.com/sydney/restaurants/berowra-waters-inn",
         "https://www.seaplanes.com.au/packages/berowra-waters-inn"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g3451450-d722330-Reviews-Berowra_Waters_Inn-Berowra_Waters_Hornsby_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.4,
+        "reviews": 347,
+        "rank": "Berowra Waters 12 家餐厅里排第 2",
+        "summary": "坐船才能到的河畔名店，景色一流，夏天闷热有蚊虫",
+        "praise": [
+          "乘船抵达，河景绝美",
+          "品鉴菜单与配酒出色",
+          "历史建筑氛围独特"
+        ],
+        "complaints": [
+          "没有空调、夏天闷热",
+          "蚊虫多",
+          "价格高、份量偏小"
+        ]
+      }
     },
     {
       "id": "seans",
@@ -2047,7 +3240,24 @@
         "https://www.nationalgeographic.com/travel/article/where-to-eat-in-sydney-according-to-josh-niland",
         "https://www.sydneytourism.org/fine-dining-restaurants-sydney/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g947961-d728230-Reviews-Sean_s_Panaroma-Bondi_Greater_Sydney_New_South_Wales.html",
+        "rating": 3.9,
+        "reviews": 280,
+        "rank": "Bondi 186 家餐厅里排第 24",
+        "summary": "邦迪海景小馆，菜品受赞，但涨价和上菜慢被吐槽",
+        "praise": [
+          "北邦迪海景",
+          "菜品新鲜有创意",
+          "固定三道菜价格尚可"
+        ],
+        "complaints": [
+          "价格逐年上涨",
+          "上菜慢、两小时限时",
+          "有人觉得水准下降"
+        ]
+      }
     },
     {
       "id": "bathers",
@@ -2081,7 +3291,24 @@
         "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
         "https://brguide.com/restaurants/bathers-pavilion"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g6153988-d755281-Reviews-Bathers_Pavilion-Balmoral_Mosman_Greater_Sydney_New_South_Wales.html",
+        "rating": 3.9,
+        "reviews": 1055,
+        "rank": "Balmoral 6 家餐厅里排第 1",
+        "summary": "海滩边老牌餐厅，景色最佳，性价比和服务一般",
+        "praise": [
+          "正对巴尔莫勒尔海滩",
+          "小馆午餐出品稳定",
+          "环境优美适合休闲"
+        ],
+        "complaints": [
+          "性价比偏低",
+          "小馆嘈杂、上菜慢",
+          "份量偏小"
+        ]
+      }
     },
     {
       "id": "saint-peter",
@@ -2118,7 +3345,40 @@
         "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
         "https://www.lightspeedhq.com/au/blog/good-food-awards-2025/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g33012944-d10810443-Reviews-Saint_Peter-Paddington_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 303,
+        "rank": "Paddington 15 家餐厅里排第 1",
+        "summary": "以整鱼料理闻名的海鲜名店，帕丁顿排名第一但很贵",
+        "praise": [
+          "鱼料理极具创意",
+          "海鲜品质无可挑剔",
+          "服务热情"
+        ],
+        "complaints": [
+          "价格很高",
+          "出品和服务不够稳定",
+          "环境吵、难交谈"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "全鱼概念和蛋奶挞被夸，但评论区吐槽齁咸、有腥味、贵且越做越差的很多",
+        "praise": [
+          "全鱼料理概念新颖、细节用心",
+          "Custard tart 几乎人人夸",
+          "鱿鱼面、生蚝口碑不错",
+          "服务温馨、上菜节奏好"
+        ],
+        "complaints": [
+          "调味齁咸、部分鱼有腥味",
+          "套餐约$295偏贵，性价比低",
+          "马鲛鱼等分量被指缩水",
+          "有人吃后肠胃不适、质量不稳定"
+        ]
+      }
     },
     {
       "id": "margaret",
@@ -2157,7 +3417,41 @@
         "https://www.gourmettraveller.com.au/dining-out/restaurant-guide/best-restaurants-australia-21192/",
         "https://www.opentable.co.uk/r/margaret-double-bay"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g15607643-d23713953-Reviews-Margaret-Double_Bay_Woollahra_New_South_Wales.html",
+        "rating": 3.9,
+        "reviews": 160,
+        "rank": "Double Bay 排第 1",
+        "summary": "Neil Perry 的海鲜烧烤馆，菜和服务受赞但嫌贵",
+        "praise": [
+          "海鲜和烤物出色",
+          "服务专业周到",
+          "杯卖葡萄酒和鸡尾酒好"
+        ],
+        "complaints": [
+          "价格过高",
+          "份量小",
+          "满座时很吵",
+          "用餐时限紧、被催"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "海鲜（星斑、虾）比牛排更受夸，世界第二牛排名气大但有人觉得低于预期",
+        "praise": [
+          "炭烤星斑配XO酱被称全场MVP",
+          "和牛舌、大虾、生鲜海鲜好吃",
+          "西冷外焦里嫩，越吃越香",
+          "甜品舒芙蕾等不踩雷"
+        ],
+        "complaints": [
+          "牛排低于预期，有人吃到煎糊发苦",
+          "名气大于实力，有人称肉纤维感重、不如从前",
+          "周末需提前约三周，很难订",
+          "和牛塔塔偏咸"
+        ]
+      }
     },
     {
       "id": "pilu",
@@ -2192,7 +3486,40 @@
         "https://www.gourmettraveller.com.au/restaurant-reviews/pilu-at-freshwater-6950/",
         "https://manlyobserver.com.au/pilu-at-freshwater-celebrates-20-years/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g3765953-d727720-Reviews-Pilu_At_Freshwater-Freshwater_Warringah_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 780,
+        "rank": "Freshwater 27 家餐厅里排第 1",
+        "summary": "海滩上的撒丁岛菜，景色加分，菜品评价有起伏",
+        "praise": [
+          "海滩边景观一流",
+          "服务周到",
+          "品鉴菜单和配酒好"
+        ],
+        "complaints": [
+          "主菜偶有过火偏干",
+          "价格高、甜点贵",
+          "有人觉得名过其实"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "海景、建筑和服务满分，适合约会；菜品中规中矩，First Table半价时最划算",
+        "praise": [
+          "正对Freshwater海景，拍照出片",
+          "服务好，会安排海景位",
+          "龙虾意面、撒丁面包、提拉米苏受夸",
+          "First Table半价5道菜约$65超值"
+        ],
+        "complaints": [
+          "主菜普遍平淡，乳猪偏咸",
+          "食物缺乏记忆点，景色才是主角",
+          "部分菜调味偏咸",
+          "原价套餐约$170pp不便宜"
+        ]
+      }
     },
     {
       "id": "catalina",
@@ -2220,7 +3547,41 @@
         "https://www.opentable.com.au/r/catalina-rose-bay",
         "https://www.gourmettraveller.com.au/restaurant-reviews/catalina-6736/"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g552113-d949331-Reviews-Catalina_Restaurant-Rose_Bay_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.4,
+        "reviews": 1299,
+        "rank": "Rose Bay 52 家餐厅里排第 1",
+        "summary": "玫瑰湾海港景观名店，海鲜好但附加费用多",
+        "praise": [
+          "海港景观绝佳",
+          "海鲜如牙鱼出色",
+          "酒单丰富",
+          "服务周到"
+        ],
+        "complaints": [
+          "套餐另加补差价、配菜收费",
+          "酒水贵、加收服务费",
+          "大团客人吵闹"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "Rose Bay海景加水上飞机氛围无敌，近年菜也变好吃，$160三道菜分量足，适合纪念日",
+        "praise": [
+          "海景和日落氛围一流，适合生日纪念日",
+          "近年菜品明显进步，刺身、乳猪、鲷鱼受夸",
+          "$160三道菜分量足，有人称性价比高",
+          "本地常客多，有人称超越Aria"
+        ],
+        "complaints": [
+          "人均约$160起不便宜",
+          "有人觉得只是好吃的西餐，不算惊艳",
+          "环境偏吵，不适合带小孩",
+          "白天座位有点晒，需提前订位"
+        ]
+      }
     },
     {
       "id": "hamsi",
@@ -2255,7 +3616,31 @@
         "https://www.sydneyfishmarket.com.au/retailer/hamsi-taverna/",
         "https://www.timeout.com/sydney/restaurants/new-restaurants-cafes-and-bars-in-sydney"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d34327314-Reviews-Hamsi_Taverna-Sydney_New_South_Wales.html",
+        "rating": 4.7,
+        "reviews": 3,
+        "rank": "悉尼 4,758 家餐厅里排第 2,057",
+        "summary": "鱼市场新店，仅3条好评，样本太少",
+        "praise": [
+          "夜晚水景漂亮",
+          "服务友好专业",
+          "土耳其菜好吃"
+        ],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "新鱼市场里的土耳其海鲜馆，笔记很少，仅有的两篇都夸炭烤章鱼和旗鱼排",
+        "praise": [
+          "炭烤小章鱼嫩、有柴火香",
+          "干式熟成鳕鱼/旗鱼排外脆像牛排",
+          "现烤面包配hummus停不下来",
+          "水边夜景氛围好，适合微醺"
+        ],
+        "complaints": []
+      }
     },
     {
       "id": "fich",
@@ -2288,7 +3673,38 @@
         "https://www.broadsheet.com.au/sydney/restaurants/fich-petersham",
         "https://www.opentable.co.uk/r/fich-at-petersham"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g552111-d14790542-Reviews-Fich_at_Petersham-Petersham_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 41,
+        "rank": "Petersham 49 家餐厅里排第 3",
+        "summary": "社区海鲜小馆，炸鱼薯条和小食受赞，嫌贵和出餐慢",
+        "praise": [
+          "炸鱼薯条和海鲜新鲜",
+          "鱼爆米花、土豆饼受欢迎",
+          "服务周到、照顾麸质过敏",
+          "可配隔壁葡式蛋挞"
+        ],
+        "complaints": [
+          "价格偏贵",
+          "高峰期出餐慢",
+          "部分菜做过头"
+        ]
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "笔记很少且多为2023–24年，提拉米苏和鱼爆米花被夸，主菜偏咸",
+        "praise": [
+          "提拉米苏大份又顺滑，被称隐藏王牌",
+          "Fish popcorn 配辣酱一粒接一粒",
+          "鱼很新鲜不腥，性价比不错"
+        ],
+        "complaints": [
+          "主菜中规中矩，多道偏咸",
+          "炭烤味对部分人太重"
+        ]
+      }
     },
     {
       "id": "fish-rocks",
@@ -2317,7 +3733,39 @@
         "https://www.tripadvisor.com/Restaurants-g255060-zfd10901-Sydney_New_South_Wales-Fish_and_Chips.html",
         "https://uk.trip.com/travel-guide/foods/Millers%20Point-2126570-restaurant/Fish%20at%20The%20Rocks-489834"
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d757102-Reviews-Fish_At_The_Rocks-Sydney_New_South_Wales.html",
+        "rating": 4.5,
+        "reviews": 1697,
+        "rank": "悉尼 4,776 家餐厅里排第 12",
+        "summary": "岩石区高分海鲜馆，新鲜实在，店小需订位",
+        "praise": [
+          "海鲜新鲜、现点现做",
+          "章鱼、生蚝、扇贝出色",
+          "服务友好懂行"
+        ],
+        "complaints": [
+          "价格略高",
+          "店面小需提前订位",
+          "忙时服务偶有疏漏"
+        ]
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "笔记少、互动低，但几篇都说是认真做菜的老派海鲜馆，适合walk in",
+        "praise": [
+          "老派复古、本地人多，不是网红店",
+          "烤鱼酿虾滑、前菜拼盘有心思",
+          "鳕鱼和西班牙海鲜汤好吃",
+          "可walk in，靠近海港大桥"
+        ],
+        "complaints": [
+          "扇贝略过火、个别搭配太重",
+          "性价比一般（3星）",
+          "博主本人也说只是普通水平"
+        ]
+      }
     },
     {
       "id": "doyles",
@@ -2345,7 +3793,39 @@
         "https://www.opentable.com.au/r/doyles-on-the-beach-watsons-bay",
         "https://www.opentable.com/lists/best-seafood-restaurants-sydney"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g552124-d756606-Reviews-Doyles_on_the_Beach_Restaurant-Watsons_Bay_Woollahra_New_South_Wales.html",
+        "rating": 3.7,
+        "reviews": 3379,
+        "rank": "Watsons Bay 12 家餐厅里排第 2",
+        "summary": "沃森斯湾老字号海鲜馆，景色好但贵且服务不稳",
+        "praise": [
+          "海湾景色是最大卖点",
+          "海鲜拼盘口碑好",
+          "坐渡轮来很方便"
+        ],
+        "complaints": [
+          "价格过高、性价比低",
+          "忙时等位久、服务不稳",
+          "室内闷热无空调"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "百年老店海景一流、二楼窗景很出片，但评论普遍说菜一般又不便宜",
+        "praise": [
+          "Watsons Bay海景和二楼露台无敌",
+          "百年历史感，适合徒步后顺路吃",
+          "生蚝拼盘、海鲜锅、炸鱼薯条中规中矩",
+          "可坐F9渡轮来回顺看歌剧院"
+        ],
+        "complaints": [
+          "食物普遍被评一般，甚至有人说难吃",
+          "人均约$90还吃不饱，偏贵",
+          "附近停车很难找"
+        ]
+      }
     },
     {
       "id": "firedoor",
@@ -2383,7 +3863,40 @@
         "https://www.sydneytourism.org/fine-dining-restaurants-sydney/",
         "https://nineforbrands.com.au/?p=28189"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g255060-d8285873-Reviews-Firedoor-Sydney_New_South_Wales.html",
+        "rating": 3.9,
+        "reviews": 399,
+        "rank": "悉尼 4,762 家餐厅里排第 272",
+        "summary": "柴火料理名店，牛排受赞，但性价比评价偏低",
+        "praise": [
+          "全柴火烹饪有特色",
+          "干式熟成牛排出色",
+          "服务周到、酒单好"
+        ],
+        "complaints": [
+          "份量小、价格高",
+          "部分肉和鱼令人失望",
+          "曾有刷卡附加费"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "柴火熟成牛排有人惊艳有人翻车，前菜被吐槽是配货，且要提前三个月订",
+        "praise": [
+          "200天以上干式熟成牛排香气独特",
+          "全柴火烹饪有仪式感，像看表演",
+          "面包配发酵黄油蜂蜜、金枪鱼好吃",
+          "适合慢慢吃三小时的约会"
+        ],
+        "complaints": [
+          "前菜难吃像配货，套餐约$235还要加$65升级牛排",
+          "牛排熟度不稳，有人退回重烤",
+          "名不副其实、摆盘丑、买单后赶人",
+          "需提前约三个月，一顿近三小时"
+        ]
+      }
     },
     {
       "id": "the-grill",
@@ -2418,7 +3931,32 @@
         "https://www.timeout.com/australia/news/the-30-best-steak-restaurants-in-australia-have-been-named-heres-the-full-list-022426",
         "https://esquire.com.au/the-grill-summer-menu/"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d32806067-Reviews-The_Grill_At_The_International-Sydney_New_South_Wales.html",
+        "rating": null,
+        "reviews": 0,
+        "rank": null,
+        "summary": "TripAdvisor 有页面但暂无评论，无法参考",
+        "praise": [],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "干式熟成西冷和薯条被夸，有人说比Margaret好；但前菜平平、套餐甜品寒酸",
+        "praise": [
+          "干式熟成西冷肉香浓、火候准",
+          "炸虾三明治、Bay bug意面、薯条惊艳",
+          "服务友好上菜快，环境安静",
+          "被称可当Firedoor平替"
+        ],
+        "complaints": [
+          "前菜乏善可陈，像普通酒店扒房",
+          "套餐甜品分量小，生日安排没兑现",
+          "人均$180–200，龙虾按重量约$340",
+          "土豆泥偏咸，鸭肉缺味"
+        ]
+      }
     },
     {
       "id": "eleven-barrack",
@@ -2454,7 +3992,38 @@
         "https://www.gourmettraveller.com.au/restaurant-reviews/eleven-barrack-sydney/",
         "https://www.timeout.com/australia/news/the-30-best-steak-restaurants-in-australia-have-been-named-heres-the-full-list-022426"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d33421956-Reviews-Eleven_Barrack-Sydney_New_South_Wales.html",
+        "rating": 4.0,
+        "reviews": 3,
+        "rank": null,
+        "summary": "仅3条评论，服务和环境好评，菜品褒贬不一",
+        "praise": [
+          "服务极其出色",
+          "老银行大楼氛围好",
+          "鱼派等菜受赞"
+        ],
+        "complaints": [
+          "价格偏高",
+          "有人觉得菜不值价"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "Bentley集团二帽，牛排、烤土豆和金枪鱼松饼几乎零差评，适合约会",
+        "praise": [
+          "木火烤牛排配红酒汁香浓",
+          "烤土豆/炸土豆配菜被反复夸",
+          "蓝鳍金枪鱼松饼、鸭肝泡芙开胃",
+          "旧银行改建、有现场钢琴，适合约会"
+        ],
+        "complaints": [
+          "人均约$150–200",
+          "虾饺意面中规中矩",
+          "金枪鱼部位、松饼底有人不爱"
+        ]
+      }
     },
     {
       "id": "porteno",
@@ -2488,7 +4057,40 @@
         "https://www.gourmettraveller.com.au/restaurant-reviews/porteno-sydney-restaurant-review-4216/",
         "https://www.opentable.co.uk/r/porteno-surry-hills"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d1958579-Reviews-Porteno-Sydney_New_South_Wales.html",
+        "rating": 4.0,
+        "reviews": 556,
+        "rank": "悉尼 4,783 家餐厅里排第 202",
+        "summary": "阿根廷炭烤老店，烤肉和酒受赞，吵且不便宜",
+        "praise": [
+          "阿根廷烤肉出色",
+          "酒单好",
+          "员工热情"
+        ],
+        "complaints": [
+          "嘈杂拥挤",
+          "性价比一般",
+          "小桌不接受订位"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "两极分化：T骨/肋眼和牛舌被夸爆，但不少人觉得营销过度、配菜平平、满屋中国客",
+        "praise": [
+          "T骨、熟成带骨肋眼火候好，只撒盐就好吃",
+          "牛舌软嫩清爽，开场惊艳",
+          "开放式柴火烤间有氛围，分量大",
+          "工作日无附加费，服务热情"
+        ],
+        "complaints": [
+          "名气靠营销，有人觉得极其一般",
+          "牛骨髓过油，甜品、烤鸡等配菜平平或偏咸",
+          "客人一半以上是中国人，有人称座位按族裔分区",
+          "人均约$130–150，二人位常排吧台"
+        ]
+      }
     },
     {
       "id": "rockpool",
@@ -2520,7 +4122,41 @@
         "https://www.timeout.com/sydney/restaurants/rockpool",
         "https://restaurantsforkings.com/blog/best-steakhouse-restaurants-sydney-2026"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d1534093-Reviews-Rockpool_Bar_Grill_Sydney-Sydney_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 1809,
+        "rank": "悉尼 4,785 家餐厅里排第 84",
+        "summary": "经典高端牛排馆，牛排和酒单强，价格高服务不稳",
+        "praise": [
+          "和牛与熟成牛排出色",
+          "酒单丰富",
+          "装饰艺术风老银行大厅",
+          "吧台和牛汉堡好吃"
+        ],
+        "complaints": [
+          "服务不稳定、偶显冷淡",
+          "酒和牛排价格高",
+          "部分菜品平平"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "老牌牛排馆出品稳定，XO扇贝、烤虾、和牛被反复夸，常被评为悉尼最好牛排之一",
+        "praise": [
+          "多次去熟度都稳定，服务专业",
+          "XO酱烤扇贝、黑虎虾必点",
+          "和牛牛排、蘑菇和mac n cheese好吃",
+          "多人称与Woodcut并列悉尼最好牛排馆"
+        ],
+        "complaints": [
+          "人均约$200，和牛单块约$250",
+          "周日、6人以上和刷卡都有附加费",
+          "牛骨髓偏咸烟熏重，焦糖布丁太甜",
+          "有人不喜欢装修风格"
+        ]
+      }
     },
     {
       "id": "gidley",
@@ -2556,7 +4192,41 @@
         "https://www.timeout.com/sydney/restaurants/the-gidley",
         "https://qantas.com/travelinsider/en/explore/australia/new-south-wales/sydney/the-gidley-restaurant-review.html"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d19543803-Reviews-The_Gidley-Sydney_New_South_Wales.html",
+        "rating": 4.3,
+        "reviews": 46,
+        "rank": "悉尼 4,785 家餐厅里排第 535",
+        "summary": "地下室高端牛排馆，牛排汉堡受赞，价格高",
+        "praise": [
+          "肋眼盖肉牛排出色",
+          "汉堡口碑好",
+          "服务专业",
+          "马天尼等鸡尾酒好"
+        ],
+        "complaints": [
+          "酒和按重量计价的肉贵",
+          "禁用手机规定执行严",
+          "入口难找、室内很暗"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "收手机的地下牛排馆，汉堡和餐前面包被夸爆、性价比高，但有人嫌偏咸、牛排难切",
+        "praise": [
+          "招牌芝士汉堡（加蛋）约$28超良心",
+          "餐前复烤面包/椒盐卷惊喜",
+          "T骨、牛排火候稳，温盘等细节到位",
+          "Bar区可walk in、鸡尾酒好喝"
+        ],
+        "complaints": [
+          "整体偏咸，汉堡有人觉得干",
+          "带骨肉眼偏硬难切，缺乏惊喜",
+          "正常时段需提前1–2个月订，不接待小孩",
+          "有人遇到上菜慢、最后催走"
+        ]
+      }
     },
     {
       "id": "20-chapel",
@@ -2589,7 +4259,34 @@
         "https://joinpearl.co/restaurants/sydney/20-chapel",
         "https://www.broadsheet.com.au/sydney/marrickville/restaurants/20-chapel"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1754380-d33347617-Reviews-20_Chapel-Marrickville_New_South_Wales.html",
+        "rating": 5.0,
+        "reviews": 1,
+        "rank": "Marrickville 175 家餐厅里排第 94",
+        "summary": "仅一条五星评论，样本太少",
+        "praise": [
+          "周六无限畅饮午餐超值",
+          "服务和菜品好"
+        ],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "Rockpool前主厨开的工厂区牛排馆，牛油炸薯角和烧椒章鱼被夸，牛排烟熏香浓、亚洲风味",
+        "praise": [
+          "牛油三炸薯角配辣奶油酱几乎每桌必点",
+          "烧椒/烟熏小章鱼惊艳",
+          "和牛牛排炭烤香浓、配烧椒韩式酱解腻",
+          "温盘等细节到位，set menu约$90较实惠"
+        ],
+        "complaints": [
+          "裙边牛排单吃偏咸、烟熏味重",
+          "鸭子孜然酸口有人吃不惯",
+          "工作日晚上也难订到好时段"
+        ]
+      }
     },
     {
       "id": "magma",
@@ -2620,7 +4317,33 @@
         "https://www.broadsheet.com.au/national/food-and-drink/article/australian-restaurants-worlds-101-best-steak-restaurants-list-2026",
         "https://concreteplayground.com/sydney/restaurants/magma-by-dany-karam/amp"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": null,
+        "rating": null,
+        "reviews": null,
+        "rank": null,
+        "summary": "TripAdvisor 无独立页面，只有零星提及",
+        "praise": [
+          "有人称牛排是吃过最好的之一"
+        ],
+        "complaints": [
+          "桌上铺皱牛皮纸显廉价"
+        ]
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "西悉尼新开名厨牛排馆，笔记少且偏推广口吻，夸和牛三拼和炭火氛围",
+        "praise": [
+          "Wagyu Trio三部位600g和牛性价比高",
+          "主厨原Star赌场扒房大厨，炭火/树皮烧烤风味独特",
+          "暗黑工业风氛围，适合约会",
+          "生蚝、炸鸡和鸡尾酒受夸"
+        ],
+        "complaints": [
+          "位于Canley Vale度假村赌场旁，离市区远"
+        ]
+      }
     },
     {
       "id": "lune",
@@ -2652,7 +4375,39 @@
         "https://manofmany.com/culture/food/lune-croissanterie-sydney-cbd",
         "https://concreteplayground.com/sydney/food-drink/lune-sydney-martin-place"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": null,
+        "rating": null,
+        "reviews": null,
+        "rank": null,
+        "summary": "罗斯伯里店无独立页面，提及评论赞可颂但嫌排队",
+        "praise": [
+          "可颂酥脆层次分明",
+          "杏仁可颂、火腿芝士好吃"
+        ],
+        "complaints": [
+          "排队久",
+          "附近难停车",
+          "价格偏贵、只收刷卡"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "多数人说原味和火腿芝士可颂名副其实，工作日基本不排队；也有人觉得名气大于味道",
+        "praise": [
+          "原味可颂外酥里软、黄油香浓",
+          "火腿芝士咸口款被多次点名惊艳",
+          "工作日不排队，Rosebery店可网上预订自取",
+          "月度限定（如抹茶草莓）受好评"
+        ],
+        "complaints": [
+          "有人觉得网红大于口感，吃几口就腻",
+          "杏仁可颂偏甜",
+          "下午品类少、限定易售罄",
+          "单价约$7–16不便宜"
+        ]
+      }
     },
     {
       "id": "messina",
@@ -2685,7 +4440,41 @@
         "https://www.pedestrian.tv/tag/gelato-messina/",
         "https://www.theurbanlist.com/sydney/a-list/where-to-find-the-best-gelato-in-sydney"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d2415590-Reviews-Gelato_Messina_Darlinghurst-Sydney_New_South_Wales.html",
+        "rating": 4.6,
+        "reviews": 2390,
+        "rank": "悉尼 4,719 家餐厅里排第 18",
+        "summary": "达令赫斯特总店高分，口味多有创意，周末排队长",
+        "praise": [
+          "口味多且有创意",
+          "可免费试吃",
+          "咸焦糖、牛奶焦糖受赞",
+          "排队快、员工高效"
+        ],
+        "complaints": [
+          "周末排长队",
+          "有人觉得不如意大利绵密",
+          "价格不算便宜"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "悉尼gelato标杆，夏果脆和开心果人人推，也有人现在更爱Cow and the Moon",
+        "praise": [
+          "Macadamia Crunch、开心果系列最受推荐",
+          "每月限定口味多，Mr. Messina被称王炸",
+          "5月Messina Monday两球约$3.8超值",
+          "有人称根本没有难吃的口味"
+        ],
+        "complaints": [
+          "部分口味偏甜，柠檬雪芭很酸",
+          "热门口味和限定常卖光",
+          "促销日要排20–30分钟",
+          "提拉米苏、港奶等口味评价一般"
+        ]
+      }
     },
     {
       "id": "flour-stone",
@@ -2721,7 +4510,40 @@
         "https://bakingbusiness.com.au/reworking-the-classics/",
         "https://www.timeout.com/sydney/restaurants/flour-and-stone"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d3374655-Reviews-Flour_and_Stone-Sydney_New_South_Wales.html",
+        "rating": 4.4,
+        "reviews": 130,
+        "rank": "悉尼 4,696 家餐厅里排第 285",
+        "summary": "以拉明顿蛋糕闻名的小烘焙店，座位少",
+        "praise": [
+          "拉明顿蛋糕是招牌",
+          "杏仁可颂出色",
+          "咖啡好、员工友好"
+        ],
+        "complaints": [
+          "店面小、座位少",
+          "有人觉得水准下滑",
+          "外带蛋糕偶有失望"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "老牌社区甜品店，胡萝卜蛋糕和lamington被称最好吃，甜但不齁；店小咖啡一般",
+        "praise": [
+          "胡萝卜蛋糕被多人称吃过最好吃",
+          "Panna cotta lamington湿润、莓果夹心好吃",
+          "甜而不齁，适合当地经典甜品体验",
+          "社区小店氛围舒服"
+        ],
+        "complaints": [
+          "店小座位局促",
+          "咖啡不太好喝",
+          "部分蛋糕偏甜，晚去品类少",
+          "盲品蛋糕活动中未进前三"
+        ]
+      }
     },
     {
       "id": "bills",
@@ -2756,7 +4578,40 @@
         "https://www.broadsheet.com.au/sydney/food-and-drink/article/bills-surry-hills-move-23-years",
         "https://www.timeout.com/sydney/news/bills-darlinghurst-is-closing-indefinitely-092120"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d1183385-Reviews-Bills_in_Surry_Hills-Sydney_New_South_Wales.html",
+        "rating": 3.9,
+        "reviews": 764,
+        "rank": "悉尼 4,786 家餐厅里排第 128",
+        "summary": "瑞可塔松饼名店，早午餐受欢迎但嫌贵、上菜慢",
+        "praise": [
+          "瑞可塔松饼是招牌",
+          "炒蛋好吃",
+          "氛围热闹"
+        ],
+        "complaints": [
+          "价格偏高",
+          "上菜慢",
+          "部分菜份量与价不符"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "招牌ricotta松饼几乎人人夸，炒蛋和sourdough也受好评；其他菜偏普通，周末排队",
+        "praise": [
+          "Ricotta hotcakes松软不甜，被称最好吃松饼",
+          "Bondi店sourdough配橄榄油、早餐拼盘丰盛",
+          "经典炒蛋滑嫩奶香",
+          "周中中午可walk in"
+        ],
+        "complaints": [
+          "西葫芦片、炸鸡、虾意面等被评普通不推荐",
+          "长期排长队，周末需预订",
+          "价格偏高，松饼约$33",
+          "炒蛋奶味重，有人吃不多"
+        ]
+      }
     },
     {
       "id": "black-star",
@@ -2786,7 +4641,38 @@
         "https://www.timeout.com/sydney/restaurants/black-star-pastry",
         "https://www.theaureview.com/travel/black-star-pastry-newtown/"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d3506365-Reviews-Black_Star_Pastry_newtown-Sydney_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 325,
+        "rank": "悉尼 4,755 家餐厅里排第 250",
+        "summary": "西瓜蛋糕名店，招牌必试，但嫌贵且没座位",
+        "praise": [
+          "西瓜草莓蛋糕是招牌",
+          "蛋糕颜值高",
+          "咖啡和点心不错"
+        ],
+        "complaints": [
+          "涨价且切块变小",
+          "部分蛋糕偏干或太甜",
+          "店小没座位、拥挤"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "草莓西瓜蛋糕仍是打卡必吃、颜值高不太甜；也有人觉得中规中矩偏甜",
+        "praise": [
+          "草莓西瓜玫瑰蛋糕清爽、中间西瓜脆爽",
+          "颜值高很出片，适合生日",
+          "CBD、Newtown等多店方便",
+          "TGTG盲盒约$12–18可拿多块蛋糕和咸派"
+        ],
+        "complaints": [
+          "有人觉得乏善可陈、奶油偏甜腻",
+          "单片约$13，整块$56起不便宜"
+        ]
+      }
     },
     {
       "id": "cow-moon",
@@ -2822,7 +4708,39 @@
         "https://www.sydney.com/node/139096",
         "https://www.timeout.com/sydney/restaurants/the-best-gelato-in-sydney"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g3675710-d2368706-Reviews-Cow_and_Moon_Artisan_Gelato-Enmore_New_South_Wales.html",
+        "rating": 4.6,
+        "reviews": 469,
+        "rank": "Enmore 排第 1",
+        "summary": "恩莫尔排名第一的冰淇淋店，阿芙佳朵必点",
+        "praise": [
+          "阿芙佳朵是招牌",
+          "口味多、品质稳定",
+          "员工友好"
+        ],
+        "complaints": [
+          "晚上常排长队",
+          "价格偏贵、份量小",
+          "店小座位少"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "Enmore冠军gelato，Mandorla Affogato被夸爆，奶味浓不甜；晚上排队久",
+        "praise": [
+          "招牌Mandorla Affogato得奖口味被打满分",
+          "奶味浓郁不甜腻，有人称已超越Messina",
+          "Cookies & cream饼干酥脆、柠檬雪芭清爽",
+          "三球约$10.5，鱼市场也开了分店"
+        ],
+        "complaints": [
+          "Newtown/Enmore店晚上8点后常排半小时",
+          "黑芝麻口味寡淡，蓝莓偏酸",
+          "热门口味会卖完，店少"
+        ]
+      }
     },
     {
       "id": "grounds",
@@ -2853,7 +4771,40 @@
       "sources": [
         "https://www.sydneytourism.org/best-brunch-spots-in-sydney/"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d2653321-Reviews-The_Grounds_Of_Alexandria-Sydney_New_South_Wales.html",
+        "rating": 4.1,
+        "reviews": 1860,
+        "rank": "悉尼 4,783 家餐厅里排第 117",
+        "summary": "网红花园式咖啡馆，环境出片，排队久价格高",
+        "praise": [
+          "花园场景漂亮好拍照",
+          "咖啡好",
+          "适合周末逛"
+        ],
+        "complaints": [
+          "排队久、点餐混乱",
+          "不接受预订",
+          "价格偏高"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "主题布置超出片（9–11月维尼，往年年底有圣诞主题），但菜品中规中矩、服务被吐槽",
+        "praise": [
+          "定期换主题布置（维尼、芭比、圣诞），拍照一流",
+          "草莓雪纺蛋糕、蓝莓芝士蛋糕不甜好吃",
+          "大早餐、炸鸡汉堡分量足",
+          "咖啡特调、热巧等饮品比菜靠谱"
+        ],
+        "complaints": [
+          "午餐菜平平无奇、烤鸡偏干偏咸",
+          "服务赶客、态度生硬，排队久",
+          "进主题花园需消费约$20并凭小票",
+          "价格不算友好（主菜约$29–35）"
+        ]
+      }
     },
     {
       "id": "ciccone",
@@ -2887,7 +4838,498 @@
         "https://www.broadsheet.com.au/sydney/food-and-drink/article/redfern-gets-gelato",
         "https://www.google.com.au/amp/s/concreteplayground.com/sydney/food-drink/the-ten-best-ice-cream-joints-in-sydney/amp"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d10029879-Reviews-Ciccone_Sons_Gelateria-Sydney_New_South_Wales.html",
+        "rating": 4.9,
+        "reviews": 37,
+        "rank": "悉尼小吃类 559 家餐厅里排第 60",
+        "summary": "雷德芬小众高分冰淇淋店，口感浓郁",
+        "praise": [
+          "口感浓郁细腻",
+          "白脱牛奶百香果等口味出色",
+          "员工热心推荐"
+        ],
+        "complaints": [
+          "外带包装不好拆"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "Redfern/Glebe小众手工gelato，抹茶、黑芝麻、提拉米苏被夸，笔记偏旧但几乎零差评",
+        "praise": [
+          "抹茶浓而不甜，被称闭眼点",
+          "黑芝麻像汤圆馅、比Ice Kirin少甜",
+          "提拉米苏有酒香蛋糕块，橄榄油口味意外清爽",
+          "怪口味也不踩雷，价格不贵"
+        ],
+        "complaints": [
+          "不提供试吃，周一周二不营业",
+          "晚饭后人多要排队",
+          "血橙雪芭偏绵密不够清爽，坚果类一般"
+        ]
+      }
+    },
+    {
+      "id": "memory-tongue",
+      "name": "Memory Tongue Hotpot",
+      "nameZh": "舌尖记忆",
+      "category": "hotpot",
+      "rank": 1,
+      "suburb": "Chatswood",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "重庆火锅",
+        "牛油锅底",
+        "手切和牛"
+      ],
+      "intro": "2016 年在悉尼创立的重庆老火锅，开在 Chatswood Interchange 楼上。牛油锅底香而不燥，手切和牛、芭比和牛和巨型炸糯米球是招牌，饭后还送冰粉和西瓜。",
+      "booking": "inline 网上订位，周末晚市建议提前",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://www.memorytongue.com/",
+      "accolades": [
+        "Frequently recommended on Xiaohongshu (3 notes read plus mentions in 2 recommendation threads, 2025–2026); in a May 2026 'which Chatswood hotpot is this' thread four commenters independently named it, and a Sichuan-native commenter (Mar 2026) ranked it among Sydney's best Chongqing hotpots",
+        "Google Maps: 4.4 from 600 reviews (checked 2026-10-12)"
+      ],
+      "sources": [
+        "https://www.memorytongue.com/",
+        "https://www.memorytongue.com/menu.html",
+        "https://www.memorytongue.com/about-us.html",
+        "https://www.google.com/maps/search/?api=1&query=Memory+Tongue+Hotpot+Chatswood",
+        "https://www.xiaohongshu.com/explore/6a17d2ec0000000035031237",
+        "https://www.xiaohongshu.com/explore/69661438000000000e00fdd2",
+        "https://www.xiaohongshu.com/explore/69aaa8de000000000d00924c"
+      ],
+      "confidence": "high",
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "重庆老乡认证的 Chatswood 老火锅，牛油锅底很香，唯一缺点是贵",
+        "praise": [
+          "牛油锅底香，被说最接近国内川渝味",
+          "雪花肥牛、虾滑、毛肚品质好",
+          "免费冰粉和西瓜，蘸料台丰富",
+          "工作日午市套餐划算"
+        ],
+        "complaints": [
+          "两人吃约 $180，偏贵",
+          "在商场楼上，不太好找"
+        ]
+      },
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g261607-d13339456-Reviews-Memory_Tongue-Chatswood_Willoughby_Greater_Sydney_New_South_Wales.html",
+        "rating": null,
+        "reviews": 10,
+        "rank": "Chatswood 213 家餐厅里排第 91",
+        "summary": "TA 仅 10 条 2018–19 年旧评，口味褒贬不一，常嫌贵和服务慢",
+        "praise": [
+          "食材新鲜、麻辣够味",
+          "装修现代好看"
+        ],
+        "complaints": [
+          "锅底另收费，整体偏贵",
+          "服务慢、沟通不畅",
+          "汤底太浓盖过肉味",
+          "生肉没标识，难分辨"
+        ]
+      }
+    },
+    {
+      "id": "jiu-long-ding",
+      "name": "Jiu Long Ding Chongqing Hot Pot",
+      "nameZh": "九龙鼎火锅",
+      "category": "hotpot",
+      "rank": 2,
+      "suburb": "Haymarket",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "重庆火锅",
+        "九宫格",
+        "万州烤鱼"
+      ],
+      "intro": "唐人街 Dixon St 二楼的家族经营重庆火锅，老板自己炒牛油底料，招牌是九宫格麻辣锅。手工小酥肉、脆皮奶和红糖冰粉常被夸，不吃火锅也可以点万州烤鱼。",
+      "booking": "官网表单或电话订位；周二、周三只开晚市",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://jiulongding.au/",
+      "accolades": [
+        "Frequently recommended on Xiaohongshu (2 notes read plus mentions in 3 recommendation threads, 2025–2026); Chengdu- and Chongqing-native commenters call it authentic",
+        "Google Maps: 4.5 from 533 reviews (checked 2026-10-12)"
+      ],
+      "sources": [
+        "https://jiulongding.au/",
+        "https://jiulongding.au/static/hotpot-menu.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Jiu+Long+Ding+Chongqing+Hot+Pot+Haymarket",
+        "https://wanderlog.com/place/details/4751514",
+        "https://www.xiaohongshu.com/explore/68f483ef00000000030137a6",
+        "https://www.xiaohongshu.com/explore/6a91598d000000000402b02f",
+        "https://www.xiaohongshu.com/explore/6a8fdfc8000000002303da69"
+      ],
+      "confidence": "high",
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "唐人街老板现炒底料的九宫格火锅，川渝网友多认可，烤鱼也被夸",
+        "praise": [
+          "底料现炒，牛油香浓",
+          "小酥肉、脆皮奶、冰粉都是手工现做",
+          "成都、重庆网友认证正宗",
+          "万州烤鱼口碑好"
+        ],
+        "complaints": [
+          "有人吐槽和牛不新鲜",
+          "也有评论直说难吃，口味见仁见智"
+        ]
+      },
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d17443488-Reviews-Jui_Long_Ding_Chong_Qing_Hot_Pot-Sydney_New_South_Wales.html",
+        "rating": 3.6,
+        "reviews": 5,
+        "rank": "悉尼 4,784 家餐厅里排第 3,123",
+        "summary": "TA 仅 5 条评论 3.6 分，近评赞正宗，早年评论嫌通风差、汤底淡",
+        "praise": [
+          "口味地道正宗",
+          "店员友好热情"
+        ],
+        "complaints": [
+          "通风差、店里有油烟味",
+          "汤底偏淡（早年评论）"
+        ]
+      }
+    },
+    {
+      "id": "er-niang",
+      "name": "Er Niang Hotpot",
+      "nameZh": "二孃重庆老火锅",
+      "category": "hotpot",
+      "rank": 3,
+      "suburb": "Rhodes",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "重庆火锅",
+        "地摊风",
+        "平价"
+      ],
+      "intro": "2024 年在 Rhodes 开业的重庆地摊风老火锅，竹凳和大排档装潢很有川渝味，菜价便宜，鸭肠、黄喉、小郡肝和贡菜常被点名；2025 年底在 Top Ryde 开了分店。",
+      "booking": "无网上订位，可到店或电话；评论提到用餐限时约 90 分钟",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "",
+      "accolades": [
+        "Frequently recommended on Xiaohongshu (2 notes read plus 6 mentions in 2 recommendation threads, 2025–2026); recommended by Chongqing- and Guizhou-native commenters, though some question freshness",
+        "Google Maps: 3.7 from 47 reviews (checked 2026-10-12)"
+      ],
+      "sources": [
+        "https://www.google.com/maps/search/?api=1&query=Er+Niang+Hotpot+Rhodes",
+        "https://www.xiaohongshu.com/explore/67fa6ca9000000001d022278",
+        "https://www.xiaohongshu.com/explore/6a463d82000000000f016701",
+        "https://www.xiaohongshu.com/explore/6a8fdfc8000000002303da69",
+        "https://www.xiaohongshu.com/explore/678c6247000000001d010244"
+      ],
+      "confidence": "medium",
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "很有重庆地摊味又便宜，但新鲜度和正宗程度有争议",
+        "praise": [
+          "装修像回到重庆大排档",
+          "菜价便宜，周末不加收",
+          "牛油锅底香，鸭肠黄喉贡菜好评",
+          "重庆、贵州网友多次推荐"
+        ],
+        "complaints": [
+          "有人说菜不新鲜、吃完拉肚子",
+          "成都网友觉得不够正宗",
+          "有笔记专门吐槽服务"
+        ]
+      },
+      "ta": {
+        "url": null,
+        "rating": null,
+        "reviews": null,
+        "rank": null,
+        "summary": "TA 上没有这家店的页面",
+        "praise": [],
+        "complaints": []
+      }
+    },
+    {
+      "id": "rengaya",
+      "name": "Rengaya",
+      "nameZh": "",
+      "category": "bbq",
+      "rank": 1,
+      "suburb": "North Sydney",
+      "price": "$$$$",
+      "badges": [],
+      "tags": [
+        "日式烧肉",
+        "A5 和牛",
+        "刺身"
+      ],
+      "intro": "1993 年开业的北悉尼日式烧肉老店，近年迁到 Miller St 新址，装修更精致。主打 M7+ 到 A5 和牛和高品质刺身，自称悉尼独家供应山形和牛，牛舌和和牛生拌很受欢迎。",
+      "booking": "OpenTable 订位；周末加收 10%，2 人午市只接套餐",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://yakiniku.com.au/",
+      "accolades": [
+        "Frequently recommended on Xiaohongshu (2 notes seen, 2026): called the 'veteran' North Sydney yakiniku with top-tier meat, main complaint is price",
+        "Official site: 'Australia's first and finest Japanese BBQ restaurant since 1993' (restaurant's own claim)",
+        "Google Maps: 4.4 from 820 reviews (checked 2026-10-12)"
+      ],
+      "sources": [
+        "https://yakiniku.com.au/",
+        "https://yakiniku.com.au/menu/rengaya_menu.pdf",
+        "https://yakiniku.com.au/menu/rengaya_lunch.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Rengaya+North+Sydney",
+        "https://www.enprimeurclub.com/restaurants/rengaya-sydney-restaurant",
+        "https://www.xiaohongshu.com/explore/69d3b251000000001b020cb7",
+        "https://www.xiaohongshu.com/explore/6a68636a0000000002003c00"
+      ],
+      "confidence": "high",
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "北悉尼三十年老牌烧肉，肉质被说悉尼顶级，就是贵",
+        "praise": [
+          "和牛油花漂亮，肉质顶级",
+          "刺身品质比一般烤肉店高",
+          "新店装修精致，适合请客约会",
+          "套餐份量大"
+        ],
+        "complaints": [
+          "价格高，套餐人均 $150 起",
+          "很多人说只能偶尔犒劳自己"
+        ]
+      },
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g2103653-d1204978-Reviews-Rengaya_Japanese_BBQ-North_Sydney_Greater_Sydney_New_South_Wales.html",
+        "rating": 4.2,
+        "reviews": 111,
+        "rank": "North Sydney 420 家餐厅里排第 51",
+        "summary": "北悉尼老牌和牛烧肉，肉质口碑很好，但价格高、性价比被吐槽",
+        "praise": [
+          "A5 和牛品质顶级、入口即化",
+          "刺身新鲜",
+          "店员会讲解部位和烤法",
+          "石锅饭受好评"
+        ],
+        "complaints": [
+          "价格高，性价比分最低",
+          "份量偏少",
+          "服务偶尔混乱、上菜顺序乱",
+          "部分主食饭多肉少"
+        ]
+      }
+    },
+    {
+      "id": "tajima",
+      "name": "Tajima Yakiniku",
+      "nameZh": "",
+      "category": "bbq",
+      "rank": 2,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "日式烧肉",
+        "9+ 和牛",
+        "和牛炒饭"
+      ],
+      "intro": "Town Hall 旁 2023 年开业的现代日式烧肉店，主打 9+ 全血和牛和北海道 A5 和牛。750g 和牛大拼盘适合三四人分，配温泉蛋的和牛蒜香炒饭是人气必点。",
+      "booking": "OpenTable 订位，工作日晚上也常满座",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://tajimayakiniku.com.au/",
+      "accolades": [
+        "Frequently recommended on Xiaohongshu (2 notes read, about 8 more seen, 2026; also named 3 times in a July 2026 BBQ recommendation thread). The restaurant also runs its own Xiaohongshu promo account",
+        "Google Maps: 4.8 from 1,137 reviews (checked 2026-10-12)"
+      ],
+      "sources": [
+        "https://tajimayakiniku.com.au/",
+        "https://tajimayakiniku.com.au/menu",
+        "https://tajimayakiniku.com.au/a5-wagyu-sydney-cbd",
+        "https://webv1.qonus.com.au/fnb/order/menu?action=menu&enc=y&qrFrom=&storeCode=YTJlVEthbzlhaldpbE56K2RLYk5Mdz09",
+        "https://www.google.com/maps/search/?api=1&query=Tajima+Yakiniku+95+Bathurst+St+Sydney",
+        "https://www.opentable.com.au/r/tajima-yakiniku-sydney",
+        "https://www.xiaohongshu.com/explore/69f053ea000000003700d42b",
+        "https://www.xiaohongshu.com/explore/6ab3a0f2000000000a0220e0",
+        "https://www.xiaohongshu.com/explore/6a549f33000000000702bf5f"
+      ],
+      "confidence": "high",
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "CBD 人气和牛烧肉，750g 拼盘和蒜香炒饭被夸，也有人觉得被吹过头",
+        "praise": [
+          "9+ 和牛肉质好、厚切过瘾",
+          "和牛蒜香炒饭配温泉蛋必点",
+          "套餐肉量足，3 人吃饱",
+          "工作日晚上也满座"
+        ],
+        "complaints": [
+          "有人去两次觉得一般",
+          "店家自营账号和探店推广多",
+          "整体价格不低"
+        ]
+      },
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d26701275-Reviews-Tajima_Yakiniku-Sydney_New_South_Wales.html",
+        "rating": 5.0,
+        "reviews": 4,
+        "rank": "悉尼 4,786 家餐厅里排第 1,604",
+        "summary": "TA 仅 4 条评论且全五星，夸和牛品质和服务，样本太小参考有限",
+        "praise": [
+          "和牛新鲜、油花漂亮",
+          "店员热情友好",
+          "靠近市政厅站，交通方便",
+          "工作日午市套餐划算"
+        ],
+        "complaints": [
+          "有人觉得澳洲和牛不如日本和牛"
+        ]
+      }
+    },
+    {
+      "id": "kangnam",
+      "name": "Kangnam Korean BBQ",
+      "nameZh": "江南烤肉",
+      "category": "bbq",
+      "rank": 3,
+      "suburb": "Epping / Hornsby / Pennant Hills",
+      "price": "$$",
+      "badges": [
+        "Sydney.com 最佳韩烤之一"
+      ],
+      "tags": [
+        "韩式烤肉",
+        "海鲜煎饼",
+        "韩式炸鸡"
+      ],
+      "intro": "2013 年起在悉尼北区经营的韩式烤肉，现有 Epping、Hornsby、Pennant Hills 三店。小菜免费续加，除了烤肉，海鲜煎饼、炸酱面、炸鸡和汤锅也是熟客必点。",
+      "booking": "官网订位；Epping 和 Pennant Hills 店周二休息",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://kangnambbq.com.au/",
+      "accolades": [
+        "Frequently recommended on Xiaohongshu (1 note read, about 7 more seen, Dec 2025–Oct 2026; called a Korean BBQ 天花板 and 'my no.1' by several commenters)",
+        "Sydney.com (Destination NSW): 13 of the best Korean barbecue restaurants in Sydney, noting 'banchan and fried chicken as good as the barbecue'",
+        "Time Out Sydney review (July 2020): highlights the pork belly with kimchi and the signature beef pot",
+        "Google Maps (Epping): 4.3 from 418 reviews (checked 2026-10-12)"
+      ],
+      "sources": [
+        "https://kangnambbq.com.au/",
+        "https://kangnambbq.com.au/epping-menu",
+        "https://www.sydney.com/articles/best-korean-barbecue-in-sydney",
+        "https://www.timeout.com/sydney/restaurants/kangnam-bbq",
+        "https://www.google.com/maps/search/?api=1&query=Kangnam+Korean+BBQ+Epping",
+        "https://www.xiaohongshu.com/explore/6944b98f0000000019024c68",
+        "https://www.xiaohongshu.com/explore/6a549f33000000000702bf5f"
+      ],
+      "confidence": "high",
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "北区韩餐天花板，小菜免费续，煎饼炸鸡汤锅样样好吃",
+        "praise": [
+          "小菜免费续，Epping 店还有酱蟹",
+          "海鲜煎饼焦脆料多",
+          "炸鸡口味多，半份就够大",
+          "牛尾汤、脊骨锅份量实在"
+        ],
+        "complaints": [
+          "店都在北区，离市区远",
+          "炖牛排肉量偏少"
+        ]
+      },
+      "ta": {
+        "url": null,
+        "rating": null,
+        "reviews": null,
+        "rank": null,
+        "summary": "Epping 店在 TA 没有页面；Hornsby 店 3.8 分（58 条）",
+        "praise": [],
+        "complaints": []
+      }
+    },
+    {
+      "id": "suminoya",
+      "name": "Suminoya",
+      "nameZh": "",
+      "category": "bbq",
+      "rank": 4,
+      "suburb": "CBD",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "日式烧肉",
+        "和牛自助",
+        "牛舌"
+      ],
+      "intro": "2000 年开业的 CBD 老牌日式烧肉，阁楼式店面。可选 $69–89 的烤肉自助（限时 90 分钟）或单点和牛拼盘，牛舌可以无限点，刺身也稳定；周六中午另有 $49 自助。",
+      "booking": "OpenTable 订位；周日休息，部分周一也休",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "website": "https://suminoya.com.au/",
+      "accolades": [
+        "Frequently recommended on Xiaohongshu (1 note read, 2 more seen, 2026; also named twice in a July 2026 BBQ recommendation thread)",
+        "Google Maps: 4.1 from 1,061 reviews (checked 2026-10-12)"
+      ],
+      "sources": [
+        "https://suminoya.com.au/",
+        "https://suminoya.com.au/menu/",
+        "https://suminoya.com.au/Menu/SUMINOYA_DinnerBuffet+SaturdayLunchBuffet.pdf",
+        "https://suminoya.com.au/Menu/SUMINOYA_Dinner_ALaCarte.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Suminoya+1+Hosking+Pl+Sydney",
+        "https://www.xiaohongshu.com/explore/6a68636a0000000002003c00",
+        "https://www.xiaohongshu.com/explore/6a549f33000000000702bf5f"
+      ],
+      "confidence": "medium",
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "CBD 开了二十多年的和牛烤肉自助，性价比高，但有人觉得体验普通",
+        "praise": [
+          "澳洲和牛 MB7–9+ 油花漂亮",
+          "自助品类多，牛舌随便点",
+          "刺身和鳗鱼饭稳定",
+          "周末不收附加费"
+        ],
+        "complaints": [
+          "烤盘小、座位挤",
+          "调料少，不太合中国胃",
+          "有人觉得整体很普通"
+        ]
+      },
+      "ta": {
+        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d737987-Reviews-Suminoya-Sydney_New_South_Wales.html",
+        "rating": 3.9,
+        "reviews": 106,
+        "rank": "悉尼 4,783 家餐厅里排第 1,177",
+        "summary": "CBD 老牌和牛自助烤肉，肉质受夸，但限时规则多、服务和排烟被吐槽",
+        "praise": [
+          "和牛风味浓郁",
+          "自助肉品丰富，自己烤有趣",
+          "平板点餐方便、上菜快"
+        ],
+        "complaints": [
+          "限时 90 分钟，规则多",
+          "服务冷淡、态度差",
+          "排烟弱，吃完满身烟味",
+          "附加收费多，性价比一般"
+        ]
+      }
     }
   ]
 }

@@ -35,6 +35,8 @@ export function mapsUrl(name: string, place: string): string {
 /** Words that name a whole category, so a match only says "this kind of place". */
 const CATEGORY_WORDS: Record<CategoryId, string> = {
   chinese: 'chinese 中国 中餐 中菜',
+  hotpot: 'hot pot hotpot 火锅',
+  bbq: 'bbq barbecue korean bbq kbbq yakiniku 烤肉 韩烤 烧肉 烤串 烧烤',
   japanese: 'japanese 日本 日料 日餐',
   korean: 'korean 韩国 韩餐',
   'se-asian': 'southeast asian asian 东南亚',
@@ -43,7 +45,7 @@ const CATEGORY_WORDS: Record<CategoryId, string> = {
   'european-bistro': 'european bistro 欧陆 欧洲',
   'modern-au': 'modern australian fine dining 澳洲 现代澳洲',
   seafood: 'seafood 海鲜',
-  'steak-grill': 'steakhouse grill 烧烤',
+  'steak-grill': 'steakhouse steak grill 牛排',
   'brunch-dessert': 'brunch dessert 早午餐 甜品',
 };
 
@@ -69,7 +71,9 @@ const SYNONYMS: [string, string[]][] = [
   ['sushi', ['寿司']],
   ['tempura', ['天妇罗']],
   ['yakitori', ['烧鸟']],
-  ['kbbq', ['韩式烤肉']],
+  ['kbbq', ['韩式烤肉', '韩烤']],
+  ['yakiniku', ['烧肉']],
+  ['skewer', ['烤串']],
   ['korean bbq', ['韩式烤肉']],
   ['pizza', ['披萨']],
   ['pasta', ['意面', '意式饺', '千层面']],

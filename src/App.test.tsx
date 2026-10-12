@@ -16,12 +16,12 @@ describe('App', () => {
     const user = userEvent.setup();
     render(<App />);
     expect(screen.getByRole('heading', { level: 1, name: '悉尼餐厅榜单' })).toBeInTheDocument();
-    for (const name of ['中餐', '日料', '韩餐']) expect(screen.getByRole('heading', { level: 2, name })).toBeInTheDocument();
-    expect(screen.queryByRole('heading', { level: 2, name: '东南亚' })).not.toBeInTheDocument();
+    for (const name of ['中餐', '火锅', '烤肉']) expect(screen.getByRole('heading', { level: 2, name })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { level: 2, name: '日料' })).not.toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: /印度/ })).not.toBeInTheDocument();
 
-    await user.click(screen.getByRole('button', { name: '展开其余 8 个类别' }));
-    for (const name of ['东南亚', '中东 / 地中海', '现代澳洲', '海鲜', '早午餐 / 甜品']) {
+    await user.click(screen.getByRole('button', { name: '展开其余 10 个类别' }));
+    for (const name of ['日料', '东南亚', '中东 / 地中海', '现代澳洲', '海鲜', '早午餐 / 甜品']) {
       expect(screen.getByRole('heading', { level: 2, name })).toBeInTheDocument();
     }
     expect(screen.getByRole('button', { name: '收起' })).toHaveAttribute('aria-expanded', 'true');
@@ -117,6 +117,7 @@ describe('App', () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(screen.getByRole('button', { name: '$', exact: true } as never));
+    await user.click(screen.getByRole('button', { name: /^展开其余/ }));
     const japanese = screen.getByRole('article', { name: '日料' });
     expect(within(japanese).getByText('0 家 · 共 7 家')).toBeInTheDocument();
     expect(within(japanese).queryByRole('button', { name: /看全部/ })).not.toBeInTheDocument();

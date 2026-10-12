@@ -1,11 +1,11 @@
 import { CATEGORIES, RESTAURANTS, restaurantsIn, searchRestaurants } from './restaurants';
 
 describe('restaurant data', () => {
-  it('has eleven categories, each with ranked restaurants', () => {
-    expect(CATEGORIES).toHaveLength(11);
+  it('has thirteen categories, each with ranked restaurants', () => {
+    expect(CATEGORIES).toHaveLength(13);
     for (const c of CATEGORIES) {
       const list = restaurantsIn(c.id);
-      expect(list.length).toBeGreaterThanOrEqual(4);
+      expect(list.length).toBeGreaterThanOrEqual(3);
       expect(list.map((r) => r.rank)).toEqual(list.map((_, i) => i + 1));
     }
   });
@@ -38,8 +38,9 @@ describe('search keywords', () => {
 
 describe('search ranking', () => {
   it('puts places that really match ahead of category-only matches', () => {
-    expect(searchRestaurants('火锅')[0].id).toBe('haidilao');
-    expect(searchRestaurants('hot pot')[0].id).toBe('haidilao');
+    expect(searchRestaurants('火锅')[0].id).toBe('memory-tongue');
+    expect(searchRestaurants('hot pot').every((r) => r.category === 'hotpot')).toBe(true);
+    expect(searchRestaurants('yakiniku').map((r) => r.id)).toEqual(expect.arrayContaining(['rengaya', 'tajima', 'suminoya']));
     expect(searchRestaurants('vietnamese').map((r) => r.id)).toEqual(['tan-viet']);
     expect(searchRestaurants('yum cha').every((r) => r.category === 'chinese')).toBe(true);
     const japanese = searchRestaurants('japanese');

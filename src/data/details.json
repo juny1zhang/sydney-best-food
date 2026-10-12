@@ -547,56 +547,6 @@
         "https://order.online/en-AU/store/23154778"
       ]
     },
-    "haidilao": {
-      "menu": "自选式火锅：先选锅底（可拼多格，如番茄、麻辣、菌汤、冬阴功），再用平板逐盘点肉类、海鲜、丸滑、蔬菜和主食，蘸料在自助调料台自己调。服务员会在桌边表演甩面，适合多人聚餐。人均约 $50–80。店在 Darling Square 的 The Exchange 5 楼。",
-      "menuUrl": "https://www.superhiinternational.com/cate/pot",
-      "dishes": [
-        {
-          "name": "Signature-Tomato Soup Hot Pot",
-          "nameZh": "番茄锅底",
-          "desc": "用熟番茄慢熬的浓郁锅底，酸甜不辣，吃到最后还能下面或泡饭，几乎每桌都会点。",
-          "image": "https://cdn-global-website.superhi-cdn.com/website/image/a8e6f68c3d4a4965a1fc684bab5555da-860-860.png",
-          "imageFrom": "https://www.superhiinternational.com/cate/pot"
-        },
-        {
-          "name": "Signature-Sichuan Spicy Soup Hot Pot",
-          "nameZh": "四川麻辣锅底",
-          "desc": "干辣椒和花椒炒出的麻辣红汤，香辣但不过分油腻，常和番茄锅拼成鸳鸯锅。",
-          "image": "https://cdn-global-website.superhi-cdn.com/website/image/e66c1dcfabc24bd4b815a21e2d71eddf-860-860.png",
-          "imageFrom": "https://www.superhiinternational.com/cate/pot"
-        },
-        {
-          "name": "Signature Shrimp Paste",
-          "nameZh": "招牌虾滑",
-          "desc": "细腻虾胶冰镇上桌，用勺分成小团下锅，煮熟后弹牙鲜甜，是必点涮品。",
-          "image": "https://cdn-global-website.superhi-cdn.com/website/image/53d265e15226424bad6be291392e1e22-373-334.jpg",
-          "imageFrom": "https://www.superhiinternational.com/cate/dish"
-        },
-        {
-          "name": "Signature Marinated Beef",
-          "nameZh": "招牌滑牛肉",
-          "desc": "预先调味腌好的牛肉片，下锅涮几秒就熟，口感嫩滑多汁。",
-          "image": "https://cdn-global-website.superhi-cdn.com/website/image/926150b179524071b230f6f775f7dbf0-373-334.jpg",
-          "imageFrom": "https://www.superhiinternational.com/cate/dish"
-        },
-        {
-          "name": "Dancing noodles",
-          "nameZh": "捞面（甩面表演）",
-          "desc": "服务员在桌边把面团拉成长面条，边甩边舞再下锅，是海底捞最有名的互动表演。",
-          "image": null,
-          "imageFrom": null
-        }
-      ],
-      "photos": [],
-      "note": "菜品图片来自海底捞海外官网，悉尼店实际品项和价格以店内平板为准。",
-      "sources": [
-        "https://www.superhiinternational.com/",
-        "https://www.superhiinternational.com/cate/pot",
-        "https://www.superhiinternational.com/cate/dish",
-        "https://www.darlingharbour.com/eat-drink/haidilao-hotpot",
-        "https://concreteplayground.com/sydney/food-drink/now-open-haidilao-has-opened-a-new-200-seat-hot-pot-restaurant-in-darling-square/amp"
-      ]
-    },
     "yoshii": {
       "menu": "仅设 10 席的寿司 omakase 吧台，菜单全由吉井主厨按季节决定：先上几道刺身和熟食小菜，再接一连串江户前握寿司。官方价 $398/人，只做晚餐（周二至周六，周五六有两轮）。每月 1 日中午放出下个月的订位，不接受任何忌口或过敏调整。",
       "menuUrl": null,
@@ -1219,50 +1169,6 @@
         "https://www.opentable.com.au/r/mat-kim-sydney",
         "https://www.timeout.com/sydney/restaurants/matkim",
         "https://hospitalitymagazine.com.au/korean-omakase-restaurant-matkim-joins-sydney-place"
-      ]
-    },
-    "bornga": {
-      "menu": "单点韩式烤肉，烤肉每桌至少点两份，送可续加的小菜和包肉蔬菜。招牌薄切牛五花 $27，和牛各部位每份约 $35–58，另有 $121–289 的多人套餐，以及石锅拌饭、冷面、汤锅等。人均约 $50–80。每桌限时 90 分钟，周末加收 10%，周五至周日有午市。",
-      "menuUrl": "https://posnet.web.app/order?projectId=borngasyd",
-      "dishes": [
-        {
-          "name": "Woosamgyeop (우삼겹)",
-          "nameZh": "薄切牛五花",
-          "desc": "极薄的牛胸腹肉片略腌后快烤，用生菜蘸包饭酱包着吃，是品牌头号招牌",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Wagyu Yangnyeom Kkotsal (양념꽃살)",
-          "nameZh": "调味和牛花肉",
-          "desc": "和牛牛小排最嫩的“花肉”部位，用店家特调酱汁腌过，菜单标为热销",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Haemul Pa Jeon (해물파전)",
-          "nameZh": "海鲜葱饼",
-          "desc": "海鲜和大葱煎成的大张煎饼，外脆内软，食客评价里被提到最多的配菜之一",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Yukhoe Bibimbap (육회비빔밥)",
-          "nameZh": "生牛肉拌饭",
-          "desc": "调味生牛肉铺在米饭和蔬菜上拌着吃，菜单上标为热销的饭类",
-          "image": null,
-          "imageFrom": null
-        }
-      ],
-      "photos": [],
-      "note": "每桌限时 90 分钟，烤肉至少点两份；周末加收 10%。",
-      "sources": [
-        "https://posnet.web.app/order?projectId=borngasyd",
-        "https://queuetix.com/index.php/borngas",
-        "https://www.timeout.com/sydney/restaurants/bornga",
-        "https://www.timeout.com/sydney/restaurants/the-best-korean-barbecue-in-sydney",
-        "https://www.sydney.com/articles/best-korean-barbecue-in-sydney",
-        "https://sitchu.com.au/best-korean-bbq-sydney"
       ]
     },
     "porkfat": {
@@ -1897,57 +1803,6 @@
         "https://www.gourmettraveller.com.au/restaurant-reviews/aalia-sydney-review-21257/",
         "https://www.goodfood.com.au/aalia-sydney/aalia-review-20220321-h22kl0",
         "https://www.broadsheet.com.au/sydney/food-and-drink/article/paul-farag-aalia-news"
-      ]
-    },
-    "olympus": {
-      "menu": "希腊小酒馆式分享餐：单点以 mezedes 小盘为主，另有馅饼、海鲜与肉类、羊肉菜单和配菜，木火炭火烹调；宴席分 $77、$90、$120/人三档。人均约 $80–120，每天供应午晚餐，周日加收 10%。",
-      "menuUrl": "https://olympusdining.com.au/menus/",
-      "dishes": [
-        {
-          "name": "Taramosalata | White cod roe dip",
-          "nameZh": "白鳕鱼子蘸酱",
-          "desc": "咸鲜带柠檬香的鳕鱼子泥，配村庄面包抹着吃，评论普遍说很容易吃过量，三档宴席都有",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Avgolemono | Egg and lemon soup",
-          "nameZh": "希腊蛋柠檬汤",
-          "desc": "鸡蛋与柠檬汁打成的顺滑热汤，GT 评论认为它可能是整份菜单里最好的一道",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Spanakopita | Wild weeds and cheese",
-          "nameZh": "野菜奶酪酥皮派",
-          "desc": "极薄酥皮包野菜和奶酪，架高上桌，口感酥脆，有大小两种份量",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Htapodi Ksidato | Pickled octopus, capers, lemon",
-          "nameZh": "醋腌章鱼",
-          "desc": "澳洲章鱼用醋、刺山柑和柠檬腌制，清爽开胃，是评论点名的冷盘",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Frozen Yoghurt | Greek spoon fruits, olive oil",
-          "nameZh": "橄榄油冻酸奶",
-          "desc": "冻酸奶淋橄榄油，配希腊糖渍水果，是熟客最爱的收尾甜点，各档宴席都包含",
-          "image": null,
-          "imageFrom": null
-        }
-      ],
-      "photos": [],
-      "note": "",
-      "sources": [
-        "https://olympusdining.com.au/menus/",
-        "https://olympusdining.com.au/site/wp-content/uploads/2026/07/Olympus_BanquetMenuDigital-1.7.26-1.pdf",
-        "https://olympusdining.com.au/",
-        "https://www.gourmettraveller.com.au/restaurant-reviews/olympus-dining-restaurant-review/",
-        "https://www.timeout.com/sydney/restaurants/olympus",
-        "https://www.broadsheet.com.au/sydney/redfern/restaurants/olympus"
       ]
     },
     "nour": {
@@ -5065,6 +4920,414 @@
         "https://cicconestore.square.site/product/jersey-milk-on-a-stick/34",
         "https://cicconestore.square.site/product/watermelon-rose-sorbetto-500ml-df-/59",
         "https://www.timeout.com/sydney/restaurants/ciccone-and-sons-gelateria"
+      ]
+    },
+    "memory-tongue": {
+      "menu": "按单点吃的重庆火锅：先选单人小锅或大锅（可鸳鸯、三拼），再点肉菜，蘸料台每人 $4。主打手切和牛、功夫牛舌、一米牛肉卷和造型夸张的芭比和牛，饭后免费冰粉和水果。人均约 $50–90，工作日午市有优惠套餐。",
+      "menuUrl": "https://www.memorytongue.com/menu.html",
+      "dishes": [
+        {
+          "name": "Barbie Australian Wagyu Beef",
+          "nameZh": "芭比澳洲和牛",
+          "desc": "和牛片铺成芭比娃娃的裙摆端上桌，拍照必点，肉质也被夸",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Giant Fried Glutinous Rice Ball",
+          "nameZh": "环球一号（巨型炸糯米球）",
+          "desc": "现炸的大号空心糯米球，外脆里糯，是 Google 上的人气菜",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Hand-Cut Australian M8 Wagyu Beef",
+          "nameZh": "手切澳洲 M8 和牛",
+          "desc": "店家主推的手切和牛，涮几秒就熟，适合多人分享",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Kung Fu Beef Tongue",
+          "nameZh": "功夫牛舌",
+          "desc": "新品推荐里的薄切牛舌，口感脆嫩，配麻辣锅很合适",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Premium Beef Tripe",
+          "nameZh": "精品毛肚",
+          "desc": "菜单招牌类第一项，重庆火锅必点，七上八下涮到脆口",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [
+        {
+          "image": "https://www.memorytongue.com/uploads/1/2/2/5/122570815/memory-tongue-32-1_orig.jpg",
+          "imageFrom": "https://www.memorytongue.com/",
+          "caption": "芭比娃娃造型的和牛肉盘"
+        },
+        {
+          "image": "https://www.memorytongue.com/uploads/1/2/2/5/122570815/memory-tongue-52-1_orig.jpg",
+          "imageFrom": "https://www.memorytongue.com/",
+          "caption": "巨型炸糯米球"
+        },
+        {
+          "image": "https://www.memorytongue.com/uploads/1/2/2/5/122570815/memory-tongue7-12-22-29-1_orig.jpg",
+          "imageFrom": "https://www.memorytongue.com/",
+          "caption": "麻辣锅与番茄锅的鸳鸯锅"
+        }
+      ],
+      "note": "蘸料台每人 $4；工作日午市有优惠套餐。",
+      "sources": [
+        "https://www.memorytongue.com/",
+        "https://www.memorytongue.com/menu.html",
+        "https://www.memorytongue.com/uploads/1/2/2/5/122570815/2e91d00c1b4ab71557adcd1a393c5379_orig.jpg",
+        "https://www.memorytongue.com/uploads/1/2/2/5/122570815/9c74be92807b8c95713ebdac2693aa12_orig.jpg",
+        "https://www.memorytongue.com/whats-on.html",
+        "https://www.google.com/maps/search/?api=1&query=Memory+Tongue+Hotpot+Chatswood",
+        "https://www.xiaohongshu.com/explore/69661438000000000e00fdd2"
+      ]
+    },
+    "jiu-long-ding": {
+      "menu": "单点重庆火锅：招牌九宫格麻辣牛油锅大锅 $42、单人小锅 $21，也有清油、花胶鸡、番茄等锅底和鸳鸯组合，蘸料每人 $3.9。肉菜海鲜按份点，另有万州烤鱼和川菜炒菜，人均约 $50–70。周二、周三只开晚市。",
+      "menuUrl": "https://jiulongding.au/static/hotpot-menu.pdf",
+      "dishes": [
+        {
+          "name": "Jiu Gong Ge Spicy Butter Hot Pot",
+          "nameZh": "九宫格麻辣牛油火锅",
+          "desc": "老板现炒牛油底料的九格锅，越煮越香，小红书和 Google 都在夸",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "AU Ox Tripe",
+          "nameZh": "特色澳洲毛肚",
+          "desc": "菜单招牌第一位，涮几秒就脆，配麻辣锅最对味",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Crispy Mala Pork",
+          "nameZh": "现炸农家小酥肉",
+          "desc": "现点现炸的大块酥肉，外酥里嫩，可直接吃也可下锅",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Fresh Prawn Paste",
+          "nameZh": "金沙鲜虾滑",
+          "desc": "招牌虾滑，虾肉感足，煮熟后弹牙",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Grilled Fish 重庆万州烤鱼",
+          "nameZh": "重庆万州烤鱼",
+          "desc": "不吃火锅也能点的麻辣烤鱼，Google 列为人气菜，多篇小红书推荐",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [
+        {
+          "image": "https://jiulongding.au/static/photos/IMG_20210306_194151.jpg",
+          "imageFrom": "https://jiulongding.au/",
+          "caption": "二楼店内用餐区"
+        }
+      ],
+      "note": "周二、周三只开晚市。",
+      "sources": [
+        "https://jiulongding.au/",
+        "https://jiulongding.au/static/hotpot-menu.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Jiu+Long+Ding+Chongqing+Hot+Pot+Haymarket",
+        "https://www.xiaohongshu.com/explore/68f483ef00000000030137a6",
+        "https://www.xiaohongshu.com/explore/6a91598d000000000402b02f"
+      ]
+    },
+    "er-niang": {
+      "menu": "单点的重庆地摊火锅，牛油锅底配一盘盘小份菜，小红书笔记说菜价低至约 $2，周末和节假日不收附加费，人均约 $50。店里也做烤鱼。有 Google 评论提到用餐限时约 90 分钟。",
+      "menuUrl": null,
+      "dishes": [
+        {
+          "name": "卤香耙牛蹄筋",
+          "nameZh": "卤香耙牛蹄筋",
+          "desc": "先卤到软糯再下锅的牛蹄筋，探店笔记点名的惊喜菜",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "八秒土豆丝",
+          "nameZh": "八秒土豆丝",
+          "desc": "切得很细的土豆丝，涮几秒就捞，口感爽脆",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "鸭肠",
+          "nameZh": "鸭肠",
+          "desc": "重庆火锅经典涮菜，和黄喉、小郡肝一起常被提到",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "贡菜",
+          "nameZh": "贡菜",
+          "desc": "爽脆的贡菜被 2026 年笔记强推",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [],
+      "note": "没有官网和网上菜单，菜品来自小红书和 Google 评论；用餐限时约 90 分钟。",
+      "sources": [
+        "https://www.google.com/maps/search/?api=1&query=Er+Niang+Hotpot+Rhodes",
+        "https://www.xiaohongshu.com/explore/67fa6ca9000000001d022278",
+        "https://www.xiaohongshu.com/explore/6a463d82000000000f016701"
+      ]
+    },
+    "rengaya": {
+      "menu": "可单点也可点套餐：和牛套餐从 Aya（M7+）$148/人、Miyabi（M9+）$198/人，到 Takumi $298、Kiwami $498（均 2 人起）。单点有各级和牛、牛舌、刺身寿司和石锅拌饭；周二至周六有午市套餐。周末加收 10%。",
+      "menuUrl": "https://yakiniku.com.au/menu/rengaya_menu.pdf",
+      "dishes": [
+        {
+          "name": "A5 Yamagata Wagyu",
+          "nameZh": "山形 A5 和牛",
+          "desc": "店家称悉尼独家供应的山形和牛，饲养 30 个月以上，油脂入口即化",
+          "image": "https://yakiniku.com.au/menu/YamagataWagyu_Items.png",
+          "imageFrom": "https://yakiniku.com.au/"
+        },
+        {
+          "name": "Premium Wagyu OX-Tongue",
+          "nameZh": "特上和牛舌",
+          "desc": "厚切和牛舌配盐和柚子胡椒，限时还有自家熟成整条牛舌",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "M9+ Wagyu “Yukke”",
+          "nameZh": "M9+ 和牛生拌",
+          "desc": "M9+ 和牛切丁拌葱、麻油和蒜，顶上蛋黄，Google 人气菜",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "M9+ Wagyu Short Rib",
+          "nameZh": "M9+ 和牛上排",
+          "desc": "套餐里的主角之一，油花漂亮，烤到微焦最香",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Signature \"Stone Pot\" Bibimbap",
+          "nameZh": "招牌石锅拌饭",
+          "desc": "烧肉后的收尾主食，小红书笔记说份量很大",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [
+        {
+          "image": "https://i0.wp.com/yakiniku.com.au/wp-content/uploads/2022/02/4rengaya100220.jpg?fit=1969%2C1255&ssl=1",
+          "imageFrom": "https://yakiniku.com.au/",
+          "caption": "新店用餐区和吧台"
+        },
+        {
+          "image": "https://i0.wp.com/yakiniku.com.au/wp-content/uploads/2020/07/Rengaya.png?fit=1134%2C756&ssl=1",
+          "imageFrom": "https://yakiniku.com.au/",
+          "caption": "Miller St 店门口"
+        },
+        {
+          "image": "https://yakiniku.com.au/wp-content/uploads/2026/03/TABBQ_Rengaya.png",
+          "imageFrom": "https://yakiniku.com.au/",
+          "caption": "外带和牛烧肉拼盘"
+        }
+      ],
+      "note": "周末加收 10%；两人午市只接套餐。",
+      "sources": [
+        "https://yakiniku.com.au/",
+        "https://yakiniku.com.au/menu/rengaya_menu.pdf",
+        "https://yakiniku.com.au/menu/rengaya_lunch.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Rengaya+North+Sydney",
+        "https://www.xiaohongshu.com/explore/69d3b251000000001b020cb7"
+      ]
+    },
+    "tajima": {
+      "menu": "单点日式烧肉，也有套餐：Deluxe Wagyu Platter 750g $168，三四人分；Ultimate Wagyu Experience（含生拌、牛舌、炒饭）点单页列 $239；午市有 $119 双人套餐。另有北海道 A5 拼盘、刺身和炸物，人均约 $60–120。",
+      "menuUrl": "https://tajimayakiniku.com.au/menu",
+      "dishes": [
+        {
+          "name": "Deluxe Wagyu Platter",
+          "nameZh": "豪华和牛拼盘",
+          "desc": "750g 全血和牛，有板腱薄切和厚切、上排、外横膈和肋眼盖",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Wagyu Beef Garlic Fried Rice",
+          "nameZh": "和牛蒜香炒饭",
+          "desc": "菜单标为最受欢迎，和牛片加温泉蛋，小红书反复点名",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Wagyu 9+ Yukke",
+          "nameZh": "9+ 和牛生拌",
+          "desc": "板腱和牛切丁，配蛋黄和店里自调的酱汁",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Premium Wagyu Ox Tongue Platter",
+          "nameZh": "和牛舌拼盘",
+          "desc": "长切、厚切和牛舌加普通牛舌的组合，套餐里的牛舌也被夸",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Hokkaido A5 Wagyu Platter",
+          "nameZh": "北海道 A5 和牛拼盘",
+          "desc": "西冷和肉眼各 150g 的雪花和牛，店家近期主推",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/698a7363e01ca72ce5e22be0/9f94b938-287d-46b2-900b-977ade78d567/Tajima-10.webp?format=1000w",
+          "imageFrom": "https://tajimayakiniku.com.au/",
+          "caption": "和牛拼盘"
+        },
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/698a7363e01ca72ce5e22be0/cb7e4fd8-1b06-4ff8-ad19-40326e301013/Tajima-21.webp?format=1000w",
+          "imageFrom": "https://tajimayakiniku.com.au/",
+          "caption": "桌边炭火烤和牛"
+        },
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/698a7363e01ca72ce5e22be0/ee8c92a8-bb49-43da-a837-594c6103a061/Tajima-90.webp?format=1000w",
+          "imageFrom": "https://tajimayakiniku.com.au/",
+          "caption": "店内座位"
+        }
+      ],
+      "note": "套餐价格网上点单页和店内略有出入，以店内为准。",
+      "sources": [
+        "https://tajimayakiniku.com.au/",
+        "https://tajimayakiniku.com.au/menu",
+        "https://webv1.qonus.com.au/fnb/order/menu?action=menu&enc=y&qrFrom=&storeCode=YTJlVEthbzlhaldpbE56K2RLYk5Mdz09",
+        "https://tajimayakiniku.com.au/a5-wagyu-sydney-cbd",
+        "https://www.xiaohongshu.com/explore/6ab3a0f2000000000a0220e0",
+        "https://www.xiaohongshu.com/explore/69f053ea000000003700d42b"
+      ]
+    },
+    "kangnam": {
+      "menu": "单点韩式烤肉，每份约 180g，烤肉至少点 2 份；也有 2–4 人烤肉套餐 $125–215。除烤肉外有大量汤锅、炸鸡、煎饼、冷面和炸酱面，小菜免费续加。人均约 $30–60，三家店菜单略有不同。",
+      "menuUrl": "https://kangnambbq.com.au/menu",
+      "dishes": [
+        {
+          "name": "Grilled Pork Belly & Kimchi",
+          "nameZh": "老泡菜烤五花肉",
+          "desc": "熟成泡菜和五花肉同烤，酸辣解腻，Time Out 点名推荐",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Seafood Pancake",
+          "nameZh": "海鲜葱饼",
+          "desc": "Google 评论提得最多的菜，边缘焦脆，虾仁鱿鱼料足",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Fried Chicken",
+          "nameZh": "韩式炸鸡",
+          "desc": "原味、甜辣、酱油、雪花芝士等多种口味，半只就够两人吃",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Black Bean Noodle",
+          "nameZh": "韩式炸酱面",
+          "desc": "五花肉洋葱炸酱拌面，小红书熟客必点",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Ox-Tail Soup",
+          "nameZh": "牛尾雪浓汤",
+          "desc": "大块牛尾和牛筋的清汤，料足火候够",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [],
+      "note": "三家店菜单略有不同；Epping 和 Pennant Hills 店周二休息。",
+      "sources": [
+        "https://kangnambbq.com.au/",
+        "https://kangnambbq.com.au/epping-menu",
+        "https://www.timeout.com/sydney/restaurants/kangnam-bbq",
+        "https://www.sydney.com/articles/best-korean-barbecue-in-sydney",
+        "https://www.google.com/maps/search/?api=1&query=Kangnam+Korean+BBQ+Epping",
+        "https://www.xiaohongshu.com/explore/6944b98f0000000019024c68"
+      ]
+    },
+    "suminoya": {
+      "menu": "可选自助或单点：烤肉自助 $69、Special $79、Deluxe $89（限时 90 分钟，Deluxe 含和牛和刺身），周六中午 $49 自助；单点有 Suminoya Platter $100（2–3 人）等和牛拼盘，工作日午市有便当。周日休息。",
+      "menuUrl": "https://suminoya.com.au/menu/",
+      "dishes": [
+        {
+          "name": "Wagyu Karubi Plate",
+          "nameZh": "和牛五花",
+          "desc": "小红书笔记点名的和牛五花，Deluxe 自助和拼盘里都有",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Special Beef Tongue",
+          "nameZh": "特选牛舌",
+          "desc": "Google 上的人气项目，自助可以无限点牛舌",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Wagyu Yaki Shabu",
+          "nameZh": "和牛薄切烧",
+          "desc": "薄切和牛片几秒即熟，Deluxe 自助和 Suminoya Platter 都含",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Wagyu Yukke",
+          "nameZh": "和牛生拌",
+          "desc": "单点 $9 的生拌和牛，可加半熟蛋",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [
+        {
+          "image": "https://suminoya.com.au/wp-content/uploads/2025/08/SUMINOYA_BBQ-02.jpg",
+          "imageFrom": "https://suminoya.com.au/",
+          "caption": "烧肉拼盘和配菜"
+        },
+        {
+          "image": "https://suminoya.com.au/wp-content/uploads/2025/08/SUMINOYA_M01-1024x1024.jpg",
+          "imageFrom": "https://suminoya.com.au/",
+          "caption": "厚切和牛"
+        },
+        {
+          "image": "https://suminoya.com.au/wp-content/uploads/2025/08/SUMINOYA_S01-1024x1024.jpg",
+          "imageFrom": "https://suminoya.com.au/",
+          "caption": "海鲜烧烤拼盘"
+        }
+      ],
+      "note": "周日休息，部分周一也休；自助限时 90 分钟。",
+      "sources": [
+        "https://suminoya.com.au/",
+        "https://suminoya.com.au/Menu/SUMINOYA_DinnerBuffet+SaturdayLunchBuffet.pdf",
+        "https://suminoya.com.au/Menu/SUMINOYA_Dinner_ALaCarte.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Suminoya+1+Hosking+Pl+Sydney",
+        "https://www.xiaohongshu.com/explore/6a68636a0000000002003c00"
       ]
     }
   }

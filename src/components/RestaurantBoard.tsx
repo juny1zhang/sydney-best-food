@@ -7,6 +7,7 @@ import { freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
 import { AddPopover } from './AddPopover';
 import { PlusIcon } from './Icons';
 import { Segmented } from './Segmented';
+import { TaChip, XhsChip } from './Reviews';
 import { detailHref } from '../lib/route';
 
 export type BoardCategory = 'all' | CategoryId;
@@ -130,7 +131,10 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                           <span className="muted">
                             {r.suburb} · {r.price}
                           </span>
-                          {r.badges[0] && <span className="badge">{r.badges[0]}</span>}
+                          <span className="block__chips">
+                            {r.badges[0] && <span className="badge">{r.badges[0]}</span>}
+                            <XhsChip restaurant={r} />
+                          </span>
                         </div>
                       </li>
                     ))}
@@ -259,6 +263,8 @@ function RestaurantRow({ restaurant: r, placements, adding, onToggleAdd, addMeal
                 {b}
               </span>
             ))}
+            <XhsChip restaurant={r} />
+            <TaChip restaurant={r} />
             {r.tags.map((t) => (
               <span key={t} className="tag">
                 {t}

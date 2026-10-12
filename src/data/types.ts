@@ -4,6 +4,8 @@ export type Price = '$' | '$$' | '$$$' | '$$$$';
 
 export type CategoryId =
   | 'chinese'
+  | 'hotpot'
+  | 'bbq'
   | 'japanese'
   | 'korean'
   | 'se-asian'
@@ -43,6 +45,31 @@ export interface Restaurant {
   accolades: string[];
   sources: string[];
   confidence: 'high' | 'medium' | 'low';
+  /** What Xiaohongshu posts and comments say; absent until checked. */
+  xhs?: XhsTake;
+  /** The TripAdvisor listing as last seen; absent until checked. */
+  ta?: TaTake;
+}
+
+export interface TaTake {
+  url: string | null;
+  rating: number | null;
+  reviews: number | null;
+  /** In Chinese, e.g. "悉尼 4,786 家里第 8". */
+  rank: string | null;
+  summary: string;
+  praise: string[];
+  complaints: string[];
+}
+
+export type XhsVerdict = 'recommend' | 'mixed' | 'avoid' | 'few';
+
+export interface XhsTake {
+  verdict: XhsVerdict;
+  /** One sentence, the way a friend would sum it up. */
+  summary: string;
+  praise: string[];
+  complaints: string[];
 }
 
 /** A venue booked outside the Sydney list (the New Zealand trip). */

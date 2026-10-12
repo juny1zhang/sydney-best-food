@@ -6,6 +6,7 @@ import { freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
 import { hostOf } from '../lib/url';
 import { AddPopover } from './AddPopover';
 import { BackIcon, PlusIcon } from './Icons';
+import { ReviewsSection, TaChip, XhsChip } from './Reviews';
 
 const SERVICE_LABEL: Record<ServiceMeal, string> = { breakfast: '早餐', lunch: '午餐', dinner: '晚餐' };
 
@@ -116,6 +117,8 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
               {b}
             </span>
           ))}
+          <XhsChip restaurant={r} />
+          <TaChip restaurant={r} />
           {r.tags.map((t) => (
             <span key={t} className="tag">
               {t}
@@ -158,6 +161,8 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
               </ul>
             </section>
           )}
+
+          <ReviewsSection restaurant={r} />
         </div>
 
         <aside className="detail__side" aria-label="订位与安排">
