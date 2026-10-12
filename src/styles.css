@@ -190,6 +190,22 @@ p {
   background: #9cc7ae;
   border: 0;
 }
+.sync__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+  background: #a9bccb;
+}
+.sync--live .sync__dot {
+  background: #6fd3a0;
+}
+.sync--error {
+  color: #ffc9a8;
+}
+.sync--error .sync__dot {
+  background: #ff9e6b;
+}
 .swatch--travel {
   background: var(--surface);
   border: 1.5px dashed var(--travel-line);

@@ -7,7 +7,7 @@ import { RestaurantBoard, type BoardCategory } from './components/RestaurantBoar
 import { DAYS_IN_MONTH, MONTH_INDEX, NZ_TRIP_DAYS, YEAR, dayInfo } from './data/december';
 import { RESTAURANT_BY_ID, VERIFIED_ON } from './data/restaurants';
 import type { Meal } from './data/types';
-import { usePicks } from './hooks/usePicks';
+import { usePicks, type SyncState } from './hooks/usePicks';
 import { useMediaQuery } from './hooks/useMediaQuery';
 import { dateLabel } from './lib/calendar';
 import { MEALS, countMeals, removePick, setPick, type Pick } from './lib/plan';
@@ -32,13 +32,25 @@ interface Toast {
   returnTo?: string;
 }
 
+const SYNC_LABEL: Record<Exclude<SyncState, 'local'>, string> = {
+  connecting: '连接中…',
+  live: '实时同步',
+  error: '未同步',
+};
+
+const SYNC_HINT: Record<Exclude<SyncState, 'local'>, string> = {
+  connecting: '正在连接共享日历',
+  live: '打开这个网站的人看到的是同一份日历，改动会马上同步',
+  error: '刚才的改动还没存到共享日历，会自动重试',
+};
+
 function formatVerified(iso: string): string {
   const [y, m, d] = iso.split('-').map(Number);
   return `${y} 年 ${m} 月 ${d} 日`;
 }
 
 export default function App() {
-  const [picks, setPicks] = usePicks();
+  const [picks, setPicks, sync] = usePicks();
   const [day, setDay] = useState(() => initialDay());
   const [category, setCategory] = useState<BoardCategory>('all');
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -132,6 +144,12 @@ export default function App() {
               <span className="swatch swatch--nz" />
               新西兰 {NZ_TRIP_DAYS} 天
             </li>
+            {sync !== 'local' && (
+              <li className={`sync sync--${sync}`} title={SYNC_HINT[sync]}>
+                <span className="sync__dot" />
+                <span aria-live="polite">{SYNC_LABEL[sync]}</span>
+              </li>
+            )}
           </ul>
         </div>
       </header>

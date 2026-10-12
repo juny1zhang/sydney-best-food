@@ -4,7 +4,7 @@
 
 - **榜单**：中餐、日料、韩餐、东南亚、印度 / 斯里兰卡、中东 / 地中海、意大利 / 披萨、法餐 / 欧陆小馆、现代澳洲、海鲜、牛排 / 烧烤、早午餐 / 甜品，共 88 家。排名综合 2026 SMH Good Food Guide、AGFG、World’s 101 Best Steak、Gourmet Traveller、Broadsheet / Time Out 等来源，每家都附“评价依据”和来源链接，营业状态核对于 2026-10-11。
 - **日历**：橙色 = 已预订，蓝色 = 自己选好的，浅绿 = 在新西兰，虚线 = 飞行日。悉尼的空日子可以从榜单搜索、挑选；新西兰的日子可以手动记一家当地的店。
-- **保存**：选好的店存在浏览器的 localStorage 里，只在这台设备上。
+- **共享**：配好 Supabase 后，所有打开网站的人编辑的是同一份日历，改动实时同步（顶部会显示“实时同步”）。网站没有登录，拿到链接的人都能改。浏览器里的 localStorage 只是缓存，让页面秒开；没配 Supabase 时（比如跑测试），选择只存在本机。
 
 ## 开发
 
@@ -17,6 +17,10 @@ npm run build      # 输出到 dist/
 ```
 
 技术栈：Vite + React 18 + TypeScript，纯静态站点。
+
+## 共享日历（Supabase）
+
+建表 SQL 在 `supabase/migrations/`：一张 `picks` 表，每顿饭一行，只接受 `dec-2026` 这一份计划，最多 62 行。连接信息写在 `.env`（`VITE_SUPABASE_URL`、`VITE_SUPABASE_PUBLISHABLE_KEY`）：publishable key 本来就是给浏览器用的，可以提交。`.env.test` 把它们清空，所以测试不会碰到真实数据。
 
 ## 部署到 Vercel
 

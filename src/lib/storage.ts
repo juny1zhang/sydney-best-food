@@ -6,7 +6,7 @@ export const STORAGE_KEY = 'sydney-eats:picks:v1';
 
 const MEAL_KEYS: Meal[] = ['lunch', 'dinner'];
 
-function cleanPick(value: unknown): Pick | null {
+export function cleanPick(value: unknown): Pick | null {
   if (!value || typeof value !== 'object') return null;
   const v = value as Record<string, unknown>;
   if (v.kind === 'restaurant' && typeof v.id === 'string' && RESTAURANT_BY_ID.has(v.id)) {
@@ -21,12 +21,15 @@ function cleanPick(value: unknown): Pick | null {
 /** Parses stored picks, dropping anything malformed or pointing at a restaurant that no longer exists. */
 export function parsePicks(text: string | null): Picks {
   if (!text) return {};
-  let data: unknown;
   try {
-    data = JSON.parse(text);
+    return sanitizePicks(JSON.parse(text));
   } catch {
     return {};
   }
+}
+
+/** Keeps only well-formed picks for real days, meals and restaurants. */
+export function sanitizePicks(data: unknown): Picks {
   if (!data || typeof data !== 'object') return {};
   const out: Picks = {};
   for (const [key, meals] of Object.entries(data as Record<string, unknown>)) {
