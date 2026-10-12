@@ -5215,6 +5215,247 @@
         "https://www.google.com/maps/search/?api=1&query=Suminoya+1+Hosking+Pl+Sydney",
         "https://www.xiaohongshu.com/explore/6a68636a0000000002003c00"
       ]
+    },
+    "cheng-ji": {
+      "menu": "家庭式小馆，单点为主，菜单围绕自制菠菜面、凉皮、肉夹馍、锅贴和羊肉/牛肉泡馍等陕西小吃，也有糖醋肉等炒菜。2026 年 5 月的评论里，菠菜干拌面 $18.80、肉夹馍 $8.50，人均约 $20–40。每天 11 点到晚上 8 点，周二休息。",
+      "menuUrl": null,
+      "dishes": [
+        {
+          "name": "Special Pan Fried Pork Dumplings",
+          "nameZh": "招牌猪肉锅贴",
+          "desc": "皮薄底脆、肉馅多汁的煎饺，一份 15 只，Google 上标为最受欢迎的菜，常被夸是必点。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Xi'an Liang-Pi Cold Noodles",
+          "nameZh": "凉皮",
+          "desc": "爽滑有弹性的凉皮拌辣油和醋，是 Google 评论里被提到最多的一道。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Xi'an Home-Style Pork Spinach Noodles",
+          "nameZh": "陕西臊子干拌菠菜面",
+          "desc": "店里自制的菠菜面拌猪肉臊子，酸辣鲜香，2026 年博主说是近来吃过最好的面之一。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Lamb Pao-Mo Soup",
+          "nameZh": "羊肉泡馍",
+          "desc": "掰碎的馍泡在清汤羊肉里，最有代表性的西安吃法，华人食客常把它列为必点。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Xi'an Stewed Pork Burger (Roujiamo)",
+          "nameZh": "肉夹馍",
+          "desc": "烙饼夹腊汁猪肉，有纯瘦肉版本；有人夸肉香多汁，也有博主嫌饼偏干。",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [],
+      "note": "周二休息，营业到晚上 8 点；没有官网，菜单以店内为准。",
+      "sources": [
+        "https://www.google.com/maps/place/Cheng%E2%80%99s+Xi%E2%80%99an+Traditional+Foods/@-33.8803575,151.1033751,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12bb02234a1a57:0x9aa8e6d78b42a30e!8m2!3d-33.8803575!4d151.1033751!16s%2Fg%2F11j234dy4n",
+        "https://pegfeeds.com/2026/05/05/chengs-xian-traditional-foods-%E7%A8%8B%E8%AE%B0%E8%A5%BF%E5%AE%89%E5%90%8D%E5%90%83-burwood-nsw-restaurant-review/",
+        "https://thatch.co/guide/24iwbo8kdz8vf/view",
+        "https://www.tiktok.com/@chewyourchow/video/7505202016151538961"
+      ]
+    },
+    "woodcut": {
+      "menu": "开放式厨房按柴火、蒸汽、烟熏和冰几种烹法分站出菜，以单点为主，主角是铁皮木炭火烤的各种牛排（下单后约需 45 分钟），海鲜和配菜也多。人均约 $200 以上；另有 4 款分享套餐 $165–305/人、素食菜单和儿童菜单，周二至周日午餐有 $45 牛排薯条套餐。",
+      "menuUrl": "https://www.crownsydney.com.au/getsydmedia/9ac3bae5-6b3e-4d34-a034-1511607cfad0/crown-sydney-woodcut-food-menu.pdf?ext=.pdf",
+      "dishes": [
+        {
+          "name": "Black Onyx T-bone 5+ 1kg",
+          "nameZh": "1 公斤 T 骨牛排",
+          "desc": "铁皮木炭火烤的 1 公斤 T 骨，单点约 $300，适合两人分，套餐里换成草饲 T 骨；评论提到最多。",
+          "image": "https://www.crownsydney.com.au/getmedia/6919a723-ad70-4d66-8eb6-7031e30f836c/240625-Crown-Sydney-Restaurants-Woodcut-Steak-1200x800.jpg",
+          "imageFrom": "https://www.crownsydney.com.au/restaurants/woodcut"
+        },
+        {
+          "name": "Crab cakes, hemp seeds, saltbush, oyster mayonnaise",
+          "nameZh": "蟹饼配生蚝蛋黄酱",
+          "desc": "蟹肉饼配大麻籽、滨藜和生蚝蛋黄酱，是 Google 评论里第二常被点名的菜，也在多款套餐里。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Hasselback potato, burnt onions, herb oil",
+          "nameZh": "风琴烤土豆",
+          "desc": "切成风琴片烤到外脆内软，配焦洋葱和香草油，是配牛排最常被夸的配菜。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Eastern rock lobster, kombu butter",
+          "nameZh": "昆布黄油烤龙虾",
+          "desc": "木烤炉烤的东岸岩龙虾刷昆布黄油，半只 $185，Google 上标为人气菜。",
+          "image": "https://www.crownsydney.com.au/getmedia/10067622-ad40-4934-a167-6488c219ea49/220830-Crown-Sydney-Restaurants-Woodcut-Seafood-1660x1200.jpg",
+          "imageFrom": "https://www.crownsydney.com.au/restaurants/woodcut"
+        }
+      ],
+      "photos": [
+        {
+          "image": "https://www.crownsydney.com.au/getmedia/d061b808-9d65-4faf-908a-e43e37071f42/220822-Crown-Sydney-Restaurants-Woodcut-Interior-1660x1200.jpg",
+          "imageFrom": "https://www.crownsydney.com.au/restaurants/woodcut",
+          "caption": "临窗用餐区与开放式厨房"
+        },
+        {
+          "image": "https://www.crownsydney.com.au/getmedia/76af6621-5fbf-4253-a391-1b854ca89ba3/220822-Crown-Sydney-Restaurants-Woodcut-Kitchen-1660x1200.jpg",
+          "imageFrom": "https://www.crownsydney.com.au/restaurants/woodcut",
+          "caption": "厨师在开放式厨房备菜"
+        },
+        {
+          "image": "https://www.crownsydney.com.au/getsydmedia/b6d34454-7e75-48ed-a045-841cee8176df/220822-Crown-Sydney-Restaurants-Woodcut-Grill-1660x1200.jpg",
+          "imageFrom": "https://www.crownsydney.com.au/restaurants/woodcut",
+          "caption": "烤架下的柴火"
+        }
+      ],
+      "note": "周六加收 10%，周日和公共假日 15%；2026 年圣诞和跨年菜单尚未公布。",
+      "sources": [
+        "https://www.crownsydney.com.au/restaurants/woodcut",
+        "https://www.crownsydney.com.au/getsydmedia/9ac3bae5-6b3e-4d34-a034-1511607cfad0/crown-sydney-woodcut-food-menu.pdf?ext=.pdf",
+        "https://www.crownsydney.com.au/getsydmedia/94b116ae-810b-4ae6-884f-82a9ab238e76/crown-sydney-woodcut-set-menu.pdf?ext=.pdf",
+        "https://www.crownsydney.com.au/getsydmedia/807b2e13-94ce-4df3-9535-62c8c6d1a132/crown-sydney-woodcut-dessert-menu.pdf?ext=.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Woodcut+Crown+Sydney+1+Barangaroo+Avenue"
+      ]
+    },
+    "6-head": {
+      "menu": "以单点为主，围绕六种牛排切法（臀肉、肉眼、T 骨、纽约客、战斧、菲力）和店内干式熟成，配生蚝、生鱼和海鲜前菜，1 公斤 T 骨 $225、1.5 公斤战斧 $278。另有三款套餐 $162 / $195 / $249 每人，可加配酒；有中文菜单和儿童菜单。周日加收 5%，公共假日 10%。",
+      "menuUrl": "https://6head.com.au/sydney-restaurant/all-day-menu/",
+      "dishes": [
+        {
+          "name": "Tomahawk - 1.5kg, Grass Fed, MB3+",
+          "nameZh": "1.5 公斤草饲战斧牛排",
+          "desc": "Collinson & Co 草饲战斧，适合两三人分享，配薯条或沙拉，是 Google 评论里提到最多的菜。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "T-Bone - 1kg, Grass Fed, MB3+",
+          "nameZh": "1 公斤草饲 T 骨",
+          "desc": "1 公斤草饲 T 骨，也是 $249 分享套餐的主菜，2026 年评论夸火候准、味道足。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Wagyu Beef Tartare",
+          "nameZh": "和牛塔塔",
+          "desc": "MB7+ 和牛臀肉切碎，配烟熏生蚝乳化酱和酱油腌蛋黄，Google 上标为人气前菜。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Wagyu Charcuterie",
+          "nameZh": "和牛风干肉拼盘",
+          "desc": "Mayura Station MB9+ 和牛风干牛肉和萨拉米配自制腌菜，TripAdvisor 列为热门菜。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Chips (beef tallow chips)",
+          "nameZh": "牛油炸薯条",
+          "desc": "用牛油炸的粗薯条，有评论夸配蘑菇酱很搭，也有人嫌配菜分量小。",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [
+        {
+          "image": "https://6head.com.au/wp-content/uploads/2026/04/sunset_harbour-1536x830.jpg",
+          "imageFrom": "https://6head.com.au/sydney-restaurant/",
+          "caption": "日落时的露台，正对歌剧院"
+        },
+        {
+          "image": "https://6head.com.au/wp-content/uploads/2025/08/Sydbay10_0000_6H-Sydney-bay-10.jpg",
+          "imageFrom": "https://6head.com.au/sydney-restaurant/",
+          "caption": "砂岩老仓库里的用餐区"
+        },
+        {
+          "image": "https://6head.com.au/wp-content/uploads/2025/10/sides.jpg",
+          "imageFrom": "https://6head.com.au/sydney-restaurant/the-chef/",
+          "caption": "两道配菜（菜式随季节更换）"
+        }
+      ],
+      "note": "周一只开晚餐；跨年夜只供 $1,100/人起的特别套餐。",
+      "sources": [
+        "https://6head.com.au/sydney-restaurant/",
+        "https://6head.com.au/sydney-restaurant/all-day-menu/",
+        "https://6head.com.au/sydney-restaurant/set-menus/",
+        "https://6head.com.au/events/new-years-eve-sydney/",
+        "https://www.google.com/maps/place/6HEAD+Sydney/@-33.8566476,151.2090994,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12ae5d6964b907:0x8ccd54d7a3e4f9a0!8m2!3d-33.8566476!4d151.2090994!16s%2Fg%2F11fkq_bk9l",
+        "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d16854011-Reviews-6HEAD_Sydney-Sydney_New_South_Wales.html"
+      ]
+    },
+    "bistecca": {
+      "menu": "只卖按重量计价的佛罗伦萨 T 骨（$22/100g，最少 600g），切好称重给客人过目后用铁皮木炭火烤到三分熟，前菜、配菜和甜点另点，评论建议两人点 700–900 克，人均约 $130–200。6 人以上可订套餐 $128–169/人。只接待 18 岁以上，入座要把手机锁起来。",
+      "menuUrl": "https://www.liquidandlarder.com.au/venues/bistecca/menus/",
+      "dishes": [
+        {
+          "name": "Bistecca alla Fiorentina",
+          "nameZh": "佛罗伦萨 T 骨牛排",
+          "desc": "新州 Riverina 牛肉做的 T 骨按克切，铁皮木炭火烤到三分熟，只用盐、胡椒和橄榄油调味。",
+          "image": "https://www.liquidandlarder.com.au/wp-content/uploads/STEAK-LANDSCAPE-1980-1-1536x1025.avif",
+          "imageFrom": "https://www.liquidandlarder.com.au/venues/bistecca/"
+        },
+        {
+          "name": "Bone Marrow, prosciutto crust",
+          "nameZh": "帕尔玛火腿脆皮牛骨髓",
+          "desc": "烤牛骨髓盖一层火腿碎脆皮，按根计价，是 Google 评论里被点名最多的前菜。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Tiramisu",
+          "nameZh": "提拉米苏",
+          "desc": "经典意式提拉米苏，和 T 骨一起被 Google 标为这家最受欢迎的两道菜。",
+          "image": "https://www.liquidandlarder.com.au/wp-content/uploads/TIRAMISU-1025x1536.avif",
+          "imageFrom": "https://www.liquidandlarder.com.au/venues/bistecca/"
+        },
+        {
+          "name": "Roast Potato, parmesan mayo, spice crumb",
+          "nameZh": "烤土豆配帕玛森蛋黄酱",
+          "desc": "外脆内绵的烤土豆配帕玛森蛋黄酱和香料脆粒，和白豆一样是评论常夸的配菜。",
+          "image": null,
+          "imageFrom": null
+        },
+        {
+          "name": "Focaccia with beef-fat candle",
+          "nameZh": "佛卡夏配牛油蜡烛",
+          "desc": "用牛排修下的牛油加迷迭香和蒜做成蜡烛，点燃后拿面包蘸融化的牛油吃，是招牌噱头。",
+          "image": null,
+          "imageFrom": null
+        }
+      ],
+      "photos": [
+        {
+          "image": "https://www.liquidandlarder.com.au/wp-content/uploads/STEAK-ON-GRILL-1025x1536.avif",
+          "imageFrom": "https://www.liquidandlarder.com.au/venues/bistecca/",
+          "caption": "炭火烤架上的牛排"
+        },
+        {
+          "image": "https://www.liquidandlarder.com.au/wp-content/uploads/Bistecca_HERO-1536x1098.avif",
+          "imageFrom": "https://www.liquidandlarder.com.au/venues/bistecca/",
+          "caption": "服务员上桌前展示生 T 骨"
+        },
+        {
+          "image": "https://www.liquidandlarder.com.au/wp-content/uploads/PHONE-BOXES-1-1536x1053.avif",
+          "imageFrom": "https://www.liquidandlarder.com.au/venues/bistecca/",
+          "caption": "用餐区存放客人手机的木格柜"
+        }
+      ],
+      "note": "12 月 25、26 日和元旦休息；只接待 18 岁以上，入座要交手机。",
+      "sources": [
+        "https://www.liquidandlarder.com.au/venues/bistecca/",
+        "https://www.liquidandlarder.com.au/venues/bistecca/menus/",
+        "https://www.broadsheet.com.au/sydney/food-and-drink/article/how-its-made-bisteccas-beef-fat-candle",
+        "https://www.google.com/maps/search/?api=1&query=Bistecca+3+Dalley+St+Sydney",
+        "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d14843805-Reviews-Bistecca-Sydney_New_South_Wales.html"
+      ]
     }
   }
 }
