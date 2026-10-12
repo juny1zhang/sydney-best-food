@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { CATEGORIES, categoryOf, restaurantsIn } from '../data/restaurants';
-import { MONTH_INDEX, YEAR } from '../data/december';
+import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
 import type { CategoryId, Meal, Price, Restaurant } from '../data/types';
 import { dateLabel } from '../lib/calendar';
 import { MEALS, freeSydneyDays, servesMeal, type Picks } from '../lib/plan';
@@ -25,6 +25,18 @@ function rankLabel(rank: number): string {
   return rank < 10 ? `0${rank}` : `${rank}`;
 }
 
+/** Where a restaurant already sits on the calendar, e.g. "12月3日 晚餐". */
+function placementsOf(id: string, picks: Picks): string[] {
+  const out: string[] = [];
+  for (const [day, meals] of Object.entries(picks)) {
+    for (const m of MEALS) {
+      const p = meals?.[m.key];
+      if (p?.kind === 'restaurant' && p.id === id) out.push(`12月${day}日 ${m.label}`);
+    }
+  }
+  return out;
+}
+
 interface BoardProps {
   category: BoardCategory;
   onCategory: (c: BoardCategory) => void;
@@ -37,21 +49,34 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
   const [expanded, setExpanded] = useState(false);
   const [addingId, setAddingId] = useState<string | null>(null);
   const [addMeal, setAddMeal] = useState<Meal>('dinner');
+  const sectionRef = useRef<HTMLElement>(null);
 
   const priceOk = (r: Restaurant) => price === 'all' || r.price === price;
-  const total = CATEGORIES.reduce((n, c) => n + restaurantsIn(c.id).length, 0);
+  const countIn = (id: CategoryId) => restaurantsIn(id).filter(priceOk).length;
+  const total = CATEGORIES.reduce((n, c) => n + countIn(c.id), 0);
 
-  const pickCategory = (c: BoardCategory) => {
+  /** The list height changes a lot between views; bring the board's top back into view. */
+  const settle = (focusSelector?: string) => {
+    requestAnimationFrame(() => {
+      const el = sectionRef.current;
+      if (el && el.getBoundingClientRect().top < 0) el.scrollIntoView?.({ block: 'start' });
+      if (focusSelector) el?.querySelector<HTMLElement>(focusSelector)?.focus({ preventScroll: true });
+    });
+  };
+
+  const pickCategory = (c: BoardCategory, fromBlock = false) => {
     onCategory(c);
     setExpanded(false);
     setAddingId(null);
+    settle(fromBlock ? '.tabs [aria-pressed="true"]' : undefined);
   };
 
   const list = category === 'all' ? [] : restaurantsIn(category).filter(priceOk);
   const visible = expanded ? list : list.slice(0, COLLAPSED_ROWS);
+  const listHeadingId = 'list-cat-h';
 
   return (
-    <section id="list" aria-labelledby="list-h" className="board">
+    <section id="list" ref={sectionRef} aria-labelledby="list-h" className="board">
       <div className="section-head">
         <div className="section-head__text">
           <h1 id="list-h">悉尼餐厅榜单</h1>
@@ -60,7 +85,16 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
             推荐。只收录目前仍在营业的店。
           </p>
         </div>
-        <Segmented label="按价位筛选" variant="pill" options={PRICE_OPTIONS} value={price} onChange={setPrice} />
+        <Segmented
+          label="按价位筛选"
+          variant="pill"
+          options={PRICE_OPTIONS}
+          value={price}
+          onChange={(p) => {
+            setPrice(p);
+            setAddingId(null);
+          }}
+        />
       </div>
 
       <div role="group" aria-label="按类别查看" className="tabs">
@@ -71,7 +105,7 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
         {CATEGORIES.map((c) => (
           <button key={c.id} type="button" className="tab" aria-pressed={category === c.id} onClick={() => pickCategory(c.id)}>
             <span>{c.name}</span>
-            <span className="tab__count">{restaurantsIn(c.id).length}</span>
+            <span className="tab__count">{countIn(c.id)}</span>
           </button>
         ))}
       </div>
@@ -80,12 +114,13 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
         <div className="blocks">
           {CATEGORIES.map((c) => {
             const all = restaurantsIn(c.id);
-            const top = all.filter(priceOk).slice(0, 3);
+            const matching = all.filter(priceOk);
+            const top = matching.slice(0, 3);
             return (
               <article key={c.id} className="block" aria-labelledby={`block-${c.id}`}>
                 <div className="block__head">
                   <h2 id={`block-${c.id}`}>{c.name}</h2>
-                  <span>共 {all.length} 家</span>
+                  <span>{price === 'all' ? `共 ${all.length} 家` : `${matching.length} 家 · 共 ${all.length} 家`}</span>
                 </div>
                 {top.length ? (
                   <ol className="block__list">
@@ -105,21 +140,28 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                 ) : (
                   <p className="muted">这个价位暂时没有。</p>
                 )}
-                <button type="button" className="btn btn--outline block__more" onClick={() => pickCategory(c.id)}>
-                  看全部 {all.length} 家
-                </button>
+                {matching.length > 0 && (
+                  <button type="button" className="btn btn--outline block__more" onClick={() => pickCategory(c.id, true)}>
+                    看全部 {matching.length} 家
+                  </button>
+                )}
               </article>
             );
           })}
         </div>
       ) : (
         <>
+          <h2 id={listHeadingId} className="list-heading">
+            {categoryOf(category).name}排名
+            {price !== 'all' && <span className="muted"> · {price}</span>}
+          </h2>
           {visible.length ? (
-            <ol className="rows" aria-label={`${categoryOf(category).name}排名`}>
+            <ol className="rows" aria-labelledby={listHeadingId}>
               {visible.map((r) => (
                 <RestaurantRow
                   key={r.id}
                   restaurant={r}
+                  placements={placementsOf(r.id, picks)}
                   adding={addingId === r.id}
                   onToggleAdd={() => setAddingId(addingId === r.id ? null : r.id)}
                   addMeal={addMeal}
@@ -128,15 +170,31 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                   onPickDay={(day) => {
                     onAdd(r, day, addMeal);
                     setAddingId(null);
+                    requestAnimationFrame(() => document.getElementById(`addbtn-${r.id}`)?.focus({ preventScroll: true }));
                   }}
                 />
               ))}
             </ol>
           ) : (
-            <p className="empty">这个价位暂时没有{categoryOf(category).name}。</p>
+            <div className="empty">
+              <p>这个价位暂时没有{categoryOf(category).name}。</p>
+              <button type="button" className="btn btn--outline" onClick={() => setPrice('all')}>
+                查看全部价位
+              </button>
+            </div>
           )}
           {list.length > COLLAPSED_ROWS && (
-            <button type="button" className="btn btn--outline btn--round expand" onClick={() => setExpanded(!expanded)}>
+            <button
+              type="button"
+              className="btn btn--outline btn--round expand"
+              onClick={() => {
+                if (expanded) {
+                  setAddingId(null);
+                  settle();
+                }
+                setExpanded(!expanded);
+              }}
+            >
               {expanded ? '收起' : `展开其余 ${list.length - COLLAPSED_ROWS} 家`}
             </button>
           )}
@@ -148,6 +206,7 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
 
 interface RowProps {
   restaurant: Restaurant;
+  placements: string[];
   adding: boolean;
   onToggleAdd: () => void;
   addMeal: Meal;
@@ -156,7 +215,7 @@ interface RowProps {
   onPickDay: (day: number) => void;
 }
 
-function RestaurantRow({ restaurant: r, adding, onToggleAdd, addMeal, onAddMeal, freeDays, onPickDay }: RowProps) {
+function RestaurantRow({ restaurant: r, placements, adding, onToggleAdd, addMeal, onAddMeal, freeDays, onPickDay }: RowProps) {
   const popId = `add-${r.id}`;
   const mealLabel = MEALS.find((m) => m.key === addMeal)!.label;
   return (
@@ -185,6 +244,7 @@ function RestaurantRow({ restaurant: r, adding, onToggleAdd, addMeal, onAddMeal,
           </div>
           <p className="row__intro">{r.intro}</p>
           <span className="muted small">订位：{r.booking}</span>
+          {placements.length > 0 && <span className="placed">已在日历：{placements.join('、')}</span>}
           {r.sources.length > 0 && (
             <details className="sources">
               <summary>评价依据（{r.sources.length}）</summary>
@@ -199,7 +259,7 @@ function RestaurantRow({ restaurant: r, adding, onToggleAdd, addMeal, onAddMeal,
                 {r.sources.map((s) => (
                   <li key={s}>
                     <a href={s} target="_blank" rel="noreferrer">
-                      {new URL(s).hostname.replace(/^www\./, '')}
+                      {hostOf(s)}
                     </a>
                   </li>
                 ))}
@@ -208,7 +268,14 @@ function RestaurantRow({ restaurant: r, adding, onToggleAdd, addMeal, onAddMeal,
           )}
         </div>
         <div className="row__action">
-          <button type="button" className="btn btn--primary" aria-expanded={adding} aria-controls={popId} onClick={onToggleAdd}>
+          <button
+            id={`addbtn-${r.id}`}
+            type="button"
+            className="btn btn--primary"
+            aria-expanded={adding}
+            aria-controls={popId}
+            onClick={onToggleAdd}
+          >
             <PlusIcon />
             <span>加入日历</span>
           </button>
@@ -224,11 +291,15 @@ function RestaurantRow({ restaurant: r, adding, onToggleAdd, addMeal, onAddMeal,
           {!servesMeal(r, addMeal) && <p className="warn">提示：这家通常不做{mealLabel}，去之前确认一下营业时间。</p>}
           {freeDays.length ? (
             <div className="addpop__days">
-              {freeDays.map((d) => (
-                <button key={d} type="button" className="btn btn--ghost" onClick={() => onPickDay(d)}>
-                  {dateLabel(YEAR, MONTH_INDEX, d)}
-                </button>
-              ))}
+              {freeDays.map((d) => {
+                const holiday = dayInfo(d).holiday;
+                return (
+                  <button key={d} type="button" className={`btn btn--ghost${holiday ? ' btn--holiday' : ''}`} onClick={() => onPickDay(d)}>
+                    {dateLabel(YEAR, MONTH_INDEX, d)}
+                    {holiday ? ` · ${holiday}` : ''}
+                  </button>
+                );
+              })}
             </div>
           ) : (
             <p className="muted">在悉尼的日子{mealLabel}都安排满了。</p>
@@ -237,4 +308,12 @@ function RestaurantRow({ restaurant: r, adding, onToggleAdd, addMeal, onAddMeal,
       )}
     </li>
   );
+}
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
 }

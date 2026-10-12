@@ -120,7 +120,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "https://www.opentable.com.au/restaurant/profile/298343",
+      "website": "",
       "accolades": [
         "SMH Good Food Guide 2026: newly hatted (hat count not confirmed)",
         "Time Out Sydney: 5/5; listed in Time Out's best Chinese restaurants in Sydney"
@@ -129,7 +129,8 @@
         "https://www.russh.com/new-hatted-restaurants-sydney-2026/",
         "https://www.opentable.com.au/lists/good-food-guide",
         "https://timeout.com/sydney/restaurants/grandfathers",
-        "https://www.timeout.com/sydney/restaurants/the-best-chinese-restaurants-in-sydney"
+        "https://www.timeout.com/sydney/restaurants/the-best-chinese-restaurants-in-sydney",
+        "https://www.opentable.com.au/restaurant/profile/298343"
       ],
       "confidence": "medium"
     },
@@ -282,7 +283,7 @@
       "suburb": "Hurstville",
       "price": "$$",
       "badges": [
-        "Broadsheet 饮茶之王"
+        "Broadsheet 西南区饮茶之王"
       ],
       "tags": [
         "粤菜",
@@ -295,7 +296,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://sydney.com/destinations/sydney/sydney-south/food-and-drink/golden-sands-hurstville",
+      "website": "",
       "accolades": [
         "Broadsheet: 'yum cha king of the south-west'",
         "Destination NSW: one of the most delicious yum cha restaurants in Sydney"
@@ -303,7 +304,8 @@
       "sources": [
         "https://www.broadsheet.com.au/sydney/hurstville/restaurants/golden-sands",
         "https://sydney.com/articles/best-yum-cha-in-sydney",
-        "https://pegfeeds.com/2026/05/25/golden-sands-%E9%87%91%E6%B2%99%E9%85%92%E6%A5%BC-hurstville-nsw-restaurant-review/"
+        "https://pegfeeds.com/2026/05/25/golden-sands-%E9%87%91%E6%B2%99%E9%85%92%E6%A5%BC-hurstville-nsw-restaurant-review/",
+        "https://sydney.com/destinations/sydney/sydney-south/food-and-drink/golden-sands-hurstville"
       ],
       "confidence": "high"
     },
@@ -329,7 +331,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://stockland.com.au/shopping-centres/centres/stockland-piccadilly/stores/palace-chinese-restaurant",
+      "website": "",
       "accolades": [
         "Broadsheet: Best Yum Cha in Sydney"
       ],
@@ -337,7 +339,8 @@
         "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d4779612-Reviews-Palace_Chinese_Restaurant-Sydney_New_South_Wales.html",
         "https://www.yelp.com/biz/palace-chinese-restaurant-sydney",
         "https://www.broadsheet.com.au/sydney/guides/best-yum-cha",
-        "https://www.dishcult.com/articles/where-to-find-the-best-yum-cha-in-sydney"
+        "https://www.dishcult.com/articles/where-to-find-the-best-yum-cha-in-sydney",
+        "https://stockland.com.au/shopping-centres/centres/stockland-piccadilly/stores/palace-chinese-restaurant"
       ],
       "confidence": "high"
     },
@@ -363,7 +366,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://broadsheet.com.au/sydney/burwood/restaurants/xi-eatery",
+      "website": "",
       "accolades": [
         "Time Out Sydney: 5/5",
         "Time Out World's Coolest Neighbourhoods 2025 (Burwood): recommended pick"
@@ -372,7 +375,8 @@
         "https://timeout.com/sydney/restaurants/xian-eatery",
         "https://www.timeout.com/australia/news/two-of-the-worlds-coolest-neighbourhoods-are-in-australia-and-they-might-surprise-you-092625",
         "https://www.broadsheet.com.au/sydney/food-and-drink/article/local-knowledge-xi-eatery",
-        "https://order.online/en-AU/store/23154778"
+        "https://order.online/en-AU/store/23154778",
+        "https://broadsheet.com.au/sydney/burwood/restaurants/xi-eatery"
       ],
       "confidence": "low"
     },
@@ -398,7 +402,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://darlingharbour.com/eat-drink/haidilao-hotpot",
+      "website": "",
       "accolades": [
         "Sitchu: The Best Hot Pot in Sydney"
       ],
@@ -463,7 +467,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "https://www.broadsheet.com.au/sydney/potts-point/restaurants/kisuke",
+      "website": "",
       "accolades": [
         "Broadsheet: Sydney's Best Japanese Restaurants 2026",
         "Broadsheet: Best Omakase Restaurants in Sydney"
@@ -471,7 +475,8 @@
       "sources": [
         "https://www.broadsheet.com.au/sydney/guides/best-japanese-restaurants",
         "https://www.broadsheet.com.au/sydney/guides/best-omakase-restaurants",
-        "https://thebrag.com/potts-points-kisuke-the-omakase-restaurant-with-a-40-day-waitlist"
+        "https://thebrag.com/potts-points-kisuke-the-omakase-restaurant-with-a-40-day-waitlist",
+        "https://www.broadsheet.com.au/sydney/potts-point/restaurants/kisuke"
       ],
       "confidence": "high"
     },
@@ -481,7 +486,7 @@
       "nameZh": "",
       "category": "japanese",
       "rank": 3,
-      "suburb": "Surry Hills",
+      "suburb": "CBD",
       "price": "$$$$",
       "badges": [
         "AGFG 15/20"
@@ -492,12 +497,12 @@
         "12 席"
       ],
       "intro": "Chaco Bar 主厨 Keita Abe 和 Kensuke Yada 合开的 12 席天妇罗 omakase，约 20 道菜当面现炸，轻盈不腻。晚餐约 210 澳元。",
-      "booking": "OpenTable 可订",
+      "booking": "不在 OpenTable 上，需直接联系餐厅订位",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "https://www.opentable.com.au/r/haco-sydney",
+      "website": "",
       "accolades": [
         "AGFG 2026 Chef Hat Award 15/20"
       ],
@@ -529,7 +534,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "https://venuenow.com/au/sydney/venue/kuro-bar-dining-6398",
+      "website": "",
       "accolades": [
         "AGFG 2026 Chef Hat Award 15/20",
         "Broadsheet: Best Omakase Restaurants in Sydney"
@@ -562,7 +567,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "https://www.opentable.com.au/r/sushi-oe-cammeray",
+      "website": "",
       "accolades": [
         "AGFG Chef Hat Award 14/20"
       ],
@@ -594,7 +599,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "https://www.broadsheet.com.au/sydney/guides/best-japanese-restaurants",
+      "website": "",
       "accolades": [
         "Broadsheet: Sydney's Best Japanese Restaurants 2026",
         "Broadsheet: Best Omakase Restaurants in Sydney"
@@ -624,7 +629,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "https://www.opentable.com.au/r/tokyo-bird-surry-hills",
+      "website": "",
       "accolades": [],
       "sources": [
         "https://www.opentable.com.au/r/tokyo-bird-surry-hills",
@@ -654,7 +659,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "https://www.opentable.com.au/r/allta-sydney",
+      "website": "",
       "accolades": [
         "SMH Good Food Guide: 2 hats (2024 & 2025); listed on OpenTable's GFG 2026 NSW & ACT awardees list (2026 hat count not confirmed)",
         "AGFG 2026 Chef Hat Award 15/20"
@@ -689,7 +694,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://www.timeout.com/sydney/restaurants/sang-by-mabasa",
+      "website": "",
       "accolades": [
         "Time Out Sydney: one of Sydney's best Korean spots"
       ],
@@ -723,7 +728,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://broadsheet.com.au/sydney/restaurants/danjee",
+      "website": "",
       "accolades": [
         "Broadsheet: Best Korean Barbeque in Sydney"
       ],
@@ -756,7 +761,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://sydney.com/destinations/sydney/sydney-city/city-centre/food-and-drink/soul-dining",
+      "website": "",
       "accolades": [
         "Destination NSW: first Korean restaurant in Sydney to earn a Chef's Hat (historical; current hat status not confirmed)"
       ],
@@ -764,7 +769,8 @@
         "https://concreteplayground.com/sydney/food-drink/soul-dining-wynyard-reopening",
         "https://www.sydney.com/articles/the-best-korean-restaurants-in-sydney",
         "https://www.timeout.com/sydney/restaurants/soul-dining",
-        "https://www.hospitalitymagazine.com.au/?p=51212"
+        "https://www.hospitalitymagazine.com.au/?p=51212",
+        "https://sydney.com/destinations/sydney/sydney-city/city-centre/food-and-drink/soul-dining"
       ],
       "confidence": "low"
     },
@@ -899,7 +905,7 @@
         "Time Out Sydney: 16 best Thai restaurants in Sydney list"
       ],
       "sources": [
-        "https://prod.gcp.timeout.com/sydney/restaurants/spice-i-am",
+        "https://www.timeout.com/sydney/restaurants/spice-i-am",
         "https://www.yelp.com/biz/spice-i-am-surry-hills",
         "https://www.spiceiam.com/",
         "https://sitchu.com.au/sydney/restaurants/best-thai-restaurants-sydney"
@@ -1000,7 +1006,7 @@
         "https://www.yelp.com/search?find_desc=Malaysian&find_loc=Sydney+New+South+Wales",
         "https://www.yelp.com/search?cflt=malaysian&find_loc=Sydney+New+South+Wales"
       ],
-      "confidence": "medium"
+      "confidence": "low"
     },
     {
       "id": "tan-viet",
@@ -1080,14 +1086,14 @@
       "suburb": "Terrey Hills",
       "price": "$$$",
       "badges": [
-        "AGFG 得帽餐厅"
+        "AGFG 曾获厨师帽"
       ],
       "tags": [
         "印度菜",
         "精致餐饮",
         "度假风"
       ],
-      "intro": "Terrey Hills 的度假风印度餐厅，是悉尼少数获 AGFG 厨师帽的印度餐厅，传统菜做得细腻，适合周末专程前往。",
+      "intro": "Terrey Hills 的度假风印度餐厅，是悉尼少数曾获 AGFG 厨师帽的印度餐厅，传统菜做得细腻，适合周末专程前往。",
       "booking": "OpenTable 可订，建议提前",
       "meals": [
         "lunch",
@@ -1293,7 +1299,7 @@
       "price": "$$$",
       "badges": [
         "GT 2026 百佳",
-        "SMH 一顶帽"
+        "SMH 曾获一顶帽"
       ],
       "tags": [
         "希腊菜",
@@ -1332,7 +1338,7 @@
       "suburb": "Surry Hills",
       "price": "$$$",
       "badges": [
-        "SMH 得帽餐厅"
+        "SMH 曾得帽"
       ],
       "tags": [
         "黎巴嫩菜",
@@ -1487,7 +1493,7 @@
       "sources": [
         "https://greekherald.com.au/?p=154926",
         "https://www.broadsheet.com.au/sydney/restaurants/babas-place",
-        "https://phoenix.danielpe.edsqa01.aws.sbs.com.au/food/article/babas-place-is-home-to-chinese-spag-bol-and-lebanese-filet-o-fish/2yf38gh43",
+        "https://www.sbs.com.au/food/article/babas-place-is-home-to-chinese-spag-bol-and-lebanese-filet-o-fish/2yf38gh43",
         "https://www.timeout.com/sydney/restaurants/babas-place",
         "https://www.tripadvisor.com.au/Restaurant_Review-g1754380-d23740812-Reviews-Baba_s_Place-Marrickville_New_South_Wales.html"
       ],
@@ -1857,7 +1863,7 @@
       "price": "$$",
       "badges": [
         "Time Out 5/5",
-        "Time Out 2023 最佳酒吧"
+        "Time Out 2023 最佳葡萄酒吧"
       ],
       "tags": [
         "葡萄酒吧",
@@ -2219,7 +2225,7 @@
         "家常时令",
         "老牌名店"
       ],
-      "intro": "北邦迪海边经营二十多年的老牌餐厅，主打朴实不做作的时令菜，服务专业又放松。",
+      "intro": "北邦迪海边 1993 年开业、经营三十多年的老牌餐厅，主打朴实不做作的时令菜，服务专业又放松。",
       "booking": "座位不多，建议提前订位",
       "meals": [
         "lunch",
@@ -2432,7 +2438,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://www.sydneyfishmarket.com.au/retailer/hamsi-taverna/",
+      "website": "",
       "accolades": [
         "Time Out Sydney 2026 新开餐厅推荐"
       ],
@@ -2505,7 +2511,7 @@
         "https://www.tripadvisor.com/Restaurants-g255060-zfd10901-Sydney_New_South_Wales-Fish_and_Chips.html",
         "https://uk.trip.com/travel-guide/foods/Millers%20Point-2126570-restaurant/Fish%20at%20The%20Rocks-489834"
       ],
-      "confidence": "medium"
+      "confidence": "low"
     },
     {
       "id": "doyles",

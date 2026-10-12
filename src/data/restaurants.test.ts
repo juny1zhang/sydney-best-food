@@ -27,3 +27,11 @@ describe('restaurant data', () => {
     expect(searchRestaurants('   ')).toEqual([]);
   });
 });
+
+describe('search keywords', () => {
+  it('finds categories by common English words', () => {
+    expect(searchRestaurants('pizza').every((r) => r.category === 'italian')).toBe(true);
+    expect(searchRestaurants('yum cha').length).toBeGreaterThan(3);
+    expect(searchRestaurants('brunch').some((r) => r.id === 'bills')).toBe(true);
+  });
+});

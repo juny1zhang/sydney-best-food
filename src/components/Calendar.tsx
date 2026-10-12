@@ -6,7 +6,7 @@ import { MEALS, mealEntry, type MealEntry, type Picks } from '../lib/plan';
 
 type CellLook = 'plain' | 'nz' | 'travel' | 'picked' | 'booked';
 
-function entryName(e: MealEntry): string {
+export function entryName(e: MealEntry): string {
   if (e.status === 'booked') return e.booking.venue.name;
   if (e.status === 'picked') return e.restaurant.name;
   return e.pick.name;
@@ -16,6 +16,15 @@ function entryCategory(e: MealEntry): string {
   if (e.status === 'booked') return e.booking.venue.categoryLabel;
   if (e.status === 'picked') return categoryOf(e.restaurant.category).short;
   return '自己记的';
+}
+
+function entryStatus(e: MealEntry): string {
+  return e.status === 'booked' ? `已预订 ${e.booking.time}` : '已选好';
+}
+
+/** The calendar button for a day, used to put focus back on the calendar. */
+export function dayCellElement(day: number): HTMLElement | null {
+  return document.querySelector<HTMLElement>(`.cell[data-day="${day}"]`);
 }
 
 interface GridProps {
@@ -55,33 +64,61 @@ interface CellProps {
   onSelect: (day: number) => void;
 }
 
+function CheckIcon() {
+  return (
+    <svg className="cell__check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </svg>
+  );
+}
+
 function DayCell({ day, picks, selected, onSelect }: CellProps) {
   const info = dayInfo(day);
   const meals = MEALS.map((m) => ({ meal: m, entry: mealEntry(day, m.key, picks) })).filter(
     (x): x is { meal: (typeof MEALS)[number]; entry: MealEntry } => x.entry !== null,
   );
+  const booked = meals.some((m) => m.entry.status === 'booked');
   let look: CellLook = info.region === 'nz' ? 'nz' : info.region === 'travel' ? 'travel' : 'plain';
-  if (meals.length) look = meals.some((m) => m.entry.status === 'booked') ? 'booked' : 'picked';
+  if (meals.length) look = booked ? 'booked' : 'picked';
   const loc = info.region === 'syd' ? '悉尼' : (info.loc ?? '');
-  const summary = meals.length ? meals.map((m) => `${m.meal.label} ${entryName(m.entry)}`).join('，') : '未安排';
-  const aria = [dateLabel(YEAR, MONTH_INDEX, day), info.holiday, loc, summary].filter(Boolean).join('，');
+  const summary = meals.length
+    ? meals.map((m) => `${m.meal.label} ${entryName(m.entry)}（${entryStatus(m.entry)}）`).join('，')
+    : '未安排';
+  const where = info.region === 'nz' ? `新西兰 ${loc}` : info.region === 'travel' ? `飞行日 ${loc}` : loc;
+  const aria = [dateLabel(YEAR, MONTH_INDEX, day), info.holiday, where, summary].filter(Boolean).join('，');
 
   return (
-    <button type="button" className={`cell cell--${look}`} aria-pressed={selected} aria-label={aria} onClick={() => onSelect(day)}>
+    <button
+      type="button"
+      className={`cell cell--${look}${info.region === 'nz' ? ' cell--in-nz' : ''}`}
+      data-day={day}
+      aria-pressed={selected}
+      aria-label={aria}
+      onClick={() => onSelect(day)}
+    >
       <span className="cell__top">
         <span className="cell__num">{day}</span>
         {info.holiday && <span className="cell__holiday">{info.holiday}</span>}
       </span>
-      {loc && <span className="cell__loc">{loc}</span>}
+      {loc && (
+        <span className="cell__loc" title={loc}>
+          {loc}
+        </span>
+      )}
       {meals.map(({ meal, entry }) => (
         <span key={meal.key} className="cell__meal">
-          <span className="cell__meal-name">
+          <span className="cell__meal-name" title={`${meal.label} · ${entryName(entry)}`}>
+            {entry.status === 'booked' && <CheckIcon />}
             {meal.short} · {entryName(entry)}
           </span>
           <span className="cell__chip">{entryCategory(entry)}</span>
         </span>
       ))}
-      {meals.length > 0 && <span className="cell__dot" aria-hidden="true" />}
+      {meals.length > 0 && (
+        <span className={`cell__mark${booked ? ' cell__mark--booked' : ''}`} aria-hidden="true">
+          {booked && <CheckIcon />}
+        </span>
+      )}
     </button>
   );
 }
@@ -90,7 +127,9 @@ export function Legend() {
   return (
     <ul className="legend" aria-label="图例">
       <li>
-        <span className="swatch swatch--booked" />
+        <span className="swatch swatch--booked">
+          <CheckIcon />
+        </span>
         已预订
       </li>
       <li>
