@@ -1,11 +1,13 @@
 import { useRef, useState } from 'react';
 import { CATEGORIES, categoryOf, restaurantsIn } from '../data/restaurants';
-import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
 import type { CategoryId, Meal, Price, Restaurant } from '../data/types';
-import { dateLabel } from '../lib/calendar';
-import { MEALS, freeSydneyDays, servesMeal, type Picks } from '../lib/plan';
+import { hostOf } from '../lib/url';
+import { useGridColumns } from '../hooks/useGridColumns';
+import { freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
+import { AddPopover } from './AddPopover';
 import { PlusIcon } from './Icons';
 import { Segmented } from './Segmented';
+import { detailHref } from '../lib/route';
 
 export type BoardCategory = 'all' | CategoryId;
 type PriceFilter = 'all' | Price;
@@ -18,23 +20,12 @@ const PRICE_OPTIONS: { value: PriceFilter; label: string }[] = [
   { value: '$$$$', label: '$$$$' },
 ];
 
-const MEAL_OPTIONS = MEALS.map((m) => ({ value: m.key, label: m.label }));
 const COLLAPSED_ROWS = 6;
+/** Collapsed, the overview shows one row of category cards, and never fewer than this. */
+const MIN_COLLAPSED_BLOCKS = 2;
 
 function rankLabel(rank: number): string {
   return rank < 10 ? `0${rank}` : `${rank}`;
-}
-
-/** Where a restaurant already sits on the calendar, e.g. "12月3日 晚餐". */
-function placementsOf(id: string, picks: Picks): string[] {
-  const out: string[] = [];
-  for (const [day, meals] of Object.entries(picks)) {
-    for (const m of MEALS) {
-      const p = meals?.[m.key];
-      if (p?.kind === 'restaurant' && p.id === id) out.push(`12月${day}日 ${m.label}`);
-    }
-  }
-  return out;
 }
 
 interface BoardProps {
@@ -49,6 +40,10 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
   const [expanded, setExpanded] = useState(false);
   const [addingId, setAddingId] = useState<string | null>(null);
   const [addMeal, setAddMeal] = useState<Meal>('dinner');
+  const [allBlocks, setAllBlocks] = useState(false);
+  const [blocksEl, setBlocksEl] = useState<HTMLDivElement | null>(null);
+  const columns = useGridColumns(blocksEl, 3);
+  const collapsedBlocks = Math.max(columns, MIN_COLLAPSED_BLOCKS);
   const sectionRef = useRef<HTMLElement>(null);
 
   const priceOk = (r: Restaurant) => price === 'all' || r.price === price;
@@ -111,8 +106,9 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
       </div>
 
       {category === 'all' ? (
-        <div className="blocks">
-          {CATEGORIES.map((c) => {
+        <>
+        <div className="blocks" id="blocks" ref={setBlocksEl}>
+          {(allBlocks ? CATEGORIES : CATEGORIES.slice(0, collapsedBlocks)).map((c) => {
             const all = restaurantsIn(c.id);
             const matching = all.filter(priceOk);
             const top = matching.slice(0, 3);
@@ -128,7 +124,9 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                       <li key={r.id}>
                         <span className={`rank${r.rank === 1 ? ' rank--first' : ''}`}>{rankLabel(r.rank)}</span>
                         <div className="block__item">
-                          <span className="block__name">{r.name}</span>
+                          <a className="block__name" href={detailHref(r.id)}>
+                            {r.name}
+                          </a>
                           <span className="muted">
                             {r.suburb} · {r.price}
                           </span>
@@ -149,6 +147,21 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
             );
           })}
         </div>
+        {CATEGORIES.length > collapsedBlocks && (
+          <button
+            type="button"
+            className="btn btn--outline btn--round expand"
+            aria-expanded={allBlocks}
+            aria-controls="blocks"
+            onClick={() => {
+              if (allBlocks) settle();
+              setAllBlocks(!allBlocks);
+            }}
+          >
+            {allBlocks ? '收起' : `展开其余 ${CATEGORIES.length - collapsedBlocks} 个类别`}
+          </button>
+        )}
+        </>
       ) : (
         <>
           <h2 id={listHeadingId} className="list-heading">
@@ -226,14 +239,15 @@ interface RowProps {
 
 function RestaurantRow({ restaurant: r, placements, adding, onToggleAdd, addMeal, onAddMeal, freeDays, onPickDay }: RowProps) {
   const popId = `add-${r.id}`;
-  const mealLabel = MEALS.find((m) => m.key === addMeal)!.label;
   return (
     <li className="row">
       <div className="row__main">
         <span className={`rank rank--big${r.rank === 1 ? ' rank--first' : ''}`}>{rankLabel(r.rank)}</span>
         <div className="row__body">
           <div className="row__title">
-            <h3>{r.name}</h3>
+            <h3>
+              <a href={detailHref(r.id)}>{r.name}</a>
+            </h3>
             {r.nameZh && <span className="row__zh">{r.nameZh}</span>}
             <span className="muted">
               {r.suburb} · {r.price}
@@ -290,39 +304,7 @@ function RestaurantRow({ restaurant: r, placements, adding, onToggleAdd, addMeal
           </button>
         </div>
       </div>
-      {adding && (
-        <div id={popId} className="addpop" role="region" aria-label={`把 ${r.name} 加入日历`}>
-          <div className="addpop__head">
-            <span className="addpop__title">加到哪一天？</span>
-            <Segmented label="哪一餐" options={MEAL_OPTIONS} value={addMeal} onChange={onAddMeal} />
-            <span className="muted small">只列出人在悉尼、这一餐还空着的日子</span>
-          </div>
-          {!servesMeal(r, addMeal) && <p className="warn">提示：这家通常不做{mealLabel}，去之前确认一下营业时间。</p>}
-          {freeDays.length ? (
-            <div className="addpop__days">
-              {freeDays.map((d) => {
-                const holiday = dayInfo(d).holiday;
-                return (
-                  <button key={d} type="button" className={`btn btn--ghost${holiday ? ' btn--holiday' : ''}`} onClick={() => onPickDay(d)}>
-                    {dateLabel(YEAR, MONTH_INDEX, d)}
-                    {holiday ? ` · ${holiday}` : ''}
-                  </button>
-                );
-              })}
-            </div>
-          ) : (
-            <p className="muted">在悉尼的日子{mealLabel}都安排满了。</p>
-          )}
-        </div>
-      )}
+      {adding && <AddPopover id={popId} restaurant={r} meal={addMeal} onMeal={onAddMeal} freeDays={freeDays} onPickDay={onPickDay} />}
     </li>
   );
-}
-
-function hostOf(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    return url;
-  }
 }

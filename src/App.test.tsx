@@ -12,12 +12,19 @@ function panel() {
 }
 
 describe('App', () => {
-  it('opens on the overview with every category and the trip bookings counted', () => {
+  it('opens on a collapsed overview and counts the trip bookings', async () => {
+    const user = userEvent.setup();
     render(<App />);
     expect(screen.getByRole('heading', { level: 1, name: '悉尼餐厅榜单' })).toBeInTheDocument();
-    for (const name of ['中餐', '日料', '韩餐', '东南亚', '现代澳洲', '海鲜', '早午餐 / 甜品']) {
+    for (const name of ['中餐', '日料', '韩餐']) expect(screen.getByRole('heading', { level: 2, name })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { level: 2, name: '东南亚' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /印度/ })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: '展开其余 8 个类别' }));
+    for (const name of ['东南亚', '中东 / 地中海', '现代澳洲', '海鲜', '早午餐 / 甜品']) {
       expect(screen.getByRole('heading', { level: 2, name })).toBeInTheDocument();
     }
+    expect(screen.getByRole('button', { name: '收起' })).toHaveAttribute('aria-expanded', 'true');
     expect(screen.getByText('已订 2 餐')).toBeInTheDocument();
     expect(screen.getByText('已选 0 餐')).toBeInTheDocument();
   });

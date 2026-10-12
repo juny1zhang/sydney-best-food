@@ -7,7 +7,6 @@ export type CategoryId =
   | 'japanese'
   | 'korean'
   | 'se-asian'
-  | 'indian'
   | 'middle-east'
   | 'italian'
   | 'european-bistro'

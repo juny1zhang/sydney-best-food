@@ -3,6 +3,7 @@ import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
 import { CATEGORIES, categoryOf, mapsUrl, restaurantsIn, searchRestaurants } from '../data/restaurants';
 import type { Meal, Restaurant } from '../data/types';
 import { dateLabel } from '../lib/calendar';
+import { detailHref } from '../lib/route';
 import { MEALS, mealEntry, servesMeal, type MealEntry, type Pick, type Picks } from '../lib/plan';
 import type { BoardCategory } from './RestaurantBoard';
 import { mealsLeft } from './Calendar';
@@ -262,6 +263,7 @@ function MealSlot({ label, meal, entry, replacing, regionNote, onReplace, onClea
       <span className="muted small">订位：{r.booking}</span>
       {!servesMeal(r, meal) && <p className="warn">提示：这家通常不做{label}，去之前确认一下营业时间。</p>}
       <div className="slot__links">
+        <a href={detailHref(r.id)}>菜单和招牌菜</a>
         <a href={mapsUrl(r.name, `${r.suburb} Sydney`)} target="_blank" rel="noreferrer">
           在地图中打开
         </a>

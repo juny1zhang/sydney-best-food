@@ -1,14 +1,17 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type MouseEvent } from 'react';
 import { BottomSheet } from './components/BottomSheet';
 import { Legend, MonthGrid, dayCellElement } from './components/Calendar';
 import { DayPanel } from './components/DayPanel';
 import { CloseIcon } from './components/Icons';
 import { RestaurantBoard, type BoardCategory } from './components/RestaurantBoard';
+import { RestaurantPage } from './components/RestaurantPage';
+import { SiteFooter } from './components/SiteFooter';
 import { DAYS_IN_MONTH, MONTH_INDEX, NZ_TRIP_DAYS, YEAR, dayInfo } from './data/december';
 import { RESTAURANT_BY_ID, VERIFIED_ON } from './data/restaurants';
-import type { Meal } from './data/types';
+import type { Meal, Restaurant } from './data/types';
 import { usePicks, type SyncState } from './hooks/usePicks';
 import { useMediaQuery } from './hooks/useMediaQuery';
+import { useRestaurantRoute } from './hooks/useRestaurantRoute';
 import { dateLabel } from './lib/calendar';
 import { MEALS, countMeals, removePick, setPick, type Pick } from './lib/plan';
 
@@ -58,6 +61,9 @@ export default function App() {
   const [toastHeld, setToastHeld] = useState(false);
   const narrow = useMediaQuery(SHEET_QUERY);
   const calendarRef = useRef<HTMLElement>(null);
+  const route = useRestaurantRoute();
+  /** A day to show once the restaurant page has closed. */
+  const pendingDay = useRef<number | null>(null);
 
   // Auto-dismiss the toast, but never while the pointer or focus is on it.
   useEffect(() => {
@@ -99,6 +105,12 @@ export default function App() {
   };
 
   const showDay = (d: number) => {
+    if (route.id) {
+      pendingDay.current = d;
+      setToast(null);
+      route.goTo('calendar');
+      return;
+    }
     // Move focus before the toast (and its button) disappears.
     dayCellElement(d)?.focus({ preventScroll: true });
     setDay(d);
@@ -112,6 +124,26 @@ export default function App() {
     back?.focus({ preventScroll: true });
     setToast(null);
     setToastHeld(false);
+  };
+
+  // The day sheet belongs to the main page; a restaurant page replaces it.
+  useEffect(() => {
+    if (route.id) setSheetOpen(false);
+  }, [route.id]);
+
+  // "Show in calendar" pressed on a restaurant page finishes once the main page is back.
+  useEffect(() => {
+    if (route.id || pendingDay.current === null) return;
+    const d = pendingDay.current;
+    pendingDay.current = null;
+    showDay(d);
+  }, [route.id]);
+
+  const addFromList = (r: Restaurant, d: number, meal: Meal) => choose(d, meal, { kind: 'restaurant', id: r.id }, true);
+  const toSection = (e: MouseEvent<HTMLAnchorElement>, section: string) => {
+    if (!route.id) return;
+    e.preventDefault();
+    route.goTo(section);
   };
 
   const summary = countMeals(picks, DAYS_IN_MONTH);
@@ -128,8 +160,12 @@ export default function App() {
             <span className="brand__sub">SYDNEY EATS · 2026.12</span>
           </div>
           <nav aria-label="页面导航" className="masthead__nav">
-            <a href="#list">餐厅榜单</a>
-            <a href="#calendar">十二月日历</a>
+            <a href="#list" onClick={(e) => toSection(e, 'list')}>
+              餐厅榜单
+            </a>
+            <a href="#calendar" onClick={(e) => toSection(e, 'calendar')}>
+              十二月日历
+            </a>
           </nav>
           <ul className="masthead__stats" aria-label="十二月概况">
             <li>
@@ -154,13 +190,10 @@ export default function App() {
         </div>
       </header>
 
-      <main className="page" data-sheet-inert="">
-        <RestaurantBoard
-          category={category}
-          onCategory={setCategory}
-          picks={picks}
-          onAdd={(r, d, meal) => choose(d, meal, { kind: 'restaurant', id: r.id }, true)}
-        />
+      {route.id && <RestaurantPage key={route.id} id={route.id} picks={picks} onAdd={addFromList} onClose={route.close} />}
+
+      <main className="page" data-sheet-inert="" hidden={route.id !== null}>
+        <RestaurantBoard category={category} onCategory={setCategory} picks={picks} onAdd={addFromList} />
 
         <section id="calendar" ref={calendarRef} aria-labelledby="cal-h" className="calendar">
           <div className="section-head">
@@ -179,12 +212,9 @@ export default function App() {
             )}
           </div>
         </section>
-
-        <footer className="foot">
-          排名依据 2026 年公开榜单与媒体推荐整理，营业状态核对于 {formatVerified(VERIFIED_ON)}
-          。每家店的“评价依据”里有来源链接。你选的店只保存在这台设备的浏览器里。
-        </footer>
       </main>
+
+      <SiteFooter page={route.id ? `restaurant:${route.id}` : 'main'} verifiedOn={formatVerified(VERIFIED_ON)} shared={sync !== 'local'} />
 
       {sheetVisible && (
         <BottomSheet labelledBy="day-h" onClose={closeSheet} fallbackFocus={selectedCell}>

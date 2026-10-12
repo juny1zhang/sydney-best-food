@@ -1,8 +1,8 @@
 import { CATEGORIES, RESTAURANTS, restaurantsIn, searchRestaurants } from './restaurants';
 
 describe('restaurant data', () => {
-  it('has twelve categories, each with ranked restaurants', () => {
-    expect(CATEGORIES).toHaveLength(12);
+  it('has eleven categories, each with ranked restaurants', () => {
+    expect(CATEGORIES).toHaveLength(11);
     for (const c of CATEGORIES) {
       const list = restaurantsIn(c.id);
       expect(list.length).toBeGreaterThanOrEqual(4);

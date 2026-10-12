@@ -1,7 +1,8 @@
-import { createClient } from '@supabase/supabase-js';
+import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Meal } from '../data/types';
 import { MEALS, removePick, setPick, type Pick, type Picks } from './plan';
 import { cleanPick } from './storage';
+import { supabase } from './supabase';
 
 /** The one shared plan this site edits; the table only accepts this id. */
 export const PLAN_ID = 'dec-2026';
@@ -57,8 +58,7 @@ export function rowToChange(row: Record<string, unknown> | null | undefined): Sl
   return { day, meal, pick: cleanPick(row.pick) };
 }
 
-export function createSupabaseRemote(url: string, key: string): PicksRemote {
-  const db = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
+export function createSupabaseRemote(db: SupabaseClient): PicksRemote {
   return {
     async fetchAll() {
       const { data, error } = await db.from(TABLE).select('day, meal, pick').eq('plan_id', PLAN_ID);
@@ -91,8 +91,5 @@ export function createSupabaseRemote(url: string, key: string): PicksRemote {
   };
 }
 
-const url = import.meta.env.VITE_SUPABASE_URL;
-const key = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
-
 /** The site's shared plan, or null when no backend is configured (tests, offline dev). */
-export const sharedRemote: PicksRemote | null = url && key ? createSupabaseRemote(url, key) : null;
+export const sharedRemote: PicksRemote | null = supabase ? createSupabaseRemote(supabase) : null;
