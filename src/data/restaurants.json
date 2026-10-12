@@ -473,79 +473,11 @@
       }
     },
     {
-      "id": "golden-sands",
-      "name": "Golden Sands",
-      "nameZh": "金沙酒楼",
-      "category": "chinese",
-      "rank": 7,
-      "suburb": "Hurstville",
-      "price": "$$",
-      "badges": [
-        "Broadsheet 西南区饮茶之王"
-      ],
-      "tags": [
-        "粤菜",
-        "饮茶",
-        "港式点心"
-      ],
-      "intro": "Hurstville 的人气粤式酒楼，点心超过 100 款。必点丝滑肠粉、黑米肠粉和烧卖。服务和价格评价不一，周末很快满座。",
-      "booking": "周末建议早到排队",
-      "meals": [
-        "lunch",
-        "dinner"
-      ],
-      "website": "",
-      "accolades": [
-        "Broadsheet: 'yum cha king of the south-west'",
-        "Destination NSW: one of the most delicious yum cha restaurants in Sydney"
-      ],
-      "sources": [
-        "https://www.broadsheet.com.au/sydney/hurstville/restaurants/golden-sands",
-        "https://sydney.com/articles/best-yum-cha-in-sydney",
-        "https://pegfeeds.com/2026/05/25/golden-sands-%E9%87%91%E6%B2%99%E9%85%92%E6%A5%BC-hurstville-nsw-restaurant-review/",
-        "https://sydney.com/destinations/sydney/sydney-south/food-and-drink/golden-sands-hurstville"
-      ],
-      "confidence": "high",
-      "ta": {
-        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g1127153-d12881013-Reviews-Golden_Sands_Restaurant-Hurstville_Greater_Sydney_New_South_Wales.html",
-        "rating": 3.8,
-        "reviews": 21,
-        "rank": "Hurstville 215 家餐厅里排第 32",
-        "summary": "评论不多，近期多夸点心和服务，差评集中在 2020–22 年。",
-        "praise": [
-          "点心出品好、上菜快",
-          "店员礼貌友善",
-          "分量足、场地大"
-        ],
-        "complaints": [
-          "比附近酒楼贵",
-          "偶有上菜慢或漏单",
-          "个别菜上桌不够热"
-        ]
-      },
-      "xhs": {
-        "verdict": "avoid",
-        "summary": "仍有人夸烧卖、流沙包和烧鹅，但近一年“越做越差、贵、态度差”的吐槽占多数",
-        "praise": [
-          "鲜虾烧卖、流沙包、榴莲酥、干炒牛河有人推荐",
-          "晚市烧鹅外酥里嫩、蒸排骨嫩，套餐够吃",
-          "镇江骨酸甜得宜、炸排骨不错",
-          "Westfield停车方便，平日中午不用排队"
-        ],
-        "complaints": [
-          "多条评论说越做越差、点心缩水、价格贵",
-          "老板态度差，带小孩被嫌弃",
-          "海鲜有被指龙虾不新鲜、缺斤少两",
-          "烧鸭像回热、鸡爪没热透，$129套餐一般"
-        ]
-      }
-    },
-    {
       "id": "palace",
       "name": "Palace Chinese Restaurant",
       "nameZh": "",
       "category": "chinese",
-      "rank": 8,
+      "rank": 7,
       "suburb": "CBD",
       "price": "$$",
       "badges": [
@@ -615,7 +547,7 @@
       "name": "Xi’an Eatery",
       "nameZh": "",
       "category": "chinese",
-      "rank": 9,
+      "rank": 8,
       "suburb": "Burwood",
       "price": "$",
       "badges": [
@@ -982,7 +914,7 @@
       },
       "xhs": {
         "verdict": "recommend",
-        "summary": "搬到新鱼市后食材被夸顶级、26道吃遍好货，但$350贵、节奏慢，7月主厨醉酒新闻让部分人抵制",
+        "summary": "搬到新鱼市后食材被夸顶级、26 道吃遍好货，但 $350 偏贵、上菜节奏慢",
         "praise": [
           "食材顶级：塔州蓝鳍金枪鱼、北海道海胆、石蟹等",
           "萤火鱿鱼、煎大鱼、渐变金枪鱼摆盘印象深",
@@ -992,8 +924,7 @@
         "complaints": [
           "每位约$350（Cammeray时期约$260）",
           "一人捏寿司加到10席，节奏很慢吃到10点半",
-          "有人觉得调味不出众、某季鱼货一般",
-          "2026年7月主厨醉酒与急救员冲突上新闻，有人避雷"
+          "有人觉得调味不出众、某季鱼货一般"
         ]
       }
     },
@@ -1449,7 +1380,7 @@
         "verdict": "few",
         "summary": "小红书几乎没有2024年后的帖子；旧帖夸口味地道不迎合，也有标题吐槽上菜慢、偏贵",
         "praise": [
-          "主厨师从David Thompson，咖喱、安康鱼汤香料层次足",
+          "主厨师从David Thompson，咖喱和鱼汤香料足",
           "不做Pad Thai等套路菜，口味不向甜妥协",
           "季节性菜单、用椰糖代替白糖，配酒有惊喜"
         ],
@@ -1510,7 +1441,7 @@
       },
       "xhs": {
         "verdict": "mixed",
-        "summary": "Town Hall店牛肋排捞面、蟹肉煲仔饭被夸，但贵、偏咸，Haymarket店被骂，评论说两店差距大",
+        "summary": "Town Hall店牛肋排捞面、蟹肉煲仔饭受夸，但贵且偏咸，Haymarket店被骂",
         "praise": [
           "牛肋排捞面软烂浓郁，和牛蟹肉煲仔饭有锅巴",
           "御膳蒸蛋、马来通菜、肠粉稳妥好吃",
@@ -1651,80 +1582,11 @@
       }
     },
     {
-      "id": "khao-pla",
-      "name": "Khao Pla",
-      "nameZh": "",
-      "category": "se-asian",
-      "rank": 6,
-      "suburb": "Chatswood",
-      "price": "$$",
-      "badges": [
-        "Time Out 4/5"
-      ],
-      "tags": [
-        "泰国菜",
-        "车士活",
-        "咖喱"
-      ],
-      "intro": "车士活人气泰餐，以辣度十足、有新意的经典泰菜著称，必点牛肉玛莎曼咖喱和粘糯猪肋排。",
-      "booking": "OpenTable 可订，周末较忙",
-      "meals": [
-        "lunch",
-        "dinner"
-      ],
-      "website": "https://khaopla.com.au",
-      "accolades": [
-        "Time Out Sydney review: 4/5 stars",
-        "OpenTable diner rating 4.4/5 (about 172 reviews)"
-      ],
-      "sources": [
-        "https://www.timeout.com/sydney/restaurants/khao-pla",
-        "https://www.opentable.com.au/r/khao-pla-chatswood",
-        "https://wanderlog.com/place/details/735482/khao-pla",
-        "https://www.timeout.com/sydney/restaurants/the-best-thai-restaurants-in-sydney"
-      ],
-      "confidence": "medium",
-      "ta": {
-        "url": "https://www.tripadvisor.com.au/Restaurant_Review-g261607-d4552177-Reviews-Khao_Pla-Chatswood_Willoughby_Greater_Sydney_New_South_Wales.html",
-        "rating": 4.1,
-        "reviews": 356,
-        "rank": "Chatswood 166 家餐厅里排第 3",
-        "summary": "车士活长期排名前列的泰餐，菜地道受赞，排队和拥挤是主要缺点。",
-        "praise": [
-          "泰菜地道、辣度不妥协",
-          "罗望子猪肋排招牌",
-          "香蕉花沙拉",
-          "性价比不错"
-        ],
-        "complaints": [
-          "热门要排队约 15 分钟",
-          "座位挤、偏吵",
-          "个别菜偏甜或偏油",
-          "分量偏小"
-        ]
-      },
-      "xhs": {
-        "verdict": "avoid",
-        "summary": "华人评价偏负面：偏甜偏咸、份量少、服务态度差被反复吐槽，只有少数人夸烤五花",
-        "praise": [
-          "烤五花皮脆多汁、九层塔炒菜香",
-          "炒饭还不错，蔬菜炒得入味",
-          "店面扩大过，老客说以前好吃"
-        ],
-        "complaints": [
-          "口味偏甜又咸，被说迎合鬼佬，绿咖喱像调料包",
-          "份量少：咖喱里只有半个土豆",
-          "服务态度差，忙时被指优先招呼外国客人",
-          "上菜慢，有评论说近年变难吃"
-        ]
-      }
-    },
-    {
       "id": "mamak",
       "name": "Mamak",
       "nameZh": "",
       "category": "se-asian",
-      "rank": 7,
+      "rank": 6,
       "suburb": "Haymarket",
       "price": "$",
       "badges": [],
@@ -1764,6 +1626,22 @@
           "清洁一般",
           "2025 年有人嫌退步"
         ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "Roti和沙爹串公认好吃、人均$30-50实惠，但咖喱鱼、炸鸡、炒菜一般，排队太久不值",
+        "praise": [
+          "Roti Tisu高塔酥脆、原味roti像手抓饼很香",
+          "沙爹鸡肉串多汁不柴，花生酱香",
+          "炒饭、咖喱羊肉、空心菜被推荐",
+          "人均约$30-50，现金有折扣，营业到深夜"
+        ],
+        "complaints": [
+          "City店晚上常排长队，排超10分钟不值",
+          "咖喱鱼香草味重难吃，炸鸡偏咸",
+          "炒菜、炒方便面没特点",
+          "马来奶茶/白咖啡太甜，记得要少糖"
+        ]
       }
     },
     {
@@ -1771,7 +1649,7 @@
       "name": "Tan Viet Noodle House",
       "nameZh": "",
       "category": "se-asian",
-      "rank": 8,
+      "rank": 7,
       "suburb": "Cabramatta",
       "price": "$",
       "badges": [
@@ -1817,6 +1695,21 @@
           "环境一般",
           "个别菜寡淡"
         ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "新越餐室的脆皮鸡被公认悉尼最脆，鸡肉不柴，鸡蛋面不错，但汤粉本身一般、常要排队",
+        "praise": [
+          "招牌脆皮鸡皮薄脆、肉多汁，被称悉尼第一脆",
+          "鸡蛋面比河粉更好吃，鱼露蘸着吃",
+          "30多年老店，越南本地人也常来",
+          "平价，另有Darling Square等分店"
+        ],
+        "complaints": [
+          "汤粉本身一般，套餐不太划算",
+          "饭点常排队",
+          "鱼露偏甜口"
+        ]
       }
     },
     {
@@ -1824,7 +1717,7 @@
       "name": "Chat Thai",
       "nameZh": "",
       "category": "se-asian",
-      "rank": 9,
+      "rank": 8,
       "suburb": "Haymarket",
       "price": "$$",
       "badges": [
@@ -1870,6 +1763,22 @@
           "价格变贵、性价比下降",
           "不订位要排队",
           "上错菜或账单加费"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "Thai Town总店打抛鸡、芒果糯米饭和烤牛肉被夸下饭，但分店被嫌太甜，服务态度差是共识",
+        "praise": [
+          "打抛鸡（无饭版）锅气足、九层塔香，必点",
+          "芒椰糯米饭椰香浓不太甜，Crying Tiger烤牛有炭香",
+          "冬阴功酸辣够味、虾大，蟹肉炸蛋香",
+          "人均$30-40，营业晚"
+        ],
+        "complaints": [
+          "服务态度差被多人吐槽",
+          "环形码头和Westfield分店被批太甜",
+          "店小拥挤、饭点排队，糯米饭量小",
+          "泰式饮品很甜，打抛肉末给得少"
         ]
       }
     },
@@ -2067,6 +1976,22 @@
           "个别菜偏咸",
           "松露早午餐令人失望"
         ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "现烤馕配burrata和半只羊肩被一致夸，牛舌松露菜也好，茄子和甜品有人踩雷",
+        "praise": [
+          "柴火烤饼外脆内软，配burrata被说全悉尼最好",
+          "半只羊肩酥烂量大不膻，几乎人人推荐",
+          "椰枣酱烤和牛舌、松露季酥皮派惊喜",
+          "人均$80-110，服务勤换盘，可walk-in"
+        ],
+        "complaints": [
+          "松露芝士蛋糕搭配违和，不推荐",
+          "烤茄子偏酸，炸西葫芦花偏甜",
+          "辣土豆太占肚子可不点",
+          "老菜单几道招牌被换掉，现在较普通"
+        ]
       }
     },
     {
@@ -2111,6 +2036,22 @@
         "summary": "TA 上只有 1 条评论、4 分，几乎无参考价值。",
         "praise": [],
         "complaints": []
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "炭烤肉和牛油薯条被夸爆，但不订位排队一两小时，前菜一般、口味偏酸偏咸",
+        "praise": [
+          "烤羊/猪/鸡炭火香浓、鲜嫩不柴",
+          "牛油炸薯条被说这辈子吃过最好吃",
+          "现烤pita配烤肉卷饼很满足",
+          "服务热情，上菜快"
+        ],
+        "complaints": [
+          "不订位要扫码排队1-1.5小时，晚去会售罄",
+          "前菜一般可跳过，小菜偏酸",
+          "烤肉偏咸，吃不惯希腊口味的人一般",
+          "环境普通，性价比中等"
+        ]
       }
     },
     {
@@ -2151,6 +2092,12 @@
         "reviews": null,
         "rank": null,
         "summary": "TripAdvisor 上没有找到这家店。",
+        "praise": [],
+        "complaints": []
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "小红书上几乎没人写过这家，三种搜法都没搜到相关笔记，基本没有中文口碑",
         "praise": [],
         "complaints": []
       }
@@ -2206,6 +2153,21 @@
           "酒价高",
           "服务不稳定"
         ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "仓库改造的氛围小馆，烤花菜、鱼籽吐司、烤鸡被夸，就是难订位、很吵",
+        "praise": [
+          "烤花菜几乎每桌必点，鱼籽酱吐司是招牌",
+          "烤鸡皮脆肉嫩、整条鱼$40很划算",
+          "鹰嘴豆泥、自制酸奶配复烤focaccia好吃",
+          "仓库改造复古温馨，像去朋友家吃饭"
+        ],
+        "complaints": [
+          "必须提前订位，walk-in难，最早只订到9点后",
+          "人声鼎沸很吵，聊天要大声",
+          "个别吐司有点腥、酸奶单吃会腻"
+        ]
       }
     },
     {
@@ -2257,6 +2219,17 @@
           "菜一次全上、桌子挤",
           "价格不便宜"
         ]
+      },
+      "xhs": {
+        "verdict": "few",
+        "summary": "2026年初新开的店，只有两篇笔记，都说羊肉和蘸酱好吃、环境大气、价格不贵",
+        "praise": [
+          "羊肉奶香浓郁被强推，和牛牛排分量大",
+          "餐前蘸酱好吃，大饼无限续",
+          "两人不点酒约$110，性价比高",
+          "空间宽敞、灯光幽暗，有现调鸡尾酒"
+        ],
+        "complaints": []
       }
     },
     {
@@ -2310,6 +2283,22 @@
           "除披萨外其他菜一般",
           "不如同街竞争者"
         ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "榜单爆火的Balmain披萨，饼皮酥弹、服务暖心多被夸，少数人觉得排名虚高、偏咸",
+        "praise": [
+          "饼皮酥脆有弹性，被说吃到真正意式披萨",
+          "辣蟹肉、Versace二次烤、Gamberi虾披萨被点名",
+          "服务热情，提拉米苏掉了马上补一份",
+          "人气旺，适合堂食也适合外带"
+        ],
+        "complaints": [
+          "有人觉得饼皮除了脆没味道、配料一般",
+          "辣蟹肉披萨被评太咸，Versace偏油",
+          "不少人质疑“澳洲第一”排名是炒作",
+          "6点室内就坐满，需早到"
+        ]
       }
     },
     {
@@ -2359,6 +2348,22 @@
           "价格高、性价比一般",
           "菜品水准不稳定",
           "晚间有时冷清"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "70年老派意餐，服务热情有仪式感，Steak Diane和墨鱼汁蟹肉面被夸，配菜偏普通",
+        "praise": [
+          "服务员热情幽默，生日送香水手写卡、全场唱歌",
+          "Steak Diane分量大火候好，被评MVP",
+          "辣蟹肉墨鱼汁面、肉酱宽面很出彩",
+          "酒窖可参观，老派温暖氛围"
+        ],
+        "complaints": [
+          "炸西葫芦花偏腻，且不按人头上",
+          "牛排配菜偏硬偏老，较一般",
+          "主菜$30-50，加上小费不便宜",
+          "晚上回程经Hyde Park要注意安全"
         ]
       }
     },
@@ -2623,6 +2628,21 @@
           "酒水价格偏高",
           "外卖份量小性价比低"
         ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "2025年后的帖子几乎一边倒夸，生火腿水牛芝士披萨和南瓜gnocchi必点，人均约$40",
+        "praise": [
+          "Prosciutto e Bufala披萨芝士球奶香足，几乎人人必点",
+          "南瓜泥gnocchi软弹、章鱼土豆前菜被多次点名",
+          "酸种饼底外脆内韧，提拉米苏也被推荐",
+          "老板店员热情会推荐菜，人均约$40性价比高"
+        ],
+        "complaints": [
+          "有人觉得饼底一般、不比别家强多少",
+          "上菜慢，有人两个披萨等了一小时",
+          "店小，雨天坐门口偏冷；周日不营业"
+        ]
       }
     },
     {
@@ -2679,6 +2699,22 @@
           "主菜分量大适合分享"
         ],
         "complaints": []
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "猪头肉鹅肝泡芙、猪排和酥皮龙虾胸腺被夸，但最火的帖子吐槽菜品猎奇偏咸，季节菜单不稳定",
+        "praise": [
+          "猪头肉鹅肝小泡芙被打10/10，一口一个",
+          "Duroc猪颈排鲜嫩无骚味，酥皮龙虾牛胸腺惊喜",
+          "复古昏黄小酒馆氛围好，摆盘不输fine dining",
+          "菜单换得勤，有罗西尼牛排、限量血鸭等特色菜"
+        ],
+        "complaints": [
+          "高赞差评：剑鱼像没熟、鸭肉香肠造型猎奇又很咸",
+          "招牌冻肉派、开心果猪肉饼口味融合差，不如预期",
+          "餐前面包冰冷，甜品被说一般",
+          "忙时服务生硬，评论说季节菜单神一阵鬼一阵"
+        ]
       }
     },
     {
@@ -2732,6 +2768,22 @@
           "服务不稳定、上酒慢",
           "价格高、性价比低"
         ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "复古巴黎小酒馆氛围很出片，和牛西冷和招牌黑巧金砖被夸，少数人吐槽牛排过熟服务一般",
+        "praise": [
+          "招牌巧克力金砖每桌必点，黑巧慕斯带朗姆香",
+          "和牛西冷、500g肉眼熟度准，牛肉塔塔不腥",
+          "复古法式装修氛围好，适合生日约会，5人约$300",
+          "周一$65无限续牛排薯条，店员勤快加菜"
+        ],
+        "complaints": [
+          "有人点三分熟牛排上来全熟，还上错鱼",
+          "服务态度被吐槽一般，与同集团Franca一样",
+          "有人觉得整体偏咸、藏红花鱼发苦、鸭肉难吃",
+          "门口位风大牛排很快凉；自带蛋糕要收费"
+        ]
       }
     },
     {
@@ -2779,6 +2831,22 @@
         "praise": [],
         "complaints": [
           "点酒等候很久、无人招呼"
+        ]
+      },
+      "xhs": {
+        "verdict": "recommend",
+        "summary": "焦糖布丁、柠檬玛德琳和鸡肝酱被夸爆，小食盲点不踩雷，只是牛排一般、几乎没服务",
+        "praise": [
+          "焦糖布丁和柠檬玛德琳几乎每篇都夸，有人想一人一份",
+          "鸡肝慕斯配sourdough、炸猪头肉饼很合亚洲口味",
+          "炸土豆片和纸包韭葱意外好吃，spritz清爽",
+          "街角小酒馆氛围好，适合朋友小聚或一人食"
+        ],
+        "complaints": [
+          "牛腹肉排被说品质一般，靠酱汁撑",
+          "鸭肉宽面份量小，凤尾鱼挞偏咸",
+          "服务存在感低；室外位天冷",
+          "午餐人均约$130不算便宜，很难订"
         ]
       }
     },
@@ -2833,6 +2901,22 @@
           "价格偏高",
           "电话难打、订位困难",
           "高峰期上菜慢"
+        ]
+      },
+      "xhs": {
+        "verdict": "mixed",
+        "summary": "地下烛光爵士氛围人人夸，但惠灵顿和鸭肝慕斯两极，2026年差评和说退步的评论明显变多",
+        "praise": [
+          "地下酒窖烛光+现场爵士，复古巴黎感很适合约会",
+          "巨型惠灵顿牛排约$200够4-6人，有人说比其他名店好吃",
+          "XO蜗牛配招牌法棍、勃艮第炖牛肉完成度高",
+          "层叠土豆、鸡、kingfish前菜被点名推荐"
+        ],
+        "complaints": [
+          "多篇避雷：惠灵顿牛肉没味又难嚼，邻桌也说难吃",
+          "鸭肝慕斯被形容腥甜难以下咽，蛋糕$40也难吃",
+          "评论说菜品退步、酱汁肉类外采，除了氛围一无是处",
+          "晚市限时要换去吧台，服务员催点酒、没冷气"
         ]
       }
     },

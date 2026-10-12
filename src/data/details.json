@@ -382,55 +382,6 @@
         "https://www.sbs.com.au/food/article/find-the-heat-and-heart-of-hunan-cuisine-here/wd8gfmtmd"
       ]
     },
-    "golden-sands": {
-      "menu": "传统粤式大酒楼：白天饮茶，点心超过 100 款，有推车也可另外点单；晚市是粤菜单点和活海鲜（如龙虾伊面、东星斑、烧鹅），适合家庭聚餐和宴席。没有公开的网上菜单。饮茶人均约 $35–55，晚餐吃海鲜会明显更贵。周末建议一开门就到。",
-      "menuUrl": null,
-      "dishes": [
-        {
-          "name": "Black rice vermicelli roll",
-          "nameZh": "黑米肠粉",
-          "desc": "用黑米做的肠粉皮颜色深、口感更有嚼劲，是这里最常被点名的招牌点心。",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Siu mai",
-          "nameZh": "烧卖",
-          "desc": "传统猪肉鲜虾烧卖，个头饱满，是旅游局和多篇评论都推荐的必点款。",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Zha liang",
-          "nameZh": "炸两",
-          "desc": "滑溜的肠粉皮包着现炸油条，软脆对比明显，评论里常和丝滑肠粉一起被夸。",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Pork blood jelly",
-          "nameZh": "韭菜猪红",
-          "desc": "嫩滑猪红配浓郁酱汁，带一点药材香，是比较地道、外面不常见的点心。",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Roast goose",
-          "nameZh": "烧鹅",
-          "desc": "晚市烧味的代表，皮脆肉香，常和叉烧拼盘一起点。",
-          "image": null,
-          "imageFrom": null
-        }
-      ],
-      "photos": [],
-      "note": "没有官网和公开菜单，菜品依据 2023–2026 年的评论。",
-      "sources": [
-        "https://www.broadsheet.com.au/sydney/hurstville/restaurants/golden-sands",
-        "https://www.sydney.com/articles/best-yum-cha-in-sydney",
-        "https://pegfeeds.com/2026/05/25/golden-sands-%E9%87%91%E6%B2%99%E9%85%92%E6%A5%BC-hurstville-nsw-restaurant-review/",
-        "https://notquitenigella.com/2019/07/14/golden-sands-hurstville"
-      ]
-    },
     "palace": {
       "menu": "传统粤式酒楼：中午是推车饮茶（工作日 11 点、周末 10:30 开始，到下午 3 点），约 80 款点心；晚市为粤菜单点和活海鲜，官网招牌有泥蟹粉丝煲、椒盐鹌鹑、山东鸡等。6 人以上可订 $56–118/人的宴席。饮茶人均约 $35–50。",
       "menuUrl": "https://palacechinese.com.au/a-la-carte-menu/",
@@ -1027,7 +978,7 @@
           "caption": "餐厅用餐区"
         }
       ],
-      "note": "官网写 10 月 1 日起 $289，部分订位平台仍显示 $279。",
+      "note": "官网写 10 月 1 日起 $289；小红书网友说新店现在是 15 道 $325，订位时确认。",
       "sources": [
         "https://www.alltasydney.com.au/",
         "https://www.alltasydney.com.au/menu",
@@ -1157,7 +1108,7 @@
           "caption": "铜盘上的烤肉主菜，配沙拉和菜叶卷"
         }
       ],
-      "note": "菜单按季整套更换，12 月可能已是新一季；订位需付每人 $150 订金。",
+      "note": "菜单按季整套更换；9 月有帖子说主厨准备退居二线，12 月出品可能有变化。订位需付每人 $150 订金。",
       "sources": [
         "https://www.matkim.com.au/",
         "https://www.matkim.com.au/menu",
@@ -1505,71 +1456,6 @@
         "https://www.timeout.com/sydney/restaurants/temu-kangen",
         "https://www.broadsheet.com.au/sydney/food-and-drink/article/temu-kangen-indonesian-haymarket-open",
         "https://www.opentable.com.au/r/temu-kangen-haymarket"
-      ]
-    },
-    "khao-pla": {
-      "menu": "用现代手法做的泰菜，单点分享为主，分前菜、汤与咖喱、肉类、海鲜、素菜和招牌菜，主菜约 $20–32。多数菜有素食或无麸质选项，另有儿童餐。持牌营业，也可自带葡萄酒（每人 $3.9 开瓶费）。人均约 $40–60。",
-      "menuUrl": "https://drive.google.com/file/d/1puJtuBQNo8oUAL-GB5v3W9C4On9D-PS-/view",
-      "dishes": [
-        {
-          "name": "Pla's Pork Ribs",
-          "nameZh": "罗望子酱双煮猪肋排",
-          "desc": "猪肋排两次烹调后裹上罗望子酱，黏甜带酸，官网称是得过奖的招牌。",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Massaman",
-          "nameZh": "玛莎曼咖喱牛脸颊",
-          "desc": "南泰做法，牛脸颊肉慢炖，加罗望子和棕榈糖，酸甜醇厚。",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Yum Nashi Pear",
-          "nameZh": "雪梨软壳蟹沙拉",
-          "desc": "爽脆的雪梨配炸软壳蟹、烤椰丝、虾米和花生，酸辣清新。",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Kana Moo Krob",
-          "nameZh": "芥兰炒脆皮猪腩",
-          "desc": "脆皮猪腩和芥兰、辣椒大火快炒，经典下饭菜。",
-          "image": null,
-          "imageFrom": null
-        },
-        {
-          "name": "Prawn Toast",
-          "nameZh": "虾多士",
-          "desc": "虾泥抹在酸种面包上炸脆，配白泡菜蛋黄酱，适合当开胃小食。",
-          "image": null,
-          "imageFrom": null
-        }
-      ],
-      "photos": [
-        {
-          "image": "https://khaopla.com.au/__static/jdj5jdewjhg4twhtv0vdczyyulfrrvdk/instagram-block-6%282%29.jpeg",
-          "imageFrom": "https://khaopla.com.au/gallery/",
-          "caption": "餐厅门面与用餐区"
-        },
-        {
-          "image": "https://khaopla.com.au/__static/jdj5jdewjhmzu0tmyjvpa3e3ogfiqzbc/image-asset-2.webp",
-          "imageFrom": "https://khaopla.com.au/gallery/",
-          "caption": "多道菜同桌分享"
-        },
-        {
-          "image": "https://khaopla.com.au/__static/jdj5jdewjhlrljd5c3m0uhjscu8ybnqz/image-asset.webp",
-          "imageFrom": "https://khaopla.com.au/gallery/",
-          "caption": "咖喱配米饭"
-        }
-      ],
-      "note": "",
-      "sources": [
-        "https://khaopla.com.au/",
-        "https://khaopla.com.au/gallery/",
-        "https://drive.google.com/file/d/1puJtuBQNo8oUAL-GB5v3W9C4On9D-PS-/view",
-        "https://www.timeout.com/sydney/restaurants/khao-pla"
       ]
     },
     "mamak": {

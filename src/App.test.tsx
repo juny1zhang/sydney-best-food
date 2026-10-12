@@ -68,17 +68,17 @@ describe('App', () => {
     await user.click(dayButton(/^12月22日 周二/));
     const p = panel();
     await user.click(within(p).getByRole('button', { name: '午餐' }));
-    await user.type(within(p).getByLabelText('搜索餐厅、菜系或区域'), '金沙');
-    await user.click(within(p).getByRole('button', { name: '选这家：Golden Sands（午餐）' }));
+    await user.type(within(p).getByLabelText('搜索餐厅、菜系或区域'), '舌尖记忆');
+    await user.click(within(p).getByRole('button', { name: '选这家：Memory Tongue Hotpot（午餐）' }));
 
-    expect(dayButton(/^12月22日 周二.*午餐 Golden Sands（已选好）/)).toBeInTheDocument();
-    expect(within(panel()).getByText('金沙酒楼 · Hurstville · $$')).toBeInTheDocument();
+    expect(dayButton(/^12月22日 周二.*午餐 Memory Tongue Hotpot（已选好）/)).toBeInTheDocument();
+    expect(within(panel()).getByText('舌尖记忆 · Chatswood · $$')).toBeInTheDocument();
 
     // Swapping keeps the current pick until a new one is chosen.
     await user.click(within(panel()).getByRole('button', { name: '换一家：午餐' }));
     expect(within(panel()).getByText('给午餐换一家')).toBeInTheDocument();
     await user.click(within(panel()).getByRole('button', { name: '不换了' }));
-    expect(dayButton(/^12月22日 周二.*午餐 Golden Sands/)).toBeInTheDocument();
+    expect(dayButton(/^12月22日 周二.*午餐 Memory Tongue Hotpot/)).toBeInTheDocument();
 
     await user.click(within(panel()).getByRole('button', { name: '换一家：午餐' }));
     await user.type(within(panel()).getByLabelText('搜索餐厅、菜系或区域'), 'gigi');

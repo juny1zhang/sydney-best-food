@@ -23,7 +23,7 @@ describe('restaurant data', () => {
   it('searches names, tags and suburbs', () => {
     expect(searchRestaurants('烤鸭').map((r) => r.name)).toContain('Lee Ho Fook Sydney');
     expect(searchRestaurants('surry hills').length).toBeGreaterThan(3);
-    expect(searchRestaurants('金沙').map((r) => r.id)).toEqual(['golden-sands']);
+    expect(searchRestaurants('舌尖记忆').map((r) => r.id)).toEqual(['memory-tongue']);
     expect(searchRestaurants('   ')).toEqual([]);
   });
 });
@@ -31,7 +31,7 @@ describe('restaurant data', () => {
 describe('search keywords', () => {
   it('finds categories by common English words', () => {
     expect(searchRestaurants('pizza').every((r) => r.category === 'italian')).toBe(true);
-    expect(searchRestaurants('yum cha').length).toBeGreaterThanOrEqual(3);
+    expect(searchRestaurants('yum cha').length).toBeGreaterThanOrEqual(2);
     expect(searchRestaurants('brunch').some((r) => r.id === 'bills')).toBe(true);
   });
 });
