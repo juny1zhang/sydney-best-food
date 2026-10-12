@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { DETAILS_CHECKED_ON, detailOf, type Dish, type Photo } from '../data/details';
+import { loadDetails, type DetailFile, type Dish, type Photo } from '../data/details';
 import { RESTAURANT_BY_ID, categoryOf, mapsUrl } from '../data/restaurants';
 import type { Meal, Restaurant, ServiceMeal } from '../data/types';
 import { freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
@@ -63,12 +63,25 @@ interface PageProps {
 /** One restaurant's own page: what to order, how the menu works, and putting it on the calendar. */
 export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
   const r = RESTAURANT_BY_ID.get(id)!;
-  const detail = detailOf(id);
+  const [file, setFile] = useState<DetailFile | null>(null);
+  const [loadFailed, setLoadFailed] = useState(false);
+  const detail = file?.details[id];
   const headingRef = useRef<HTMLHeadingElement>(null);
   const [adding, setAdding] = useState(false);
   const [meal, setMeal] = useState<Meal>('dinner');
   const placements = placementsOf(id, picks);
   const popId = `detail-add-${id}`;
+
+  useEffect(() => {
+    let live = true;
+    loadDetails().then(
+      (f) => live && setFile(f),
+      () => live && setLoadFailed(true),
+    );
+    return () => {
+      live = false;
+    };
+  }, []);
 
   useEffect(() => {
     headingRef.current?.focus({ preventScroll: true });
@@ -124,12 +137,14 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
                 {detail.note && <p className="detail__note">{detail.note}</p>}
                 {detail.menuUrl && (
                   <a className="detail__menu-link" href={detail.menuUrl} target="_blank" rel="noreferrer">
-                    看官网菜单（{hostOf(detail.menuUrl)}）
+                    看完整菜单（{hostOf(detail.menuUrl)}）
                   </a>
                 )}
               </>
             ) : (
-              <p className="detail__text muted">这家的菜单还在整理，先看官网吧。</p>
+              <p className="detail__text muted">
+                {loadFailed ? '菜单没加载出来，检查一下网络再刷新。' : file ? '这家的菜单还在整理，先看官网吧。' : '正在加载菜单…'}
+              </p>
             )}
           </section>
 
@@ -222,8 +237,8 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
         </aside>
       </div>
 
-      {detail && (
-        <p className="detail__fine">菜单、价格和招牌菜整理于 {DETAILS_CHECKED_ON}，会随季节变动，以餐厅官网为准。图片来自餐厅官网，点图片下的链接可以看原页面。</p>
+      {file && detail && (
+        <p className="detail__fine">菜单、价格和招牌菜整理于 {file.checkedOn}，会随季节变动，以餐厅官网为准。图片来自餐厅官网，点图片下的链接可以看原页面。</p>
       )}
     </main>
   );

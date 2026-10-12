@@ -1,5 +1,5 @@
 {
-  "verifiedOn": "2026-10-11",
+  "verifiedOn": "2026-10-12",
   "categories": [
     {
       "id": "chinese",
@@ -78,6 +78,7 @@
       "intro": "墨尔本名店 Lee Ho Fook 的悉尼分店，2025 年 9 月在 Porter House 开业，随即拿下 Good Food Guide 2026 两顶帽。主厨 Victor Liong 用清淡克制的手法做中国各地风味，必点脆炸茄子和北京烤鸭。",
       "booking": "建议提前网上订位，热门时段较难订",
       "meals": [
+        "lunch",
         "dinner"
       ],
       "website": "https://trippaswhitegroup.com.au/whats-on/lee-ho-fook-at-porter-house",
@@ -113,9 +114,10 @@
       "intro": "Clam Bar 和 Pellegrino 2000 团队在 Angel Place 开的 140 座中餐厅，灵感来自主厨的华人祖父，融合粤菜和川菜。必点凉拌海蜇、饺子和整只北京烤鸭，氛围热烈又复古。",
       "booking": "OpenTable 可订，有约 $138 的套餐",
       "meals": [
+        "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.grandfathers.com",
       "accolades": [
         "SMH Good Food Guide 2026: newly hatted (hat count not confirmed)",
         "Time Out Sydney: 5/5; listed in Time Out's best Chinese restaurants in Sydney"
@@ -180,13 +182,13 @@
         "饮茶",
         "活海鲜"
       ],
-      "intro": "唐人街老字号金唐海鲜酒家（原店已结业）家族开的新店，在 Darling Square，店名来自招牌 XO 酱炒蚬。点心、活海鲜和现代粤菜都有，适合家庭聚餐和周末饮茶。",
+      "intro": "唐人街老字号金唐海鲜酒家家族开的新店，在 Darling Square，店名来自招牌 XO 酱炒蚬。点心、活海鲜和现代粤菜都有，适合家庭聚餐和周末饮茶。",
       "booking": "建议提前订位，周末较忙",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "https://xopp.com.au",
+      "website": "https://goldencentury.com.au/xopp/",
       "accolades": [
         "Broadsheet: The Best Chinese Restaurants in Sydney",
         "Gourmet Traveller review: 'a glimpse into the future of Cantonese dining'"
@@ -216,13 +218,13 @@
         "湘菜",
         "地下餐厅"
       ],
-      "intro": "由 Neil Perry 创立、现属 Rockpool Dining Group 的地下中餐厅，主打中国各地辣味菜，灯光昏暗很有氛围。周末有不推车的饮茶，椒盐银鱼和虾饼口碑好。",
+      "intro": "由 Neil Perry 创立、现属 Hunter Street Hospitality 的地下中餐厅，主打中国各地辣味菜，灯光昏暗很有氛围。红油虾仁云吞和孜然羊肉饼口碑好。",
       "booking": "可网上订位",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "https://spicetemple.com.au",
+      "website": "https://hunterstreethospitality.com.au/venues/spice-temple/sydney/",
       "accolades": [
         "AGFG Chef Hat Award 12/20",
         "Time Out Sydney: best yum cha in Sydney list"
@@ -241,7 +243,7 @@
       "nameZh": "",
       "category": "chinese",
       "rank": 6,
-      "suburb": "Darlinghurst",
+      "suburb": "Botany",
       "price": "$$",
       "badges": [
         "Broadsheet 最佳中餐"
@@ -251,7 +253,7 @@
         "烟熏腊肉",
         "红烧肉"
       ],
-      "intro": "Kensington 湘菜名店 Chairman Mao 原班人马开设，在海德公园对面的 College Street。招牌是米烟熏制的湖南腊肉，配熏笋或熏豆干，还有多年不变的红烧肉。",
+      "intro": "Kensington 湘菜名店 Chairman Mao 原班人马开设，2025 年 9 月从 Darlinghurst 搬回 Botany Rd。招牌是米烟熏制的湖南腊肉，配熏笋或熏豆干，还有多年不变的红烧肉。",
       "booking": "OpenTable 可订，营业日以官网为准",
       "meals": [
         "lunch",
@@ -326,7 +328,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://palacechinese.com.au",
       "accolades": [
         "Broadsheet: Best Yum Cha in Sydney"
       ],
@@ -355,7 +357,7 @@
         "biangbiang 面",
         "平价"
       ],
-      "intro": "Burwood 人气陕西面馆，被 Time Out 称为悉尼最好的 biangbiang 面之一。宽面每天手工拉，上桌前泼一勺热油，大碗约 17 澳元。",
+      "intro": "Burwood 人气陕西面馆，被 Time Out 称为悉尼最好的 biangbiang 面之一。宽面每天手工拉，上桌前泼一勺热油，一碗约 16 澳元。",
       "booking": "随到随吃，出发前建议确认营业",
       "meals": [
         "lunch",
@@ -462,7 +464,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.kisukepottspoint.com",
       "accolades": [
         "Broadsheet: Sydney's Best Japanese Restaurants 2026",
         "Broadsheet: Best Omakase Restaurants in Sydney"
@@ -491,8 +493,8 @@
         "Omakase",
         "12 席"
       ],
-      "intro": "Chaco Bar 主厨 Keita Abe 和 Kensuke Yada 合开的 12 席天妇罗 omakase，约 20 道菜当面现炸，轻盈不腻。晚餐约 210 澳元。",
-      "booking": "不在 OpenTable 上，需直接联系餐厅订位",
+      "intro": "Chaco Bar 主厨 Keita Abe 与 Kensuke Yada 合开的 12 席吧台，现为天妇罗与炭火烤物交替上桌的 13 道 omakase，每位 190 澳元。",
+      "booking": "只在官网订位，提前 3 个月放出名额",
       "meals": [
         "lunch",
         "dinner"
@@ -524,12 +526,13 @@
         "主厨餐桌",
         "Omakase"
       ],
-      "intro": "Kent Street 上的现代日料餐厅兼咖啡吧，设有 10 席主厨餐桌，食客称赞鱼和牛肉料理。omakase 约 135 澳元起。",
-      "booking": "建议提前网上订位",
+      "intro": "Kent Street 百年仓库里的现代日料，秘鲁籍主厨 Héctor Chunga 加入日秘融合（Nikkei）风味，5 道套餐 135 澳元、7 道 165 澳元。",
+      "booking": "建议提前网上订位，也接受 walk-in；周六晚只供应套餐",
       "meals": [
+        "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://kurosydney.com",
       "accolades": [
         "AGFG 2026 Chef Hat Award 15/20",
         "Broadsheet: Best Omakase Restaurants in Sydney"
@@ -557,12 +560,12 @@
         "江户前寿司",
         "8 席"
       ],
-      "intro": "寿司师傅 Oe 主理的 8 席板前，已从 Cammeray 搬到新悉尼鱼市场片区。约 27 贯的 omakase 用料顶级，每位约 350 澳元。",
-      "booking": "OpenTable 预订，出发前确认新地址",
+      "intro": "寿司师傅大江俊彦的 8 席江户前 omakase，已从 Cammeray 搬进新悉尼鱼市场内的 Gyokuu，每晚一场约 30 道，每位 350 澳元。",
+      "booking": "提前网上订位，周二至周六晚 6:30 一场",
       "meals": [
         "dinner"
       ],
-      "website": "",
+      "website": "https://gyokuu.com",
       "accolades": [
         "AGFG Chef Hat Award 14/20"
       ],
@@ -589,12 +592,13 @@
         "炉端烧",
         "Omakase"
       ],
-      "intro": "The Star 里的人气日料，怀石风料理、炉端烤串和顶级海鲜都受欢迎。另有 6 席 omakase 吧台，最多 23 道菜，适合约会或庆祝。",
+      "intro": "The Star 里的人气日料，味噌犬牙鱼、备长炭烤物和创意寿司都受欢迎；寿司吧台另有 7 道品鉴（215 澳元），适合约会或庆祝。",
       "booking": "建议提前网上订位",
       "meals": [
+        "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.star.com.au/sydney/eat-and-drink/signature-dining/sokyo",
       "accolades": [
         "Broadsheet: Sydney's Best Japanese Restaurants 2026",
         "Broadsheet: Best Omakase Restaurants in Sydney"
@@ -624,7 +628,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "",
+      "website": "https://tokyobird.com.au",
       "accolades": [],
       "sources": [
         "https://www.opentable.com.au/r/tokyo-bird-surry-hills",
@@ -649,12 +653,12 @@
         "品鉴菜单",
         "12 席"
       ],
-      "intro": "主厨 Jung-su Chang 主理的 12 席开放厨房韩式高级餐厅，用当代手法演绎韩国风味，品鉴菜单约 279 澳元起，是悉尼规格最高的韩餐。",
+      "intro": "主厨 Jung-su Chang 的现代韩式品鉴餐厅，已搬到 Surry Hills 的 Reservoir St，约 22 席，11 道菜 289 澳元，是悉尼规格最高的韩餐。",
       "booking": "需提前在 OpenTable 订位",
       "meals": [
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.alltasydney.com.au",
       "accolades": [
         "SMH Good Food Guide: 2 hats (2024 & 2025); listed on OpenTable's GFG 2026 NSW & ACT awardees list (2026 hat count not confirmed)",
         "AGFG 2026 Chef Hat Award 15/20"
@@ -683,13 +687,13 @@
         "韩式炸鸡",
         "家族经营"
       ],
-      "intro": "孙氏一家经营的小馆，坚持传统韩国家常做法，摆盘精致。必点韩式炸鸡、烤牛肉和泡菜煎饼，也有品鉴菜单。",
-      "booking": "建议提前订位，周一休息",
+      "intro": "孙氏一家经营的小馆，坚持传统韩国家常做法，摆盘精致。午餐吃饺子和拌饭，晚餐是现代分享菜，酱蒜炸鸡和 LA 牛小排必点。",
+      "booking": "建议提前订位，只在周四至周日营业",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.sangbymabasa.com.au",
       "accolades": [
         "Time Out Sydney: one of Sydney's best Korean spots"
       ],
@@ -702,72 +706,85 @@
       "confidence": "high"
     },
     {
-      "id": "danjee",
-      "name": "Danjee",
+      "id": "matkim",
+      "name": "Matkim",
       "nameZh": "",
       "category": "korean",
       "rank": 3,
-      "suburb": "CBD",
-      "price": "$$$",
+      "suburb": "Circular Quay",
+      "price": "$$$$",
       "badges": [
-        "Broadsheet 最佳韩烤"
+        "AGFG 14/20",
+        "SMH 一顶帽（2024–25）"
       ],
       "tags": [
-        "韩式烤肉",
-        "石锅拌饭",
-        "烧酒"
+        "韩式 Omakase",
+        "主厨餐桌",
+        "8 席"
       ],
-      "intro": "Pitt Street 老牌韩餐 Madang 团队开设，在 Albion Place，比一般韩式烤肉高一个档次。必点酱腌牛排骨和石锅拌饭，人均约 50–80 澳元。",
-      "booking": "可订位，周末晚市建议提前",
+      "intro": "主厨 Jacob Lee 主理的 8 席韩式 omakase，围着开放厨房吃十几道按季更换的菜，融合全罗道家乡味、韩国进口食材和炭火料理，每位 279 澳元。",
+      "booking": "仅 8 席，OpenTable 订位需付 $150/人订金",
       "meals": [
-        "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.matkim.com.au/",
       "accolades": [
-        "Broadsheet: Best Korean Barbeque in Sydney"
+        "AGFG 2026 Chef Hat Award 14/20",
+        "SMH Good Food Guide 2025 (NSW & ACT): One Hat (badge shown on matkim.com.au); OpenTable also lists GFG 1 Hat 2024; 2026 hat status not confirmed",
+        "Time Out Sydney: The best Korean restaurants in Sydney (January 2026)",
+        "Broadsheet: Best Korean Restaurants in Sydney (updated June 2024)"
       ],
       "sources": [
-        "https://www.broadsheet.com.au/sydney/guides/korean-barbeque-sydney",
-        "https://broadsheet.com.au/sydney/restaurants/danjee",
-        "https://citiesinsider.com/country/australia/sydney/good-korean-restaurants/zh"
+        "https://www.agfg.com.au/awards/sydney",
+        "https://www.agfg.com.au/restaurant/matkim-134308",
+        "https://www.matkim.com.au/",
+        "https://www.matkim.com.au/reservations",
+        "https://www.opentable.com.au/r/mat-kim-sydney",
+        "https://www.timeout.com/sydney/restaurants/the-best-korean-restaurants-in-sydney",
+        "https://www.timeout.com/sydney/restaurants/matkim",
+        "https://broadsheet.com.au/sydney/guides/korean-restaurants-sydney",
+        "https://hospitalitymagazine.com.au/korean-omakase-restaurant-matkim-joins-sydney-place"
       ],
-      "confidence": "medium"
+      "confidence": "high"
     },
     {
-      "id": "soul-dining",
-      "name": "SOUL Dining",
+      "id": "bornga",
+      "name": "Bornga Korean BBQ",
       "nameZh": "",
       "category": "korean",
       "rank": 4,
-      "suburb": "Wynyard",
-      "price": "$$$",
+      "suburb": "Haymarket",
+      "price": "$$",
       "badges": [
-        "悉尼首家得帽韩餐"
+        "Time Out 最佳韩烤",
+        "Sitchu 最佳韩烤 2026"
       ],
       "tags": [
-        "现代韩餐",
-        "砂锅饭",
-        "品鉴菜单"
+        "韩式烤肉",
+        "薄切牛五花",
+        "和牛"
       ],
-      "intro": "悉尼第一家拿到厨师帽的韩餐厅，2024 年搬到 Wynyard。招牌是大虾辣炒年糕、泡菜水黄尾鱼和砂锅饭，有 10 道菜的品鉴菜单。",
-      "booking": "建议提前网上订位，出发前确认营业",
+      "intro": "韩国名厨白钟元旗下烤肉连锁的悉尼店，在 Haymarket 二楼，装修比一般韩烤讲究，被 Time Out 视为全城最高档的韩烤之一。招牌是薄切腌牛五花，小菜可无限续加。",
+      "booking": "QueueTix 网上订位，每桌限时 90 分钟",
       "meals": [
         "lunch",
         "dinner"
       ],
       "website": "",
       "accolades": [
-        "Destination NSW: first Korean restaurant in Sydney to earn a Chef's Hat (historical; current hat status not confirmed)"
+        "Time Out Sydney: The best Korean barbecue in Sydney (May 2025), called the fanciest Korean BBQ in Sydney",
+        "Sitchu: The Best Korean BBQ in Sydney (July 2026), listed first",
+        "Sydney.com (Destination NSW): best Korean barbecue restaurants in Sydney, described as one of the city's highest-quality Korean BBQs"
       ],
       "sources": [
-        "https://concreteplayground.com/sydney/food-drink/soul-dining-wynyard-reopening",
-        "https://www.sydney.com/articles/the-best-korean-restaurants-in-sydney",
-        "https://www.timeout.com/sydney/restaurants/soul-dining",
-        "https://www.hospitalitymagazine.com.au/?p=51212",
-        "https://sydney.com/destinations/sydney/sydney-city/city-centre/food-and-drink/soul-dining"
+        "https://www.timeout.com/sydney/restaurants/the-best-korean-barbecue-in-sydney",
+        "https://www.timeout.com/sydney/restaurants/bornga",
+        "https://sitchu.com.au/best-korean-bbq-sydney",
+        "https://www.sydney.com/articles/best-korean-barbecue-in-sydney",
+        "https://queuetix.com/index.php/borngas",
+        "https://posnet.web.app/order?projectId=borngasyd"
       ],
-      "confidence": "low"
+      "confidence": "high"
     },
     {
       "id": "porkfat",
@@ -792,7 +809,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.porkfat.com.au",
       "accolades": [
         "RUSSH: No.1 pick, 'The best Thai restaurant in Sydney'",
         "Time Out Sydney review: 5/5 stars",
@@ -824,12 +841,12 @@
         "品鉴菜单",
         "特别场合"
       ],
-      "intro": "前 Long Chim 行政主厨 Annita Potter 的泰餐品鉴餐厅，八道式菜单约 145 澳元，另有素食版，刻意避开绿咖喱等俗套菜式。",
+      "intro": "前 Long Chim 行政主厨 Annita Potter 的泰餐品鉴餐厅，5 道 129 澳元、8 道 179 澳元，另有素食版，刻意避开绿咖喱等俗套菜式。",
       "booking": "建议提前网上订位",
       "meals": [
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.viand.club",
       "accolades": [
         "Chef Annita Potter: SMH Good Food Guide Oceania Cruises Chef of the Year (sources differ on 2022 vs 2023)"
       ],
@@ -862,7 +879,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.hojiak.com.au",
       "accolades": [],
       "sources": [
         "https://www.broadsheet.com.au/sydney/restaurants/ho-jiak-haymarket",
@@ -929,7 +946,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://temukangen.com.au",
       "accolades": [
         "Time Out Sydney review: 5/5 stars"
       ],
@@ -962,7 +979,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://khaopla.com.au",
       "accolades": [
         "Time Out Sydney review: 4/5 stars",
         "OpenTable diner rating 4.4/5 (about 172 reviews)"
@@ -1019,7 +1036,7 @@
         "卡市",
         "脆皮鸡面"
       ],
-      "intro": "卡市老牌越南面馆，招牌脆皮鸡蛋面汤，鸡皮酥脆、汤头清甜。Eastwood 和 Darling Square 也有分店。",
+      "intro": "卡市老牌越南面馆，招牌脆皮鸡蛋面汤，鸡皮酥脆、汤头清甜。Darling Square 也有分店。",
       "booking": "随到随吃",
       "meals": [
         "breakfast",
@@ -1136,7 +1153,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://olympusdining.com.au",
       "accolades": [
         "Gourmet Traveller 2026 Restaurant Guide: 100 best restaurants in Australia (NSW)",
         "Host venue of the 2026 Gourmet Traveller Restaurant Awards (17 Aug 2026)",
@@ -1175,7 +1192,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.noursydney.com",
       "accolades": [
         "SMH Good Food Guide: hatted (per Concrete Playground, Nov 2024, and The AU Review; current edition not confirmed)"
       ],
@@ -1209,7 +1226,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://nomad.sydney",
       "accolades": [
         "SMH Good Food Guide: hatted five consecutive years to 2019 (per Good Food); current hat status not confirmed"
       ],
@@ -1306,9 +1323,10 @@
       "intro": "马里克维尔仓库改造的热闹餐厅，以西悉尼移民家庭的怀旧家常菜为灵感，网评褒贬不一。",
       "booking": "建议提前预订",
       "meals": [
+        "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.babasplace.com.au",
       "accolades": [
         "SMH Good Food Guide Awards 2025: Bill Granger Trailblazer Award",
         "Broadsheet Sydney Hot List",
@@ -1379,7 +1397,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "",
+      "website": "https://gigisbalmain.com.au",
       "accolades": [
         "50 Top Pizza World 2026: #16 in the world (highest-ranked Australian pizzeria)",
         "50 Top Pizza World 2026: Pizza Maker of the Year (Daniel Semrani)",
@@ -1442,13 +1460,13 @@
         "意大利菜",
         "海滩景观"
       ],
-      "intro": "曼利海滩边 Manly Pacific 酒店内的意大利餐厅，出自 Ormeggio 的 Pavoni 夫妇，开业约一年即获帽，适合周末海景午餐。",
+      "intro": "曼利海滩边酒店里的意大利餐厅，出自 Ormeggio 的 Pavoni 夫妇，开业约一年即获帽，适合周末海景午餐。",
       "booking": "可网上订位，周末建议提前",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://cibariamanly.au",
       "accolades": [
         "SMH Good Food Guide 2026: 1 hat (newly hatted)",
         "Time Out Sydney: 5/5 stars",
@@ -1513,10 +1531,9 @@
       "intro": "Surry Hills 的复古意式小馆，必点焦黄油鼠尾草虾仁意式饺和配面包的松露黄油，很适合约会。",
       "booking": "周末很难订，建议提前约 2 周",
       "meals": [
-        "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.pellegrino2000.com",
       "accolades": [
         "Time Out Sydney: 5/5 stars",
         "Gourmet Traveller review",
@@ -1581,13 +1598,12 @@
         "切片披萨",
         "平价"
       ],
-      "intro": "Surry Hills 的人气罗马式切片披萨，饼底酥脆、配料丰富，适合快速午餐。",
+      "intro": "Surry Hills 的酸面团披萨店，饼底长时间发酵、酥脆带麦香，整张现烤，只做晚餐。",
       "booking": "无需预订，可外带",
       "meals": [
-        "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://altaglio.com.au",
       "accolades": [
         "50 Top Pizza Asia-Pacific 2026: #16 (also 17th in 2025 and equal 5th in 2024)"
       ],
@@ -1620,7 +1636,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.porcine.com.au",
       "accolades": [
         "Gourmet Traveller Restaurant Guide 2026: NSW list",
         "World's 50 Best Discovery 2026: debut listing (per Concrete Playground)",
@@ -1656,13 +1672,13 @@
         "海鲜塔",
         "牛排薯条"
       ],
-      "intro": "Surry Hills 的气派法式大饭馆，海鲜塔和牛排薯条是招牌，甜点“巧克力宝箱”很出片。",
+      "intro": "Surry Hills 的气派法式大饭馆，海鲜塔和牛排薯条是招牌，周一晚还有无限续牛排薯条。",
       "booking": "需提前 1–2 周订位",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.armorica.com.au",
       "accolades": [
         "Time Out Sydney Food & Drink Awards 2023: Best Fine Dining Restaurant (as reported in search summaries)",
         "Australian Traveller best French restaurants Sydney 2026: best for fine dining",
@@ -1693,13 +1709,13 @@
         "葡萄酒吧",
         "法式小盘"
       ],
-      "intro": "阿尔比恩街街角的葡萄酒吧兼小馆，炸猪肉丝配 gribiche 酱、明火烤墨累鳕等小盘出色，酒单逾 300 款。",
+      "intro": "阿尔比恩街街角的葡萄酒吧兼小馆，炸猪头肉配 gribiche 酱、苦酒焦糖布丁等小盘出色，酒单逾 300 款。",
       "booking": "座位紧张，建议提前订或早到",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://barcopains.com",
       "accolades": [
         "Time Out Sydney: 5/5 stars",
         "Time Out Sydney Food & Drink Awards 2023: Best Wine Bar",
@@ -1737,7 +1753,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://www.restauranthubert.com",
+      "website": "https://swillhouse.com/venues/restaurant-hubert/",
       "accolades": [
         "Australian Good Food Guide (AGFG) 2026 NSW Chef Hat Awards: score 13",
         "World's 101 Best Burgers 2026: #16 (per Canberra Times)",
@@ -1774,7 +1790,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://loulou.sydney",
       "accolades": [
         "Broadsheet: The Best French Restaurants in Sydney",
         "Australian Traveller best French restaurants Sydney 2026: hottest dining gem"
@@ -1787,40 +1803,6 @@
         "https://www.broadsheet.com.au/sydney/guides/best-french-restaurants"
       ],
       "confidence": "medium"
-    },
-    {
-      "id": "franca",
-      "name": "Franca",
-      "nameZh": "",
-      "category": "european-bistro",
-      "rank": 6,
-      "suburb": "Potts Point",
-      "price": "$$$",
-      "badges": [
-        "Broadsheet 最佳法餐"
-      ],
-      "tags": [
-        "法式餐厅",
-        "约会",
-        "葡萄酒"
-      ],
-      "intro": "波茨角的人气法式餐厅，菜单游走于法国各地与地中海沿岸，适合约会晚餐。",
-      "booking": "建议提前订位",
-      "meals": [
-        "lunch",
-        "dinner"
-      ],
-      "website": "https://www.franca.com.au",
-      "accolades": [
-        "Broadsheet: The Best French Restaurants in Sydney",
-        "Australian Traveller best French restaurants Sydney 2026: best for Francophiles"
-      ],
-      "sources": [
-        "https://concreteplayground.com/sydney/restaurants/franca/amp",
-        "https://www.broadsheet.com.au/sydney/guides/best-french-restaurants",
-        "https://australiantraveller.com/nsw/sydney/best-french-restaurant-sydney"
-      ],
-      "confidence": "high"
     },
     {
       "id": "sixpenny",
@@ -1873,7 +1855,7 @@
         "品鉴菜单",
         "纪念日"
       ],
-      "intro": "Matt Moran 旗舰店，正对歌剧院与海港大桥，现由 Tom Gorringe 掌勺，5 道菜品鉴 A$240，适合纪念日与商务宴请。",
+      "intro": "Matt Moran 旗舰店，正对歌剧院与海港大桥，现由 Tom Gorringe 掌勺，5 道品鉴 A$260（8 道 A$305），适合纪念日与商务宴请。",
       "booking": "OpenTable 可订，窗边景观位尽早",
       "meals": [
         "lunch",
@@ -1908,7 +1890,7 @@
         "歌剧院内",
         "澳洲本土食材"
       ],
-      "intro": "坐落悉尼歌剧院帆形屋顶之下，Peter Gilmore 以澳洲本土食材演绎当代澳菜，2026 年还拿了年度侍酒师奖。景观无敌，也有人觉得价格偏高。",
+      "intro": "坐落悉尼歌剧院帆形屋顶之下，Peter Gilmore 团队以澳洲本土食材演绎当代澳菜，2026 年还拿了年度侍酒师奖。景观无敌，也有人觉得价格偏高。",
       "booking": "OpenTable 可订；18:15 前的早场菜单有限制",
       "meals": [
         "lunch",
@@ -1945,7 +1927,7 @@
         "品鉴菜单",
         "水岸"
       ],
-      "intro": "主厨 Federico Zanellato 把意式手工面与日式技法结合，16 道菜品鉴约 A$280，坐落 Pyrmont 水边。",
+      "intro": "主厨 Federico Zanellato 把意式手工面与日式技法结合，品鉴菜单 A$265、Omakase A$350，坐落 Pyrmont 水边。",
       "booking": "晚餐周四至周日，午餐周六日",
       "meals": [
         "lunch",
@@ -2055,7 +2037,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://seansbondi.com",
       "accolades": [
         "Gourmet Traveller 2026 Top 100 Restaurants（NSW）",
         "SMH Good Food Guide 2026: 1 hat（据 Sydney Tourism）"
@@ -2083,7 +2065,7 @@
         "文物建筑",
         "全天营业"
       ],
-      "intro": "Balmoral 海滩边的文物建筑餐厅，设休闲 Bistro 与精致餐厅，从早到晚都能用餐，招牌藏红花黄油淡水小龙虾。",
+      "intro": "Balmoral 海滩边的文物建筑餐厅，设休闲 Bistro 与精致餐厅，从早到晚都能用餐，精致餐厅另有 A$230 的季节品鉴菜单。",
       "booking": "精致餐厅建议提前订位；Bistro 较易订",
       "meals": [
         "breakfast",
@@ -2161,7 +2143,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://margaretdoublebay.com",
+      "website": "https://themargaretfamily.com",
       "accolades": [
         "World's 101 Best Steak Restaurants 2026: 全球第2 / 澳洲第1",
         "Gourmet Traveller 2026 Top 100 Restaurants",
@@ -2193,7 +2175,7 @@
         "海鲜",
         "海滩景观"
       ],
-      "intro": "Freshwater 海滩上开业二十年的撒丁岛菜餐厅，龙虾撒丁珍珠面、炭烤章鱼都是招牌，坐拥北部海滩海景。",
+      "intro": "Freshwater 海滩上开业二十年的撒丁岛菜餐厅，烤乳猪和乌鱼子意面是招牌，坐拥北部海滩海景。",
       "booking": "OpenTable 可订",
       "meals": [
         "lunch",
@@ -2256,13 +2238,13 @@
         "炭烤海鲜",
         "鱼市场"
       ],
-      "intro": "2026 年 1 月随新悉尼鱼市场开业的土耳其海鲜酒馆，炭烤沙丁鱼串和酥丝大虾很出彩，全天营业，价格亲民。",
+      "intro": "2026 年 1 月随新悉尼鱼市场开业的土耳其海鲜酒馆，酥炸黑海鳀鱼和炭烤剑鱼排很出彩，全天营业，价格亲民。",
       "booking": "每日 11:30–22:00，建议网上订位",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://hamsitaverna.com.au",
       "accolades": [
         "Time Out Sydney 2026 新开餐厅推荐"
       ],
@@ -2322,13 +2304,13 @@
         "岩石区",
         "平价"
       ],
-      "intro": "岩石区的老牌海鲜小馆，啤酒脆浆鲷鱼和焗鱼派最受推荐，逛完岩石区与环形码头后的平价好选择。",
+      "intro": "岩石区的老牌海鲜小馆，酿虾焗尖吻鲈和当日炸鱼薯条最受推荐，逛完岩石区与环形码头后的平价好选择。",
       "booking": "建议提前订位",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://fishattherocks.com.au",
       "accolades": [],
       "sources": [
         "https://pixidia.com/restauration/fish-at-the-rocks/",
@@ -2419,13 +2401,13 @@
         "炭烤牛排",
         "商务午餐"
       ],
-      "intro": "25 Martin Place 的两帽烧烤餐厅，Kidman 裙带牛排与 Rangers Valley 菲力是招牌。",
+      "intro": "25 Martin Place 的两帽烧烤餐厅，柴火烤 Kidman 干式熟成西冷和 Westholme 和牛臀盖是招牌。",
       "booking": "OpenTable 可订",
       "meals": [
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://internationalsydney.com",
       "accolades": [
         "SMH Good Food Guide 2026: 2 hats（据 RUSSH）",
         "World's 101 Best Steak Restaurants 2026: 澳洲第9"
@@ -2490,9 +2472,10 @@
         "炭烤",
         "热闹"
       ],
-      "intro": "Surry Hills 的阿根廷炭烤名店，明火 asado 与 parrilla 烤炉就在眼前，炭烤裙带牛排和慢烤乳猪是招牌。",
+      "intro": "Surry Hills 的阿根廷炭烤名店，明火 parrilla 烤炉就在眼前，F1 和牛裙带牛排和柴火烤奶酪是招牌。",
       "booking": "OpenTable 可订",
       "meals": [
+        "lunch",
         "dinner"
       ],
       "website": "https://www.porteno.com.au",
@@ -2528,7 +2511,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "https://www.rockpoolbarandgrill.com.au",
+      "website": "https://hunterstreethospitality.com.au/venues/rockpool/sydney/",
       "accolades": [
         "World's 101 Best Steak Restaurants 2026: 澳洲第11"
       ],
@@ -2556,12 +2539,13 @@
         "鸡尾酒",
         "无手机用餐"
       ],
-      "intro": "King Street 地下室的纽约风牛排馆，入座需把手机封存进皮袋，Spinalis 肋眼盖和 Prime rib 必点。",
+      "intro": "King Street 地下室的纽约风牛排馆，入座需把手机封存进皮袋，Spinalis 肋眼盖和带骨肉眼必点。",
       "booking": "建议提前订位",
       "meals": [
+        "lunch",
         "dinner"
       ],
-      "website": "https://www.thegidley.com",
+      "website": "https://www.liquidandlarder.com.au/venues/the-gidley/",
       "accolades": [
         "World's 101 Best Steak Restaurants 2026: 澳洲第12",
         "Time Out Sydney 4/5星"
@@ -2593,9 +2577,10 @@
       "intro": "Marrickville 的社区牛排馆，用定制柴火烤炉烤制店内干式熟成的 Blackmore 和牛。",
       "booking": "一般较易订，周末晚提前约一周",
       "meals": [
+        "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.20chapel.com.au",
       "accolades": [
         "World's 101 Best Steak Restaurants 2026: 澳洲第13"
       ],
@@ -2626,7 +2611,7 @@
       "meals": [
         "dinner"
       ],
-      "website": "",
+      "website": "https://cabravale.com.au/dining/magma-by-dany-karam/",
       "accolades": [
         "World's 101 Best Steak Restaurants 2026: 澳洲第14 / 全球第61"
       ],
@@ -2685,7 +2670,7 @@
         "创意口味",
         "夜宵"
       ],
-      "intro": "悉尼最受欢迎的意式冰淇淋之一，常备约 40 种口味，每周有特供，晚上排队也值得。",
+      "intro": "悉尼最受欢迎的意式冰淇淋之一，常备三十多种口味，每月推出 10 款限定，晚上排队也值得。",
       "booking": "不接受预订，晚间常排队",
       "meals": [
         "lunch",
@@ -2786,13 +2771,13 @@
         "网红蛋糕",
         "草莓西瓜蛋糕"
       ],
-      "intro": "纽敦起家的甜品店，招牌草莓西瓜蛋糕清爽带玫瑰香，Chippendale、Rosebery 和 CBD 也有门店。",
+      "intro": "纽敦起家的甜品店，招牌草莓西瓜蛋糕清爽带玫瑰香，悉尼现有 9 家店，CBD、Rosebery 等地都有。",
       "booking": "无需预订",
       "meals": [
         "breakfast",
         "lunch"
       ],
-      "website": "https://www.blackstarpastry.com.au",
+      "website": "https://blackstarpastry.com",
       "accolades": [
         "Man of Many best desserts in Sydney (2025): ranked #1"
       ],
@@ -2824,7 +2809,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.cowandthemoon.com.au",
       "accolades": [
         "Gelato World Tour 2014 champion (Rimini)",
         "Sydney Royal Cheese & Dairy Produce Show 2022: gelato champion",
@@ -2885,7 +2870,7 @@
         "手工冰淇淋",
         "时令口味"
       ],
-      "intro": "雷德芬的小批量手工冰淇淋店，用娟姗牛奶每日现做，酪乳百香果、黑芝麻等口味很受欢迎。",
+      "intro": "雷德芬的小批量手工冰淇淋店，用娟姗牛奶每日现做，酪乳百香果、西瓜玫瑰雪葩等口味很受欢迎。",
       "booking": "无需预订，下午才开门",
       "meals": [
         "lunch",

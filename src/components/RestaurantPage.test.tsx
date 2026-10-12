@@ -12,6 +12,9 @@ describe('restaurant page', () => {
     const page = await screen.findByRole('main', { name: 'Kisuke' });
     expect(within(page).getByRole('heading', { level: 1, name: 'Kisuke' })).toHaveFocus();
     expect(within(page).getByRole('heading', { level: 2, name: '菜单' })).toBeInTheDocument();
+    // Menus load separately from the first page.
+    const dishes = await within(page).findByRole('heading', { level: 2, name: '招牌菜' });
+    expect(within(dishes.parentElement!).getAllByRole('listitem').length).toBeGreaterThanOrEqual(3);
     expect(screen.queryByRole('heading', { name: '悉尼餐厅榜单' })).not.toBeInTheDocument();
     expect(document.title).toBe('Kisuke · 悉尼吃什么');
 

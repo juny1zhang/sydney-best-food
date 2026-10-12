@@ -7,6 +7,7 @@ import { RestaurantBoard, type BoardCategory } from './components/RestaurantBoar
 import { RestaurantPage } from './components/RestaurantPage';
 import { SiteFooter } from './components/SiteFooter';
 import { DAYS_IN_MONTH, MONTH_INDEX, NZ_TRIP_DAYS, YEAR, dayInfo } from './data/december';
+import { loadDetails } from './data/details';
 import { RESTAURANT_BY_ID, VERIFIED_ON } from './data/restaurants';
 import type { Meal, Restaurant } from './data/types';
 import { usePicks, type SyncState } from './hooks/usePicks';
@@ -17,6 +18,7 @@ import { MEALS, countMeals, removePick, setPick, type Pick } from './lib/plan';
 
 const FIRST_SYDNEY_DAY = 3;
 const TOAST_MS = 6000;
+const PREFETCH_MS = 1500;
 /** Below this width the day panel can't sit beside the calendar, so it opens as a sheet. */
 const SHEET_QUERY = '(max-width: 1047px), (max-height: 500px)';
 
@@ -125,6 +127,12 @@ export default function App() {
     setToast(null);
     setToastHeld(false);
   };
+
+  // Fetch the menus once the first page is up, so a restaurant page opens with them ready.
+  useEffect(() => {
+    const t = window.setTimeout(() => void loadDetails().catch(() => {}), PREFETCH_MS);
+    return () => window.clearTimeout(t);
+  }, []);
 
   // The day sheet belongs to the main page; a restaurant page replaces it.
   useEffect(() => {

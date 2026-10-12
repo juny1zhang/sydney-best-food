@@ -1,5 +1,3 @@
-import raw from './details.json';
-
 export interface Dish {
   /** As the restaurant writes it. */
   name: string;
@@ -29,15 +27,21 @@ export interface RestaurantDetail {
   sources: string[];
 }
 
-interface DetailFile {
+export interface DetailFile {
   checkedOn: string;
   details: Record<string, RestaurantDetail>;
 }
 
-const file = raw as DetailFile;
+let pending: Promise<DetailFile> | null = null;
 
-export const DETAILS_CHECKED_ON = file.checkedOn;
-
-export function detailOf(id: string): RestaurantDetail | undefined {
-  return file.details[id];
+/** The details are a third of the site's weight, so they load on their own rather than with the first page. */
+export function loadDetails(): Promise<DetailFile> {
+  pending ??= import('./details.json').then(
+    (m) => m.default as DetailFile,
+    (e) => {
+      pending = null; // let the next attempt try again
+      throw e;
+    },
+  );
+  return pending;
 }
