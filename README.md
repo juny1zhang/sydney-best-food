@@ -16,7 +16,11 @@ npm run typecheck
 npm run build      # 输出到 dist/
 ```
 
-技术栈：Vite + React 18 + TypeScript，纯静态站点，可直接部署到 Vercel / Netlify / GitHub Pages。
+技术栈：Vite + React 18 + TypeScript，纯静态站点。
+
+## 部署到 Vercel
+
+`vercel.json` 已经写好构建设置（`npm ci` → `npm run build` → 输出 `dist/`）。在 Vercel 控制台 **Add New → Project → Import Git Repository**，选 `juny1zhang/sydney-best-food` 直接 Deploy 即可；之后每次 push 都会自动重新部署。
 
 ## 数据
 
