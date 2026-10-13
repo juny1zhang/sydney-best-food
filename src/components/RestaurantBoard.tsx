@@ -129,6 +129,7 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                             {r.name}
                           </a>
                           <span className="muted">
+                            {r.nameZh && `${r.nameZh} · `}
                             {r.suburb} · {r.price}
                           </span>
                           <span className="block__chips">
