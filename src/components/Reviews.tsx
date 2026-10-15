@@ -68,7 +68,7 @@ function TaBody({ ta }: { ta: TaTake }) {
   let caveat = '';
   if (!ta.rating) {
     if (!said) return <p className="muted">{ta.url ? 'TripAdvisor 上评价太少，还没有评分。' : 'TripAdvisor 上没找到这家店。'}</p>;
-    caveat = ta.reviews ? `只有 ${ta.reviews} 条评价，还没有评分。` : '没有 TripAdvisor 评分。';
+    caveat = ta.reviews ? `只有 ${ta.reviews} 条评价，仅供参考。` : '没有 TripAdvisor 评分。';
   } else if ((ta.reviews ?? 0) < MIN_TA_REVIEWS) {
     const few = ta.reviews ? `只有 ${ta.reviews} 条评价` : '评价很少';
     if (!said) return <p className="muted">{few}，参考价值不大。</p>;

@@ -88,14 +88,23 @@ function closedWeekly(r: Restaurant, day: number): boolean {
   return r.closed?.includes(weekdayOf(YEAR, MONTH_INDEX, day)) ?? false;
 }
 
-/** Whether the restaurant is likely shut that day of December: a weekly closing day, or a date it has announced. */
-export function closedOn(r: Restaurant, day: number): boolean {
-  return closedWeekly(r, day) || (r.closedDates?.includes(day) ?? false);
+/** A closure the restaurant has announced for that day (or that meal of it), rather than its usual weekly pattern. */
+export function closureAnnounced(r: Restaurant, day: number, meal?: Meal): boolean {
+  return (r.closedDates?.includes(day) ?? false) || (meal !== undefined && (r.closedMeals?.[day]?.includes(meal) ?? false));
 }
 
-/** Why it is likely shut that day, e.g. "周一通常休息" or "12月25日休息"; empty when it should be open. */
-export function closedReason(r: Restaurant, day: number): string {
+/**
+ * Whether the restaurant is likely shut that day of December, or for that meal of it: a weekly closing day,
+ * or a closure it has announced.
+ */
+export function closedOn(r: Restaurant, day: number, meal?: Meal): boolean {
+  return closedWeekly(r, day) || closureAnnounced(r, day, meal);
+}
+
+/** Why it is likely shut, e.g. "周一通常休息", "12月25日休息" or "12月24日晚餐不营业"; empty when it should be open. */
+export function closedReason(r: Restaurant, day: number, meal?: Meal): string {
   if (r.closedDates?.includes(day)) return `12月${day}日休息`;
+  if (meal && r.closedMeals?.[day]?.includes(meal)) return `12月${day}日${MEALS.find((m) => m.key === meal)!.label}不营业`;
   if (closedWeekly(r, day)) return `${weekdayName(weekdayOf(YEAR, MONTH_INDEX, day))}通常休息`;
   return '';
 }
@@ -114,15 +123,21 @@ export function decemberDates(days: number[]): string {
   return runs.every((run) => run.length < 3) ? `12月${sorted.join('、')}日` : `12月${parts.join('、')}`;
 }
 
+/** The December closures it has announced, e.g. "12月25日至31日休息；12月24日晚餐不营业"; empty when none. */
+export function announcedClosures(r: Restaurant): string {
+  const parts: string[] = [];
+  if (r.closedDates?.length) parts.push(`${decemberDates(r.closedDates)}休息`);
+  for (const [day, meals] of Object.entries(r.closedMeals ?? {})) {
+    parts.push(`12月${day}日${meals.map((m) => MEALS.find((x) => x.key === m)!.label).join('、')}不营业`);
+  }
+  return parts.join('；');
+}
+
 /** "通常周一、周二休息；12月25日至31日休息", Monday first; empty when it opens every day or nobody checked. */
 export function closedLabel(r: Restaurant): string {
-  const parts: string[] = [];
-  if (r.closed?.length) {
-    const monFirst = [...r.closed].sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7));
-    parts.push(`通常${monFirst.map(weekdayName).join('、')}休息`);
-  }
-  if (r.closedDates?.length) parts.push(`${decemberDates(r.closedDates)}休息`);
-  return parts.join('；');
+  const monFirst = [...(r.closed ?? [])].sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7));
+  const weekly = monFirst.length ? `通常${monFirst.map(weekdayName).join('、')}休息` : '';
+  return [weekly, announcedClosures(r)].filter(Boolean).join('；');
 }
 
 export function countMeals(picks: Picks, days: number): { booked: number; picked: number } {

@@ -21,6 +21,16 @@ function popover(restaurant: Restaurant, extra: { onPickDay?: (day: number) => v
 }
 
 describe('add popover', () => {
+  it('calls a closure the restaurant has announced what it is, not "maybe"', () => {
+    // 22 December dinner is off; 28 December is shut all day.
+    const pop = popover({ ...LEE_HO_FOOK, closed: [], closedDates: [28], closedMeals: { 22: ['dinner'] } });
+    expect(within(pop).getByRole('button', { name: '12月22日 周二，已公布休息' })).toHaveTextContent('已公布休息');
+    expect(within(pop).getByRole('button', { name: '12月28日 周一 · 补假日，已公布休息' })).toHaveClass('addpop__day--closed');
+    expect(within(pop).getByRole('button', { name: '12月21日 周一' })).not.toHaveClass('addpop__day--closed');
+    expect(within(pop).getByText('这家12月28日休息；12月22日晚餐不营业。')).toBeInTheDocument();
+    expect(within(pop).queryByText(/可能休息/)).not.toBeInTheDocument();
+  });
+
   it('still lists days the restaurant usually closes, but marks them', async () => {
     const user = userEvent.setup();
     const picked: number[] = [];

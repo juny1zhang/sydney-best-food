@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useRef, useState, type SetStateAction } from 'react';
 import type { Picks } from '../lib/plan';
-import { STORAGE_KEY, loadPending, loadPicks, parsePicks, savePending, savePicks } from '../lib/storage';
-import { applyChange, diffPicks, sharedRemote, slotKey, type PicksRemote, type SlotChange } from '../lib/sync';
+import { PENDING_KEY, STORAGE_KEY, loadPending, loadPicks, parsePending, parsePicks, savePending, savePicks } from '../lib/storage';
+import { applyChange, diffPicks, samePick, sharedRemote, slotKey, type PicksRemote, type SlotChange } from '../lib/sync';
 
 export const RETRY_MS = 5000;
+/** While the live stream can't connect, how often to read the plan instead. */
+export const POLL_MS = 6 * RETRY_MS;
 
 /**
  * `local`: no shared backend. `offline`: the shared plan can't be read; retrying, and changes wait on this device.
@@ -14,6 +16,22 @@ export type SyncState = 'local' | 'connecting' | 'live' | 'offline' | 'error';
 /** Latest change per slot. */
 function bySlot(changes: SlotChange[]): Map<string, SlotChange> {
   return new Map(changes.map((c) => [slotKey(c.day, c.meal), c]));
+}
+
+const sameChange = (a: SlotChange, b: SlotChange) => a.day === b.day && a.meal === b.meal && samePick(a.pick ?? undefined, b.pick ?? undefined);
+
+/** Every open tab shares the stored list, so each one only touches the slots it changed. */
+function storePending(changes: SlotChange[]): void {
+  const stored = bySlot(loadPending());
+  for (const c of changes) stored.set(slotKey(c.day, c.meal), c);
+  savePending([...stored.values()]);
+}
+
+/** Drops a change the plan has confirmed, unless another tab has stored a newer one for that slot since. */
+function clearPending(change: SlotChange): void {
+  const stored = loadPending();
+  const kept = stored.filter((c) => !sameChange(c, change));
+  if (kept.length !== stored.length) savePending(kept);
 }
 
 /**
@@ -70,11 +88,14 @@ export function usePicks(remote: PicksRemote | null = sharedRemote) {
           } catch {
             return false;
           }
-          // A read still in flight may have missed this write.
-          if (replay.current) stale = true;
+          // A read still in flight may have missed this write: put it back on top of whatever that read returns.
+          if (replay.current) {
+            stale = true;
+            replay.current.push(change);
+          }
           if (unsynced.get(key) === change) {
             unsynced.delete(key);
-            savePending([...unsynced.values()]);
+            clearPending(change);
             // A change from someone else was skipped meanwhile and may be newer than ours.
             if (skipped.current.delete(key)) stale = true;
           }
@@ -102,8 +123,9 @@ export function usePicks(remote: PicksRemote | null = sharedRemote) {
       if (next === prev) return;
       replace(next);
       if (!remote) return;
-      for (const change of diffPicks(prev, next)) unsynced.set(slotKey(change.day, change.meal), change);
-      savePending([...unsynced.values()]);
+      const changes = diffPicks(prev, next);
+      for (const change of changes) unsynced.set(slotKey(change.day, change.meal), change);
+      storePending(changes);
       void flush();
     },
     [remote, unsynced, flush, replace],
@@ -114,12 +136,14 @@ export function usePicks(remote: PicksRemote | null = sharedRemote) {
     let active = true;
     let latest = 0;
     let retry = 0;
+    let poll = 0;
     let streamUp = false;
 
     /** Retries pending writes and reloads the whole plan, keeping any change still in flight. Only the latest read lands. */
     const reload = async () => {
       const mine = ++latest;
       window.clearTimeout(retry);
+      window.clearTimeout(poll);
       void flush();
       const seen: SlotChange[] = [];
       replay.current = seen;
@@ -141,6 +165,8 @@ export function usePicks(remote: PicksRemote | null = sharedRemote) {
       replace(next);
       setReadFailed(false);
       if (streamUp) setLive(true);
+      // Some networks block the live stream but not reads: keep reading now and then so other people's changes still arrive.
+      else poll = window.setTimeout(() => void reload(), POLL_MS);
     };
     resync.current = () => void reload();
 
@@ -161,7 +187,11 @@ export function usePicks(remote: PicksRemote | null = sharedRemote) {
         streamUp = isLive;
         // Catch up on anything missed while the stream was down; it only counts as live once that has landed.
         if (isLive) void reload();
-        else setLive(false);
+        else {
+          setLive(false);
+          window.clearTimeout(poll);
+          poll = window.setTimeout(() => void reload(), POLL_MS);
+        }
       },
     );
     void reload();
@@ -171,11 +201,29 @@ export function usePicks(remote: PicksRemote | null = sharedRemote) {
       if (document.visibilityState === 'visible') void reload();
     };
     document.addEventListener('visibilitychange', onVisible);
+
+    // Another tab sent or replaced a change this one is also holding (say, one it loaded from storage at start):
+    // let that tab's version stand rather than send ours over it later.
+    const onStorage = (e: StorageEvent) => {
+      if (e.key !== PENDING_KEY) return;
+      const stored = parsePending(e.newValue);
+      let dropped = false;
+      for (const [key, change] of unsynced) {
+        if (stored.some((c) => sameChange(c, change))) continue;
+        unsynced.delete(key);
+        skipped.current.delete(key);
+        dropped = true;
+      }
+      if (dropped) void reload();
+    };
+    window.addEventListener('storage', onStorage);
     return () => {
       active = false;
       window.clearTimeout(retry);
+      window.clearTimeout(poll);
       stop();
       document.removeEventListener('visibilitychange', onVisible);
+      window.removeEventListener('storage', onStorage);
       resync.current = () => {};
       replay.current = null;
       setLive(false);

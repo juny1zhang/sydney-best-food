@@ -56,18 +56,21 @@ let restore = () => {};
  */
 function closeOn(closed: Record<string, number[]>) {
   const all = [...RESTAURANT_BY_ID.values()];
-  const saved = all.map((r: Restaurant) => ({ r, closed: r.closed, closedDates: r.closedDates }));
+  const saved = all.map((r: Restaurant) => ({ r, closed: r.closed, closedDates: r.closedDates, closedMeals: r.closedMeals }));
   for (const r of all) {
     delete r.closed;
     delete r.closedDates;
+    delete r.closedMeals;
   }
   for (const [id, days] of Object.entries(closed)) RESTAURANT_BY_ID.get(id)!.closed = days;
   restore = () => {
-    for (const { r, closed: c, closedDates: d } of saved) {
+    for (const { r, closed: c, closedDates: d, closedMeals: m } of saved) {
       if (c === undefined) delete r.closed;
       else r.closed = c;
       if (d === undefined) delete r.closedDates;
       else r.closedDates = d;
+      if (m === undefined) delete r.closedMeals;
+      else r.closedMeals = m;
     }
   };
 }
@@ -78,9 +81,19 @@ afterEach(() => {
 });
 
 /** The researched closing days, to check every test puts them back. */
-const RESEARCHED = JSON.stringify([...RESTAURANT_BY_ID.values()].map((r) => [r.id, r.closed, r.closedDates]));
+const RESEARCHED = JSON.stringify([...RESTAURANT_BY_ID.values()].map((r) => [r.id, r.closed, r.closedDates, r.closedMeals]));
 
 describe('marking picks as booked', () => {
+  it('keeps the booking when "换一家" ends on the same place', async () => {
+    const user = userEvent.setup();
+    const booked = { kind: 'restaurant' as const, id: LEE_HO_FOOK.id, booked: true, time: '19:30' };
+    render(<Plan day={22} category="chinese" initial={{ 22: { dinner: booked } }} />);
+    await user.click(within(panel()).getByRole('button', { name: '换一家：晚餐' }));
+    await user.click(within(panel()).getByRole('button', { name: `选这家：${LEE_HO_FOOK.name}（晚餐）` }));
+    expect(within(panel()).getByText('已预订 · 19:30')).toBeInTheDocument();
+    expect(summary()).toBe('已订 3 餐，已选 0 餐');
+  });
+
   it('books a picked restaurant at a time and takes the booking off again', async () => {
     const user = userEvent.setup();
     render(<Plan day={22} initial={{ 22: { dinner: { kind: 'restaurant', id: LEE_HO_FOOK.id } } }} />);
@@ -238,7 +251,7 @@ describe('closing days', () => {
     closeOn({});
     RESTAURANT_BY_ID.get('lee-ho-fook')!.closedDates = [25];
     render(<Plan day={25} category="chinese" initial={{ 25: { lunch: { kind: 'restaurant', id: LEE_HO_FOOK.id } } }} />);
-    expect(within(panel()).getByText('提示：这家已公布 12月25日休息，换一家吧。')).toBeInTheDocument();
+    expect(within(panel()).getByText('提示：这家已公布12月25日休息，换一家吧。')).toBeInTheDocument();
     expect(within(panel()).getByText(/^中餐榜单 9 家，当天营业、做晚餐的排在前面/)).toBeInTheDocument();
     await user.click(within(panel()).getByRole('button', { name: '显示全部 9 家' }));
     const names = pickerNames();
@@ -247,8 +260,21 @@ describe('closing days', () => {
     expect(within(items[items.length - 1]).getByText('12月25日休息')).toBeInTheDocument();
   });
 
+  it('warns about a meal the restaurant has announced it will skip, and only that meal', () => {
+    closeOn({});
+    RESTAURANT_BY_ID.get('lee-ho-fook')!.closedMeals = { 24: ['dinner'] };
+    render(
+      <Plan
+        day={24}
+        initial={{ 24: { lunch: { kind: 'restaurant', id: LEE_HO_FOOK.id }, dinner: { kind: 'restaurant', id: LEE_HO_FOOK.id } } }}
+      />,
+    );
+    expect(within(panel()).getAllByText(/^提示：这家已公布/)).toHaveLength(1);
+    expect(within(panel()).getByText('提示：这家已公布12月24日晚餐不营业，换一家吧。')).toBeInTheDocument();
+  });
+
   it('restores the data between tests', () => {
-    expect(JSON.stringify([...RESTAURANT_BY_ID.values()].map((r) => [r.id, r.closed, r.closedDates]))).toBe(RESEARCHED);
+    expect(JSON.stringify([...RESTAURANT_BY_ID.values()].map((r) => [r.id, r.closed, r.closedDates, r.closedMeals]))).toBe(RESEARCHED);
   });
 });
 

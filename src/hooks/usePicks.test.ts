@@ -3,9 +3,9 @@ import { act, renderHook, waitFor } from '@testing-library/react';
 import { RESTAURANTS } from '../data/restaurants';
 import type { Meal } from '../data/types';
 import { removePick, setPick, type Picks } from '../lib/plan';
-import { PENDING_KEY } from '../lib/storage';
+import { PENDING_KEY, loadPending } from '../lib/storage';
 import { applyChange, slotKey, type PicksRemote, type SlotChange } from '../lib/sync';
-import { RETRY_MS, usePicks } from './usePicks';
+import { POLL_MS, RETRY_MS, usePicks } from './usePicks';
 
 const id = RESTAURANTS[0].id;
 const other = RESTAURANTS[1].id;
@@ -34,6 +34,8 @@ function fakeRemote(initial: Picks = {}) {
   let failing = false;
   let readFailing = false;
   const failingSlots = new Set<string>();
+  /** Slots whose writes hang until released. */
+  const hanging = new Map<string, (() => void) | null>();
   const reads = gate();
   const writes = gate();
   let onChange: (c: SlotChange) => void = () => {};
@@ -48,6 +50,7 @@ function fakeRemote(initial: Picks = {}) {
     }),
     write: vi.fn(async (c: SlotChange) => {
       if (failing || failingSlots.has(slotKey(c.day, c.meal))) throw new Error('offline');
+      if (hanging.has(slotKey(c.day, c.meal))) await new Promise<void>((resolve) => hanging.set(slotKey(c.day, c.meal), resolve));
       server = applyChange(server, c);
       // The server has it; the answer may arrive later.
       await writes.pass();
@@ -66,6 +69,13 @@ function fakeRemote(initial: Picks = {}) {
     fail: (on: boolean) => (failing = on),
     failReads: (on: boolean) => (readFailing = on),
     failSlot: (day: number, meal: Meal, on = true) => (on ? failingSlots.add(slotKey(day, meal)) : failingSlots.delete(slotKey(day, meal))),
+    hangSlot: (day: number, meal: Meal) => hanging.set(slotKey(day, meal), null),
+    releaseSlot: (day: number, meal: Meal) =>
+      act(async () => {
+        const release = hanging.get(slotKey(day, meal));
+        hanging.delete(slotKey(day, meal));
+        release?.();
+      }),
     holdReads: reads.close,
     answerReads: reads.open,
     holdWrites: writes.close,
@@ -293,3 +303,141 @@ describe('usePicks with a shared plan', () => {
     expect(result.current[0][5]).toEqual({ lunch: { kind: 'restaurant', id } });
   });
 });
+
+/** What another tab writing the pending list looks like to this one. */
+function storageEventFromOtherTab() {
+  act(() => {
+    window.dispatchEvent(new StorageEvent('storage', { key: PENDING_KEY, newValue: localStorage.getItem(PENDING_KEY) }));
+  });
+}
+
+describe('usePicks across tabs', () => {
+  afterEach(() => localStorage.clear());
+
+  it("keeps each tab's unsent change when both are offline", async () => {
+    const fake = fakeRemote();
+    fake.fail(true);
+    const tabA = renderHook(() => usePicks(fake.remote));
+    const tabB = renderHook(() => usePicks(fake.remote));
+    act(() => tabA.result.current[1]((p) => setPick(p, 8, 'dinner', { kind: 'restaurant', id })));
+    act(() => tabB.result.current[1]((p) => setPick(p, 9, 'lunch', { kind: 'restaurant', id: other })));
+    await waitFor(() => expect(tabB.result.current[2]).toBe('error'));
+    expect(loadPending()).toHaveLength(2);
+    tabA.unmount();
+    tabB.unmount();
+
+    fake.fail(false);
+    renderHook(() => usePicks(fake.remote));
+    await waitFor(() => expect(localStorage.getItem(PENDING_KEY)).toBeNull());
+    expect(fake.server).toEqual({ 8: { dinner: { kind: 'restaurant', id } }, 9: { lunch: { kind: 'restaurant', id: other } } });
+  });
+
+  it("doesn't drop another tab's unsent change when its own write lands", async () => {
+    const fake = fakeRemote();
+    const tabA = renderHook(() => usePicks(fake.remote));
+    const tabB = renderHook(() => usePicks(fake.remote));
+    fake.failSlot(8, 'dinner');
+    act(() => tabA.result.current[1]((p) => setPick(p, 8, 'dinner', { kind: 'restaurant', id })));
+    await waitFor(() => expect(tabA.result.current[2]).toBe('error'));
+    act(() => tabB.result.current[1]((p) => setPick(p, 9, 'lunch', { kind: 'restaurant', id: other })));
+    await waitFor(() => expect(fake.server[9]).toBeDefined());
+    expect(loadPending()).toEqual([{ day: 8, meal: 'dinner', pick: { kind: 'restaurant', id } }]);
+  });
+
+  it('lets go of a change another tab has already sent, so it never comes back after being cleared', async () => {
+    // One plan, and a connection per tab that can be down on its own.
+    let server: Picks = {};
+    const tab = () => {
+      let down = true;
+      const remote: PicksRemote = {
+        fetchAll: async () => {
+          if (down) throw new Error('offline');
+          return server;
+        },
+        write: async (c) => {
+          if (down) throw new Error('offline');
+          server = applyChange(server, c);
+        },
+        subscribe: () => () => {},
+      };
+      return { remote, up: () => (down = false) };
+    };
+    const comeBack = () => act(async () => void document.dispatchEvent(new Event('visibilitychange')));
+
+    const a = tab();
+    const tabA = renderHook(() => usePicks(a.remote));
+    act(() => tabA.result.current[1]((p) => setPick(p, 8, 'dinner', { kind: 'restaurant', id })));
+    await waitFor(() => expect(tabA.result.current[2]).toBe('offline'));
+    // A second tab opens while still offline and picks up the same unsent change.
+    const b = tab();
+    const tabB = renderHook(() => usePicks(b.remote));
+    expect(tabB.result.current[0][8]).toEqual({ dinner: { kind: 'restaurant', id } });
+
+    // The first tab gets through, then the dinner is cleared there.
+    a.up();
+    await comeBack();
+    await waitFor(() => expect(server[8]).toBeDefined());
+    storageEventFromOtherTab();
+    act(() => tabA.result.current[1]((p) => removePick(p, 8, 'dinner')));
+    await waitFor(() => expect(server[8]).toBeUndefined());
+    storageEventFromOtherTab();
+
+    // When the second tab gets through, it must not send the old dinner again.
+    b.up();
+    await comeBack();
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 20));
+    });
+    expect(server[8]).toBeUndefined();
+    expect(tabB.result.current[0][8]).toBeUndefined();
+  });
+});
+
+describe('usePicks while a read is in flight', () => {
+  it('keeps a confirmed change on screen when an older read lands while another write is still out', async () => {
+    const fake = fakeRemote();
+    const { result } = renderHook(() => usePicks(fake.remote));
+    fake.live(true);
+    await waitFor(() => expect(result.current[2]).toBe('live'));
+
+    fake.fail(true);
+    act(() => result.current[1]((p) => setPick(setPick(p, 8, 'dinner', { kind: 'restaurant', id }), 9, 'lunch', { kind: 'restaurant', id: other })));
+    await waitFor(() => expect(result.current[2]).toBe('error'));
+
+    // Back online: the slot-9 write hangs while slot 8 gets through, and a read taken before slot 8 landed answers.
+    fake.fail(false);
+    fake.holdReads();
+    fake.hangSlot(9, 'lunch');
+    fake.live(false);
+    fake.live(true);
+    await waitFor(() => expect(fake.server[8]).toBeDefined());
+    await fake.answerReads();
+    expect(result.current[0][8]).toEqual({ dinner: { kind: 'restaurant', id } });
+    await fake.releaseSlot(9, 'lunch');
+    await waitFor(() => expect(fake.server[9]).toBeDefined());
+  });
+});
+
+describe('usePicks when the live stream is blocked', () => {
+  it('reads the plan now and then so other people\'s changes still arrive', async () => {
+    vi.useFakeTimers();
+    try {
+      const fake = fakeRemote();
+      const { result } = renderHook(() => usePicks(fake.remote));
+      await act(async () => {
+        await vi.advanceTimersByTimeAsync(0);
+      });
+      expect(fake.remote.fetchAll).toHaveBeenCalledTimes(1);
+      fake.change({ day: 5, meal: 'dinner', pick: { kind: 'restaurant', id } });
+      await act(async () => {
+        await vi.advanceTimersByTimeAsync(POLL_MS);
+      });
+      expect(fake.remote.fetchAll).toHaveBeenCalledTimes(2);
+      expect(result.current[0][5]).toEqual({ dinner: { kind: 'restaurant', id } });
+      expect(result.current[2]).toBe('connecting');
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+});
+

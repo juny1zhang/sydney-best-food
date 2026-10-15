@@ -43,7 +43,7 @@ const CATEGORY_WORDS: Record<CategoryId, string> = {
   'se-asian': 'southeast asian asian 东南亚',
   'middle-east': 'middle eastern mediterranean 中东 地中海',
   italian: 'italian 意大利 意餐',
-  'european-bistro': 'european bistro 欧陆 欧洲',
+  'european-bistro': 'european bistro 法国 法式 欧陆 欧洲',
   'modern-au': 'modern australian fine dining 澳洲 现代澳洲',
   seafood: 'seafood 海鲜',
   'steak-grill': 'steakhouse steak grill 牛排',
@@ -60,6 +60,9 @@ const CHEAP: Term[] = ['平价', '性价比', '实惠', '不贵'];
  */
 const SYNONYMS: [string, Term[]][] = [
   ['vietnamese', ['越南']],
+  ['泰国', ['泰']],
+  ['马来西亚', ['马来']],
+  ['chinatown', ['唐人街', 'haymarket']],
   ['thai', ['泰']],
   ['malaysian', ['马来']],
   ['indonesian', ['印尼']],
@@ -80,6 +83,7 @@ const SYNONYMS: [string, Term[]][] = [
   ['vegetarian', ['素食']],
   ['vegan', ['素食']],
   ['yum cha', ['饮茶', '点心']],
+  ['早茶', ['饮茶', '点心']],
   ['dim sum', ['饮茶', '点心']],
   ['dumpling', ['饺子', '锅贴', '云吞', '点心']],
   ['bao', ['叉烧包']],
@@ -93,6 +97,7 @@ const SYNONYMS: [string, Term[]][] = [
   ['noodle', ['面馆', '面汤', '面食', '拉面', '叻沙', '虾面', 'biangbiang']],
   // No ramen bar made the list; the noodle-soup houses are the nearest thing.
   ['ramen', ['拉面', '面馆', '面汤']],
+  ['拉面', ['拉面', '面馆', '面汤']],
   ['pho', ['河粉', '越南']],
   ['laksa', ['叻沙']],
   ['fried rice', ['炒饭']],
@@ -107,6 +112,7 @@ const SYNONYMS: [string, Term[]][] = [
   ['korean barbecue', ['韩式烤肉']],
   ['kbbq', ['韩式烤肉']],
   ['韩烤', ['韩式烤肉']],
+  ['韩国烤肉', ['韩式烤肉']],
   // Japanese-style only: a bare 烧肉 also finds the Chairman's 红烧肉 (red-braised pork).
   ['yakiniku', ['日式烧肉']],
   // Not a bare 烤, which is in 烤鸭, 烤物 and half the intros.
@@ -139,6 +145,7 @@ const SYNONYMS: [string, Term[]][] = [
   ['chicken', ['炸鸡', '烤鸡', '鸡肉', '鸡面', '沙爹鸡', '烧鸟']],
   ['fried chicken', ['炸鸡']],
   ['oyster', ['蚝']],
+  ['生蚝', ['蚝']],
   ['crab', ['蟹']],
   ['fish and chip', ['炸鱼薯条']],
   ['fish n chip', ['炸鱼薯条']],
@@ -195,34 +202,65 @@ function escapeRegExp(s: string): string {
 
 /** Longest first, so "korean bbq" is used up before "bbq" gets a look. */
 const SYNONYM_RULES = SYNONYMS.map(([word, found]) => ({
+  word,
   pattern: new RegExp(`(^|[^a-z])${escapeRegExp(word)}(?:e?s)?(?![a-z])`),
   found,
-  length: word.length,
-})).sort((a, b) => b.length - a.length);
+})).sort((a, b) => b.word.length - a.word.length);
 
 /** Asking for breakfast means places that open for it, whatever their intro says. */
 const BREAKFAST = /(^|[^a-z])(breakfast|brekkie)(?![a-z])|早餐|早饭/;
 
-/** Lower case, accents dropped ("Porteño" → "porteno"), full-width letters and curly apostrophes made plain. */
+/**
+ * Lower case, accents dropped ("Porteño" → "porteno"), full-width letters made plain, and the punctuation people
+ * leave out on a phone ignored, so "mr wong" finds "Mr. Wong", "gigis" finds "Gigi’s" and "&" reads as "and".
+ */
 function fold(s: string): string {
   return s
     .normalize('NFKD')
     .replace(/[̀-ͯ]/g, '')
     .normalize('NFC')
     .toLowerCase()
-    .replace(/[‘’]/g, "'");
+    .replace(/[‘’'.]/g, '')
+    .replace(/\s*&\s*/g, ' and ');
 }
 
 const OWN_TEXT = new Map(RESTAURANTS.map((r) => [r.id, fold([r.name, r.nameZh, r.suburb, ...r.tags, r.intro].join(' '))]));
 const CATEGORY_TEXT = new Map(CATEGORIES.map((c) => [c.id, fold(`${c.name} ${CATEGORY_WORDS[c.id]}`)]));
 
-function terms(q: string): Term[] {
-  const out: Term[] = [q];
-  let rest = q.replace(/\s*&\s*/g, ' and ').replace(/-/g, ' ');
+/** "日本料理" → "日本", "意大利菜" → "意大利": the cuisine is what the list knows about. */
+function stem(token: string): string {
+  const bare = token.replace(/(?:菜|料理|餐厅|餐馆)$/, '');
+  return bare.length >= 2 ? bare : token;
+}
+
+/**
+ * Categories with a word that starts with this one, so "japan" names Japanese but "tea" doesn't name steakhouses.
+ * Short English words have to be the whole word: "bar" is a bar, not the start of "barbecue".
+ */
+function categoriesNamedBy(word: string): Set<CategoryId> {
+  const whole = /[a-z]/.test(word) && word.length < 4 ? '(?![a-z])' : '';
+  const startsWord = new RegExp(`(^|[^a-z])${escapeRegExp(word)}${whole}`);
+  return new Set(CATEGORIES.filter((c) => startsWord.test(CATEGORY_TEXT.get(c.id)!)).map((c) => c.id));
+}
+
+/** One thing the query asks for: a place matches it through its own text, or by being in a category it names. */
+interface Want {
+  terms: Term[];
+  categories: Set<CategoryId>;
+  breakfast: boolean;
+}
+
+/** Splits a query into what it asks for: known words (with what the list calls them), then the words left over. */
+function wants(q: string): Want[] {
+  let rest = q.replace(/-/g, ' ').split(/\s+/).map(stem).join(' ');
+  const out: Want[] = [];
   for (const rule of SYNONYM_RULES) {
     if (!rule.pattern.test(rest)) continue;
-    out.push(...rule.found);
+    out.push({ terms: [rule.word, ...rule.found], categories: categoriesNamedBy(rule.word), breakfast: false });
     rest = rest.replace(rule.pattern, '$1 ');
+  }
+  for (const word of rest.split(/\s+/).filter(Boolean)) {
+    out.push({ terms: [word], categories: categoriesNamedBy(word), breakfast: BREAKFAST.test(word) });
   }
   return out;
 }
@@ -232,27 +270,30 @@ function hit(text: string, term: Term): boolean {
 }
 
 /**
- * Case- and accent-insensitive search. Places whose own name, suburb, tags or intro match come first,
- * those from a category the query names ahead of the rest; places that only match because of their
- * category follow. Each group is best ranked first.
+ * Case-, accent- and punctuation-insensitive search. Every word in the query has to match, so "steak cbd" only
+ * finds steakhouses in the CBD. Places named by the query come first, then the whole of any category it names in
+ * rank order, then the rest best ranked first.
  */
 export function searchRestaurants(query: string): Restaurant[] {
-  const q = fold(query.trim());
+  const q = fold(query.trim()).trim();
   if (!q) return [];
-  const words = terms(q);
-  const forBreakfast = BREAKFAST.test(q);
-  const named = new Set(CATEGORIES.filter((c) => CATEGORY_TEXT.get(c.id)!.includes(q)).map((c) => c.id));
+  const asked = wants(q);
+  const named = new Set(asked.flatMap((w) => [...w.categories]));
+  const byName: Restaurant[] = [];
   const inNamed: Restaurant[] = [];
   const elsewhere: Restaurant[] = [];
-  const byCategory: Restaurant[] = [];
   for (const r of RESTAURANTS) {
     const own = OWN_TEXT.get(r.id)!;
-    if (words.some((w) => hit(own, w)) || (forBreakfast && r.meals.includes('breakfast'))) {
-      (named.has(r.category) ? inNamed : elsewhere).push(r);
-    } else if (named.has(r.category)) byCategory.push(r);
+    const matches =
+      own.includes(q) ||
+      asked.every((w) => w.terms.some((t) => hit(own, t)) || w.categories.has(r.category) || (w.breakfast && r.meals.includes('breakfast')));
+    if (!matches) continue;
+    // Typing a name puts that place first; a word like 火锅 that names a category isn't looking for 九龙鼎火锅 in particular.
+    if (!named.size && fold(`${r.name} ${r.nameZh}`).includes(q)) byName.push(r);
+    else (named.has(r.category) ? inNamed : elsewhere).push(r);
   }
   const byRank = (a: Restaurant, b: Restaurant) => a.rank - b.rank;
-  return [...inNamed.sort(byRank), ...elsewhere.sort(byRank), ...byCategory.sort(byRank)];
+  return [...byName.sort(byRank), ...inNamed.sort(byRank), ...elsewhere.sort(byRank)];
 }
 
 export type SortOrder = 'rank' | 'xhs' | 'ta' | 'price-asc' | 'price-desc';

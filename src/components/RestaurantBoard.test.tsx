@@ -225,4 +225,23 @@ describe('board list', () => {
     await user.click(screen.getAllByRole('button', { name: /加入日历/ })[0]);
     expect(mealButton('Gigi’s Balmain', '晚餐')).toHaveAttribute('aria-pressed', 'true');
   });
+
+  it("doesn't let a café's lunch carry over to the next place when nothing was added", async () => {
+    const user = userEvent.setup();
+    render(<Board onAdd={vi.fn<OnAdd>()} />);
+    const pressed = (place: string) =>
+      within(within(screen.getByRole('region', { name: `把 ${place} 加入日历` })).getByRole('group', { name: '哪一餐' })).getByRole('button', {
+        pressed: true,
+      });
+
+    await user.click(tab(/^早午餐/));
+    const add = () => within(screen.getByRole('list', { name: '早午餐 / 甜品排名' })).getAllByRole('button', { name: /加入日历/ });
+    await user.click(add()[0]);
+    expect(pressed('Lune Croissanterie')).toHaveTextContent('午餐');
+    await user.click(add()[0]);
+
+    await user.click(tab(/^意大利/));
+    await user.click(screen.getAllByRole('button', { name: /加入日历/ })[1]);
+    expect(pressed('Beppi’s')).toHaveTextContent('晚餐');
+  });
 });

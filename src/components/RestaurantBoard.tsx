@@ -1,4 +1,4 @@
-import { useRef, useState, type KeyboardEvent } from 'react';
+import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
 import { CATEGORIES, categoryOf, restaurantsIn, searchRestaurants, sortRestaurants, type SortOrder } from '../data/restaurants';
 import type { CategoryId, Meal, Price, Restaurant } from '../data/types';
 import { hostOf } from '../lib/url';
@@ -78,6 +78,8 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
   const [expanded, setExpanded] = useState(false);
   const [addingId, setAddingId] = useState<string | null>(null);
   const [addMeal, setAddMeal] = useState<Meal>('dinner');
+  /** The meal the user last chose; a popover opens on it unless that place doesn't serve it. */
+  const [preferredMeal, setPreferredMeal] = useState<Meal>('dinner');
   const [allBlocks, setAllBlocks] = useState(false);
   const [blocksEl, setBlocksEl] = useState<HTMLDivElement | null>(null);
   const columns = useGridColumns(blocksEl, 3);
@@ -101,6 +103,11 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
       if (focusSelector) el?.querySelector<HTMLElement>(focusSelector)?.focus({ preventScroll: true });
     });
   };
+
+  // On phones the tabs scroll sideways; keep the chosen one in view, including a later tab remembered from last time.
+  useEffect(() => {
+    sectionRef.current?.querySelector<HTMLElement>('.tabs [aria-pressed="true"]')?.scrollIntoView?.({ block: 'nearest', inline: 'nearest' });
+  }, [category]);
 
   const pickCategory = (c: BoardCategory, moveFocus = false) => {
     onCategory(c);
@@ -308,14 +315,18 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                       setAddingId(null);
                       return;
                     }
-                    setAddMeal(defaultMeal(r, addMeal));
+                    setAddMeal(defaultMeal(r, preferredMeal));
                     setAddingId(r.id);
                   }}
                   addMeal={addMeal}
-                  onAddMeal={setAddMeal}
+                  onAddMeal={(m) => {
+                    setAddMeal(m);
+                    setPreferredMeal(m);
+                  }}
                   freeDays={addingId === r.id ? freeSydneyDays(addMeal, picks) : []}
                   onPickDay={(day) => {
                     onAdd(r, day, addMeal);
+                    setPreferredMeal(addMeal);
                     setAddingId(null);
                     requestAnimationFrame(() => document.getElementById(`addbtn-${r.id}`)?.focus({ preventScroll: true }));
                   }}

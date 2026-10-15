@@ -1,4 +1,4 @@
-import type { SupabaseClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import { RESTAURANTS } from '../data/restaurants';
 import { sendFeedback } from './feedback';
 import { loadSupabase } from './supabase';
@@ -76,7 +76,7 @@ function fakeClient(rows: Record<string, unknown>[] = []) {
       byHandle.get(handle)!.removed = true;
       return 'ok';
     },
-    from: () => ({ select: () => ({ eq: async () => ({ data: rows, error: null }) }) }),
+    from: () => ({ select: () => ({ eq: () => ({ retry: async () => ({ data: rows, error: null }) }) }) }),
   };
   return { db: db as unknown as SupabaseClient, channels };
 }
@@ -84,6 +84,18 @@ function fakeClient(rows: Record<string, unknown>[] = []) {
 const settle = () => new Promise((resolve) => setTimeout(resolve, 0));
 
 describe('the Supabase remote', () => {
+  it('reads the plan once and leaves retrying to the hook', async () => {
+    const fetch = vi.fn(async () => {
+      throw new TypeError('Failed to fetch');
+    });
+    const db = createClient('https://example.supabase.co', 'publishable-key', {
+      auth: { persistSession: false, autoRefreshToken: false },
+      global: { fetch },
+    });
+    await expect(createSupabaseRemote(async () => db).fetchAll()).rejects.toBeTruthy();
+    expect(fetch).toHaveBeenCalledTimes(1);
+  });
+
   it('loads the client only once something needs it', async () => {
     const { db } = fakeClient([
       { day: 3, meal: 'dinner', pick: { kind: 'restaurant', id } },

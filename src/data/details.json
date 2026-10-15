@@ -383,7 +383,7 @@
       ]
     },
     "palace": {
-      "menu": "传统粤式酒楼：中午是推车饮茶（工作日 11 点、周末 10:30 开始，到下午 3 点），约 80 款点心；晚市为粤菜单点和活海鲜，官网招牌有泥蟹粉丝煲、椒盐鹌鹑、山东鸡等。6 人以上可订 $56–118/人的宴席。饮茶人均约 $35–50。",
+      "menu": "传统粤式酒楼：中午是推车饮茶（周二至周五 11 点、周末 9 点开始，到下午 3 点），约 80 款点心；晚市为粤菜单点和活海鲜，官网招牌有泥蟹粉丝煲、椒盐鹌鹑、山东鸡等。6 人以上可订 $56–118/人的宴席。饮茶人均约 $35–50。",
       "menuUrl": "https://palacechinese.com.au/a-la-carte-menu/",
       "dishes": [
         {
@@ -439,7 +439,7 @@
           "caption": "龙虾菜式"
         }
       ],
-      "note": "饮茶时间各来源不一（商场页面写周一休息），出发前打电话确认。",
+      "note": "官网和商场页面写周一休息，旧的点评页写每天营业，出发前打电话确认。",
       "sources": [
         "https://palacechinese.com.au/",
         "https://palacechinese.com.au/about-us/",
@@ -4976,7 +4976,7 @@
       ]
     },
     "rengaya": {
-      "menu": "可单点也可点套餐：和牛套餐从 Aya（M7+）$148/人、Miyabi（M9+）$198/人，到 Takumi $298、Kiwami $498（均 2 人起）。单点有各级和牛、牛舌、刺身寿司和石锅拌饭；周二至周六有午市套餐。周末加收 10%。",
+      "menu": "可单点也可点套餐：和牛套餐从 Aya（M7+）$148/人、Miyabi（M9+）$198/人，到 Takumi $298、Kiwami $498（均 2 人起）。单点有各级和牛、牛舌、刺身寿司和石锅拌饭；也有午市套餐。周末加收 10%。",
       "menuUrl": "https://yakiniku.com.au/menu/rengaya_menu.pdf",
       "dishes": [
         {
@@ -5450,7 +5450,7 @@
           "caption": "用餐区存放客人手机的木格柜"
         }
       ],
-      "note": "12 月 25、26 日和元旦休息；只接待 18 岁以上，入座要交手机。",
+      "note": "12 月 25、26、31 日和元旦休息；只接待 18 岁以上，入座要交手机。",
       "sources": [
         "https://www.liquidandlarder.com.au/venues/bistecca/",
         "https://www.liquidandlarder.com.au/venues/bistecca/menus/",

@@ -19,6 +19,10 @@ describe('restaurant data', () => {
         expect(r.closed.length, r.id).toBeLessThan(7);
       }
       for (const d of r.closedDates ?? []) expect(Number.isInteger(d) && d >= 1 && d <= 31, r.id).toBe(true);
+      for (const [day, meals] of Object.entries(r.closedMeals ?? {})) {
+        expect(Number(day) >= 1 && Number(day) <= 31, r.id).toBe(true);
+        for (const m of meals) expect(['lunch', 'dinner'], r.id).toContain(m);
+      }
       if (r.hours !== undefined) expect(r.hours.trim().length, r.id).toBeGreaterThan(2);
       if (r.hoursSource !== undefined) {
         expect(r.hours, r.id).toBeTruthy();
@@ -65,11 +69,19 @@ describe('search ranking', () => {
     expect(japanese.every((r) => r.category === 'japanese')).toBe(true);
   });
 
-  it('lists matches from the category the query names before matches from elsewhere', () => {
+  it('lists the whole category the query names in rank order, then matches from elsewhere', () => {
+    const steakhouses = restaurantsIn('steak-grill').map((r) => r.id);
     const steak = searchRestaurants('steak').map((r) => r.id);
-    // Steakhouses that mention 牛排, then the brasserie's steak frites, then steakhouses that never say it.
-    expect(steak.indexOf('firedoor')).toBeLessThan(steak.indexOf('armorica'));
-    expect(steak.indexOf('armorica')).toBeLessThan(steak.indexOf('eleven-barrack'));
+    // Every steakhouse by rank, then the brasserie's steak frites.
+    expect(steak.slice(0, steakhouses.length)).toEqual(steakhouses);
+    expect(steak.indexOf('armorica')).toBeGreaterThanOrEqual(steakhouses.length);
+    expect(searchRestaurants('牛排馆').map((r) => r.id)).toEqual(steakhouses);
+    expect(searchRestaurants('海鲜')[0].id).toBe(restaurantsIn('seafood')[0].id);
+  });
+
+  it('puts a place first when its name is typed', () => {
+    expect(searchRestaurants('chat thai')[0].id).toBe('chat-thai');
+    expect(searchRestaurants('rockpool bar & grill').map((r) => r.id)).toEqual(['rockpool']);
   });
 });
 
@@ -190,5 +202,42 @@ describe('sorting', () => {
     const before = chinese.map((r) => r.id);
     sortRestaurants(chinese, 'price-asc');
     expect(chinese.map((r) => r.id)).toEqual(before);
+  });
+});
+
+describe('search that forgives how people type', () => {
+  const ids = (q: string) => searchRestaurants(q).map((r) => r.id);
+
+  it('ignores the punctuation people leave out', () => {
+    expect(ids('mr wong')).toEqual(['mr-wong']);
+    expect(ids('gigis')).toEqual(['gigis']);
+    expect(ids("gigi's")).toEqual(['gigis']);
+    expect(ids('flour & stone')).toEqual(['flour-stone']);
+  });
+
+  it('understands Chinese ways of naming a cuisine', () => {
+    expect(ids('日本料理')).toEqual(restaurantsIn('japanese').map((r) => r.id));
+    expect(ids('中国菜')).toEqual(restaurantsIn('chinese').map((r) => r.id));
+    expect(ids('意大利菜')).toEqual(ids('意大利'));
+    expect(ids('法国菜').length).toBeGreaterThan(0);
+    expect(ids('韩国烤肉')).toEqual(['kangnam']);
+    expect(ids('生蚝')).toEqual(ids('oyster'));
+    expect(ids('早茶')).toEqual(ids('yum cha'));
+    expect(ids('chinatown')).toEqual(expect.arrayContaining(['chat-thai', 'mamak']));
+  });
+
+  it('needs every word to match, so a cuisine and an area narrow each other', () => {
+    const steakCbd = searchRestaurants('steak cbd');
+    expect(steakCbd.length).toBeGreaterThan(0);
+    expect(steakCbd.every((r) => r.category === 'steak-grill' && r.suburb.includes('CBD'))).toBe(true);
+    expect(ids('japanese surry hills')).toEqual(['tokyo-bird']);
+    expect(ids('korean surry hills')).toEqual(expect.arrayContaining(['allta', 'sang']));
+  });
+
+  it('only names a category by the start of one of its words', () => {
+    expect(ids('tea')).toEqual([]);
+    expect(ids('pan')).toEqual([]);
+    expect(ids('bar')).not.toContain('rengaya');
+    expect(ids('japan')).toEqual(restaurantsIn('japanese').map((r) => r.id));
   });
 });

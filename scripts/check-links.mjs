@@ -9,6 +9,7 @@
  *   npm run check:links
  *   npm run check:links -- --timeout 20000 --concurrency 4
  */
+import { realpathSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -228,7 +229,8 @@ export async function main(argv = process.argv.slice(2), log = console.log) {
   return summary.failing ? 1 : 0;
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+// Node reports this module by its real path, so compare real paths: run through a symlink, it still has to run.
+if (process.argv[1] && realpathSync(path.resolve(process.argv[1])) === fileURLToPath(import.meta.url)) {
   main().then(
     (code) => {
       process.exitCode = code;

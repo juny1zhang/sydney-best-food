@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { loadDetails, type DetailFile, type Dish, type Photo } from '../data/details';
 import { RESTAURANT_BY_ID, categoryOf, mapsUrl } from '../data/restaurants';
 import type { Meal, Restaurant, ServiceMeal } from '../data/types';
-import { closedLabel, decemberDates, defaultMeal, freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
+import { announcedClosures, closedLabel, defaultMeal, freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
 import { hostOf } from '../lib/url';
 import { AddPopover } from './AddPopover';
 import { BackIcon, PlusIcon } from './Icons';
@@ -60,8 +60,7 @@ function Gallery({ photos, name }: { photos: Photo[]; name: string }) {
 
 /** "营业时间：…" with where it was read; just the closing days when that is all that was checked. */
 function OpeningHours({ restaurant: r }: { restaurant: Restaurant }) {
-  const dates = r.closedDates?.length ? `${decemberDates(r.closedDates)}休息` : '';
-  const text = r.hours ? [r.hours, dates].filter(Boolean).join('；') : closedLabel(r);
+  const text = r.hours ? [r.hours, announcedClosures(r)].filter(Boolean).join('；') : closedLabel(r);
   if (!text) return null;
   return (
     <p className="detail__hours">

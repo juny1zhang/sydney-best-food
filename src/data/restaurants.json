@@ -1330,7 +1330,10 @@
           "有帖称主厨准备退居二线，12月出品待观察"
         ]
       },
-      "hours": "每晚一轮 omakase（18:00 起），各来源营业日说法不一",
+      "closed": [
+        1
+      ],
+      "hours": "晚餐一轮 omakase（18:00 起），官网写周三至周日，周二、周日各来源说法不一",
       "hoursSource": "https://www.matkim.com.au/reservations"
     },
     {
@@ -1482,7 +1485,7 @@
         1,
         2
       ],
-      "hours": "周三至周六晚餐（18:30 起）",
+      "hours": "周三至周六晚餐（18:30 起）；12 月 18 日前周四、周五加午市",
       "hoursSource": "https://www.viand.club/bookings"
     },
     {
@@ -4462,6 +4465,11 @@
         30,
         31
       ],
+      "closedMeals": {
+        "24": [
+          "dinner"
+        ]
+      },
       "hours": "周三至周六晚餐，周五、周六加午市",
       "hoursSource": "https://firedoor.com.au/menu/"
     },
@@ -4618,7 +4626,6 @@
       "intro": "Surry Hills 的阿根廷炭烤名店，明火 parrilla 烤炉就在眼前，F1 和牛裙带牛排和柴火烤奶酪是招牌。",
       "booking": "OpenTable 可订",
       "meals": [
-        "lunch",
         "dinner"
       ],
       "website": "https://www.porteno.com.au",
@@ -5768,7 +5775,7 @@
         ]
       },
       "closed": [],
-      "hours": "每晚晚餐，周一至周五加午市"
+      "hours": "每晚晚餐，工作日有午市（午市是哪几天各来源说法不一）"
     },
     {
       "id": "tajima",

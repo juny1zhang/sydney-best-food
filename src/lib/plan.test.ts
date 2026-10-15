@@ -85,6 +85,15 @@ describe('plan', () => {
     expect(closedLabel({ ...r, closed: undefined, closedDates: [25, 26, 27, 28, 29, 30, 31] })).toBe('12月25日至31日休息');
   });
 
+  it('knows a meal the restaurant has announced it will skip on a day it is open', () => {
+    const r = { ...first, closed: [], closedMeals: { 24: ['dinner' as const] } };
+    expect(closedOn(r, 24, 'dinner')).toBe(true);
+    expect(closedOn(r, 24, 'lunch')).toBe(false);
+    expect(closedOn(r, 24)).toBe(false);
+    expect(closedReason(r, 24, 'dinner')).toBe('12月24日晚餐不营业');
+    expect(closedLabel(r)).toBe('12月24日晚餐不营业');
+  });
+
   it('writes December dates compactly', () => {
     expect(decemberDates([25])).toBe('12月25日');
     expect(decemberDates([28, 25, 26])).toBe('12月25、26、28日');

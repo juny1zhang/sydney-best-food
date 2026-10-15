@@ -88,7 +88,7 @@ describe('reviews', () => {
     const r = withReviews({ ta: ta({ reviews: 10, summary: '只有几条 2018 年的旧评', praise: ['麻辣够味'], complaints: ['服务慢'] }) });
     render(<ReviewsSection restaurant={r} />);
     const card = screen.getByRole('article', { name: 'TripAdvisor' });
-    expect(within(card).getByText('只有 10 条评价，还没有评分。')).toBeInTheDocument();
+    expect(within(card).getByText('只有 10 条评价，仅供参考。')).toBeInTheDocument();
     expect(within(card).getByText('只有几条 2018 年的旧评')).toBeInTheDocument();
     expect(within(card).getByText('服务慢')).toBeInTheDocument();
     expect(within(card).queryByRole('link')).not.toBeInTheDocument();

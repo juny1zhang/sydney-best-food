@@ -53,6 +53,8 @@ export interface Restaurant {
   closed?: number[];
   /** Days of December 2026 it has announced it will be closed, e.g. over Christmas. */
   closedDates?: number[];
+  /** Meals it has announced it won't serve on a day it is otherwise open, keyed by day of December. */
+  closedMeals?: Record<string, Meal[]>;
   /** Opening days and hours in one short Chinese line, e.g. "周二至周六晚餐，周五、周六有午市". */
   hours?: string;
   /** The page the hours were read from. */

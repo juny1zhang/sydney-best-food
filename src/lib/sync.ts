@@ -25,7 +25,7 @@ export interface PicksRemote {
 
 export const slotKey = (day: number, meal: Meal) => `${day}:${meal}`;
 
-function samePick(a: Pick | undefined, b: Pick | undefined): boolean {
+export function samePick(a: Pick | undefined, b: Pick | undefined): boolean {
   if (!a || !b) return a === b;
   if (Boolean(a.booked) !== Boolean(b.booked) || (a.time ?? '') !== (b.time ?? '')) return false;
   if (a.kind === 'restaurant') return b.kind === 'restaurant' && a.id === b.id;
@@ -69,7 +69,8 @@ export function createSupabaseRemote(connect: () => Promise<SupabaseClient>): Pi
   return {
     async fetchAll() {
       const db = await connect();
-      const { data, error } = await db.from(TABLE).select('day, meal, pick').eq('plan_id', PLAN_ID);
+      // usePicks retries a failed read itself; the client's own retries would only hold the answer back.
+      const { data, error } = await db.from(TABLE).select('day, meal, pick').eq('plan_id', PLAN_ID).retry(false);
       if (error) throw error;
       let picks: Picks = {};
       for (const row of data) {

@@ -8,6 +8,7 @@ import {
   MEALS,
   closedOn,
   closedReason,
+  closureAnnounced,
   isBooked,
   mealEntry,
   placementsOf,
@@ -163,7 +164,11 @@ export function DayPanel({ day, picks, boardCategory, titleId, onChoose, onClear
           query={query}
           onQuery={setQuery}
           boardCategory={boardCategory}
-          onPick={(r) => choose(target, { kind: 'restaurant', id: r.id })}
+          onPick={(r) => {
+            const current = picks[day]?.[target];
+            // Settling back on the place already there keeps its booking.
+            choose(target, current?.kind === 'restaurant' && current.id === r.id ? current : { kind: 'restaurant', id: r.id });
+          }}
           onCancelReplace={() => {
             setReplacing(null);
             refocus();
@@ -353,10 +358,10 @@ function MealSlot({ day, label, meal, entry, replacing, regionNote, onReplace, o
       <p className="slot__intro">{r.intro}</p>
       <span className="muted small">订位：{r.booking}</span>
       {!servesMeal(r, meal) && <p className="warn">提示：这家通常不做{label}，去之前确认一下营业时间。</p>}
-      {closedOn(r, day) && (
+      {closedOn(r, day, meal) && (
         <p className="warn">
-          {r.closedDates?.includes(day)
-            ? `提示：这家已公布 12月${day}日休息，换一家吧。`
+          {closureAnnounced(r, day, meal)
+            ? `提示：这家已公布${closedReason(r, day, meal)}，换一家吧。`
             : `提示：这家通常${weekdayOfDay(day)}休息，去之前确认一下。`}
         </p>
       )}
@@ -458,10 +463,14 @@ function Picker({ day, picks, meal, writable, replacing, onMeal, query, onQuery,
   }
   const weekday = weekdayOfDay(day);
   // Keep rank order, but venues that serve this meal come first, and ones usually closed that day go last.
-  const sortKey = (r: Restaurant) => (closedOn(r, day) ? 2 : 0) + (servesMeal(r, meal) ? 0 : 1);
+  const sortKey = (r: Restaurant) => (closedOn(r, day, meal) ? 2 : 0) + (servesMeal(r, meal) ? 0 : 1);
   const ordered = [...pool].sort((a, b) => sortKey(a) - sortKey(b));
   const shown = showAll ? ordered : ordered.slice(0, SUGGESTIONS);
-  const openFirst = !pool.some((r) => closedOn(r, day)) ? '' : pool.some((r) => r.closedDates?.includes(day)) ? '当天营业、' : `${weekday}营业、`;
+  const openFirst = !pool.some((r) => closedOn(r, day, meal))
+    ? ''
+    : pool.some((r) => closureAnnounced(r, day, meal))
+      ? '当天营业、'
+      : `${weekday}营业、`;
   const heading = !pool.length
     ? '没找到，换个关键词试试，比如“烤鸭”“pizza”“Surry Hills”'
     : `${source}，${openFirst}做${label}的排在前面${shown.length < pool.length ? `，先显示 ${shown.length} 家` : ''}`;
@@ -506,7 +515,7 @@ function Picker({ day, picks, meal, writable, replacing, onMeal, query, onQuery,
                     {categoryOf(r.category).short}第 {r.rank} 名 · {r.suburb} · {r.price}
                     {r.badges[0] ? ` · ${r.badges[0]}` : ''}
                   </span>
-                  {closedOn(r, day) && <span className="picker__warn">{closedReason(r, day)}</span>}
+                  {closedOn(r, day, meal) && <span className="picker__warn">{closedReason(r, day, meal)}</span>}
                   {!servesMeal(r, meal) && <span className="picker__warn">通常不做{label}</span>}
                   {placed.length > 0 && <span className="picker__placed">已在日历：{placed.join('、')}</span>}
                 </div>

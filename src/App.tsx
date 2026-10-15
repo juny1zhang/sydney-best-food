@@ -46,7 +46,7 @@ const SYNC_LABEL: Record<Exclude<SyncState, 'local'>, string> = {
 };
 
 const SYNC_HINT: Record<Exclude<SyncState, 'local'>, string> = {
-  connecting: '正在连接共享日历',
+  connecting: '正在连接共享日历的实时同步；连上之前，别人的改动会晚一点显示',
   live: '打开这个网站的人看到的是同一份日历，改动会马上同步',
   offline: '连不上共享日历，正在重试；改动先存在这台设备上',
   error: '刚才的改动还没存到共享日历，会自动重试',
