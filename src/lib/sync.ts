@@ -27,6 +27,7 @@ export const slotKey = (day: number, meal: Meal) => `${day}:${meal}`;
 
 function samePick(a: Pick | undefined, b: Pick | undefined): boolean {
   if (!a || !b) return a === b;
+  if (Boolean(a.booked) !== Boolean(b.booked) || (a.time ?? '') !== (b.time ?? '')) return false;
   if (a.kind === 'restaurant') return b.kind === 'restaurant' && a.id === b.id;
   return b.kind === 'custom' && a.name === b.name && a.note === b.note;
 }

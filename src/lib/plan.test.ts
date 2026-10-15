@@ -1,6 +1,6 @@
 import { SYDNEY_DAYS } from '../data/december';
 import { RESTAURANTS } from '../data/restaurants';
-import { countMeals, freeSydneyDays, mealEntry, removePick, setPick, type Picks } from './plan';
+import { closedLabel, closedOn, countMeals, freeSydneyDays, isBooked, mealEntry, removePick, setPick, type Picks } from './plan';
 
 const first = RESTAURANTS[0];
 
@@ -48,5 +48,25 @@ describe('plan', () => {
     expect(countMeals({}, 31)).toEqual({ booked: 2, picked: 0 });
     const picks = setPick(setPick({}, 3, 'lunch', { kind: 'restaurant', id: first.id }), 3, 'dinner', { kind: 'custom', name: 'x', note: '' });
     expect(countMeals(picks, 31)).toEqual({ booked: 2, picked: 2 });
+  });
+
+  it('counts a pick marked as booked with the bookings', () => {
+    const picks = setPick({}, 22, 'dinner', { kind: 'restaurant', id: first.id, booked: true, time: '19:00' });
+    const entry = mealEntry(22, 'dinner', picks)!;
+    expect(entry.status).toBe('picked');
+    expect(isBooked(entry)).toBe(true);
+    expect(countMeals(picks, 31)).toEqual({ booked: 3, picked: 0 });
+  });
+
+  it('knows the weekdays a restaurant usually closes', () => {
+    // 7 December 2026 is a Monday, 8 December a Tuesday.
+    const r = { ...first, closed: [2, 1] };
+    expect(closedOn(r, 7)).toBe(true);
+    expect(closedOn(r, 8)).toBe(true);
+    expect(closedOn(r, 9)).toBe(false);
+    expect(closedOn({ ...first, closed: undefined }, 7)).toBe(false);
+    expect(closedLabel(r)).toBe('周一、周二休息');
+    expect(closedLabel({ ...r, closed: [0, 1] })).toBe('周一、周日休息');
+    expect(closedLabel({ ...r, closed: [] })).toBe('');
   });
 });

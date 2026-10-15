@@ -1,19 +1,32 @@
 import { RESTAURANT_BY_ID } from '../data/restaurants';
 import type { Meal } from '../data/types';
-import type { Pick, Picks } from './plan';
+import type { Pick, Picks, Reservation } from './plan';
 
 export const STORAGE_KEY = 'sydney-eats:picks:v1';
 
 const MEAL_KEYS: Meal[] = ['lunch', 'dinner'];
 
+const TIME = /^([01]\d|2[0-3]):[0-5]\d$/;
+
+/** Only `booked: true` counts, and a time only alongside it. */
+function cleanReservation(v: Record<string, unknown>): Reservation {
+  if (v.booked !== true) return {};
+  return typeof v.time === 'string' && TIME.test(v.time) ? { booked: true, time: v.time } : { booked: true };
+}
+
 export function cleanPick(value: unknown): Pick | null {
   if (!value || typeof value !== 'object') return null;
   const v = value as Record<string, unknown>;
   if (v.kind === 'restaurant' && typeof v.id === 'string' && RESTAURANT_BY_ID.has(v.id)) {
-    return { kind: 'restaurant', id: v.id };
+    return { kind: 'restaurant', id: v.id, ...cleanReservation(v) };
   }
   if (v.kind === 'custom' && typeof v.name === 'string' && v.name.trim()) {
-    return { kind: 'custom', name: v.name.trim().slice(0, 80), note: typeof v.note === 'string' ? v.note.slice(0, 200) : '' };
+    return {
+      kind: 'custom',
+      name: v.name.trim().slice(0, 80),
+      note: typeof v.note === 'string' ? v.note.slice(0, 200) : '',
+      ...cleanReservation(v),
+    };
   }
   return null;
 }

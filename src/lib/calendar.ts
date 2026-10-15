@@ -19,6 +19,11 @@ export function daysIn(year: number, monthIndex: number): number {
   return new Date(Date.UTC(year, monthIndex + 1, 0)).getUTCDate();
 }
 
+/** "周五" for 5. */
+export function weekdayName(weekday: number): string {
+  return `周${WEEKDAY_ZH[weekday]}`;
+}
+
 /** "12月4日 周五" */
 export function dateLabel(year: number, monthIndex: number, day: number): string {
   return `${monthIndex + 1}月${day}日 周${WEEKDAY_ZH[weekdayOf(year, monthIndex, day)]}`;

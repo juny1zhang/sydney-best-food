@@ -1,22 +1,37 @@
-import { SYDNEY_DAYS, dayInfo } from '../data/december';
+import { MONTH_INDEX, SYDNEY_DAYS, YEAR, dayInfo } from '../data/december';
 import { RESTAURANT_BY_ID } from '../data/restaurants';
 import type { Booking, Meal, Restaurant } from '../data/types';
+import { weekdayName, weekdayOf } from './calendar';
 
 export const MEALS: { key: Meal; label: string; short: string }[] = [
   { key: 'lunch', label: '午餐', short: '午' },
   { key: 'dinner', label: '晚餐', short: '晚' },
 ];
 
+/** Set once the table is actually booked; the time ("19:30") is optional. */
+export interface Reservation {
+  booked?: boolean;
+  time?: string;
+}
+
+export type RestaurantPick = { kind: 'restaurant'; id: string } & Reservation;
+export type CustomPick = { kind: 'custom'; name: string; note: string } & Reservation;
+
 /** What the user chose for one meal: a restaurant from the list, or a place typed in by hand. */
-export type Pick = { kind: 'restaurant'; id: string } | { kind: 'custom'; name: string; note: string };
+export type Pick = RestaurantPick | CustomPick;
 
 /** Picks keyed by day of month, then meal. */
 export type Picks = Record<number, Partial<Record<Meal, Pick>>>;
 
 export type MealEntry =
   | { status: 'booked'; booking: Booking }
-  | { status: 'picked'; pick: { kind: 'restaurant'; id: string }; restaurant: Restaurant }
-  | { status: 'custom'; pick: { kind: 'custom'; name: string; note: string } };
+  | { status: 'picked'; pick: RestaurantPick; restaurant: Restaurant }
+  | { status: 'custom'; pick: CustomPick };
+
+/** A booking from the trip, or a pick the user has marked as booked. */
+export function isBooked(e: MealEntry): boolean {
+  return e.status === 'booked' || e.pick.booked === true;
+}
 
 /** Resolves a meal slot. A real booking always wins over a pick. */
 export function mealEntry(day: number, meal: Meal, picks: Picks): MealEntry | null {
@@ -51,6 +66,18 @@ export function servesMeal(r: Restaurant, meal: Meal): boolean {
   return r.meals.includes(meal);
 }
 
+/** Whether the restaurant is usually closed on that day of December, going by its weekly closing days. */
+export function closedOn(r: Restaurant, day: number): boolean {
+  return r.closed?.includes(weekdayOf(YEAR, MONTH_INDEX, day)) ?? false;
+}
+
+/** "周一、周二休息", Monday first; empty when it opens every day or nobody checked. */
+export function closedLabel(r: Restaurant): string {
+  if (!r.closed?.length) return '';
+  const monFirst = [...r.closed].sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7));
+  return `${monFirst.map(weekdayName).join('、')}休息`;
+}
+
 export function countMeals(picks: Picks, days: number): { booked: number; picked: number } {
   let booked = 0;
   let picked = 0;
@@ -58,7 +85,7 @@ export function countMeals(picks: Picks, days: number): { booked: number; picked
     for (const m of MEALS) {
       const e = mealEntry(d, m.key, picks);
       if (!e) continue;
-      if (e.status === 'booked') booked++;
+      if (isBooked(e)) booked++;
       else picked++;
     }
   }

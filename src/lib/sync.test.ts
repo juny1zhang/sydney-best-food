@@ -18,6 +18,8 @@ describe('sync', () => {
     ]);
     expect(diffPicks(next, {})).toHaveLength(3);
     expect(diffPicks(next, next)).toEqual([]);
+    const booked = { ...next, 4: { dinner: { kind: 'restaurant' as const, id: other, booked: true, time: '19:00' } } };
+    expect(diffPicks(next, booked)).toEqual([{ day: 4, meal: 'dinner', pick: booked[4].dinner }]);
   });
 
   it('applies a change, keeping the same object when nothing moves', () => {

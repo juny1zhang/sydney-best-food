@@ -49,6 +49,12 @@ export interface Restaurant {
   xhs?: XhsTake;
   /** The TripAdvisor listing as last seen; absent until checked. */
   ta?: TaTake;
+  /** Weekdays it is usually closed, 0 = Sunday … 6 = Saturday; absent until checked. */
+  closed?: number[];
+  /** Opening days and hours in one short Chinese line, e.g. "周二至周六晚餐，周五、周六有午市". */
+  hours?: string;
+  /** The page the hours were read from. */
+  hoursSource?: string;
 }
 
 export interface TaTake {
@@ -99,6 +105,8 @@ export interface DayInfo {
   /** Day number of the New Zealand trip. */
   trip?: number;
   plan?: string;
+  /** A flight that day, e.g. "06:25 悉尼 → 奥克兰". */
+  flight?: string;
   holiday?: string;
   booked?: Partial<Record<Meal, Booking>>;
 }

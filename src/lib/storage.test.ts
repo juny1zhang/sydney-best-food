@@ -34,4 +34,20 @@ describe('storage', () => {
     expect(loadPicks()).toEqual({});
     spy.mockRestore();
   });
+
+  it('keeps a booking mark and a well-formed time, nothing else', () => {
+    expect(
+      parsePicks(
+        JSON.stringify({
+          4: { dinner: { kind: 'restaurant', id, booked: true, time: '19:30' } },
+          5: { dinner: { kind: 'restaurant', id, booked: 'yes', time: '19:30' } },
+          6: { lunch: { kind: 'custom', name: '小馆', note: '', booked: true, time: '7pm' } },
+        }),
+      ),
+    ).toEqual({
+      4: { dinner: { kind: 'restaurant', id, booked: true, time: '19:30' } },
+      5: { dinner: { kind: 'restaurant', id } },
+      6: { lunch: { kind: 'custom', name: '小馆', note: '', booked: true } },
+    });
+  });
 });
