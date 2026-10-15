@@ -1,6 +1,20 @@
 import { SYDNEY_DAYS } from '../data/december';
 import { RESTAURANTS } from '../data/restaurants';
-import { closedLabel, closedOn, countMeals, freeSydneyDays, isBooked, mealEntry, removePick, setPick, type Picks } from './plan';
+import type { Restaurant } from '../data/types';
+import {
+  closedLabel,
+  closedOn,
+  countMeals,
+  defaultMeal,
+  freeSydneyDays,
+  isBooked,
+  mealEntry,
+  removePick,
+  setPick,
+  withReservation,
+  type Pick,
+  type Picks,
+} from './plan';
 
 const first = RESTAURANTS[0];
 
@@ -68,5 +82,34 @@ describe('plan', () => {
     expect(closedLabel(r)).toBe('周一、周二休息');
     expect(closedLabel({ ...r, closed: [0, 1] })).toBe('周一、周日休息');
     expect(closedLabel({ ...r, closed: [] })).toBe('');
+  });
+
+  it('marks a pick booked and back without touching the original', () => {
+    const pick: Pick = { kind: 'restaurant', id: first.id };
+    const booked = withReservation(pick, true, '19:30');
+    expect(booked).toEqual({ kind: 'restaurant', id: first.id, booked: true, time: '19:30' });
+    expect(pick).toEqual({ kind: 'restaurant', id: first.id });
+    expect(withReservation(pick, true)).toEqual({ kind: 'restaurant', id: first.id, booked: true });
+    // Taking the booking off drops the old time too.
+    expect(withReservation(booked, false)).toEqual(pick);
+    // Booking again without a time forgets the earlier one.
+    expect(withReservation(booked, true, '')).toEqual({ kind: 'restaurant', id: first.id, booked: true });
+    const custom: Pick = { kind: 'custom', name: '楼下面馆', note: '靠窗', booked: true, time: '12:00' };
+    expect(withReservation(custom, false)).toEqual({ kind: 'custom', name: '楼下面馆', note: '靠窗' });
+  });
+
+  it('offers the meal a restaurant actually serves', () => {
+    const both = { ...first, meals: ['lunch', 'dinner'] as Restaurant['meals'] };
+    const dinnerOnly = { ...first, meals: ['dinner'] as Restaurant['meals'] };
+    const brunch = { ...first, meals: ['breakfast', 'lunch'] as Restaurant['meals'] };
+    const breakfastOnly = { ...first, meals: ['breakfast'] as Restaurant['meals'] };
+    expect(defaultMeal(both, 'lunch')).toBe('lunch');
+    expect(defaultMeal(both, 'dinner')).toBe('dinner');
+    expect(defaultMeal(dinnerOnly, 'lunch')).toBe('dinner');
+    expect(defaultMeal(dinnerOnly, 'dinner')).toBe('dinner');
+    expect(defaultMeal(brunch, 'dinner')).toBe('lunch');
+    // Serves neither: keep what was asked for.
+    expect(defaultMeal(breakfastOnly, 'dinner')).toBe('dinner');
+    expect(defaultMeal(breakfastOnly, 'lunch')).toBe('lunch');
   });
 });

@@ -2,12 +2,23 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
 import { CATEGORIES, categoryOf, mapsUrl, restaurantsIn, searchRestaurants } from '../data/restaurants';
 import type { Meal, Restaurant } from '../data/types';
-import { dateLabel } from '../lib/calendar';
+import { dateLabel, weekdayName, weekdayOf } from '../lib/calendar';
 import { detailHref } from '../lib/route';
-import { MEALS, mealEntry, servesMeal, type MealEntry, type Pick, type Picks } from '../lib/plan';
+import {
+  MEALS,
+  closedOn,
+  isBooked,
+  mealEntry,
+  placementsOf,
+  servesMeal,
+  withReservation,
+  type MealEntry,
+  type Pick,
+  type Picks,
+} from '../lib/plan';
 import type { BoardCategory } from './RestaurantBoard';
 import { mealsLeft } from './Calendar';
-import { PinIcon } from './Icons';
+import { PinIcon, PlaneIcon } from './Icons';
 import { Segmented } from './Segmented';
 
 const MEAL_OPTIONS = MEALS.map((m) => ({ value: m.key, label: m.label }));
@@ -15,6 +26,23 @@ const SUGGESTIONS = 5;
 
 function mealLabel(meal: Meal): string {
   return MEALS.find((m) => m.key === meal)!.label;
+}
+
+/** "周一" for a day of December. */
+function weekdayOfDay(day: number): string {
+  return weekdayName(weekdayOf(YEAR, MONTH_INDEX, day));
+}
+
+/** What fills a slot, so a half-filled booking form never carries over to another place. */
+function slotKey(e: MealEntry | null): string {
+  if (!e) return 'empty';
+  if (e.status === 'booked') return `booking:${e.booking.venue.id}`;
+  return e.status === 'picked' ? `restaurant:${e.restaurant.id}` : `custom:${e.pick.name}`;
+}
+
+/** "已预订 · 19:30", or just "已预订" when no time was noted. */
+function bookedLabel(time?: string): string {
+  return time ? `已预订 · ${time}` : '已预订';
 }
 
 interface PanelProps {
@@ -55,13 +83,15 @@ export function DayPanel({ day, picks, boardCategory, titleId, onChoose, onClear
     refocus();
   };
 
+  // The flight line below already names the route.
+  const travel = info.flight ? '飞行日' : `飞行日 · ${info.loc}`;
   const eyebrow =
     info.region === 'nz'
       ? `新西兰第 ${info.trip} 天 · ${info.loc}`
       : info.region === 'syd'
         ? '悉尼'
         : info.region === 'travel'
-          ? `飞行日 · ${info.loc}`
+          ? travel
           : '十二月';
 
   const showPicker = info.region === 'syd' && target !== null && !customOpen;
@@ -75,6 +105,12 @@ export function DayPanel({ day, picks, boardCategory, titleId, onChoose, onClear
           {dateLabel(YEAR, MONTH_INDEX, day)}
           {info.holiday ? ` · ${info.holiday}` : ''}
         </h3>
+        {info.flight && (
+          <p className="panel__plan panel__flight">
+            <PlaneIcon label="航班" />
+            <span>{info.flight}</span>
+          </p>
+        )}
         {info.plan && (
           <p className="panel__plan">
             <PinIcon />
@@ -83,32 +119,42 @@ export function DayPanel({ day, picks, boardCategory, titleId, onChoose, onClear
         )}
       </div>
 
-      {MEALS.map((m) => (
-        <MealSlot
-          key={m.key}
-          label={m.label}
-          meal={m.key}
-          entry={mealEntry(day, m.key, picks)}
-          replacing={replacing === m.key}
-          regionNote={info.region === 'syd' ? '还空着，可以在下面挑一家。' : info.region === 'nz' ? '还没定。' : '这天还没有计划。'}
-          onReplace={() => {
-            setReplacing(m.key);
-            setMeal(m.key);
-            setCustomOpen(false);
-            requestAnimationFrame(() => document.getElementById(`picker-q-${day}`)?.focus());
-          }}
-          onClear={() => {
-            onClear(day, m.key);
-            setReplacing(null);
-            setMeal(m.key);
-            refocus();
-          }}
-        />
-      ))}
+      {MEALS.map((m) => {
+        const entry = mealEntry(day, m.key, picks);
+        return (
+          <MealSlot
+            key={`${m.key}:${slotKey(entry)}`}
+            day={day}
+            label={m.label}
+            meal={m.key}
+            entry={entry}
+            replacing={replacing === m.key}
+            regionNote={info.region === 'syd' ? '还空着，可以在下面挑一家。' : info.region === 'nz' ? '还没定。' : '这天还没有计划。'}
+            onReplace={() => {
+              setReplacing(m.key);
+              setMeal(m.key);
+              setCustomOpen(false);
+              requestAnimationFrame(() => document.getElementById(`picker-q-${day}`)?.focus());
+            }}
+            onClear={() => {
+              onClear(day, m.key);
+              setReplacing(null);
+              setMeal(m.key);
+              refocus();
+            }}
+            onReserve={(booked, time) => {
+              if (entry && entry.status !== 'booked') onChoose(day, m.key, withReservation(entry.pick, booked, time));
+              refocus();
+            }}
+            onCancelReserve={refocus}
+          />
+        );
+      })}
 
       {showPicker && (
         <Picker
           day={day}
+          picks={picks}
           meal={target}
           writable={writable}
           replacing={replacing !== null}
@@ -151,6 +197,7 @@ export function DayPanel({ day, picks, boardCategory, titleId, onChoose, onClear
 }
 
 interface SlotProps {
+  day: number;
   label: string;
   meal: Meal;
   entry: MealEntry | null;
@@ -158,9 +205,15 @@ interface SlotProps {
   regionNote: string;
   onReplace: () => void;
   onClear: () => void;
+  /** Marks the pick as booked, at an optional "19:30", or takes the booking off again. */
+  onReserve: (booked: boolean, time?: string) => void;
+  /** The booking form was closed without saving. */
+  onCancelReserve: () => void;
 }
 
-function MealSlot({ label, meal, entry, replacing, regionNote, onReplace, onClear }: SlotProps) {
+function MealSlot({ day, label, meal, entry, replacing, regionNote, onReplace, onClear, onReserve, onCancelReserve }: SlotProps) {
+  const [reserving, setReserving] = useState(false);
+
   if (!entry) {
     return (
       <div className="slot">
@@ -211,23 +264,60 @@ function MealSlot({ label, meal, entry, replacing, regionNote, onReplace, onClea
     );
   }
 
+  const name = entry.status === 'picked' ? entry.restaurant.name : entry.pick.name;
+  const booked = isBooked(entry);
+  const pill =
+    booked && !replacing ? (
+      <span className="pill pill--booked">{bookedLabel(entry.pick.time)}</span>
+    ) : (
+      <span className="pill pill--picked">{replacing ? '正在换' : '已选好'}</span>
+    );
+  const reserveForm = (
+    <ReserveForm
+      label={label}
+      name={name}
+      onCancel={() => {
+        setReserving(false);
+        onCancelReserve();
+      }}
+      onSave={(time) => {
+        setReserving(false);
+        onReserve(true, time);
+      }}
+    />
+  );
+  const reserveButton = booked ? (
+    <button type="button" className="btn btn--ghost" onClick={() => onReserve(false)} aria-label={`取消已订：${label} ${name}`}>
+      取消已订
+    </button>
+  ) : (
+    <button type="button" className="btn btn--ghost" onClick={() => setReserving(true)} aria-label={`标记为已订：${label} ${name}`}>
+      标记为已订
+    </button>
+  );
+
   if (entry.status === 'custom') {
     return (
       <div className="slot">
         <div className="slot__head">
           <span className="slot__label">{label}</span>
-          <span className="pill pill--picked">已选好</span>
+          {pill}
         </div>
         <div className="slot__name">
           <span>{entry.pick.name}</span>
           <span className="muted">自己记的</span>
         </div>
         {entry.pick.note && <p className="slot__intro">{entry.pick.note}</p>}
-        <div className="slot__actions">
-          <button type="button" className="btn btn--ghost" onClick={onClear} aria-label={`删除${label} ${entry.pick.name}`}>
-            删除
-          </button>
-        </div>
+        {reserving ? (
+          reserveForm
+        ) : (
+          <div className="slot__actions">
+            {reserveButton}
+            <button type="button" className="btn btn--ghost" onClick={onClear} aria-label={`删除${label} ${entry.pick.name}`}>
+              删除
+            </button>
+          </div>
+        )}
       </div>
     );
   }
@@ -237,7 +327,7 @@ function MealSlot({ label, meal, entry, replacing, regionNote, onReplace, onClea
     <div className="slot">
       <div className="slot__head">
         <span className="slot__label">{label}</span>
-        <span className="pill pill--picked">{replacing ? '正在换' : '已选好'}</span>
+        {pill}
       </div>
       <div className="slot__name">
         <span>{r.name}</span>
@@ -262,6 +352,7 @@ function MealSlot({ label, meal, entry, replacing, regionNote, onReplace, onClea
       <p className="slot__intro">{r.intro}</p>
       <span className="muted small">订位：{r.booking}</span>
       {!servesMeal(r, meal) && <p className="warn">提示：这家通常不做{label}，去之前确认一下营业时间。</p>}
+      {closedOn(r, day) && <p className="warn">提示：这家通常{weekdayOfDay(day)}休息，去之前确认一下。</p>}
       <div className="slot__links">
         <a href={detailHref(r.id)}>菜单和招牌菜</a>
         <a href={mapsUrl(r.name, `${r.suburb} Sydney`)} target="_blank" rel="noreferrer">
@@ -273,22 +364,62 @@ function MealSlot({ label, meal, entry, replacing, regionNote, onReplace, onClea
           </a>
         )}
       </div>
-      {!replacing && (
-        <div className="slot__actions">
-          <button type="button" className="btn btn--ghost" onClick={onReplace} aria-label={`换一家：${label}`}>
-            换一家
-          </button>
-          <button type="button" className="btn btn--ghost" onClick={onClear} aria-label={`删除：${label} ${r.name}`}>
-            删除
-          </button>
-        </div>
-      )}
+      {!replacing &&
+        (reserving ? (
+          reserveForm
+        ) : (
+          <div className="slot__actions">
+            {reserveButton}
+            <button type="button" className="btn btn--ghost" onClick={onReplace} aria-label={`换一家：${label}`}>
+              换一家
+            </button>
+            <button type="button" className="btn btn--ghost" onClick={onClear} aria-label={`删除：${label} ${r.name}`}>
+              删除
+            </button>
+          </div>
+        ))}
     </div>
+  );
+}
+
+interface ReserveProps {
+  label: string;
+  name: string;
+  onCancel: () => void;
+  onSave: (time: string) => void;
+}
+
+/** Marks a pick as booked, with the time if there is one. */
+function ReserveForm({ label, name, onCancel, onSave }: ReserveProps) {
+  const [time, setTime] = useState('');
+
+  const submit = (e: FormEvent) => {
+    e.preventDefault();
+    // Keep "19:30" even where the browser adds seconds.
+    onSave(/^\d{2}:\d{2}/.exec(time)?.[0] ?? '');
+  };
+
+  return (
+    <form className="slot__reserve" onSubmit={submit} aria-label={`标记为已订：${label} ${name}`}>
+      <label className="field">
+        订位时间（可选）
+        <input type="time" value={time} onChange={(e) => setTime(e.target.value)} autoFocus />
+      </label>
+      <div className="slot__actions">
+        <button type="submit" className="btn btn--primary">
+          确定
+        </button>
+        <button type="button" className="btn btn--ghost" onClick={onCancel}>
+          取消
+        </button>
+      </div>
+    </form>
   );
 }
 
 interface PickerProps {
   day: number;
+  picks: Picks;
   meal: Meal;
   writable: Meal[];
   replacing: boolean;
@@ -301,7 +432,7 @@ interface PickerProps {
   onCustom: () => void;
 }
 
-function Picker({ day, meal, writable, replacing, onMeal, query, onQuery, boardCategory, onPick, onCancelReplace, onCustom }: PickerProps) {
+function Picker({ day, picks, meal, writable, replacing, onMeal, query, onQuery, boardCategory, onPick, onCancelReplace, onCustom }: PickerProps) {
   const [showAll, setShowAll] = useState(false);
   const searching = query.trim().length > 0;
   const label = mealLabel(meal);
@@ -318,12 +449,15 @@ function Picker({ day, meal, writable, replacing, onMeal, query, onQuery, boardC
     pool = CATEGORIES.map((c) => restaurantsIn(c.id)[0]);
     source = `各类第一名 ${pool.length} 家`;
   }
-  // Keep rank order, but venues that serve this meal come first.
-  const ordered = [...pool.filter((r) => servesMeal(r, meal)), ...pool.filter((r) => !servesMeal(r, meal))];
+  const weekday = weekdayOfDay(day);
+  // Keep rank order, but venues that serve this meal come first, and ones usually closed that day go last.
+  const sortKey = (r: Restaurant) => (closedOn(r, day) ? 2 : 0) + (servesMeal(r, meal) ? 0 : 1);
+  const ordered = [...pool].sort((a, b) => sortKey(a) - sortKey(b));
   const shown = showAll ? ordered : ordered.slice(0, SUGGESTIONS);
+  const openFirst = pool.some((r) => closedOn(r, day)) ? `${weekday}营业、` : '';
   const heading = !pool.length
     ? '没找到，换个关键词试试，比如“烤鸭”“pizza”“Surry Hills”'
-    : `${source}，做${label}的排在前面${shown.length < pool.length ? `，先显示 ${shown.length} 家` : ''}`;
+    : `${source}，${openFirst}做${label}的排在前面${shown.length < pool.length ? `，先显示 ${shown.length} 家` : ''}`;
   const inputId = `picker-q-${day}`;
 
   return (
@@ -355,21 +489,26 @@ function Picker({ day, meal, writable, replacing, onMeal, query, onQuery, boardC
       </span>
       {shown.length > 0 && (
         <ul className="picker__list">
-          {shown.map((r) => (
-            <li key={r.id}>
-              <div className="picker__item">
-                <span className="picker__name">{r.name}</span>
-                <span className="muted small">
-                  {categoryOf(r.category).short}第 {r.rank} 名 · {r.suburb} · {r.price}
-                  {r.badges[0] ? ` · ${r.badges[0]}` : ''}
-                </span>
-                {!servesMeal(r, meal) && <span className="picker__warn">通常不做{label}</span>}
-              </div>
-              <button type="button" className="btn btn--primary" aria-label={`选这家：${r.name}（${label}）`} onClick={() => onPick(r)}>
-                选这家
-              </button>
-            </li>
-          ))}
+          {shown.map((r) => {
+            const placed = placementsOf(r.id, picks);
+            return (
+              <li key={r.id}>
+                <div className="picker__item">
+                  <span className="picker__name">{r.name}</span>
+                  <span className="muted small">
+                    {categoryOf(r.category).short}第 {r.rank} 名 · {r.suburb} · {r.price}
+                    {r.badges[0] ? ` · ${r.badges[0]}` : ''}
+                  </span>
+                  {closedOn(r, day) && <span className="picker__warn">{weekday}通常休息</span>}
+                  {!servesMeal(r, meal) && <span className="picker__warn">通常不做{label}</span>}
+                  {placed.length > 0 && <span className="picker__placed">已在日历：{placed.join('、')}</span>}
+                </div>
+                <button type="button" className="btn btn--primary" aria-label={`选这家：${r.name}（${label}）`} onClick={() => onPick(r)}>
+                  选这家
+                </button>
+              </li>
+            );
+          })}
         </ul>
       )}
       {ordered.length > SUGGESTIONS && (

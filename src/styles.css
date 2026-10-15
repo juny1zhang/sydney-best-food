@@ -601,6 +601,20 @@ p {
   flex-wrap: wrap;
   gap: 8px;
 }
+/* Two classes, to win over .btn and .btn--ghost further down. */
+.addpop__days .btn--holiday {
+  color: var(--holiday);
+}
+.addpop__days .addpop__day--closed {
+  border-style: dashed;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 500;
+}
+.addpop__closed {
+  font-size: 12px;
+  font-weight: 700;
+}
 
 .expand {
   align-self: center;
@@ -798,6 +812,19 @@ button.cell:hover {
   background: rgba(255, 255, 255, 0.72);
   color: var(--ink);
 }
+/* A flight that day: the outline turns dashed, whatever colour the day has. */
+.cell--flight {
+  border-style: dashed;
+}
+.cell--plain.cell--flight {
+  border-color: var(--travel-line);
+}
+.cell--nz.cell--flight {
+  border-color: var(--nz-ink);
+}
+.cell--booked.cell--flight {
+  border-color: var(--booked-ink);
+}
 .cell__top {
   display: flex;
   justify-content: space-between;
@@ -920,6 +947,10 @@ button.cell:hover {
   flex: none;
   margin-top: 2px;
 }
+.panel__flight {
+  color: var(--ink-2);
+  font-weight: 700;
+}
 .slot {
   border-top: 1px solid var(--soft-2);
   padding-top: 16px;
@@ -971,7 +1002,20 @@ button.cell:hover {
 }
 .slot__actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+}
+.slot__reserve {
+  background: var(--ground);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px 12px;
+}
+.slot__reserve .field {
+  flex: 1 1 140px;
 }
 .pill {
   font-size: 12px;
@@ -1079,6 +1123,12 @@ button.cell:hover {
   font-size: 12px;
   font-weight: 600;
   color: #8a3a0c;
+}
+.picker__placed {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue-ink);
 }
 .picker__foot {
   display: flex;

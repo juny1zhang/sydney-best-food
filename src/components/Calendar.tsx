@@ -2,7 +2,7 @@ import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
 import { categoryOf } from '../data/restaurants';
 import type { Meal } from '../data/types';
 import { WEEK_HEADERS, dateLabel, monthGrid } from '../lib/calendar';
-import { MEALS, mealEntry, type MealEntry, type Picks } from '../lib/plan';
+import { MEALS, isBooked, mealEntry, type MealEntry, type Picks } from '../lib/plan';
 
 type CellLook = 'plain' | 'nz' | 'travel' | 'picked' | 'booked';
 
@@ -19,7 +19,9 @@ function entryCategory(e: MealEntry): string {
 }
 
 function entryStatus(e: MealEntry): string {
-  return e.status === 'booked' ? `已预订 ${e.booking.time}` : '已选好';
+  if (e.status === 'booked') return `已预订 ${e.booking.time}`;
+  if (isBooked(e)) return e.pick.time ? `已预订 ${e.pick.time}` : '已预订';
+  return '已选好';
 }
 
 /** The calendar button for a day, used to put focus back on the calendar. */
@@ -77,20 +79,22 @@ function DayCell({ day, picks, selected, onSelect }: CellProps) {
   const meals = MEALS.map((m) => ({ meal: m, entry: mealEntry(day, m.key, picks) })).filter(
     (x): x is { meal: (typeof MEALS)[number]; entry: MealEntry } => x.entry !== null,
   );
-  const booked = meals.some((m) => m.entry.status === 'booked');
+  const booked = meals.some((m) => isBooked(m.entry));
   let look: CellLook = info.region === 'nz' ? 'nz' : info.region === 'travel' ? 'travel' : 'plain';
   if (meals.length) look = booked ? 'booked' : 'picked';
   const loc = info.region === 'syd' ? '悉尼' : (info.loc ?? '');
   const summary = meals.length
     ? meals.map((m) => `${m.meal.label} ${entryName(m.entry)}（${entryStatus(m.entry)}）`).join('，')
     : '未安排';
-  const where = info.region === 'nz' ? `新西兰 ${loc}` : info.region === 'travel' ? `飞行日 ${loc}` : loc;
-  const aria = [dateLabel(YEAR, MONTH_INDEX, day), info.holiday, where, summary].filter(Boolean).join('，');
+  // A travel day's place is its route, which the flight part already names.
+  const where = info.region === 'nz' ? `新西兰 ${loc}` : info.region === 'travel' ? '' : loc;
+  const flight = (info.flight || info.region === 'travel') ? `飞行日 ${info.flight ?? loc}` : '';
+  const aria = [dateLabel(YEAR, MONTH_INDEX, day), info.holiday, where, flight, summary].filter(Boolean).join('，');
 
   return (
     <button
       type="button"
-      className={`cell cell--${look}${info.region === 'nz' ? ' cell--in-nz' : ''}`}
+      className={`cell cell--${look}${info.region === 'nz' ? ' cell--in-nz' : ''}${info.flight ? ' cell--flight' : ''}`}
       data-day={day}
       aria-pressed={selected}
       aria-label={aria}
@@ -108,7 +112,7 @@ function DayCell({ day, picks, selected, onSelect }: CellProps) {
       {meals.map(({ meal, entry }) => (
         <span key={meal.key} className="cell__meal">
           <span className="cell__meal-name" title={`${meal.label} · ${entryName(entry)}`}>
-            {entry.status === 'booked' && <CheckIcon />}
+            {isBooked(entry) && <CheckIcon />}
             {meal.short} · {entryName(entry)}
           </span>
           <span className="cell__chip">{entryCategory(entry)}</span>
