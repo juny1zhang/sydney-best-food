@@ -125,7 +125,12 @@ export default function App() {
   };
 
   const dismissToast = () => {
-    const back = (toast?.returnTo && document.getElementById(toast.returnTo)) || (toast && dayCellElement(toast.day));
+    // The main page stays mounted but hidden under a restaurant page; never aim focus in there.
+    const shown = (el: HTMLElement | null) => (el && !el.closest('[hidden], [inert]') ? el : null);
+    const back =
+      shown(toast?.returnTo ? document.getElementById(toast.returnTo) : null) ??
+      (route.id ? shown(document.getElementById(`detail-addbtn-${route.id}`)) : null) ??
+      (toast ? shown(dayCellElement(toast.day)) : null);
     back?.focus({ preventScroll: true });
     setToast(null);
     setToastHeld(false);
