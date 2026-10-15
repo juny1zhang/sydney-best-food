@@ -10,6 +10,23 @@ describe('restaurant data', () => {
     }
   });
 
+  it('keeps opening days well-formed and sourced', () => {
+    for (const r of RESTAURANTS) {
+      if (r.closed) {
+        expect(new Set(r.closed).size, r.id).toBe(r.closed.length);
+        for (const d of r.closed) expect(Number.isInteger(d) && d >= 0 && d <= 6, r.id).toBe(true);
+        // A place shut every day of the week doesn't belong on the list.
+        expect(r.closed.length, r.id).toBeLessThan(7);
+      }
+      for (const d of r.closedDates ?? []) expect(Number.isInteger(d) && d >= 1 && d <= 31, r.id).toBe(true);
+      if (r.hours !== undefined) expect(r.hours.trim().length, r.id).toBeGreaterThan(2);
+      if (r.hoursSource !== undefined) {
+        expect(r.hours, r.id).toBeTruthy();
+        expect(new URL(r.hoursSource).protocol, r.id).toBe('https:');
+      }
+    }
+  });
+
   it('gives every restaurant a unique id, intro and at least one source', () => {
     expect(new Set(RESTAURANTS.map((r) => r.id)).size).toBe(RESTAURANTS.length);
     for (const r of RESTAURANTS) {

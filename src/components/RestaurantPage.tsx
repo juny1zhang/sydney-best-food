@@ -2,18 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import { loadDetails, type DetailFile, type Dish, type Photo } from '../data/details';
 import { RESTAURANT_BY_ID, categoryOf, mapsUrl } from '../data/restaurants';
 import type { Meal, Restaurant, ServiceMeal } from '../data/types';
-import { closedLabel, freeSydneyDays, placementsOf, servesMeal, type Picks } from '../lib/plan';
+import { closedLabel, decemberDates, defaultMeal, freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
 import { hostOf } from '../lib/url';
 import { AddPopover } from './AddPopover';
 import { BackIcon, PlusIcon } from './Icons';
 import { ReviewsSection, TaChip, XhsChip } from './Reviews';
 
 const SERVICE_LABEL: Record<ServiceMeal, string> = { breakfast: '早餐', lunch: '午餐', dinner: '晚餐' };
-
-/** Dinner, unless it serves lunch but not dinner. */
-function defaultMeal(r: Restaurant): Meal {
-  return !servesMeal(r, 'dinner') && servesMeal(r, 'lunch') ? 'lunch' : 'dinner';
-}
 
 /** A photo from the restaurant's site; the owner drops it (and its credit) if the site stops serving it. */
 function SitePhoto({ src, alt, className, onFail }: { src: string; alt: string; className: string; onFail: () => void }) {
@@ -65,7 +60,8 @@ function Gallery({ photos, name }: { photos: Photo[]; name: string }) {
 
 /** "营业时间：…" with where it was read; just the closing days when that is all that was checked. */
 function OpeningHours({ restaurant: r }: { restaurant: Restaurant }) {
-  const text = r.hours || closedLabel(r);
+  const dates = r.closedDates?.length ? `${decemberDates(r.closedDates)}休息` : '';
+  const text = r.hours ? [r.hours, dates].filter(Boolean).join('；') : closedLabel(r);
   if (!text) return null;
   return (
     <p className="detail__hours">
@@ -99,7 +95,7 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
   const retryRef = useRef<HTMLButtonElement>(null);
   const addRef = useRef<HTMLButtonElement>(null);
   const [adding, setAdding] = useState(false);
-  const [meal, setMeal] = useState<Meal>(() => defaultMeal(r));
+  const [meal, setMeal] = useState<Meal>(() => defaultMeal(r, 'dinner'));
   const placements = placementsOf(id, picks);
   const popId = `detail-add-${id}`;
 

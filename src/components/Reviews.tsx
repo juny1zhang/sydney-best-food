@@ -1,7 +1,5 @@
+import { MIN_TA_REVIEWS } from '../data/restaurants';
 import type { Restaurant, TaTake, XhsTake, XhsVerdict } from '../data/types';
-
-/** Below this many reviews a TripAdvisor score says more about luck than the restaurant. */
-const MIN_TA_REVIEWS = 20;
 
 const LABEL: Record<Exclude<XhsVerdict, 'few'>, string> = {
   recommend: '小红书好评',

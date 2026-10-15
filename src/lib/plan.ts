@@ -84,16 +84,45 @@ export function defaultMeal(r: Restaurant, preferred: Meal): Meal {
   return servesMeal(r, other) ? other : preferred;
 }
 
-/** Whether the restaurant is usually closed on that day of December, going by its weekly closing days. */
-export function closedOn(r: Restaurant, day: number): boolean {
+function closedWeekly(r: Restaurant, day: number): boolean {
   return r.closed?.includes(weekdayOf(YEAR, MONTH_INDEX, day)) ?? false;
 }
 
-/** "周一、周二休息", Monday first; empty when it opens every day or nobody checked. */
+/** Whether the restaurant is likely shut that day of December: a weekly closing day, or a date it has announced. */
+export function closedOn(r: Restaurant, day: number): boolean {
+  return closedWeekly(r, day) || (r.closedDates?.includes(day) ?? false);
+}
+
+/** Why it is likely shut that day, e.g. "周一通常休息" or "12月25日休息"; empty when it should be open. */
+export function closedReason(r: Restaurant, day: number): string {
+  if (r.closedDates?.includes(day)) return `12月${day}日休息`;
+  if (closedWeekly(r, day)) return `${weekdayName(weekdayOf(YEAR, MONTH_INDEX, day))}通常休息`;
+  return '';
+}
+
+/** "12月25、26、31日"; a run of three or more days reads "12月25日至31日". */
+export function decemberDates(days: number[]): string {
+  const sorted = [...new Set(days)].sort((a, b) => a - b);
+  const runs: number[][] = [];
+  for (const d of sorted) {
+    const run = runs[runs.length - 1];
+    if (run && d === run[run.length - 1] + 1) run.push(d);
+    else runs.push([d]);
+  }
+  const parts = runs.flatMap((run) => (run.length >= 3 ? [`${run[0]}日至${run[run.length - 1]}日`] : run.map((d) => `${d}日`)));
+  // "25日、26日" reads better as "25、26日" when every part is a single day.
+  return runs.every((run) => run.length < 3) ? `12月${sorted.join('、')}日` : `12月${parts.join('、')}`;
+}
+
+/** "通常周一、周二休息；12月25日至31日休息", Monday first; empty when it opens every day or nobody checked. */
 export function closedLabel(r: Restaurant): string {
-  if (!r.closed?.length) return '';
-  const monFirst = [...r.closed].sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7));
-  return `${monFirst.map(weekdayName).join('、')}休息`;
+  const parts: string[] = [];
+  if (r.closed?.length) {
+    const monFirst = [...r.closed].sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7));
+    parts.push(`通常${monFirst.map(weekdayName).join('、')}休息`);
+  }
+  if (r.closedDates?.length) parts.push(`${decemberDates(r.closedDates)}休息`);
+  return parts.join('；');
 }
 
 export function countMeals(picks: Picks, days: number): { booked: number; picked: number } {

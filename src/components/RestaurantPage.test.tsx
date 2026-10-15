@@ -16,7 +16,7 @@ vi.mock('../data/details', async (importOriginal) => {
 function pin(id: string, extra: Partial<Restaurant>) {
   const r = RESTAURANT_BY_ID.get(id)!;
   const before = { ...r };
-  Object.assign(r, { hours: undefined, hoursSource: undefined, closed: undefined }, extra);
+  Object.assign(r, { hours: undefined, hoursSource: undefined, closed: undefined, closedDates: undefined }, extra);
   onTestFinished(() => {
     for (const k of Object.keys(r)) delete r[k as keyof Restaurant];
     Object.assign(r, before);
@@ -96,9 +96,9 @@ describe('restaurant page', () => {
       return label;
     };
     expect(await pressedMeal('aria')).toBe('晚餐');
-    expect(await pressedMeal('bills')).toBe('午餐');
-    pin('bills', { meals: ['breakfast'] });
-    expect(await pressedMeal('bills')).toBe('晚餐');
+    expect(await pressedMeal('lune')).toBe('午餐');
+    pin('lune', { meals: ['breakfast'] });
+    expect(await pressedMeal('lune')).toBe('晚餐');
   });
 
   it('drops a dish photo and its credit when the photo fails to load', async () => {
@@ -159,10 +159,16 @@ describe('restaurant page', () => {
     expect(screen.getByRole('link', { name: '来源：ariasydney.com.au' })).toHaveAttribute('href', 'https://www.ariasydney.com.au/contact');
   });
 
+  it('adds the December dates it has announced it is closed', () => {
+    pin('aria', { hours: '每天晚餐', closed: [], closedDates: [25, 26] });
+    renderPage('aria');
+    expect(screen.getByText('营业时间：每天晚餐；12月25、26日休息')).toBeInTheDocument();
+  });
+
   it('falls back to the closing days, and says nothing when nobody checked', () => {
     pin('aria', { closed: [0, 1] });
     const { container, unmount } = renderPage('aria');
-    expect(screen.getByText('营业时间：周一、周日休息')).toBeInTheDocument();
+    expect(screen.getByText('营业时间：通常周一、周日休息')).toBeInTheDocument();
     expect(screen.queryByRole('link', { name: /^来源：/ })).not.toBeInTheDocument();
     unmount();
 

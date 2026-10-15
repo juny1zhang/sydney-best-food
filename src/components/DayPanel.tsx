@@ -7,6 +7,7 @@ import { detailHref } from '../lib/route';
 import {
   MEALS,
   closedOn,
+  closedReason,
   isBooked,
   mealEntry,
   placementsOf,
@@ -352,7 +353,13 @@ function MealSlot({ day, label, meal, entry, replacing, regionNote, onReplace, o
       <p className="slot__intro">{r.intro}</p>
       <span className="muted small">订位：{r.booking}</span>
       {!servesMeal(r, meal) && <p className="warn">提示：这家通常不做{label}，去之前确认一下营业时间。</p>}
-      {closedOn(r, day) && <p className="warn">提示：这家通常{weekdayOfDay(day)}休息，去之前确认一下。</p>}
+      {closedOn(r, day) && (
+        <p className="warn">
+          {r.closedDates?.includes(day)
+            ? `提示：这家已公布 12月${day}日休息，换一家吧。`
+            : `提示：这家通常${weekdayOfDay(day)}休息，去之前确认一下。`}
+        </p>
+      )}
       <div className="slot__links">
         <a href={detailHref(r.id)}>菜单和招牌菜</a>
         <a href={mapsUrl(r.name, `${r.suburb} Sydney`)} target="_blank" rel="noreferrer">
@@ -454,7 +461,7 @@ function Picker({ day, picks, meal, writable, replacing, onMeal, query, onQuery,
   const sortKey = (r: Restaurant) => (closedOn(r, day) ? 2 : 0) + (servesMeal(r, meal) ? 0 : 1);
   const ordered = [...pool].sort((a, b) => sortKey(a) - sortKey(b));
   const shown = showAll ? ordered : ordered.slice(0, SUGGESTIONS);
-  const openFirst = pool.some((r) => closedOn(r, day)) ? `${weekday}营业、` : '';
+  const openFirst = !pool.some((r) => closedOn(r, day)) ? '' : pool.some((r) => r.closedDates?.includes(day)) ? '当天营业、' : `${weekday}营业、`;
   const heading = !pool.length
     ? '没找到，换个关键词试试，比如“烤鸭”“pizza”“Surry Hills”'
     : `${source}，${openFirst}做${label}的排在前面${shown.length < pool.length ? `，先显示 ${shown.length} 家` : ''}`;
@@ -499,7 +506,7 @@ function Picker({ day, picks, meal, writable, replacing, onMeal, query, onQuery,
                     {categoryOf(r.category).short}第 {r.rank} 名 · {r.suburb} · {r.price}
                     {r.badges[0] ? ` · ${r.badges[0]}` : ''}
                   </span>
-                  {closedOn(r, day) && <span className="picker__warn">{weekday}通常休息</span>}
+                  {closedOn(r, day) && <span className="picker__warn">{closedReason(r, day)}</span>}
                   {!servesMeal(r, meal) && <span className="picker__warn">通常不做{label}</span>}
                   {placed.length > 0 && <span className="picker__placed">已在日历：{placed.join('、')}</span>}
                 </div>

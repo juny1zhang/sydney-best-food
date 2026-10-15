@@ -51,6 +51,8 @@ export interface Restaurant {
   ta?: TaTake;
   /** Weekdays it is usually closed, 0 = Sunday … 6 = Saturday; absent until checked. */
   closed?: number[];
+  /** Days of December 2026 it has announced it will be closed, e.g. over Christmas. */
+  closedDates?: number[];
   /** Opening days and hours in one short Chinese line, e.g. "周二至周六晚餐，周五、周六有午市". */
   hours?: string;
   /** The page the hours were read from. */

@@ -257,8 +257,8 @@ export function searchRestaurants(query: string): Restaurant[] {
 
 export type SortOrder = 'rank' | 'xhs' | 'ta' | 'price-asc' | 'price-desc';
 
-/** Same cut-off as the TripAdvisor chip: below it a score says more about luck than the restaurant. */
-const MIN_TA_REVIEWS = 20;
+/** Below this many reviews a TripAdvisor score says more about luck than the restaurant. */
+export const MIN_TA_REVIEWS = 20;
 
 const XHS_ORDER: Record<XhsVerdict, number> = { recommend: 0, mixed: 1, few: 2, avoid: 3 };
 

@@ -1,20 +1,7 @@
 import { SYDNEY_DAYS } from '../data/december';
 import { RESTAURANTS } from '../data/restaurants';
 import type { Restaurant } from '../data/types';
-import {
-  closedLabel,
-  closedOn,
-  countMeals,
-  defaultMeal,
-  freeSydneyDays,
-  isBooked,
-  mealEntry,
-  removePick,
-  setPick,
-  withReservation,
-  type Pick,
-  type Picks,
-} from './plan';
+import { closedLabel, closedOn, closedReason, decemberDates, countMeals, defaultMeal, freeSydneyDays, isBooked, mealEntry, removePick, setPick, withReservation, type Pick, type Picks } from './plan';
 
 const first = RESTAURANTS[0];
 
@@ -79,9 +66,29 @@ describe('plan', () => {
     expect(closedOn(r, 8)).toBe(true);
     expect(closedOn(r, 9)).toBe(false);
     expect(closedOn({ ...first, closed: undefined }, 7)).toBe(false);
-    expect(closedLabel(r)).toBe('周一、周二休息');
-    expect(closedLabel({ ...r, closed: [0, 1] })).toBe('周一、周日休息');
+    expect(closedLabel(r)).toBe('通常周一、周二休息');
+    expect(closedLabel({ ...r, closed: [0, 1] })).toBe('通常周一、周日休息');
     expect(closedLabel({ ...r, closed: [] })).toBe('');
+    expect(closedReason(r, 7)).toBe('周一通常休息');
+    expect(closedReason(r, 9)).toBe('');
+  });
+
+  it('knows the December dates a restaurant has announced it is closed', () => {
+    // 25 December 2026 is a Friday.
+    const r = { ...first, closed: [1], closedDates: [26, 25, 31] };
+    expect(closedOn(r, 25)).toBe(true);
+    expect(closedOn(r, 24)).toBe(false);
+    expect(closedOn(r, 21)).toBe(true);
+    expect(closedReason(r, 25)).toBe('12月25日休息');
+    expect(closedReason(r, 21)).toBe('周一通常休息');
+    expect(closedLabel(r)).toBe('通常周一休息；12月25、26、31日休息');
+    expect(closedLabel({ ...r, closed: undefined, closedDates: [25, 26, 27, 28, 29, 30, 31] })).toBe('12月25日至31日休息');
+  });
+
+  it('writes December dates compactly', () => {
+    expect(decemberDates([25])).toBe('12月25日');
+    expect(decemberDates([28, 25, 26])).toBe('12月25、26、28日');
+    expect(decemberDates([24, 25, 26, 31])).toBe('12月24日至26日、31日');
   });
 
   it('marks a pick booked and back without touching the original', () => {

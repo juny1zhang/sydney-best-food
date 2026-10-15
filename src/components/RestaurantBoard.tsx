@@ -4,7 +4,7 @@ import type { CategoryId, Meal, Price, Restaurant } from '../data/types';
 import { hostOf } from '../lib/url';
 import { useGridColumns } from '../hooks/useGridColumns';
 import { usePersistentState } from '../hooks/usePersistentState';
-import { MEALS, freeSydneyDays, placementsOf, servesMeal, type Picks } from '../lib/plan';
+import { defaultMeal, freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
 import { AddPopover } from './AddPopover';
 import { CloseIcon, PlusIcon } from './Icons';
 import { Segmented } from './Segmented';
@@ -53,12 +53,6 @@ const ROWS_ID = 'board-rows';
 
 function rankLabel(rank: number): string {
   return rank < 10 ? `0${rank}` : `${rank}`;
-}
-
-/** The meal to offer first when adding a place: the one already chosen if it serves it, otherwise one it does. */
-function mealToOffer(r: Restaurant, current: Meal): Meal {
-  if (servesMeal(r, current)) return current;
-  return MEALS.find((m) => servesMeal(r, m.key))?.key ?? current;
 }
 
 function SearchGlyph() {
@@ -314,7 +308,7 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                       setAddingId(null);
                       return;
                     }
-                    setAddMeal(mealToOffer(r, addMeal));
+                    setAddMeal(defaultMeal(r, addMeal));
                     setAddingId(r.id);
                   }}
                   addMeal={addMeal}

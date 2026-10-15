@@ -1,4 +1,4 @@
-import { cleanup, render, screen, within } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { RESTAURANT_BY_ID } from '../data/restaurants';
 import type { Restaurant } from '../data/types';
@@ -6,7 +6,7 @@ import { AddPopover } from './AddPopover';
 
 const LEE_HO_FOOK = RESTAURANT_BY_ID.get('lee-ho-fook')!;
 
-function popover(restaurant: Restaurant, extra: { placements?: string[]; onPickDay?: (day: number) => void } = {}) {
+function popover(restaurant: Restaurant, extra: { onPickDay?: (day: number) => void } = {}) {
   render(
     <AddPopover
       id="pop"
@@ -15,7 +15,6 @@ function popover(restaurant: Restaurant, extra: { placements?: string[]; onPickD
       onMeal={() => {}}
       freeDays={[21, 22, 28]}
       onPickDay={extra.onPickDay ?? (() => {})}
-      placements={extra.placements}
     />,
   );
   return screen.getByRole('region', { name: `把 ${restaurant.name} 加入日历` });
@@ -53,19 +52,5 @@ describe('add popover', () => {
     // Closed on Sundays only; none of the listed days is a Sunday.
     const pop = popover({ ...LEE_HO_FOOK, closed: [0] });
     expect(within(pop).queryByText(/可能休息/)).not.toBeInTheDocument();
-  });
-
-  it('shows where the restaurant already sits on the calendar', () => {
-    const pop = popover(LEE_HO_FOOK, { placements: ['12月4日 晚餐', '12月21日 午餐'] });
-    expect(within(pop).getByText('已在日历：12月4日 晚餐、12月21日 午餐')).toBeInTheDocument();
-  });
-
-  it('leaves the placement line out when the restaurant is not on the calendar', () => {
-    const pop = popover(LEE_HO_FOOK, { placements: [] });
-    expect(within(pop).queryByText(/已在日历/)).not.toBeInTheDocument();
-    cleanup();
-    // Callers that do not pass placements at all.
-    const again = popover(LEE_HO_FOOK);
-    expect(within(again).queryByText(/已在日历/)).not.toBeInTheDocument();
   });
 });

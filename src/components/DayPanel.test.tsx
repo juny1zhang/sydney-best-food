@@ -50,18 +50,24 @@ function pickerNames(): string[] {
 
 let restore = () => {};
 
-/** Pretends some restaurants usually close on some weekdays, until the test ends. */
+/**
+ * Pretends some restaurants usually close on some weekdays, until the test ends. Every researched
+ * closing day is set aside meanwhile, so the tests don't move when the data does.
+ */
 function closeOn(closed: Record<string, number[]>) {
-  const saved = Object.entries(closed).map(([id, days]) => {
-    const r: Restaurant = RESTAURANT_BY_ID.get(id)!;
-    const before = r.closed;
-    r.closed = days;
-    return { r, before };
-  });
+  const all = [...RESTAURANT_BY_ID.values()];
+  const saved = all.map((r: Restaurant) => ({ r, closed: r.closed, closedDates: r.closedDates }));
+  for (const r of all) {
+    delete r.closed;
+    delete r.closedDates;
+  }
+  for (const [id, days] of Object.entries(closed)) RESTAURANT_BY_ID.get(id)!.closed = days;
   restore = () => {
-    for (const { r, before } of saved) {
-      if (before === undefined) delete r.closed;
-      else r.closed = before;
+    for (const { r, closed: c, closedDates: d } of saved) {
+      if (c === undefined) delete r.closed;
+      else r.closed = c;
+      if (d === undefined) delete r.closedDates;
+      else r.closedDates = d;
     }
   };
 }
@@ -70,6 +76,9 @@ afterEach(() => {
   restore();
   restore = () => {};
 });
+
+/** The researched closing days, to check every test puts them back. */
+const RESEARCHED = JSON.stringify([...RESTAURANT_BY_ID.values()].map((r) => [r.id, r.closed, r.closedDates]));
 
 describe('marking picks as booked', () => {
   it('books a picked restaurant at a time and takes the booking off again', async () => {
@@ -181,7 +190,7 @@ describe('flight days', () => {
 describe('closing days', () => {
   it('puts restaurants usually closed that day last, after the meal ordering', async () => {
     const user = userEvent.setup();
-    // 21 December 2026 is a Monday. Gigi's and Pellegrino don't do lunch.
+    // 21 December 2026 is a Monday. Gigi's and Al Taglio don't do lunch.
     closeOn({ gigis: [1], beppis: [1, 2] });
     render(<Plan day={21} category="italian" />);
     await user.click(within(panel()).getByRole('button', { name: '午餐' }));
@@ -190,8 +199,8 @@ describe('closing days', () => {
     expect(pickerNames()).toEqual([
       'Cibaria Manly',
       'OTTO Sydney',
-      'Fratelli Paradiso',
       'Pellegrino 2000',
+      'Fratelli Paradiso',
       'Al Taglio',
       'Beppi’s',
       'Gigi’s Balmain',
@@ -224,9 +233,22 @@ describe('closing days', () => {
     expect(within(panel()).queryByText(/休息/)).not.toBeInTheDocument();
   });
 
+  it('warns about a date the restaurant has announced it is closed', async () => {
+    const user = userEvent.setup();
+    closeOn({});
+    RESTAURANT_BY_ID.get('lee-ho-fook')!.closedDates = [25];
+    render(<Plan day={25} category="chinese" initial={{ 25: { lunch: { kind: 'restaurant', id: LEE_HO_FOOK.id } } }} />);
+    expect(within(panel()).getByText('提示：这家已公布 12月25日休息，换一家吧。')).toBeInTheDocument();
+    expect(within(panel()).getByText(/^中餐榜单 9 家，当天营业、做晚餐的排在前面/)).toBeInTheDocument();
+    await user.click(within(panel()).getByRole('button', { name: '显示全部 9 家' }));
+    const names = pickerNames();
+    expect(names[names.length - 1]).toBe(LEE_HO_FOOK.name);
+    const items = within(panel()).getAllByRole('listitem');
+    expect(within(items[items.length - 1]).getByText('12月25日休息')).toBeInTheDocument();
+  });
+
   it('restores the data between tests', () => {
-    expect(RESTAURANT_BY_ID.get('lee-ho-fook')!.closed).toBeUndefined();
-    expect(RESTAURANT_BY_ID.get('beppis')!.closed).toBeUndefined();
+    expect(JSON.stringify([...RESTAURANT_BY_ID.values()].map((r) => [r.id, r.closed, r.closedDates]))).toBe(RESEARCHED);
   });
 });
 
