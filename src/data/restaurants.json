@@ -127,7 +127,9 @@
           "上菜慢，有人等主菜近一小时，服务难叫到人",
           "出品不稳定，配不上两帽的吐槽多"
         ]
-      }
+      },
+      "hours": "周一至周六晚餐，周五、周六加午市（周日是否营业说法不一）",
+      "hoursSource": "https://www.leehofook.com.au/home/sydney"
     },
     {
       "id": "grandfathers",
@@ -196,12 +198,15 @@
           "苹果派是炸年糕包苹果，黏牙评价两极",
           "四川刺身一般；灯光红暗有人觉得诡异"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 12:00 至深夜，午晚餐连续营业",
+      "hoursSource": "https://www.opentable.co.uk/r/grandfathers-sydney"
     },
     {
       "id": "mr-wong",
       "name": "Mr. Wong",
-      "nameZh": "",
+      "nameZh": "黄先生",
       "category": "chinese",
       "rank": 3,
       "suburb": "CBD",
@@ -265,7 +270,10 @@
           "满场老外很吵，口味偏甜，被说是骗老外的中餐",
           "不订位很难进，walk-in要等两小时"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐，周末 10:30 起饮茶",
+      "hoursSource": "https://www.opentable.co.uk/r/mr-wong-sydney"
     },
     {
       "id": "xopp",
@@ -334,7 +342,10 @@
           "评论有人说整体一般，只有pipi米粉好吃",
           "近一两年的帖子不多，最新口碑信号有限"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐",
+      "hoursSource": "https://www.darlingharbour.com/eat-drink/xopp-by-golden-century"
     },
     {
       "id": "spice-temple",
@@ -405,12 +416,15 @@
           "包厢有最低消费，人均$100-120性价比低",
           "有人说随便去唐人街都比这里满足"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐（周末午市 12:00–14:00）",
+      "hoursSource": "https://hunterstreethospitality.com.au/venues/spice-temple/sydney/"
     },
     {
       "id": "the-chairman",
       "name": "The Chairman",
-      "nameZh": "",
+      "nameZh": "湖南人湘菜馆",
       "category": "chinese",
       "rank": 6,
       "suburb": "Botany",
@@ -470,12 +484,18 @@
           "搬到Botany，离市区远需开车",
           "个别评论说厨师换了、不如从前"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2
+      ],
+      "hours": "周三至周日午晚餐",
+      "hoursSource": "https://thechairmanrestaurant.com.au/"
     },
     {
       "id": "palace",
       "name": "Palace Chinese Restaurant",
-      "nameZh": "",
+      "nameZh": "杏园酒家",
       "category": "chinese",
       "rank": 7,
       "suburb": "CBD",
@@ -540,12 +560,17 @@
           "芋泥香酥鸭网红菜被评普通",
           "评论有少数人说不好吃、怀疑预制"
         ]
-      }
+      },
+      "closed": [
+        1
+      ],
+      "hours": "周二至周日午晚餐，周末 9:00 起饮茶",
+      "hoursSource": "https://palacechinese.com.au/"
     },
     {
       "id": "xian-eatery",
       "name": "Xi’an Eatery",
-      "nameZh": "",
+      "nameZh": "西安诱惑",
       "category": "chinese",
       "rank": 8,
       "suburb": "Burwood",
@@ -608,7 +633,10 @@
           "常有上错菜，只能转账不能刷卡",
           "多位华人说不正宗、吃一次不会回头"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 11:00–21:30",
+      "hoursSource": "https://timeout.com/sydney/restaurants/xian-eatery"
     },
     {
       "id": "yoshii",
@@ -672,7 +700,13 @@
           "鹅肝配豆腐皮等新菜搭配违和",
           "很难订，常要提前一个月或私信预约"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1
+      ],
+      "hours": "周二至周六晚餐（周五、周六两轮）",
+      "hoursSource": "https://www.crownsydney.com.au/restaurants/yoshii-omakase"
     },
     {
       "id": "kisuke",
@@ -737,7 +771,13 @@
           "有人觉得toro、鱿鱼处理不如Yoshii",
           "个别评论说份量小、结账多算，Potts Point难停车"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1
+      ],
+      "hours": "周二至周六晚餐（omakase）",
+      "hoursSource": "https://www.kisukepottspoint.com/"
     },
     {
       "id": "haco",
@@ -799,7 +839,13 @@
           "部分蘸料（咖喱粉、蟹膏味噌）偏咸",
           "另收5% surcharge，酒水另算"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1
+      ],
+      "hours": "周二至周六晚餐，周五、周六加午市",
+      "hoursSource": "https://www.opentable.com/r/haco-sydney"
     },
     {
       "id": "kuro",
@@ -868,7 +914,13 @@
           "菲力牛排柴、只有芥末一种酱，整体无功无过",
           "评论有人说其实偏难吃，性价比存疑"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1
+      ],
+      "hours": "周二至周六午晚餐",
+      "hoursSource": "https://kurosydney.com/kuro-dine-in/"
     },
     {
       "id": "sushi-oe",
@@ -926,7 +978,13 @@
           "一人捏寿司加到10席，节奏很慢吃到10点半",
           "有人觉得调味不出众、某季鱼货一般"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1
+      ],
+      "hours": "周二至周六晚餐（18:30 起）",
+      "hoursSource": "https://gyokuu.com/sushi-oe"
     },
     {
       "id": "sokyo",
@@ -947,6 +1005,7 @@
       "intro": "The Star 里的人气日料，味噌犬牙鱼、备长炭烤物和创意寿司都受欢迎；寿司吧台另有 7 道品鉴（215 澳元），适合约会或庆祝。",
       "booking": "建议提前网上订位",
       "meals": [
+        "breakfast",
         "lunch",
         "dinner"
       ],
@@ -994,7 +1053,10 @@
           "海鲜锅太咸，脆米金枪鱼调味怪",
           "整体稳但不惊艳，性价比一般"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天早餐和晚餐，周五至周日加午市",
+      "hoursSource": "https://www.opentable.com/r/sokyo-the-star-pyrmont"
     },
     {
       "id": "tokyo-bird",
@@ -1054,7 +1116,12 @@
           "鸡肉丸寡淡、香肠过咸，有人说烧鸟不合格",
           "店里嘈杂不适合聊天，常要排队"
         ]
-      }
+      },
+      "closed": [
+        0
+      ],
+      "hours": "周一至周六 16:00 起晚间营业",
+      "hoursSource": "https://www.opentable.co.uk/r/tokyo-bird-surry-hills"
     },
     {
       "id": "allta",
@@ -1114,7 +1181,13 @@
           "生蚝过咸、菲力焦糖味重，热菜被说一般",
           "搬到Surry Hills后装修不如旧店出片"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1
+      ],
+      "hours": "周二至周六晚餐（17:00–22:00）",
+      "hoursSource": "https://www.agfg.com.au/restaurant/allta-129742"
     },
     {
       "id": "sang",
@@ -1183,7 +1256,13 @@
           "LA牛小排腌料太重",
           "不是第一口惊艳型，例汤性价比一般"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2,
+        3
+      ],
+      "hours": "周四至周日午晚餐（周一至周三休息）"
     },
     {
       "id": "matkim",
@@ -1250,7 +1329,9 @@
           "以海鲜为主，不吃海鲜要提前说",
           "有帖称主厨准备退居二线，12月出品待观察"
         ]
-      }
+      },
+      "hours": "每晚一轮 omakase（18:00 起），各来源营业日说法不一",
+      "hoursSource": "https://www.matkim.com.au/reservations"
     },
     {
       "id": "porkfat",
@@ -1326,7 +1407,13 @@
           "个别特餐（丛林红咖喱鸡）咖喱味不足",
           "需提前订位，周日有附加费"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2
+      ],
+      "hours": "周三至周五晚餐，周六、周日午晚餐",
+      "hoursSource": "https://www.porkfat.com.au/contact"
     },
     {
       "id": "viand",
@@ -1389,7 +1476,14 @@
           "2022-23年旧帖标题有“两小时上四道菜”“踩雷贵价餐厅”",
           "近两年几乎无新帖，现状难判断"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1,
+        2
+      ],
+      "hours": "周三至周六晚餐（18:30 起）",
+      "hoursSource": "https://www.viand.club/bookings"
     },
     {
       "id": "ho-jiak",
@@ -1454,7 +1548,10 @@
           "煲仔饭和蒸蛋上桌只温热，松露加$58不值",
           "评论吐槽量少、像忽悠游客"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐（11:00/11:30 起连续营业）",
+      "hoursSource": "https://www.hojiak.com.au/townhall/"
     },
     {
       "id": "spice-i-am",
@@ -1522,7 +1619,12 @@
           "店小，6点多就要排队约15分钟",
           "谷歌评分仅4.2，小红书讨论很少"
         ]
-      }
+      },
+      "closed": [
+        1
+      ],
+      "hours": "周二至周日午晚餐，周一休息",
+      "hoursSource": "https://www.yelp.com.au/biz/spice-i-am-surry-hills"
     },
     {
       "id": "temu-kangen",
@@ -1579,7 +1681,10 @@
           "蔬菜炸饼不够酥、多吃腻",
           "汤类不算惊艳；小红书讨论太少"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 11:00–21:30（部分来源称至22:00）",
+      "hoursSource": "https://www.broadsheet.com.au/sydney/haymarket/restaurants/temu-kangen"
     },
     {
       "id": "mamak",
@@ -1642,7 +1747,10 @@
           "炒菜、炒方便面没特点",
           "马来奶茶/白咖啡太甜，记得要少糖"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐，周五、周六营业至深夜",
+      "hoursSource": "https://www.yelp.com.au/biz/mamak-haymarket-4"
     },
     {
       "id": "tan-viet",
@@ -1710,7 +1818,10 @@
           "饭点常排队",
           "鱼露偏甜口"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 9:00–20:00",
+      "hoursSource": "https://tanviet.com.au/locations/"
     },
     {
       "id": "chat-thai",
@@ -1780,7 +1891,10 @@
           "店小拥挤、饭点排队，糯米饭量小",
           "泰式饮品很甜，打抛肉末给得少"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 10:00–22:00，周五、周六至凌晨2:00",
+      "hoursSource": "https://chatthai.com.au/ct_branches/thaitown/"
     },
     {
       "id": "aalia",
@@ -1856,7 +1970,12 @@
           "上主菜慢，有人遇到羊肉和饼上桌常温",
           "香料味偏冲，海胆紫苏饭和叶子饭被吐槽"
         ]
-      }
+      },
+      "closed": [
+        0
+      ],
+      "hours": "周一至周五午餐，周一至周六晚餐",
+      "hoursSource": "https://www.aaliarestaurant.com/contact"
     },
     {
       "id": "nour",
@@ -1924,7 +2043,10 @@
           "set menu甜点香料味太重",
           "扇贝调料颗粒大，有人觉得一般"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚餐，周四至周日加午市",
+      "hoursSource": "https://www.noursydney.com/hours"
     },
     {
       "id": "nomad",
@@ -1992,7 +2114,10 @@
           "辣土豆太占肚子可不点",
           "老菜单几道招牌被换掉，现在较普通"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚餐，周三至周日加午市",
+      "hoursSource": "https://nomad.sydney/"
     },
     {
       "id": "olympic-meats",
@@ -2016,7 +2141,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://www.olympicmeats.shop/",
       "accolades": [
         "Time Out Sydney review: 5/5 stars",
         "Time Out Sydney: best Greek restaurants list"
@@ -2030,10 +2155,10 @@
       "confidence": "medium",
       "ta": {
         "url": null,
-        "rating": 4.0,
-        "reviews": 1,
+        "rating": null,
+        "reviews": null,
         "rank": null,
-        "summary": "TA 上只有 1 条评论、4 分，几乎无参考价值。",
+        "summary": "TripAdvisor 上没找到正式的店铺页面，只零星有 1 条评论，没有参考价值。",
         "praise": [],
         "complaints": []
       },
@@ -2052,7 +2177,13 @@
           "烤肉偏咸，吃不惯希腊口味的人一般",
           "环境普通，性价比中等"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2
+      ],
+      "hours": "周三至周五晚餐，周六午晚餐，周日 12:00–19:30",
+      "hoursSource": "https://www.olympicmeats.shop/"
     },
     {
       "id": "al-yasmin",
@@ -2077,7 +2208,7 @@
         "lunch",
         "dinner"
       ],
-      "website": "",
+      "website": "https://alyasmin.com.au",
       "accolades": [
         "Time Out Sydney review: 5/5 stars",
         "Time Out Sydney Food & Drink Awards 2026: Affordable Eat nominee"
@@ -2100,7 +2231,10 @@
         "summary": "小红书上几乎没人写过这家，三种搜法都没搜到相关笔记，基本没有中文口碑",
         "praise": [],
         "complaints": []
-      }
+      },
+      "closed": [],
+      "hours": "每天 8:00–21:45",
+      "hoursSource": "https://restaurantguru.com/Al-Yasmin-Lebanese-Restaurant-Punchbowl"
     },
     {
       "id": "babas-place",
@@ -2168,7 +2302,14 @@
           "人声鼎沸很吵，聊天要大声",
           "个别吐司有点腥、酸奶单吃会腻"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2,
+        3
+      ],
+      "hours": "周四至周日晚餐，周六、周日加午市",
+      "hoursSource": "https://www.instagram.com/babasplace__/"
     },
     {
       "id": "sahtein",
@@ -2230,7 +2371,10 @@
           "空间宽敞、灯光幽暗，有现调鸡尾酒"
         ],
         "complaints": []
-      }
+      },
+      "closed": [],
+      "hours": "每天 12:00 起午晚餐（周五六至约22:00）",
+      "hoursSource": "https://hunterstreethospitality.com.au/venues/sahtein/"
     },
     {
       "id": "gigis",
@@ -2299,7 +2443,10 @@
           "不少人质疑“澳洲第一”排名是炒作",
           "6点室内就坐满，需早到"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚餐（17:00 起）",
+      "hoursSource": "https://gigisbalmain.com.au/our-menu/"
     },
     {
       "id": "beppis",
@@ -2365,7 +2512,12 @@
           "主菜$30-50，加上小费不便宜",
           "晚上回程经Hyde Park要注意安全"
         ]
-      }
+      },
+      "closed": [
+        0
+      ],
+      "hours": "周一至周五午晚餐，周六仅晚餐，周日休息",
+      "hoursSource": "https://www.yellowpages.com.au/darlinghurst-nsw/bpp/beppis-restaurant-580412045"
     },
     {
       "id": "cibaria",
@@ -2433,7 +2585,10 @@
           "牛排有人觉得无功无过",
           "基本要提前预约，很少能walk-in"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天营业：咖啡馆早上起，餐厅11:30起午晚餐",
+      "hoursSource": "https://www.theurbanlist.com/sydney/directory/cibaria"
     },
     {
       "id": "otto",
@@ -2500,7 +2655,13 @@
           "人均偏贵，有人一人花了约$220",
           "有人觉得意面差点意思，口味偏澳式意餐"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2
+      ],
+      "hours": "周三至周六午晚餐（12:00–21:00），周日仅午市",
+      "hoursSource": "https://ottoristorante.com.au/sydney/"
     },
     {
       "id": "pellegrino",
@@ -2521,6 +2682,7 @@
       "intro": "Surry Hills 的复古意式小馆，必点焦黄油鼠尾草虾仁意式饺和配面包的松露黄油，很适合约会。",
       "booking": "周末很难订，建议提前约 2 周",
       "meals": [
+        "lunch",
         "dinner"
       ],
       "website": "https://www.pellegrino2000.com",
@@ -2572,7 +2734,10 @@
           "周六地窖座位要提前约一个月",
           "佛卡夏偏韧，部分意面分量少"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每晚晚餐（17:00 起），周四至周日加午市",
+      "hoursSource": "https://www.opentable.ae/r/pellegrino-2000-surry-hills"
     },
     {
       "id": "fratelli",
@@ -2593,6 +2758,7 @@
       "intro": "波茨角 2001 年开业的意式小馆，招牌肉酱千层面 lasagnette，绿树成荫的街角热闹又有欧洲味。",
       "booking": "人气很高，建议提前订位",
       "meals": [
+        "breakfast",
         "lunch",
         "dinner"
       ],
@@ -2639,7 +2805,10 @@
           "价格偏高，两人约$250，$48意面分量少",
           "2025-2026年的相关笔记很少、互动低"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 7:00 起早午晚餐，周日或提早收市",
+      "hoursSource": "https://www.tripadvisor.com.au/Restaurant_Review-g255060-d755589-Reviews-Fratelli_Paradiso-Sydney_New_South_Wales.html"
     },
     {
       "id": "al-taglio",
@@ -2703,7 +2872,12 @@
           "上菜慢，有人两个披萨等了一小时",
           "店小，雨天坐门口偏冷；周日不营业"
         ]
-      }
+      },
+      "closed": [
+        0
+      ],
+      "hours": "周一至周六晚餐（17:30 起），周日休息",
+      "hoursSource": "https://www.opentable.com.au/r/al-taglio-surry-hills"
     },
     {
       "id": "porcine",
@@ -2775,7 +2949,14 @@
           "餐前面包冰冷，甜品被说一般",
           "忙时服务生硬，评论说季节菜单神一阵鬼一阵"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2,
+        3
+      ],
+      "hours": "周四至周六晚餐，周五至周日午市",
+      "hoursSource": "https://www.opentable.com.au/r/porcine-paddington"
     },
     {
       "id": "armorica",
@@ -2844,7 +3025,10 @@
           "有人觉得整体偏咸、藏红花鱼发苦、鸭肉难吃",
           "门口位风大牛排很快凉；自带蛋糕要收费"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚餐；午市至少周五至周日",
+      "hoursSource": "https://www.armorica.com.au/"
     },
     {
       "id": "bar-copains",
@@ -2908,7 +3092,10 @@
           "服务存在感低；室外位天冷",
           "午餐人均约$130不算便宜，很难订"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚间营业，周五至周日加午市",
+      "hoursSource": "https://barcopains.com/"
     },
     {
       "id": "hubert",
@@ -2978,7 +3165,10 @@
           "评论说菜品退步、酱汁肉类外采，除了氛围一无是处",
           "晚市限时要换去吧台，服务员催点酒、没冷气"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐（午市12:00起，晚市17:00起）",
+      "hoursSource": "https://swillhouse.com/venues/restaurant-hubert/"
     },
     {
       "id": "loulou",
@@ -3048,7 +3238,9 @@
           "扇贝、小龙虾crudo被评中规中矩",
           "有评论质疑John Dory调味太淡"
         ]
-      }
+      },
+      "hours": "小馆午晚餐（周一是否营业说法不一），面包店每天 7:00 起",
+      "hoursSource": "https://loulou.sydney/loulou-bistro-milsons-point/"
     },
     {
       "id": "sixpenny",
@@ -3116,7 +3308,13 @@
           "份量大吃到很撑，甜品小点吃不下",
           "位置偏，没有景观"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2
+      ],
+      "hours": "周三至周六晚餐，周六、周日午餐",
+      "hoursSource": "https://www.sixpenny.com.au/"
     },
     {
       "id": "aria",
@@ -3185,7 +3383,10 @@
           "测评称创新保守、主菜平庸，主要为环境品牌买单",
           "非窗边座位体验打折，有人吐槽服务慢没人清桌"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚餐，周四至周日加午市",
+      "hoursSource": "https://ariasydney.com.au/contact-us"
     },
     {
       "id": "bennelong",
@@ -3255,7 +3456,10 @@
           "不允许吃自带蛋糕，只能拍照",
           "黑猪排偏重口"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚餐，周五至周日加午市",
+      "hoursSource": "https://www.bennelong.com.au/make-a-reservation/"
     },
     {
       "id": "lumi",
@@ -3325,7 +3529,14 @@
           "有人说曾跌落神坛，人均$265-350偏贵",
           "午餐一顿吃3个半小时，生意火要提前约一个月"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2,
+        3
+      ],
+      "hours": "周四至周日晚餐，周六、周日加午市",
+      "hoursSource": "https://lumidining.com/reservations/"
     },
     {
       "id": "ester",
@@ -3394,7 +3605,13 @@
           "有人遇到结账比菜单价多收",
           "甜品pavlova被评猎奇、欣赏不来；和牛偏肥"
         ]
-      }
+      },
+      "closed": [
+        2,
+        3
+      ],
+      "hours": "周一、周四至周六晚餐，周六、周日午餐",
+      "hoursSource": "https://www.opentable.com.au/r/ester-chippendale"
     },
     {
       "id": "berowra",
@@ -3460,7 +3677,14 @@
           "码头山路难开、信号差，要提前和餐厅确认",
           "全程约3小时，偏远需专门花半天"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2,
+        3
+      ],
+      "hours": "周四至周日午餐，周五、周六加晚餐",
+      "hoursSource": "https://www.berowrawatersinn.com/reservations"
     },
     {
       "id": "seans",
@@ -3527,7 +3751,10 @@
           "周末强制收约$40服务费",
           "只有固定三道式套餐，没有单点"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚餐，周五至周日加午市",
+      "hoursSource": "https://seansbondi.com/"
     },
     {
       "id": "bathers",
@@ -3594,7 +3821,10 @@
           "周末加10%服务费，五人人均约$130",
           "门口大坡难走，街边停车要买票否则吃罚单"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天早餐及Bistro午晚餐；主餐厅周三至日午、周三至六晚",
+      "hoursSource": "https://www.batherspavilion.com.au/spaces/restaurant/"
     },
     {
       "id": "saint-peter",
@@ -3664,7 +3894,10 @@
           "马鲛鱼等分量被指缩水",
           "有人吃后肠胃不适、质量不稳定"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天晚餐，周四至周日加午市",
+      "hoursSource": "https://www.saintpeter.com.au/contact-us"
     },
     {
       "id": "margaret",
@@ -3737,7 +3970,13 @@
           "周末需提前约三周，很难订",
           "和牛塔塔偏咸"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2
+      ],
+      "hours": "周三至周日晚餐，周四至周日加午市",
+      "hoursSource": "https://themargaretfamily.com/venue/margaret/"
     },
     {
       "id": "pilu",
@@ -3805,7 +4044,13 @@
           "部分菜调味偏咸",
           "原价套餐约$170pp不便宜"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2
+      ],
+      "hours": "周三至周日午晚餐",
+      "hoursSource": "https://pilu.com.au/make-a-booking/"
     },
     {
       "id": "catalina",
@@ -3867,7 +4112,10 @@
           "环境偏吵，不适合带小孩",
           "白天座位有点晒，需提前订位"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午餐，周一至周六晚餐",
+      "hoursSource": "https://catalinarosebay.com.au/reservations"
     },
     {
       "id": "hamsi",
@@ -3926,7 +4174,10 @@
           "水边夜景氛围好，适合微醺"
         ],
         "complaints": []
-      }
+      },
+      "closed": [],
+      "hours": "每天 11:30 起连续营业到晚上",
+      "hoursSource": "https://www.sydneyfishmarket.com.au/retailer/hamsi-taverna/"
     },
     {
       "id": "fich",
@@ -3990,7 +4241,10 @@
           "主菜中规中矩，多道偏咸",
           "炭烤味对部分人太重"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 11:30–21:00",
+      "hoursSource": "https://www.opentable.com.au/r/fich-at-petersham"
     },
     {
       "id": "fish-rocks",
@@ -4051,7 +4305,15 @@
           "性价比一般（3星）",
           "博主本人也说只是普通水平"
         ]
-      }
+      },
+      "closed": [],
+      "closedDates": [
+        25,
+        26,
+        28
+      ],
+      "hours": "周一至周五午市，每晚晚餐；公众假期休息",
+      "hoursSource": "https://fishattherocks.com.au/"
     },
     {
       "id": "doyles",
@@ -4111,7 +4373,10 @@
           "人均约$90还吃不饱，偏贵",
           "附近停车很难找"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐",
+      "hoursSource": "https://www.doyles.com.au/"
     },
     {
       "id": "firedoor",
@@ -4182,7 +4447,23 @@
           "名不副其实、摆盘丑、买单后赶人",
           "需提前约三个月，一顿近三小时"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1,
+        2
+      ],
+      "closedDates": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "hours": "周三至周六晚餐，周五、周六加午市",
+      "hoursSource": "https://firedoor.com.au/menu/"
     },
     {
       "id": "the-grill",
@@ -4242,7 +4523,11 @@
           "人均$180–200，龙虾按重量约$340",
           "土豆泥偏咸，鸭肉缺味"
         ]
-      }
+      },
+      "closed": [
+        0
+      ],
+      "hours": "周一至周六晚餐，周二至周五加午市"
     },
     {
       "id": "eleven-barrack",
@@ -4309,7 +4594,10 @@
           "虾饺意面中规中矩",
           "金枪鱼部位、松饼底有人不爱"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每晚晚餐（17:30 起），周一至周五加午市",
+      "hoursSource": "https://www.bentleyrestaurantgroup.com.au/elevenbarrack"
     },
     {
       "id": "porteno",
@@ -4376,7 +4664,9 @@
           "客人一半以上是中国人，有人称座位按族裔分区",
           "人均约$130–150，二人位常排吧台"
         ]
-      }
+      },
+      "hours": "晚餐为主，周日、周一是否营业说法不一",
+      "hoursSource": "https://www.porteno.com.au/porteno"
     },
     {
       "id": "rockpool",
@@ -4442,7 +4732,10 @@
           "牛骨髓偏咸烟熏重，焦糖布丁太甜",
           "有人不喜欢装修风格"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐",
+      "hoursSource": "https://hunterstreethospitality.com.au/venues/rockpool/sydney/"
     },
     {
       "id": "gidley",
@@ -4512,7 +4805,19 @@
           "正常时段需提前1–2个月订，不接待小孩",
           "有人遇到上菜慢、最后催走"
         ]
-      }
+      },
+      "closed": [],
+      "closedDates": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "hours": "每天午晚餐",
+      "hoursSource": "https://www.liquidandlarder.com.au/venues/the-gidley/"
     },
     {
       "id": "20-chapel",
@@ -4572,7 +4877,13 @@
           "鸭子孜然酸口有人吃不惯",
           "工作日晚上也难订到好时段"
         ]
-      }
+      },
+      "closed": [
+        0,
+        1
+      ],
+      "hours": "周二至周六晚餐，周五、周六加午市",
+      "hoursSource": "https://www.broadsheet.com.au/sydney/marrickville/restaurants/20-chapel"
     },
     {
       "id": "magma",
@@ -4629,7 +4940,14 @@
         "complaints": [
           "位于Canley Vale度假村赌场旁，离市区远"
         ]
-      }
+      },
+      "closed": [],
+      "closedDates": [
+        28,
+        29
+      ],
+      "hours": "平时周三至周日营业，11/30–12/25 每天开",
+      "hoursSource": "https://cabravale.com.au/dining/magma-by-dany-karam/"
     },
     {
       "id": "lune",
@@ -4693,7 +5011,10 @@
           "下午品类少、限定易售罄",
           "单价约$7–16不便宜"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天早上营业到下午，售完即止",
+      "hoursSource": "https://lunecroissanterie.com/contact"
     },
     {
       "id": "messina",
@@ -4760,7 +5081,9 @@
           "促销日要排20–30分钟",
           "提拉米苏、港奶等口味评价一般"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 12:00–23:00，周五、周六到 23:30"
     },
     {
       "id": "flour-stone",
@@ -4829,7 +5152,12 @@
           "部分蛋糕偏甜，晚去品类少",
           "盲品蛋糕活动中未进前三"
         ]
-      }
+      },
+      "closed": [
+        0
+      ],
+      "hours": "周一至周六营业，周日休息，常提早卖完",
+      "hoursSource": "https://flourandstone.com.au/"
     },
     {
       "id": "bills",
@@ -4851,7 +5179,8 @@
       "booking": "部分门店可订，周末建议早到",
       "meals": [
         "breakfast",
-        "lunch"
+        "lunch",
+        "dinner"
       ],
       "website": "https://www.bills.com.au",
       "accolades": [
@@ -4897,7 +5226,13 @@
           "价格偏高，松饼约$33",
           "炒蛋奶味重，有人吃不多"
         ]
-      }
+      },
+      "closed": [],
+      "closedDates": [
+        25
+      ],
+      "hours": "每天早午餐，17:00 后有晚餐",
+      "hoursSource": "https://www.bills.com.au/locations/surry-hills"
     },
     {
       "id": "black-star",
@@ -4958,7 +5293,9 @@
           "有人觉得乏善可陈、奶油偏甜腻",
           "单片约$13，整块$56起不便宜"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "纽镇店每天 7:30–17:30"
     },
     {
       "id": "cow-moon",
@@ -5026,7 +5363,10 @@
           "黑芝麻口味寡淡，蓝莓偏酸",
           "热门口味会卖完，店少"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天 8:30 起营业到晚上",
+      "hoursSource": "https://www.cowandthemoon.com.au/locations"
     },
     {
       "id": "grounds",
@@ -5090,7 +5430,10 @@
           "进主题花园需消费约$20并凭小票",
           "价格不算友好（主菜约$29–35）"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天：咖啡馆 7:30–16:00，Potting Shed 午晚餐",
+      "hoursSource": "https://thegrounds.com.au/"
     },
     {
       "id": "ciccone",
@@ -5154,7 +5497,13 @@
           "晚饭后人多要排队",
           "血橙雪芭偏绵密不够清爽，坚果类一般"
         ]
-      }
+      },
+      "closed": [
+        1,
+        2
+      ],
+      "hours": "周三至周日下午营业，周一、周二休息",
+      "hoursSource": "https://www.cicconeandsons.com.au/contact"
     },
     {
       "id": "memory-tongue",
@@ -5286,7 +5635,10 @@
           "通风差、店里有油烟味",
           "汤底偏淡（早年评论）"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天营业，周二、周三只开晚市",
+      "hoursSource": "https://jiulongding.au/"
     },
     {
       "id": "er-niang",
@@ -5414,7 +5766,9 @@
           "服务偶尔混乱、上菜顺序乱",
           "部分主食饭多肉少"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每晚晚餐，周一至周五加午市"
     },
     {
       "id": "tajima",
@@ -5483,7 +5837,10 @@
         "complaints": [
           "有人觉得澳洲和牛不如日本和牛"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐",
+      "hoursSource": "https://www.opentable.com.au/r/tajima-yakiniku-sydney"
     },
     {
       "id": "kangnam",
@@ -5546,7 +5903,9 @@
         "summary": "Epping 店在 TA 没有页面；Hornsby 店 3.8 分（58 条）",
         "praise": [],
         "complaints": []
-      }
+      },
+      "hours": "各分店不同，Epping、Pennant Hills 店周二休息",
+      "hoursSource": "https://kangnambbq.com.au/"
     },
     {
       "id": "suminoya",
@@ -5615,7 +5974,12 @@
           "排烟弱，吃完满身烟味",
           "附加收费多，性价比一般"
         ]
-      }
+      },
+      "closed": [
+        0
+      ],
+      "hours": "周一至周六午晚餐，周日休息",
+      "hoursSource": "https://www.opentable.ie/r/suminoya-sydney"
     },
     {
       "id": "cheng-ji",
@@ -5670,7 +6034,12 @@
           "周末忙时出品不稳定，有人被催着让桌",
           "有评论称看到厨房卫生习惯不佳"
         ]
-      }
+      },
+      "closed": [
+        2
+      ],
+      "hours": "每天 11:00–20:00，周二休息",
+      "hoursSource": "https://pegfeeds.com/2026/05/05/chengs-xian-traditional-foods-%E7%A8%8B%E8%AE%B0%E8%A5%BF%E5%AE%89%E5%90%8D%E5%90%83-burwood-nsw-restaurant-review/"
     },
     {
       "id": "woodcut",
@@ -5743,7 +6112,10 @@
           "评论说近来变差、牛排不稳定，和牛串偏柴",
           "服务配不上价位，不及时换餐盘"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天午晚餐",
+      "hoursSource": "https://www.crownsydney.com.au/restaurants/woodcut"
     },
     {
       "id": "6-head",
@@ -5808,7 +6180,10 @@
           "MB6+肉眼太腻，有人觉得肉偏咸、面包偏酸",
           "有人说大块牛排烤了三次才到想要熟度"
         ]
-      }
+      },
+      "closed": [],
+      "hours": "每天营业，周一只开晚餐",
+      "hoursSource": "https://6head.com.au/sydney-restaurant/"
     },
     {
       "id": "bistecca",
@@ -5881,7 +6256,15 @@
           "有人觉得偏生、部分嚼不动，前菜鰤鱼腥",
           "手机要上交，灯光很暗"
         ]
-      }
+      },
+      "closed": [],
+      "closedDates": [
+        25,
+        26,
+        31
+      ],
+      "hours": "每天午晚餐",
+      "hoursSource": "https://www.liquidandlarder.com.au/venues/bistecca/"
     }
   ]
 }

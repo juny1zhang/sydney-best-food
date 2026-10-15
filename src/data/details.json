@@ -1831,7 +1831,7 @@
     },
     "olympic-meats": {
       "menu": "希腊乡村小馆，主打 kontosouvli 式炭烤肉：可外带 gyros、kebab 等 pita 卷，也可堂食点 mezedes、羊排和烤肉拼盘分享。多数菜品不超过 $21，人均约 $30–50。只接受 walk-in、不订位，可 BYO，常需排队，手工菜售完即止。",
-      "menuUrl": null,
+      "menuUrl": "https://www.olympicmeats.shop/",
       "dishes": [
         {
           "name": "Chicken Gyros",
@@ -1870,8 +1870,9 @@
         }
       ],
       "photos": [],
-      "note": "没有官网，菜品和营业时间来自 2025 年的报道，菜单常换，出发前再确认。",
+      "note": "菜单常换，营业时间以官网为准，出发前再确认。",
       "sources": [
+        "https://www.olympicmeats.shop/",
         "https://www.timeout.com/sydney/restaurants/olympic-meats",
         "https://greekcitytimes.com/2025/11/25/olympic-meats-marrickville-greek-cuisine",
         "https://www.broadsheet.com.au/sydney/marrickville/restaurants/olympic-meats",
@@ -1880,7 +1881,7 @@
     },
     "al-yasmin": {
       "menu": "Punchbowl 车站对面的黎巴嫩家常馆，单点菜单很大：烤串、shawarma 套餐盘、拼盘和 wrap 等，上菜前免费送面包、腌菜和蒜酱辣酱。份量足，主菜约 $26–32、wrap 约 $10，人均约 $25–40。每天 8am–9:45pm 营业，适合聚餐和外带。",
-      "menuUrl": null,
+      "menuUrl": "https://alyasmin.com.au/menus/",
       "dishes": [
         {
           "name": "Lemon garlic chicken",
@@ -1905,8 +1906,9 @@
         }
       ],
       "photos": [],
-      "note": "没有官网，菜品和价格来自 2026 年 3 月 Time Out 的评论。",
+      "note": "菜品和价格来自 2026 年 3 月 Time Out 的评论。",
       "sources": [
+        "https://alyasmin.com.au/menus/",
         "https://www.timeout.com/sydney/restaurants/al-yasmin",
         "https://www.timeout.com/sydney/food-and-drink-awards-2026-affordable-eat-nominees"
       ]
@@ -2271,7 +2273,7 @@
       ]
     },
     "pellegrino": {
-      "menu": "复古意式小馆，只做晚餐（17:00 起）。单点前菜约 $9–34、意面 $39–48、主菜 $61–69；也可点 Menu del giorno 套餐 $89/人或 $120/人。周日加收 10%，5 人以上加 10% 服务费。人均约 $90–130。",
+      "menu": "复古意式小馆，每晚 17:00 起供应晚餐，周四至周日也有午市。单点前菜约 $9–34、意面 $39–48、主菜 $61–69；也可点 Menu del giorno 套餐 $89/人或 $120/人。周日加收 10%，5 人以上加 10% 服务费。人均约 $90–130。",
       "menuUrl": "https://cdn.sanity.io/files/pc86bwcw/production/9a337939adf54d96ccfa397e9643ac86fc731abd.pdf",
       "dishes": [
         {
@@ -2726,7 +2728,7 @@
           "caption": "淋满巧克力酱的泡芙"
         }
       ],
-      "note": "小馆周一休息；周日无限续烤鸡活动出发前确认是否还在。",
+      "note": "周一小馆是否营业各来源说法不一，出发前确认；周日无限续烤鸡活动也先确认是否还在。",
       "sources": [
         "https://loulou.sydney/",
         "https://loulou.sydney/loulou-bistro-milsons-point/",
@@ -3971,7 +3973,7 @@
       ]
     },
     "porteno": {
-      "menu": "Surry Hills 的阿根廷柴火烤肉餐厅，单点以多产地牛排为主（含干式熟成，约 $95–195），配柴火烤奶酪、炸馅饼等小菜；另有宴席套餐 $155/人和 $195/人（可加 $45 升级和牛）。每晚营业，周五加开午餐。人均约 $100–160。",
+      "menu": "Surry Hills 的阿根廷柴火烤肉餐厅，单点以多产地牛排为主（含干式熟成，约 $95–195），配柴火烤奶酪、炸馅饼等小菜；另有宴席套餐 $155/人和 $195/人（可加 $45 升级和牛）。人均约 $100–160。",
       "menuUrl": "https://www.porteno.com.au/s/Porteno-A-la-Carte-Oct-2026.pdf",
       "dishes": [
         {
