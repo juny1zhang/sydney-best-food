@@ -3,7 +3,7 @@ import { BottomSheet } from './components/BottomSheet';
 import { Legend, MonthGrid, dayCellElement } from './components/Calendar';
 import { DayPanel } from './components/DayPanel';
 import { CloseIcon } from './components/Icons';
-import { RestaurantBoard, type BoardCategory } from './components/RestaurantBoard';
+import { RestaurantBoard, useBoardCategory } from './components/RestaurantBoard';
 import { RestaurantPage } from './components/RestaurantPage';
 import { SiteFooter } from './components/SiteFooter';
 import { DAYS_IN_MONTH, MONTH_INDEX, NZ_TRIP_DAYS, YEAR, dayInfo } from './data/december';
@@ -57,7 +57,7 @@ function formatVerified(iso: string): string {
 export default function App() {
   const [picks, setPicks, sync] = usePicks();
   const [day, setDay] = useState(() => initialDay());
-  const [category, setCategory] = useState<BoardCategory>('all');
+  const [category, setCategory] = useBoardCategory();
   const [sheetOpen, setSheetOpen] = useState(false);
   const [toast, setToast] = useState<Toast | null>(null);
   const [toastHeld, setToastHeld] = useState(false);
