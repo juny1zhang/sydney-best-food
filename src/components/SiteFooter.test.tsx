@@ -26,13 +26,25 @@ describe('feedback', () => {
     expect(screen.getByRole('textbox', { name: '想说的话' })).toHaveValue('日历很好用');
   });
 
-  it('does not send blank notes', async () => {
+  it('does not send blank notes, and says why', async () => {
     const user = userEvent.setup();
     const send = vi.fn();
     render(<SiteFooter page="main" verifiedOn="2026 年 10 月 11 日" shared send={send} />);
-    await user.type(screen.getByRole('textbox', { name: '想说的话' }), '   ');
+    const box = screen.getByRole('textbox', { name: '想说的话' });
+    await user.type(box, '   ');
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: '发送' }));
     expect(send).not.toHaveBeenCalled();
+    expect(screen.getByRole('alert')).toHaveTextContent('先写点内容再发送。');
+    expect(box).toHaveFocus();
+    expect(box).toHaveAttribute('aria-invalid', 'true');
+    expect(box).toHaveAccessibleDescription('先写点内容再发送。');
+
+    await user.type(box, '早餐');
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(box).not.toHaveAttribute('aria-invalid');
+    await user.click(screen.getByRole('button', { name: '发送' }));
+    expect(send).toHaveBeenCalledWith(expect.objectContaining({ message: '   早餐' }));
   });
 
   it('hides the form when there is nowhere to send it', () => {

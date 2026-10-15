@@ -1225,6 +1225,15 @@ button.cell:hover {
   font-size: 14px;
   color: var(--muted);
 }
+.detail__hours {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.detail__hours .credit {
+  display: inline-block;
+  margin-left: 8px;
+}
 .detail__intro {
   font-size: 16px;
   line-height: 1.7;
@@ -1247,17 +1256,14 @@ button.cell:hover {
   display: flex;
   flex-direction: column;
   gap: 6px;
-}
-.gallery__item:has(.gallery__img) {
   min-width: 0;
-}
-.gallery__item:not(:has(.gallery__img)) {
-  display: none;
 }
 .gallery__img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
+  /* A lone photo (the only one, or the last that still loads) spans the row: a banner, not a wall. */
+  max-height: 420px;
   object-fit: cover;
   border-radius: var(--radius);
   background: var(--soft);
@@ -1317,6 +1323,13 @@ button.cell:hover {
   min-height: 44px;
   font-size: 14px;
   font-weight: 700;
+}
+.detail__retry {
+  align-self: flex-start;
+}
+.detail__retry[aria-disabled='true'] {
+  opacity: 0.55;
+  cursor: progress;
 }
 .dishes {
   list-style: none;

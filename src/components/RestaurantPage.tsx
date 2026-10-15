@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { loadDetails, type DetailFile, type Dish, type Photo } from '../data/details';
 import { RESTAURANT_BY_ID, categoryOf, mapsUrl } from '../data/restaurants';
 import type { Meal, Restaurant, ServiceMeal } from '../data/types';
-import { freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
+import { closedLabel, freeSydneyDays, placementsOf, servesMeal, type Picks } from '../lib/plan';
 import { hostOf } from '../lib/url';
 import { AddPopover } from './AddPopover';
 import { BackIcon, PlusIcon } from './Icons';
@@ -10,23 +10,28 @@ import { ReviewsSection, TaChip, XhsChip } from './Reviews';
 
 const SERVICE_LABEL: Record<ServiceMeal, string> = { breakfast: '早餐', lunch: '午餐', dinner: '晚餐' };
 
-/** A photo from the restaurant's site; disappears if the site stops serving it. */
-function SitePhoto({ src, alt, className }: { src: string; alt: string; className: string }) {
-  const [failed, setFailed] = useState(false);
-  if (failed) return null;
-  return <img className={className} src={src} alt={alt} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(true)} />;
+/** Dinner, unless it serves lunch but not dinner. */
+function defaultMeal(r: Restaurant): Meal {
+  return !servesMeal(r, 'dinner') && servesMeal(r, 'lunch') ? 'lunch' : 'dinner';
+}
+
+/** A photo from the restaurant's site; the owner drops it (and its credit) if the site stops serving it. */
+function SitePhoto({ src, alt, className, onFail }: { src: string; alt: string; className: string; onFail: () => void }) {
+  return <img className={className} src={src} alt={alt} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={onFail} />;
 }
 
 function DishCard({ dish }: { dish: Dish }) {
   const label = dish.nameZh || dish.name;
+  const [failed, setFailed] = useState(false);
+  const image = failed ? null : dish.image;
   return (
     <li className="dish">
-      {dish.image && <SitePhoto className="dish__img" src={dish.image} alt={label} />}
+      {image && <SitePhoto className="dish__img" src={image} alt={label} onFail={() => setFailed(true)} />}
       <div className="dish__body">
         <h3 className="dish__name">{label}</h3>
         {dish.nameZh && dish.name !== dish.nameZh && <span className="dish__orig">{dish.name}</span>}
         <p className="dish__desc">{dish.desc}</p>
-        {dish.image && dish.imageFrom && (
+        {image && dish.imageFrom && (
           <a className="credit" href={dish.imageFrom} target="_blank" rel="noreferrer">
             图片：{hostOf(dish.imageFrom)}
           </a>
@@ -36,12 +41,16 @@ function DishCard({ dish }: { dish: Dish }) {
   );
 }
 
+/** The photos that still load; gone altogether once none do. */
 function Gallery({ photos, name }: { photos: Photo[]; name: string }) {
+  const [failed, setFailed] = useState<ReadonlySet<string>>(() => new Set());
+  const shown = photos.filter((p) => !failed.has(p.image));
+  if (!shown.length) return null;
   return (
     <div className="gallery">
-      {photos.map((p) => (
+      {shown.map((p) => (
         <figure key={p.image} className="gallery__item">
-          <SitePhoto className="gallery__img" src={p.image} alt={p.caption || name} />
+          <SitePhoto className="gallery__img" src={p.image} alt={p.caption || name} onFail={() => setFailed((s) => new Set(s).add(p.image))} />
           <figcaption>
             {p.caption && <span>{p.caption}</span>}
             <a className="credit" href={p.imageFrom} target="_blank" rel="noreferrer">
@@ -51,6 +60,22 @@ function Gallery({ photos, name }: { photos: Photo[]; name: string }) {
         </figure>
       ))}
     </div>
+  );
+}
+
+/** "营业时间：…" with where it was read; just the closing days when that is all that was checked. */
+function OpeningHours({ restaurant: r }: { restaurant: Restaurant }) {
+  const text = r.hours || closedLabel(r);
+  if (!text) return null;
+  return (
+    <p className="detail__hours">
+      营业时间：{text}
+      {r.hoursSource && (
+        <a className="credit" href={r.hoursSource} target="_blank" rel="noreferrer">
+          来源：{hostOf(r.hoursSource)}
+        </a>
+      )}
+    </p>
   );
 }
 
@@ -65,24 +90,35 @@ interface PageProps {
 export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
   const r = RESTAURANT_BY_ID.get(id)!;
   const [file, setFile] = useState<DetailFile | null>(null);
-  const [loadFailed, setLoadFailed] = useState(false);
+  const [load, setLoad] = useState<'loading' | 'failed' | 'done'>('loading');
+  /** Bumped by the retry button to load the menus again. */
+  const [tries, setTries] = useState(0);
   const detail = file?.details[id];
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const menuHeadingRef = useRef<HTMLHeadingElement>(null);
+  const retryRef = useRef<HTMLButtonElement>(null);
+  const addRef = useRef<HTMLButtonElement>(null);
   const [adding, setAdding] = useState(false);
-  const [meal, setMeal] = useState<Meal>('dinner');
+  const [meal, setMeal] = useState<Meal>(() => defaultMeal(r));
   const placements = placementsOf(id, picks);
   const popId = `detail-add-${id}`;
 
   useEffect(() => {
     let live = true;
     loadDetails().then(
-      (f) => live && setFile(f),
-      () => live && setLoadFailed(true),
+      (f) => {
+        if (!live) return;
+        // The retry button goes away with the menu's arrival; don't let focus go with it.
+        if (retryRef.current && document.activeElement === retryRef.current) menuHeadingRef.current?.focus({ preventScroll: true });
+        setFile(f);
+        setLoad('done');
+      },
+      () => live && setLoad('failed'),
     );
     return () => {
       live = false;
     };
-  }, []);
+  }, [tries]);
 
   useEffect(() => {
     headingRef.current?.focus({ preventScroll: true });
@@ -92,6 +128,13 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
       document.title = title;
     };
   }, [r.name]);
+
+  const retrying = load === 'loading' && tries > 0;
+  const retry = () => {
+    if (retrying) return;
+    setLoad('loading');
+    setTries((t) => t + 1);
+  };
 
   return (
     <main className="page detail" aria-labelledby="detail-h">
@@ -111,6 +154,7 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
           {r.nameZh && `${r.nameZh} · `}
           {r.suburb} · {r.price} · 营业：{r.meals.map((m) => SERVICE_LABEL[m]).join('、')}
         </span>
+        <OpeningHours restaurant={r} />
         <div className="chips">
           {r.badges.map((b) => (
             <span key={b} className="badge">
@@ -133,7 +177,9 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
       <div className="detail__body">
         <div className="detail__main">
           <section aria-labelledby="detail-menu-h" className="detail__section">
-            <h2 id="detail-menu-h">菜单</h2>
+            <h2 id="detail-menu-h" ref={menuHeadingRef} tabIndex={-1}>
+              菜单
+            </h2>
             {detail ? (
               <>
                 <p className="detail__text">{detail.menu}</p>
@@ -145,9 +191,16 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
                 )}
               </>
             ) : (
-              <p className="detail__text muted">
-                {loadFailed ? '菜单没加载出来，检查一下网络再刷新。' : file ? '这家的菜单还在整理，先看官网吧。' : '正在加载菜单…'}
-              </p>
+              <>
+                <p className="detail__text muted" role="status">
+                  {load === 'done' ? '这家的菜单还在整理，先看官网吧。' : load === 'failed' ? '菜单没加载出来，检查一下网络再试一次。' : '正在加载菜单…'}
+                </p>
+                {(load === 'failed' || retrying) && (
+                  <button type="button" ref={retryRef} className="btn btn--ghost detail__retry" aria-disabled={retrying} onClick={retry}>
+                    {retrying ? '加载中…' : '重试'}
+                  </button>
+                )}
+              </>
             )}
           </section>
 
@@ -172,6 +225,8 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
             {placements.length > 0 && <span className="placed">已在日历：{placements.join('、')}</span>}
             <button
               type="button"
+              id={`detail-addbtn-${id}`}
+              ref={addRef}
               className="btn btn--primary"
               aria-expanded={adding}
               aria-controls={popId}
@@ -190,6 +245,8 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
                 onPickDay={(day) => {
                   onAdd(r, day, meal);
                   setAdding(false);
+                  // The day button that was pressed is about to go with the popover.
+                  addRef.current?.focus({ preventScroll: true });
                 }}
               />
             )}

@@ -1,4 +1,4 @@
-import { useRef, useState, type FormEvent } from 'react';
+import { useId, useRef, useState, type FormEvent } from 'react';
 import { FEEDBACK_MAX, NAME_MAX, sendFeedback, type SendFeedback } from '../lib/feedback';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
@@ -28,12 +28,20 @@ function FeedbackForm({ page, send }: { page: string; send: SendFeedback }) {
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
   const [status, setStatus] = useState<Status>('idle');
+  /** Set when "发送" is pressed with nothing but spaces written. */
+  const [blank, setBlank] = useState(false);
+  const blankId = useId();
   const doneRef = useRef<HTMLParagraphElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!message.trim() || status === 'sending') return;
+    if (status === 'sending') return;
+    if (!message.trim()) {
+      setBlank(true);
+      messageRef.current?.focus();
+      return;
+    }
     setStatus('sending');
     try {
       await send({ message, name, page });
@@ -79,12 +87,20 @@ function FeedbackForm({ page, send }: { page: string; send: SendFeedback }) {
               rows={4}
               required
               placeholder="例如：某家店的营业时间变了，或者想加一家店"
+              aria-invalid={blank || undefined}
+              aria-describedby={blank ? blankId : undefined}
               onChange={(e) => {
                 setMessage(e.target.value);
+                setBlank(false);
                 if (status === 'error') setStatus('idle');
               }}
             />
           </label>
+          {blank && (
+            <p id={blankId} className="warn" role="alert">
+              先写点内容再发送。
+            </p>
+          )}
           <label className="field">
             你的称呼（可不填）
             <input value={name} maxLength={NAME_MAX} autoComplete="nickname" onChange={(e) => setName(e.target.value)} />
