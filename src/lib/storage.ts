@@ -1,6 +1,7 @@
 import { RESTAURANT_BY_ID } from '../data/restaurants';
 import type { Meal } from '../data/types';
 import type { Pick, Picks, Reservation } from './plan';
+import type { SlotChange } from './sync';
 
 export const STORAGE_KEY = 'sydney-eats:picks:v1';
 
@@ -69,5 +70,51 @@ export function savePicks(picks: Picks): void {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(picks));
   } catch {
     // Private mode or blocked storage: picks just won't survive a reload.
+  }
+}
+
+/** Changes that haven't reached the shared plan yet, so a reload still sends them. */
+export const PENDING_KEY = 'sydney-eats:pending:v1';
+
+/**
+ * Parses stored pending changes, keeping only real slots. `pick: null` is a deliberate clear; a pick that no
+ * longer checks out (say, a restaurant since dropped from the list) is skipped rather than sent as a clear.
+ */
+export function parsePending(text: string | null): SlotChange[] {
+  if (!text) return [];
+  let data: unknown;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    return [];
+  }
+  if (!Array.isArray(data)) return [];
+  const out: SlotChange[] = [];
+  for (const item of data) {
+    if (!item || typeof item !== 'object') continue;
+    const { day, meal, pick: raw } = item as Record<string, unknown>;
+    if (typeof day !== 'number' || !Number.isInteger(day) || day < 1 || day > 31) continue;
+    const slot = MEAL_KEYS.find((m) => m === meal);
+    const pick = raw === null ? null : cleanPick(raw);
+    if (!slot || (raw !== null && !pick)) continue;
+    out.push({ day, meal: slot, pick });
+  }
+  return out;
+}
+
+export function loadPending(): SlotChange[] {
+  try {
+    return parsePending(window.localStorage.getItem(PENDING_KEY));
+  } catch {
+    return [];
+  }
+}
+
+export function savePending(changes: SlotChange[]): void {
+  try {
+    if (changes.length) window.localStorage.setItem(PENDING_KEY, JSON.stringify(changes));
+    else window.localStorage.removeItem(PENDING_KEY);
+  } catch {
+    // Blocked storage: pending changes are still sent, they just won't survive a reload.
   }
 }

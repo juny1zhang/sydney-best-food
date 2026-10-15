@@ -2,7 +2,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Meal } from '../data/types';
 import { MEALS, removePick, setPick, type Pick, type Picks } from './plan';
 import { cleanPick } from './storage';
-import { supabase } from './supabase';
+import { loadSupabase } from './supabase';
 
 /** The one shared plan this site edits; the table only accepts this id. */
 export const PLAN_ID = 'dec-2026';
@@ -59,9 +59,16 @@ export function rowToChange(row: Record<string, unknown> | null | undefined): Sl
   return { day, meal, pick: cleanPick(row.pick) };
 }
 
-export function createSupabaseRemote(db: SupabaseClient): PicksRemote {
+/** How long to wait before downloading the realtime client again after a failed attempt. */
+const RELOAD_MS = 5000;
+/** Subscriptions made so far; each gets its own channel name. */
+let subscriptions = 0;
+
+/** The plan in Supabase. `connect` loads the client, which only happens once something needs it. */
+export function createSupabaseRemote(connect: () => Promise<SupabaseClient>): PicksRemote {
   return {
     async fetchAll() {
+      const db = await connect();
       const { data, error } = await db.from(TABLE).select('day, meal, pick').eq('plan_id', PLAN_ID);
       if (error) throw error;
       let picks: Picks = {};
@@ -72,25 +79,46 @@ export function createSupabaseRemote(db: SupabaseClient): PicksRemote {
       return picks;
     },
     async write({ day, meal, pick }) {
+      const db = await connect();
       const { error } = pick
         ? await db.from(TABLE).upsert({ plan_id: PLAN_ID, day, meal, pick })
         : await db.from(TABLE).delete().match({ plan_id: PLAN_ID, day, meal });
       if (error) throw error;
     },
     subscribe(onChange, onLive) {
-      // No server-side filter: Postgres can't filter delete events, and the table only holds this plan.
-      const channel = db
-        .channel(`picks:${PLAN_ID}`)
-        .on('postgres_changes', { event: '*', schema: 'public', table: TABLE }, (payload) => {
-          const deleted = payload.eventType === 'DELETE';
-          const change = rowToChange(deleted ? payload.old : payload.new);
-          if (change) onChange(deleted ? { ...change, pick: null } : change);
-        })
-        .subscribe((status) => onLive(status === 'SUBSCRIBED'));
-      return () => void db.removeChannel(channel);
+      let stopped = false;
+      let retry: ReturnType<typeof setTimeout> | undefined;
+      let leave = () => {};
+      const join = () =>
+        connect().then(
+          (db) => {
+            if (stopped) return;
+            // A fresh name every time: supabase-js hands back a same-named channel even while it is still leaving,
+            // and that one never delivers again (React StrictMode subscribes, leaves and resubscribes in dev).
+            // No server-side filter: Postgres can't filter delete events, and the table only holds this plan.
+            const channel = db
+              .channel(`picks:${PLAN_ID}:${++subscriptions}`)
+              .on('postgres_changes', { event: '*', schema: 'public', table: TABLE }, (payload) => {
+                const deleted = payload.eventType === 'DELETE';
+                const change = rowToChange(deleted ? payload.old : payload.new);
+                if (change) onChange(deleted ? { ...change, pick: null } : change);
+              })
+              .subscribe((status) => onLive(status === 'SUBSCRIBED'));
+            leave = () => void db.removeChannel(channel).catch(() => {});
+          },
+          () => {
+            if (!stopped) retry = setTimeout(join, RELOAD_MS);
+          },
+        );
+      void join();
+      return () => {
+        stopped = true;
+        clearTimeout(retry);
+        leave();
+      };
     },
   };
 }
 
 /** The site's shared plan, or null when no backend is configured (tests, offline dev). */
-export const sharedRemote: PicksRemote | null = supabase ? createSupabaseRemote(supabase) : null;
+export const sharedRemote: PicksRemote | null = loadSupabase ? createSupabaseRemote(loadSupabase) : null;

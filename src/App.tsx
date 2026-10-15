@@ -6,6 +6,7 @@ import { CloseIcon } from './components/Icons';
 import { RestaurantBoard, type BoardCategory } from './components/RestaurantBoard';
 import { RestaurantPage } from './components/RestaurantPage';
 import { SiteFooter } from './components/SiteFooter';
+import { SyncStatus } from './components/SyncStatus';
 import { DAYS_IN_MONTH, MONTH_INDEX, NZ_TRIP_DAYS, YEAR, dayInfo } from './data/december';
 import { loadDetails } from './data/details';
 import { RESTAURANT_BY_ID, VERIFIED_ON } from './data/restaurants';
@@ -40,12 +41,14 @@ interface Toast {
 const SYNC_LABEL: Record<Exclude<SyncState, 'local'>, string> = {
   connecting: '连接中…',
   live: '实时同步',
+  offline: '连不上',
   error: '未同步',
 };
 
 const SYNC_HINT: Record<Exclude<SyncState, 'local'>, string> = {
   connecting: '正在连接共享日历',
   live: '打开这个网站的人看到的是同一份日历，改动会马上同步',
+  offline: '连不上共享日历，正在重试；改动先存在这台设备上',
   error: '刚才的改动还没存到共享日历，会自动重试',
 };
 
@@ -188,12 +191,7 @@ export default function App() {
               <span className="swatch swatch--nz" />
               新西兰 {NZ_TRIP_DAYS} 天
             </li>
-            {sync !== 'local' && (
-              <li className={`sync sync--${sync}`} title={SYNC_HINT[sync]}>
-                <span className="sync__dot" />
-                <span aria-live="polite">{SYNC_LABEL[sync]}</span>
-              </li>
-            )}
+            {sync !== 'local' && <SyncStatus state={sync} label={SYNC_LABEL[sync]} hint={SYNC_HINT[sync]} />}
           </ul>
         </div>
       </header>

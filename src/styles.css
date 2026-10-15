@@ -195,6 +195,25 @@ p {
   background: #9cc7ae;
   border: 0;
 }
+.masthead__stats .sync {
+  position: relative;
+  padding: 0;
+}
+.sync__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: inherit;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+.sync__btn:hover,
+.sync__btn[aria-expanded='true'] {
+  background: rgba(255, 255, 255, 0.08);
+}
 .sync__dot {
   width: 8px;
   height: 8px;
@@ -205,11 +224,32 @@ p {
 .sync--live .sync__dot {
   background: #6fd3a0;
 }
-.sync--error {
+.sync--error,
+.sync--offline {
   color: #ffc9a8;
 }
-.sync--error .sync__dot {
+.sync--error .sync__dot,
+.sync--offline .sync__dot {
   background: #ff9e6b;
+}
+/* Centred under the pill; SyncStatus sets --nudge to keep it on screen. */
+.sync__hint {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(calc(-50% + var(--nudge, 0px)));
+  width: max-content;
+  max-width: min(280px, calc(100vw - 32px));
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.55;
+  box-shadow: 0 12px 32px rgba(15, 34, 51, 0.25);
 }
 .swatch--travel {
   background: var(--surface);
