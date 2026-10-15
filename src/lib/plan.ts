@@ -48,6 +48,17 @@ export function setPick(picks: Picks, day: number, meal: Meal, pick: Pick): Pick
   return { ...picks, [day]: { ...picks[day], [meal]: pick } };
 }
 
+/** The same pick marked as booked, at an optional time like "19:30", or back to just picked. */
+export function withReservation(pick: Pick, booked: boolean, time = ''): Pick {
+  const next = { ...pick };
+  delete next.booked;
+  delete next.time;
+  if (!booked) return next;
+  next.booked = true;
+  if (time) next.time = time;
+  return next;
+}
+
 export function removePick(picks: Picks, day: number, meal: Meal): Picks {
   const forDay = { ...picks[day] };
   delete forDay[meal];
@@ -64,6 +75,13 @@ export function freeSydneyDays(meal: Meal, picks: Picks): number[] {
 
 export function servesMeal(r: Restaurant, meal: Meal): boolean {
   return r.meals.includes(meal);
+}
+
+/** The meal to offer first: the preferred one if the restaurant serves it, else the other one if it does. */
+export function defaultMeal(r: Restaurant, preferred: Meal): Meal {
+  if (servesMeal(r, preferred)) return preferred;
+  const other: Meal = preferred === 'lunch' ? 'dinner' : 'lunch';
+  return servesMeal(r, other) ? other : preferred;
 }
 
 /** Whether the restaurant is usually closed on that day of December, going by its weekly closing days. */
