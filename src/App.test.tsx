@@ -1,7 +1,8 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
-import { STORAGE_KEY } from './lib/storage';
+import { STORAGE_KEY, WISHLIST_KEY } from './lib/storage';
+import { decodePlan, encodePlan } from './lib/share';
 
 function dayButton(label: RegExp) {
   return screen.getByRole('button', { name: label });
@@ -9,6 +10,16 @@ function dayButton(label: RegExp) {
 
 function panel() {
   return screen.getByRole('complementary', { name: /12月/ });
+}
+
+/** jsdom's Blob has no text(), so read it the old way. */
+function readBlob(b: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(String(r.result));
+    r.onerror = () => reject(r.error);
+    r.readAsText(b);
+  });
 }
 
 describe('App', () => {
@@ -26,7 +37,7 @@ describe('App', () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(screen.getByRole('button', { name: /^中餐/ }));
-    const rows = screen.getByRole('list', { name: '中餐排名' });
+    const rows = screen.getByRole('list', { name: /^中餐排名/ });
     const firstRow = within(rows).getAllByRole('listitem')[0];
     expect(within(firstRow).getByRole('heading', { name: 'Lee Ho Fook Sydney' })).toBeInTheDocument();
 
@@ -64,7 +75,7 @@ describe('App', () => {
     await user.type(within(p).getByLabelText('搜索餐厅、菜系或区域'), '金沙');
     await user.click(within(p).getByRole('button', { name: '选这家：Golden Sands（午餐）' }));
 
-    expect(dayButton(/^12月22日 周二.*午餐 Golden Sands（已选好）/)).toBeInTheDocument();
+    expect(dayButton(/^12月22日 周二.*午餐 Golden Sands（已选好，未订位）/)).toBeInTheDocument();
     expect(within(panel()).getByText('金沙酒楼 · Hurstville · $$')).toBeInTheDocument();
 
     // Swapping keeps the current pick until a new one is chosen.
@@ -93,7 +104,7 @@ describe('App', () => {
 
     // Meanwhile dinner on the same day is filled from the board.
     await user.click(screen.getByRole('button', { name: /^中餐/ }));
-    const firstRow = within(screen.getByRole('list', { name: '中餐排名' })).getAllByRole('listitem')[0];
+    const firstRow = within(screen.getByRole('list', { name: /^中餐排名/ })).getAllByRole('listitem')[0];
     await user.click(within(firstRow).getByRole('button', { name: /加入日历/ }));
     await user.click(within(screen.getByRole('region', { name: /加入日历/ })).getByRole('button', { name: '12月3日 周四', exact: true } as never));
 
@@ -116,15 +127,32 @@ describe('App', () => {
     expect(screen.getByRole('button', { name: /^日料/ })).toHaveTextContent('0');
   });
 
+  it('suggests places along the New Zealand route for each meal', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(dayButton(/^12月18日 周五/));
+    expect(within(panel()).getByText('当地推荐')).toBeInTheDocument();
+    await user.click(within(panel()).getByRole('button', { name: '晚餐' }));
+    expect(within(panel()).getByText(/^奥马鲁的推荐 \d+ 家/)).toBeInTheDocument();
+    const choices = within(panel()).getAllByRole('button', { name: /^选这家：/ });
+    expect(choices[0]).toHaveAccessibleName('选这家：Cucina（晚餐）');
+
+    await user.click(choices[0]);
+    expect(dayButton(/^12月18日 周五.*晚餐 Cucina（已选好，未订位）/)).toHaveClass('cell--picked');
+    expect(within(panel()).getByText('阿根廷·地中海融合菜')).toBeInTheDocument();
+    expect(within(panel()).getByText(/奥马鲁屡获大奖的餐厅/)).toBeInTheDocument();
+    expect(within(panel()).getByText('评价依据（6）')).toBeInTheDocument();
+  });
+
   it('lets you note a local place for a New Zealand day', async () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(dayButton(/^12月14日 周一/));
-    await user.click(within(panel()).getByRole('button', { name: '手动添加一家店' }));
+    await user.click(within(panel()).getByRole('button', { name: '不在推荐里？手动添加一家' }));
     await user.click(within(panel()).getByRole('button', { name: '午餐' }));
-    await user.type(within(panel()).getByLabelText('店名'), 'Fergburger');
+    await user.type(within(panel()).getByLabelText('店名'), '朋友推荐的小馆');
     await user.click(within(panel()).getByRole('button', { name: '保存' }));
-    expect(dayButton(/^12月14日 周一.*午餐 Fergburger/)).toBeInTheDocument();
+    expect(dayButton(/^12月14日 周一.*午餐 朋友推荐的小馆/)).toBeInTheDocument();
   });
 
   it('restores saved picks after a reload', () => {
@@ -132,5 +160,122 @@ describe('App', () => {
     render(<App />);
     expect(dayButton(/^12月24日 周四，平安夜.*晚餐 Bennelong/)).toBeInTheDocument();
     expect(screen.getByText('已选 1 餐')).toBeInTheDocument();
+  });
+
+  it('marks a pick as reserved and turns the day orange', async () => {
+    const user = userEvent.setup();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ 4: { dinner: { kind: 'restaurant', id: 'lee-ho-fook' } } }));
+    render(<App />);
+    await user.click(dayButton(/^12月4日 周五/));
+    await user.click(within(panel()).getByRole('button', { name: '标记已订位：晚餐' }));
+    const form = within(panel()).getByRole('form', { name: '晚餐订位信息' });
+    const time = within(form).getByLabelText('订到几点');
+    expect(time).toHaveValue('19:00');
+    await user.clear(time);
+    await user.type(time, '19:15');
+    await user.type(within(form).getByLabelText('备注（可选）'), '2 位');
+    await user.click(within(form).getByRole('button', { name: '保存' }));
+
+    expect(dayButton(/^12月4日 周五.*晚餐 Lee Ho Fook Sydney（已预订 19:15）/)).toHaveClass('cell--booked');
+    expect(within(panel()).getByText('已预订 · 19:15')).toBeInTheDocument();
+    expect(within(panel()).getByText('订位备注：2 位')).toBeInTheDocument();
+    expect(screen.getByText('已订 3 餐')).toBeInTheDocument();
+
+    await user.click(within(panel()).getByRole('button', { name: '取消已订：晚餐' }));
+    expect(dayButton(/^12月4日 周五.*（已选好，未订位）/)).toHaveClass('cell--picked');
+  });
+
+  it('saves places to 想去 and puts them first when picking', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole('button', { name: /^日料/ }));
+    const toggle = screen.getByRole('button', { name: '想去：Kisuke' });
+    await user.click(toggle);
+    expect(toggle).toHaveAttribute('aria-pressed', 'true');
+    expect(JSON.parse(localStorage.getItem(WISHLIST_KEY)!)).toEqual(['kisuke']);
+
+    await user.click(screen.getByRole('button', { name: /^想去\s*1$/ }));
+    const list = screen.getByRole('list', { name: /^想去的店/ });
+    expect(within(list).getByRole('heading', { name: 'Kisuke' })).toBeInTheDocument();
+    expect(within(list).getByText('日料第 2 名')).toBeInTheDocument();
+
+    await user.click(dayButton(/^12月21日 周一/));
+    const first = within(panel()).getAllByRole('listitem')[0];
+    expect(first).toHaveTextContent('想去');
+    expect(first).toHaveTextContent('Kisuke');
+  });
+
+  it('searches the whole board', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.type(screen.getByRole('searchbox', { name: '搜索榜单' }), 'pizza');
+    const list = screen.getByRole('list', { name: /^搜索“pizza”/ });
+    expect(within(list).getByRole('heading', { name: 'Gigi’s Balmain' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /^全部\s*\d+$/ })).toHaveAttribute('aria-pressed', 'false');
+    await user.click(screen.getByRole('button', { name: '清除搜索' }));
+    expect(screen.getByRole('heading', { level: 2, name: '中餐' })).toBeInTheDocument();
+  });
+
+  it('lists the whole plan and opens a day from it', async () => {
+    const user = userEvent.setup();
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ 22: { lunch: { kind: 'restaurant', id: 'golden-sands', reserved: { time: '11:30', note: '' } } } }),
+    );
+    render(<App />);
+    const plan = screen.getByRole('region', { name: '我的十二月计划' });
+    expect(within(plan).getByText('共 3 餐：')).toBeInTheDocument();
+    const days = within(plan).getAllByRole('listitem').filter((li) => li.classList.contains('plan__day'));
+    expect(days.map((d) => d.querySelector('.plan__date-main')?.textContent)).toEqual(['12月6日 周日', '12月12日 周六', '12月22日 周二']);
+    expect(within(days[2]).getByText('已预订 · 11:30')).toBeInTheDocument();
+
+    await user.click(within(plan).getByRole('button', { name: '打开这天：12月22日 周二' }));
+    expect(within(panel()).getByRole('heading', { name: '12月22日 周二' })).toBeInTheDocument();
+  });
+
+  it('builds a share link that carries the plan', async () => {
+    const user = userEvent.setup();
+    const picks = { 4: { dinner: { kind: 'restaurant', id: 'lee-ho-fook' } } };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(picks));
+    localStorage.setItem(WISHLIST_KEY, JSON.stringify(['kisuke']));
+    render(<App />);
+    await user.click(screen.getByRole('button', { name: '分享给家人' }));
+    const dialog = screen.getByRole('dialog', { name: '分享计划' });
+    const url = (within(dialog).getByLabelText('分享链接') as HTMLInputElement).value;
+    expect(decodePlan(url.slice(url.indexOf('#')))).toEqual({ picks, wishlist: ['kisuke'] });
+  });
+
+  it('imports a shared plan from the link', async () => {
+    const user = userEvent.setup();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ 3: { lunch: { kind: 'restaurant', id: 'mr-wong' } } }));
+    const theirs = { 3: { dinner: { kind: 'restaurant' as const, id: 'sixpenny' } } };
+    window.history.replaceState(null, '', `/#plan=${encodePlan({ picks: theirs, wishlist: ['kisuke'] })}`);
+    render(<App />);
+    const dialog = screen.getByRole('dialog', { name: '导入分享的计划' });
+    expect(dialog).toHaveTextContent('链接里有 1 餐安排、1 家想去的店');
+    await user.click(within(dialog).getByRole('button', { name: '合并到我的计划' }));
+
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    expect(window.location.hash).toBe('');
+    expect(dayButton(/^12月3日 周四.*午餐 Mr. Wong.*晚餐 Sixpenny/)).toBeInTheDocument();
+    expect(JSON.parse(localStorage.getItem(WISHLIST_KEY)!)).toEqual(['kisuke']);
+  });
+
+  it('exports the plan as a calendar file', async () => {
+    const user = userEvent.setup();
+    const blobs: Blob[] = [];
+    const create = vi.fn((b: Blob) => {
+      blobs.push(b);
+      return 'blob:plan';
+    });
+    Object.assign(URL, { createObjectURL: create, revokeObjectURL: vi.fn() });
+    const click = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => {});
+    render(<App />);
+    await user.click(screen.getByRole('button', { name: '导出到手机日历' }));
+    expect(click).toHaveBeenCalled();
+    expect(blobs[0].type).toBe('text/calendar;charset=utf-8');
+    expect(await readBlob(blobs[0])).toContain('SUMMARY:晚餐 · Kika');
+    expect(screen.getByText('已生成日历文件（2 餐），打开它就能加进手机或电脑的日历')).toBeInTheDocument();
+    click.mockRestore();
   });
 });

@@ -46,6 +46,84 @@ export interface Restaurant {
   confidence: 'high' | 'medium' | 'low';
 }
 
+/** Stops on the New Zealand road trip that have eating suggestions. */
+export type TownId =
+  | 'auckland'
+  | 'waitomo'
+  | 'rotorua'
+  | 'matamata'
+  | 'christchurch'
+  | 'geraldine'
+  | 'fairlie'
+  | 'tekapo'
+  | 'mount-cook'
+  | 'twizel'
+  | 'wanaka'
+  | 'queenstown'
+  | 'arrowtown'
+  | 'te-anau'
+  | 'cromwell'
+  | 'omarama'
+  | 'oamaru'
+  | 'moeraki';
+
+export interface Town {
+  id: TownId;
+  /** Chinese name shown in the UI. */
+  name: string;
+  en: string;
+}
+
+/** A recommended place to eat on the New Zealand route. */
+export interface NzVenue {
+  id: string;
+  name: string;
+  nameZh: string;
+  town: TownId;
+  categoryLabel: string;
+  /** Compact label for calendar chips when categoryLabel is longer than about four characters. */
+  categoryShort?: string;
+  price: Price;
+  badges: string[];
+  tags: string[];
+  intro: string;
+  booking: string;
+  meals: ServiceMeal[];
+  address: string;
+  website: string;
+  sources: string[];
+  confidence: 'high' | 'medium' | 'low';
+}
+
+/** Anything that can be picked for a meal, in the shape the UI shows it. */
+export interface Place {
+  id: string;
+  /** Which list it comes from: the Sydney board or the New Zealand route. */
+  region: 'syd' | 'nz';
+  name: string;
+  nameZh: string;
+  /** Suburb in Sydney, or the Chinese town name in New Zealand. */
+  area: string;
+  price: Price;
+  categoryLabel: string;
+  /** Compact label for calendar chips. */
+  categoryShort: string;
+  /** "中餐第 1 名" on the Sydney board, the town in New Zealand. */
+  rankLabel: string;
+  badges: string[];
+  tags: string[];
+  intro: string;
+  booking: string;
+  meals: ServiceMeal[];
+  website: string;
+  /** Street address or locality, for calendar events. */
+  address: string;
+  /** Text for a Google Maps search. */
+  mapsQuery: string;
+  accolades: string[];
+  sources: string[];
+}
+
 /** A venue booked outside the Sydney list (the New Zealand trip). */
 export interface BookedVenue {
   id: string;

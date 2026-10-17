@@ -1,0 +1,1699 @@
+{
+  "verifiedOn": "2026-10-17",
+  "venues": [
+    {
+      "id": "nz-depot-eatery-oyster-bar",
+      "name": "Depot Eatery & Oyster Bar",
+      "nameZh": "",
+      "town": "auckland",
+      "categoryLabel": "新西兰菜",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "名厨坐镇",
+        "生蚝",
+        "不接受订位"
+      ],
+      "intro": "新西兰名厨Al Brown的招牌餐馆，炭火烧烤配生蚝吧，必点生蚝、迷你汉堡和羊肋排。猫途鹰4.6分（2800+条点评），2026年仍好评不断，周日中午随到随吃很方便。",
+      "booking": "不接受订位，随到随排（周日约11:00开门，以官网为准）",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "86 Federal Street, Auckland CBD",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.co.nz/Restaurant_Review-g255106-d2307643-Reviews-Depot_Eatery_Oyster_Bar-Auckland_Central_North_Island.html",
+        "https://www.mapquest.com/nz/depot-eatery-oyster-bar-432347581",
+        "https://aucklandtribune.co.nz/article/critic-s-choice-auckland-s-50-best-restaurants-try-2026",
+        "https://tablejourney.com/new-zealand/auckland/restaurants/sunday/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-eden-noodles-dominion-road",
+      "name": "Eden Noodles",
+      "nameZh": "",
+      "town": "auckland",
+      "categoryLabel": "中餐·面馆",
+      "categoryShort": "面馆",
+      "price": "$",
+      "badges": [
+        "Urban List 2026 奥克兰最佳饺子"
+      ],
+      "tags": [
+        "平价",
+        "辣味饺子",
+        "常排队"
+      ],
+      "intro": "多米尼恩路华人美食街上的人气面馆，招牌辣味饺子、馄饨和面条，三种口味都带辣。入选Urban List 2026年奥克兰最佳饺子榜，就在机场进城的路上，想吃口热乎中餐时首选。",
+      "booking": "不接受订位，饭点常需排队",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "105 Dominion Road, Mt Eden, Auckland",
+      "website": "",
+      "sources": [
+        "https://www.theurbanlist.com/auckland/a-list/aucklands-best-dumplings",
+        "https://www.theurbanlist.com/auckland/directory/eden-noodles",
+        "https://dishcult.com/articles/auckland/everywhere-good-to-eat-on-dominion-road"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-amano-britomart",
+      "name": "Amano",
+      "nameZh": "",
+      "town": "auckland",
+      "categoryLabel": "意大利菜",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "意式料理",
+        "自家面包房",
+        "市中心"
+      ],
+      "intro": "Britomart区的人气意式餐厅，附设自家面包房，主打当季本地食材。每天从早营业到晚，2026年仍入选多份奥克兰必吃榜单，适合落地后好好吃一顿正餐，从机场开车约30–40分钟。",
+      "booking": "建议提前网上订位，周末较满",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "address": "66-68 Tyler Street, Britomart, Auckland CBD",
+      "website": "",
+      "sources": [
+        "https://aucklandtribune.co.nz/article/critic-s-choice-auckland-s-50-best-restaurants-try-2026",
+        "https://us.trip.com/toplist/tripbest/recommend/auckland/best-must-visit-restaurants/100900013896/",
+        "https://tablejourney.com/new-zealand/auckland/restaurants/sunday/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-relay-cafe-akl-domestic",
+      "name": "Relay Café",
+      "nameZh": "",
+      "town": "auckland",
+      "categoryLabel": "西式简餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "国内航站楼内",
+        "安检前",
+        "有酒水"
+      ],
+      "intro": "奥克兰机场国内航站楼安检前的全天餐吧，5:00–21:00营业，从早餐、汉堡到晚餐主菜都有，另设酒吧。还车后直接来吃最省时间，但网上口碑资料有限，胜在方便。",
+      "booking": "无需预订",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "address": "Domestic Terminal (landside), Auckland Airport",
+      "website": "https://www.aucklandairport.co.nz/eat-and-relax/store/relay-cafe",
+      "sources": [
+        "https://www.aucklandairport.co.nz/eat-and-relax/store/relay-cafe",
+        "https://www.aucklandairport.co.nz/shopping/domestic-open-now"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-te-kaahu-akl-airport",
+      "name": "Te Kaahu",
+      "nameZh": "",
+      "town": "auckland",
+      "categoryLabel": "新西兰菜",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "跑道景观",
+        "酒店餐厅",
+        "步行可达"
+      ],
+      "intro": "机场Pullman酒店9楼的现代新西兰餐厅，窗外就是跑道，主打炭烤牛排、烤章鱼等扒房菜。每天营业到22:00，是机场周边最体面的正餐选择，但猫途鹰仅3.8分，评价两极。",
+      "booking": "建议提前订位并要求窗边座位；从国内航站楼步行约10–15分钟，也可乘免费航站楼接驳车",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "address": "Level 9, Te Arikinui Pullman Auckland Airport, 37 Tom Pearce Drive, Auckland Airport",
+      "website": "https://tekaahu.nz/",
+      "sources": [
+        "https://tekaahu.nz/",
+        "https://www.tripadvisor.co.nz/Restaurant_Review-g1811027-d26697067-Reviews-Te_Kaahu-Auckland_North_Island.html",
+        "https://www.pullmanaucklandairport.com/restaurant-cafe/te-kaahu/",
+        "https://www.dish.co.nz/news-reviews/restaurant-reviews/introducing-te-arikinui-pullman-auckland-airport-hotel/",
+        "https://www.vervemagazine.co.nz/the-roving-gourmets-te-kaahu/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-huhu-cafe-waitomo",
+      "name": "HUHU Cafe",
+      "nameZh": "",
+      "town": "waitomo",
+      "categoryLabel": "新西兰菜",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "本地食材",
+        "素食友好",
+        "近萤火虫洞"
+      ],
+      "intro": "怀托摩村最受好评的餐厅之一，2007年开业，主打新鲜本地食材，招牌羊肉和甜品，素食、无麸质选择多。猫途鹰4.6分（近2000条点评），离萤火虫洞仅几分钟车程。",
+      "booking": "建议提前订位；淡季曾周一、周二休息，务必确认12月7日（周一）午市营业",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "10 Waitomo Caves Road, Waitomo Caves",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurant_Review-g616349-d1161019-Reviews-Huhu_Cafe-Waitomo_Caves_Waitomo_District_Waikato_Region_North_Island.html",
+        "https://www.yelp.com/biz/huhu-cafe-hangatiki",
+        "https://wanderlog.com/place/details/1178585/huhu-cafe",
+        "https://www.happycow.net/oceania/new_zealand/waitomo/print"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-stratosfare-skyline-rotorua",
+      "name": "Stratosfare Restaurant (Skyline Rotorua)",
+      "nameZh": "天空缆车观景自助餐厅",
+      "town": "rotorua",
+      "categoryLabel": "自助餐",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "缆车上山",
+        "湖景"
+      ],
+      "intro": "乘Skyline缆车上山，边吃自助边看180度罗托鲁瓦湖全景，海鲜、熟成牛肉、时令汤品和沙拉俱全，也有素食。每天11:30–21:00营业，饭后可接着玩滑道车，适合8日安排半天。",
+      "booking": "建议在官网连同缆车票一起提前预订",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "178 Fairy Springs Road, Rotorua",
+      "website": "https://www.skyline.co.nz/",
+      "sources": [
+        "https://www.skyline.co.nz/blog/best-restaurants-in-rotorua/",
+        "https://www.tripadvisor.co.nz/Restaurant_Review-g255111-d725414-Reviews-Stratosfare_Rotorua-Rotorua_Rotorua_District_Bay_of_Plenty_Region_North_Island.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-te-puia-te-po",
+      "name": "Te Puia – Te Pō Indigenous Experience",
+      "nameZh": "",
+      "town": "rotorua",
+      "categoryLabel": "毛利烤餐",
+      "price": "$$$$",
+      "badges": [],
+      "tags": [
+        "自助烤餐",
+        "毛利表演",
+        "地热园区"
+      ],
+      "intro": "在地热园区Te Puia举办的毛利夜宴，17:30开始，先看45分钟文化表演，再吃自助hāngī地坑烤餐，全程约2小时45分。2026–27年度成人NZ$203，比Te Pā Tū省时又省钱。",
+      "booking": "须提前预订；酒水另付",
+      "meals": [
+        "dinner"
+      ],
+      "address": "Hemo Road, Whakarewarewa, Rotorua",
+      "website": "https://www.tepuia.com/",
+      "sources": [
+        "https://doubletree.bookme.co.nz/things-to-do/new-zealand/activity/te-puia-indigenous-experience/10120",
+        "https://www.expedia.com/things-to-do/te-puia-te-po-indigenous-evening-experience-with-dinner.a50891292.activity-details"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-atticus-finch-rotorua",
+      "name": "Atticus Finch",
+      "nameZh": "",
+      "town": "rotorua",
+      "categoryLabel": "新西兰菜",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "分享盘",
+        "特调鸡尾酒",
+        "近温泉"
+      ],
+      "intro": "美食街Eat Streat上最抢手的小酒馆，由一对姐妹经营，主打本地食材分享盘，哈罗米芝士最受好评，自制糖浆调酒和精酿也出色。步行几分钟到波利尼西亚温泉，泡汤前吃晚饭正好。",
+      "booking": "热门，需提前订位，并确认12月7日（周一）是否营业",
+      "meals": [
+        "dinner"
+      ],
+      "address": "Eat Streat, Tutanekai Street, Rotorua",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com.au/Attractions-g255111-Activities-c47-t34-Rotorua_Rotorua_District_Bay_of_Plenty_Region_North_Island.html",
+        "https://www.taiaoadventures.com/blog/post/162485/a-guides-favourite-spots-for-a-post-adventure-dinner-and-drinks-in-rotorua/",
+        "https://www.skyline.co.nz/blog/best-restaurants-in-rotorua/",
+        "https://wanderlog.com/list/geoCategory/208719/restaurants"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-pig-and-whistle-rotorua",
+      "name": "Pig & Whistle Historic Pub",
+      "nameZh": "",
+      "town": "rotorua",
+      "categoryLabel": "酒吧餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "历史建筑",
+        "精酿啤酒",
+        "近温泉"
+      ],
+      "intro": "由1940年代老警察局改建的历史酒吧，位于Eat Streat南端，海鲜浓汤、波本猪五花和招牌螺旋薯条最受欢迎，常有现场乐队。份量足、气氛热闹，是周一晚上随到随吃的稳妥之选。",
+      "booking": "通常可直接入座，人多时可先电话订位",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "1182 Tutanekai Street, Rotorua",
+      "website": "",
+      "sources": [
+        "https://cdn.fodors.com/world/australia-and-the-pacific/new-zealand/east-coast-and-the-volcanic-zone/places/rotorua/restaurants",
+        "https://sa.trip.com/travel-guide/restaurant/rotorua-682-restaurantdetail/pig-and-whistle-historic-pub-34926050.html",
+        "https://www.taiaoadventures.com/blog/post/162485/a-guides-favourite-spots-for-a-post-adventure-dinner-and-drinks-in-rotorua/",
+        "https://newstalkzb.co.nz/on-air/saturday-morning-with-jack-tame/audio/mike-yardley-bites-and-sights-in-rotorua"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-yamato-rotorua",
+      "name": "Yamato Japanese Restaurant",
+      "nameZh": "",
+      "town": "rotorua",
+      "categoryLabel": "日料",
+      "price": "$$",
+      "badges": [
+        "Neat Places 推荐"
+      ],
+      "tags": [
+        "寿司吧台",
+        "刺身新鲜",
+        "需订位"
+      ],
+      "intro": "罗托鲁瓦人气日料店，可坐U形吧台看师傅现切刺身、现卷寿司，散寿司饭和三文鱼牛油果卷常获好评，价格实在。周一、周三休息，正好赶上12月8日（周二）的午市或晚市。",
+      "booking": "常客满，务必提前订位；周一、周三休息",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "1123 Pukuatua Street, Rotorua",
+      "website": "",
+      "sources": [
+        "https://api.neatplaces.co.nz/places/rotorua/eat-drink/yamato",
+        "https://wanderlog.com/place/details/853842/yamato-japanese-restaurant",
+        "https://neatplaces.co.nz/stories/best-japanese-restaurants-new-zealand"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-te-pa-tu-rotorua",
+      "name": "Te Pā Tū",
+      "nameZh": "塔玛基毛利文化村",
+      "town": "rotorua",
+      "categoryLabel": "毛利烤餐",
+      "price": "$$$$",
+      "badges": [],
+      "tags": [
+        "地坑烤餐",
+        "毛利文化",
+        "沉浸体验"
+      ],
+      "intro": "前身为著名的塔玛基毛利村，3.5小时夜间体验随毛利月历换季，传统地坑烤餐hāngī配时令毛利美食。猫途鹰逾6000条点评，成人约NZ$270–280，适合8日晚上隆重安排。",
+      "booking": "须提前预订，48小时前取消可全额退款",
+      "meals": [
+        "dinner"
+      ],
+      "address": "State Highway 5, south of Rotorua (town pick-up available)",
+      "website": "",
+      "sources": [
+        "https://www.newzealand.com/nz/plan/business/tamaki-maori-village-3967280",
+        "https://sg.trip.com/things-to-do/detail/102708293"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-hobbiton-tour-buffet-lunch",
+      "name": "Hobbiton Movie Set – Guided Tour & Buffet Lunch Experience",
+      "nameZh": "霍比特人村导览+自助午餐套票",
+      "town": "matamata",
+      "categoryLabel": "自助午餐",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "官方套票",
+        "自助大餐",
+        "需预订"
+      ],
+      "intro": "霍比特人村官方导览+自助午餐套票，约3.5小时，参观完在园区享用自助大餐，菜色如烤鸡、迷迭香烤羊肉、烟熏鱼和农舍派（随季调整）。2026年成人NZ$170（含导览），省心又有仪式感。",
+      "booking": "须在官网提前预订套票，旺季易满",
+      "meals": [
+        "lunch"
+      ],
+      "address": "501 Buckland Road, Hinuera, Matamata",
+      "website": "https://www.hobbitontours.com/experiences/tourmealcombo/",
+      "sources": [
+        "https://www.hobbitontours.com/experiences/tourmealcombo/",
+        "https://www.travelerstoday.com/articles/60737/20260804/hobbiton-complete-guide-new-zealands-lord-rings-filming-locations.htm"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-shires-rest-cafe-hobbiton",
+      "name": "The Shire's Rest Café",
+      "nameZh": "",
+      "town": "matamata",
+      "categoryLabel": "咖啡简餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "霍比特人村",
+        "乡村简餐",
+        "可喝啤酒"
+      ],
+      "intro": "霍比特人村出发点The Shire's Rest的自营咖啡馆，供应乡村风味简餐和柜台小食，还有新西兰啤酒和苹果酒。每天9:00–15:30营业（夏季延长），点餐菜单供应到14:30，团前团后都方便。",
+      "booking": "无需预订；点餐菜单14:30截止，按团时安排",
+      "meals": [
+        "lunch"
+      ],
+      "address": "501 Buckland Road, Hinuera, Matamata",
+      "website": "https://www.hobbitontours.com/discover/the-shires-rest/",
+      "sources": [
+        "https://hobbitontours.com/discover/the-shires-rest/the-shires-rest-cafe/",
+        "https://www.hobbitontours.com/discover/the-shires-rest/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-inati",
+      "name": "Inati",
+      "nameZh": "",
+      "town": "christchurch",
+      "categoryLabel": "创意新西兰菜",
+      "categoryShort": "新西兰菜",
+      "price": "$$$$",
+      "badges": [
+        "米其林 2026 一星",
+        "Cuisine 2026 两顶帽",
+        "Cuisine 2026 年度餐饮人物（Lisa Levy）"
+      ],
+      "tags": [
+        "米其林一星",
+        "分享盘",
+        "收官大餐"
+      ],
+      "intro": "基督城仅有的两家米其林一星之一，位于市中心Hereford街，从酒店步行可到。以分享盘为主，招牌有牛肉甜甜圈（boeuf-nut）和14天熟成烤鸭，也可点主厨发办“Trust Us”套餐，最适合19日的收官大餐。",
+      "booking": "务必提前数周订位：米其林注明由餐厅自行管理订位，可上官网或致电+64 3 390 1580。一般周二至周六供应晚餐，19日是周六。",
+      "meals": [
+        "dinner"
+      ],
+      "address": "48 Hereford Street, Christchurch Central City, Christchurch",
+      "website": "https://inati.nz",
+      "sources": [
+        "https://guide.michelin.com/nz/en/south-island/christchurch_2307083/restaurant/inati",
+        "https://www.christchurchnz.com/about/news/christchurch-restaurants-awarded-by-the-michelin-guide",
+        "https://www.theurbanlist.com/new-zealand/a-list/cuisine-good-food-guide-2026",
+        "https://christchurch.neighbourlynews.co.nz/eat-drink/hats-off-to-these-world-class-eatiers-28884",
+        "https://joinpearl.co/restaurants/christchurch-new-zealand/inati",
+        "https://bellyrumbles.com/inati-restaurant-christchurch/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-londo",
+      "name": "Londo",
+      "nameZh": "",
+      "town": "christchurch",
+      "categoryLabel": "现代料理",
+      "price": "$$$",
+      "badges": [
+        "米其林 2026 必比登推介",
+        "米其林 2026 青年厨师奖（Robert Fairs）",
+        "Cuisine 2026 两顶帽",
+        "Cuisine 2025 年度休闲餐厅"
+      ],
+      "tags": [
+        "仅27座",
+        "必比登",
+        "性价比高"
+      ],
+      "intro": "梅里韦尔（Merivale）只有27个座位的小餐馆，客人几乎坐在厨房前看主厨做菜。主厨Robert Fairs获2026米其林青年厨师奖，餐厅获必比登推介，2025年还拿下Cuisine年度休闲餐厅，好吃又划算。",
+      "booking": "只做晚餐、座位极少，务必尽早致电027 340 8385订位（米其林注明需直接联系餐厅）。营业日各来源说法不一，约为周三至周日17:00起，请以餐厅公布为准。",
+      "meals": [
+        "dinner"
+      ],
+      "address": "Unit 6, 2 Papanui Road (Carlton Courts), Merivale, Christchurch",
+      "website": "",
+      "sources": [
+        "https://guide.michelin.com/nz/en/south-island/christchurch_2307083/restaurant/londo",
+        "https://www.christchurchnz.com/see-do/wine-and-dine/londo",
+        "https://www.canberratimes.com.au/story/9302532/michelin-guide-new-zealand-2026-unveils-top-restaurants/",
+        "https://christchurch.neighbourlynews.co.nz/eat-drink/hats-off-to-these-world-class-eatiers-28884",
+        "https://cityscape-christchurch.co.nz/blog/food-drink/entry/hats-on-for-londo-city-eatery-wins-cuisine-casual-restaurant-2025",
+        "https://neatplaces.co.nz/places/christchurch/eat-drink/londo"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-earl",
+      "name": "Earl",
+      "nameZh": "",
+      "town": "christchurch",
+      "categoryLabel": "欧陆餐酒馆",
+      "categoryShort": "餐酒馆",
+      "price": "$$$",
+      "badges": [
+        "米其林 2026 必比登推介"
+      ],
+      "tags": [
+        "市中心",
+        "氛围热闹",
+        "素食友好"
+      ],
+      "intro": "市中心Lichfield街的人气餐酒馆，获2026米其林必比登推介。气氛热闹又温暖，开胃小食（aperitivo）菜单很受好评，素食者也照顾得很好。离酒店不远，适合作19日晚餐的备选。",
+      "booking": "可通过OpenTable或致电03 365 1147预订，周日休息。2026年7月公布的冬季时间为：周二意面夜，周三至周六晚餐，周五、周六午餐。12月可能调整，请再确认。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "128 Lichfield Street, Christchurch Central City, Christchurch",
+      "website": "",
+      "sources": [
+        "https://www.christchurchnz.com/about/news/christchurch-restaurants-awarded-by-the-michelin-guide",
+        "https://www.christchurchnz.com/see-do/wine-and-dine/earl",
+        "https://joinpearl.co/restaurants/christchurch-new-zealand/earl",
+        "https://www.opentable.com.au/restaurant/profile/56717",
+        "https://www.theurbanlist.com/christchurch/a-list/restaurants-christchurch"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-gatherings",
+      "name": "Gatherings",
+      "nameZh": "",
+      "town": "christchurch",
+      "categoryLabel": "时令料理",
+      "price": "$$$",
+      "badges": [
+        "米其林 2026 必比登推介",
+        "Cuisine 2026 一顶帽"
+      ],
+      "tags": [
+        "时令蔬菜",
+        "自然酒",
+        "小而精"
+      ],
+      "intro": "和Londo同在Carlton Courts的小餐厅，由主厨Alex Davies主理，菜单以时令蔬菜为重点并搭配自然酒。2026年获米其林必比登推介和Cuisine一顶帽，适合想吃得清爽讲究的一晚。",
+      "booking": "建议提前在官网订位。一般周三至周日供应晚餐，周一、周二休息；部分资料称周六有需预约的午市，请以官网为准。",
+      "meals": [
+        "dinner"
+      ],
+      "address": "Unit 5, 2 Papanui Road (Carlton Courts), Merivale, Christchurch",
+      "website": "https://gatherings.co.nz",
+      "sources": [
+        "https://www.christchurchnz.com/about/news/christchurch-restaurants-awarded-by-the-michelin-guide",
+        "https://www.theurbanlist.com/new-zealand/a-list/cuisine-good-food-guide-2026",
+        "https://christchurch.neighbourlynews.co.nz/eat-drink/hats-off-to-these-world-class-eatiers-28884",
+        "https://neatplaces.co.nz/places/christchurch-canterbury/eat-drink/gatherings",
+        "https://www.cuisine.co.nz/gatherings/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-riverside-market",
+      "name": "Riverside Market",
+      "nameZh": "河畔市场",
+      "town": "christchurch",
+      "categoryLabel": "美食市集",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "选择多",
+        "有亚洲风味",
+        "不用订位"
+      ],
+      "intro": "市中心雅芳河畔的室内美食市场，每天营业。2025年的摊位有回转寿司、上海风味、越南菜、德式热狗、烘焙、咖啡和精酿啤酒，两人可以各点各的。吃完开车约20分钟到机场，还车时间好把握。",
+      "booking": "不用订位，可分头点餐。建议13:30前吃完，留足时间加油，16:00前到机场还车。",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "address": "96 Oxford Terrace, Christchurch Central City, Christchurch",
+      "website": "https://riverside.nz",
+      "sources": [
+        "https://www.theurbanlist.com/christchurch/a-list/riverside-market-christchurch",
+        "https://ccc.govt.nz/news-and-events/whats-on/event/riverside-farmers-market-3",
+        "https://en.wikipedia.org/wiki/Riverside_Market",
+        "https://neatplaces.co.nz/places/christchurch/eat-drink/riverside-market"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-hello-sunday",
+      "name": "Hello Sunday",
+      "nameZh": "",
+      "town": "christchurch",
+      "categoryLabel": "咖啡早午餐",
+      "categoryShort": "早午餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "百年老建筑",
+        "早午餐人气店",
+        "素食选择多"
+      ],
+      "intro": "Sydenham区由19世纪老邮局改建的人气咖啡馆，Wanderlog上约1700条评价、平均4.6分。韩式炸鸡、牛颊肉薯饼、北非蛋和法式吐司都很受欢迎。适合20日早上退房后开车过去吃早午餐。",
+      "booking": "周末常排到门外，建议开门即到：工作日7:30、周末8:30开门，营业到16:30（资料未注明日期，请再确认）。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "6 Elgin Street, Sydenham, Christchurch",
+      "website": "",
+      "sources": [
+        "https://www.christchurchnz.com/visit/eat-and-drink/best-brunch-spots-in-christchurch",
+        "https://neatplaces.co.nz/features/best-brunch-christchurch",
+        "https://wanderlog.com/list/geoCategory/11184/best-breakfast-and-brunch-in-christchurch",
+        "https://maps.roadtrippers.com/nz/can/food-drink/hello-sunday",
+        "https://neatplaces.co.nz/stories/cafes-open-on-a-sunday"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-barkers-foodstore-eatery-geraldine",
+      "name": "Barker's Foodstore & Eatery",
+      "nameZh": "",
+      "town": "geraldine",
+      "categoryLabel": "咖啡简餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "杰拉尔丁",
+        "果酱试吃",
+        "座位宽敞"
+      ],
+      "intro": "新西兰果酱糖浆品牌Barker's在杰拉尔丁（Geraldine）老家的食品店兼餐厅，有试吃台可以尝各种果酱、酸辣酱和糖浆。菜单每几个月更换，素食、纯素和无麸质选择多。在去费尔利的路上，可以在这里吃个从容的午餐。",
+      "booking": "不用订位，室内约100座，露台另有约50座。每天约8:30–16:30营业（资料未注明日期，请再确认）。",
+      "meals": [
+        "lunch"
+      ],
+      "address": "71 Talbot Street, Geraldine",
+      "website": "https://barkers.co.nz",
+      "sources": [
+        "https://neatplaces.co.nz/places/south-canterbury/eat-drink/barkers-foodstore-eatery",
+        "https://vttourism.co.nz/activities/foodies/barkers-of-geraldine",
+        "https://wanderlog.com/place/details/762796/barkers-foodstore--eatery"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-fairlie-bakehouse",
+      "name": "Fairlie Bakehouse",
+      "nameZh": "费尔利面包坊",
+      "town": "fairlie",
+      "categoryLabel": "烘焙派",
+      "price": "$",
+      "badges": [
+        "Tripadvisor 2026 旅行者之选"
+      ],
+      "tags": [
+        "招牌肉派",
+        "自驾午餐",
+        "可外带"
+      ],
+      "intro": "Tripadvisor上费尔利排名第一的老牌派店，4.7分、近千条评价。招牌是三文鱼培根派，2026年不少评论力推猪肉苹果派。可以坐下吃，也可以外带到特卡波湖边吃。排队虽长，但出餐很快。",
+      "booking": "不用订位，午间排队但前进很快。三文鱼培根派有时要现烤，等20–30分钟，可先下单。各来源营业时间不一，一般到16:30左右。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "74 Main Street, Fairlie",
+      "website": "https://www.fairliebakehouse.co.nz",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurant_Review-g658477-d2066694-Reviews-Fairlie_Bakehouse-Fairlie_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://www.tripadvisor.co.uk/Restaurant_Review-g658477-d2066694-Reviews-Fairlie_Bakehouse-Fairlie_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://www.mackenzienz.com/52-reasons/fairlie-bakehouse/",
+        "https://en.wikipedia.org/wiki/Fairlie_Bakehouse",
+        "https://foodspy.meowtainpeople.com/fairlie-bakehouse-pies/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-kohan-tekapo",
+      "name": "Kohan Restaurant",
+      "nameZh": "湖畔日料",
+      "town": "tekapo",
+      "categoryLabel": "日料",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "三文鱼刺身",
+        "三文鱼丼",
+        "晚餐要订位"
+      ],
+      "intro": "特卡波唯一的日本料理店，由同一位主厨经营多年，用附近养殖场的三文鱼做刺身、寿司和三文鱼丼，便当套餐很划算。Tripadvisor约4.4分、1400多条评价，2025年的评论仍说点三文鱼不会错。",
+      "booking": "晚餐经常客满，建议提前致电+64 3 680 6688订位。店在主路Blue Lake Eatery & Bar后面。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "6 State Highway 8 (behind Blue Lake Eatery & Bar), Lake Tekapo",
+      "website": "https://www.kohan.co.nz",
+      "sources": [
+        "https://www.mackenzienz.com/visit/kohan-japanese-restaurant/",
+        "https://www.tripadvisor.com/--d723797.html",
+        "https://www.tripadvisor.com/Restaurants-g644415-Lake_Tekapo_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://cdn.fodors.com/world/australia-and-the-pacific/new-zealand/the-southern-alps-and-fiordland/places/mackenzie-country-and-lake-tekapo/restaurants",
+        "https://you.ctrip.com/food/57959/8907731.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-tlv-restaurant-bar",
+      "name": "T.L.V. Restaurant & Bar",
+      "nameZh": "",
+      "town": "tekapo",
+      "categoryLabel": "希腊风欧陆菜",
+      "categoryShort": "欧陆菜",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "湖景",
+        "汉堡口碑好",
+        "评分最高之一"
+      ],
+      "intro": "约2022年开业的湖畔餐厅，做带希腊风味的欧陆菜，海鲜、牛排和汉堡都受好评，有评论称是“全新西兰最好吃的汉堡”。Tripadvisor约4.6分、近400条评价，是10日晚餐和Kohan之外的好选择。",
+      "booking": "旺季晚餐建议提前订位。一般每天中午到21:00营业（来自旅游博客，请以餐厅公布为准）。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "7 Motuariki Lane, Lake Tekapo",
+      "website": "",
+      "sources": [
+        "https://www.mackenzienz.com/visit/t-l-v-restaurant-bar/",
+        "https://www.tripadvisor.com/Restaurants-g644415-Lake_Tekapo_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://wanderlog.com/place/details/2810691/tlv-restaurant--bar",
+        "https://myqueenstowndiary.com/restaurants-in-lake-tekapo/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-greedy-cow-tekapo",
+      "name": "The Greedy Cow",
+      "nameZh": "",
+      "town": "tekapo",
+      "categoryLabel": "咖啡早午餐",
+      "categoryShort": "早午餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "早餐首选",
+        "咖啡好",
+        "份量足"
+      ],
+      "intro": "特卡波镇中心的人气早餐咖啡馆，每天7:30开门，有早餐菜单和橱柜简餐，咖啡和糕点评价好，份量也足。Tripadvisor约4.5分、400多条评价，不过旺季要排队，2026年也有评论抱怨服务慢。",
+      "booking": "不用订位。11日要赶11:00的直升机徒步，建议7:30开门就到，或直接外带。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "Town centre shops, State Highway 8 (Main Street), Lake Tekapo",
+      "website": "",
+      "sources": [
+        "https://www.mackenzienz.com/visit/greedy-cow/",
+        "https://www.tripadvisor.com/Restaurant_Review-g644415-d14766495-Reviews-The_Greedy_Cow_Ltd-Lake_Tekapo_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://cdn.fodors.com/world/australia-and-the-pacific/new-zealand/the-southern-alps-and-fiordland/places/mackenzie-country-and-lake-tekapo/restaurants"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-astro-cafe-mt-john",
+      "name": "Astro Café",
+      "nameZh": "约翰山天文台咖啡馆",
+      "town": "tekapo",
+      "categoryLabel": "景观咖啡馆",
+      "categoryShort": "咖啡馆",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "山顶360°景观",
+        "天文台",
+        "上山收费"
+      ],
+      "intro": "约翰山（Mt John）山顶天文台旁的咖啡馆，可以360度俯瞰特卡波湖和麦肯齐盆地，供应三明治、汤、蛋糕和奶昔。Tripadvisor约4.2分、1000多条评价，景色比餐点更值得专程上山。",
+      "booking": "不用订位。每天9:00–14:00营业，13:30最后点单；开车上山每车收费约14纽币，也可徒步往返约1.5小时。按行程不容易排进去，10日下午若能在13:30前到特卡波可以考虑。",
+      "meals": [
+        "lunch"
+      ],
+      "address": "Mt John Observatory summit, Godley Peaks Road, Lake Tekapo",
+      "website": "",
+      "sources": [
+        "https://www.mackenzienz.com/visit/astro-cafe/",
+        "https://www.tripadvisor.com/Restaurants-g644415-Lake_Tekapo_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://sa.trip.com/travel-guide/Lake%20Tekapo-57959/restaurants"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-sir-edmund-hillary-cafe-hermitage",
+      "name": "Sir Edmund Hillary Café & Bar (The Hermitage)",
+      "nameZh": "希拉里爵士咖啡吧（隐士庐酒店）",
+      "town": "mount-cook",
+      "categoryLabel": "咖啡简餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "酒店内",
+        "自助点餐",
+        "时间灵活"
+      ],
+      "intro": "隐士庐酒店（The Hermitage）里的自助式咖啡吧，供应午餐简餐和饮品，营业时间长（约9:30–17:00）。直升机徒步结束时间不好预估，这里最稳妥。想吃正式一点，可以选酒店的Alpine Restaurant午餐（12:00–14:00）。",
+      "booking": "不用订位。约9:30–17:00营业（资料未注明日期，请以酒店公布为准）。",
+      "meals": [
+        "lunch"
+      ],
+      "address": "The Hermitage Hotel, 89 Terrace Road, Aoraki/Mount Cook Village",
+      "website": "https://www.hermitage.co.nz",
+      "sources": [
+        "https://mackenzienz.com/?p=4678",
+        "https://www.hermitage.co.nz/stay/mt-cook-lodge",
+        "https://www.hermitage.co.nz/stay/hermitage-hotel",
+        "https://mtcookskiplanes.com/where-to-eat-drink-in-aoraki-mt-cook-village"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-poppies-twizel",
+      "name": "Poppies Café & Restaurant",
+      "nameZh": "",
+      "town": "twizel",
+      "categoryLabel": "新西兰菜",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "花园餐厅",
+        "三文鱼和鹿肉",
+        "必须订位"
+      ],
+      "intro": "特威泽尔口碑最好的餐厅之一，花园环境，用自家菜园的有机蔬菜，菜单有肉类、海鲜、披萨和意面，三文鱼和鹿肉菜最受好评。2026年仍好评不断，评论提醒经常客满。",
+      "booking": "晚餐务必提前订位，2026年的评论多次提到满座。旅游局旧资料显示周三、周四休息（11日是周五），请再确认。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "1 Benmore Place, Twizel",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurant_Review-g612499-d812355-Reviews-Poppies_Cafe-Twizel_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://www.tripadvisor.com.au/Restaurant_Review-g612499-d812355-Reviews-Poppies_Cafe-Twizel_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://www.mackenzienz.com/visit/poppies-cafe-and-restaurant/",
+        "https://cdn.fodors.com/world/australia-and-the-pacific/new-zealand/the-southern-alps-and-fiordland/places/twizel/restaurants"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-ministry-of-works-twizel",
+      "name": "Ministry of Works Bar & Eatery",
+      "nameZh": "",
+      "town": "twizel",
+      "categoryLabel": "酒吧餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "精酿啤酒",
+        "啤酒花园",
+        "气氛轻松"
+      ],
+      "intro": "镇中心广场旁的酒吧餐厅，当地人和游客都爱来。有精酿啤酒、新西兰葡萄酒和各国街头小吃风味的菜，2026年8–10月的评论盛赞炸鱼、汉堡和海鲜意面。气氛轻松，适合不想吃得太正式的晚上。",
+      "booking": "一般可以直接去，周末晚上人多可先打电话。",
+      "meals": [
+        "dinner"
+      ],
+      "address": "Town square, Market Place (opposite the playground), Twizel",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurant_Review-g612499-d9710725-Reviews-Ministry_of_Works_Bar_Eatery-Twizel_Mackenzie_District_Canterbury_Region_South_Is.html",
+        "https://mackenzienz.com/tours/ministry-of-works-bar-and-eatery/",
+        "https://www.tripadvisor.co.nz/Restaurants-g612499-Twizel_Mackenzie_District_Canterbury_Region_South_Island.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-twizel-bakery-cafe",
+      "name": "Twizel Bakery Café",
+      "nameZh": "",
+      "town": "twizel",
+      "categoryLabel": "烘焙早餐",
+      "price": "$",
+      "badges": [],
+      "tags": [
+        "7点开门",
+        "全天早餐",
+        "适合早出发"
+      ],
+      "intro": "镇中心的面包咖啡馆，每天7:00开门，全天供应早餐和现烤面包点心，适合12日一早出发前快快吃顿早饭。2026年有评论说派烤过了头，建议点早餐盘和咖啡。",
+      "booking": "不用订位，每天7:00–17:00营业。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "5 Market Place, Twizel",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.co.nz/Restaurant_Review-g612499-d11871913-Reviews-Twizel_Bakery_Cafe-Twizel_Mackenzie_District_Canterbury_Region_South_Island.html",
+        "https://www.mackenzienz.com/visit/twizel-bakery-cafe/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-federal-diner-wanaka",
+      "name": "Federal Diner",
+      "nameZh": "",
+      "town": "wanaka",
+      "categoryLabel": "咖啡早午餐",
+      "categoryShort": "早午餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "早餐首选",
+        "司康饼",
+        "7点开门"
+      ],
+      "intro": "Helwick街上的人气咖啡馆，每天早上7点开门。班尼迪克蛋和早餐碗口碑好，柜台的芝士司康、枣子司康是招牌，适合13日吃完早餐再出发。",
+      "booking": "一般随到随坐；周日上午人多，建议8点前到。各来源营业时间不一，出发前查官网。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "47 Helwick Street, Wānaka",
+      "website": "https://www.federaldiner.co.nz",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurants-g612500-zfp2-Wanaka_Otago_Region_South_Island.html",
+        "https://neatplaces.co.nz/places/wanaka/eat-drink/federal-diner",
+        "https://www.bachcare.co.nz/blog/?p=9530"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-francesca-wanaka",
+      "name": "Francesca",
+      "nameZh": "",
+      "town": "wanaka",
+      "categoryLabel": "意大利菜",
+      "price": "$$",
+      "badges": [
+        "米其林指南 2026 必比登推介"
+      ],
+      "tags": [
+        "必比登",
+        "手工意面",
+        "柴火披萨"
+      ],
+      "intro": "瓦纳卡市中心的休闲意大利餐厅，入选2026年首版米其林新西兰指南必比登推介。主打柴火披萨和手工意面，牛脸颊土豆团子、提拉米苏常被推荐，人均约30纽币。",
+      "booking": "每天午餐12:00-15:00；周六中午建议提前电话03 443 5599订位。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "93 Ardmore Street, Wānaka",
+      "website": "",
+      "sources": [
+        "https://joinpearl.co/restaurants/wanaka/francesca",
+        "https://www.odt.co.nz/node/3676143",
+        "https://dish.co.nz/news-reviews/events/new-zealand-michelin-guide-2026-results",
+        "https://kidsonboard.co.nz/activity_dw/francescas-kitchen-wanaka/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-bombay-palace-wanaka",
+      "name": "Bombay Palace Wānaka",
+      "nameZh": "",
+      "town": "wanaka",
+      "categoryLabel": "印度菜",
+      "price": "$$",
+      "badges": [
+        "米其林指南 2026 必比登推介"
+      ],
+      "tags": [
+        "湖景露台",
+        "印度咖喱",
+        "必比登"
+      ],
+      "intro": "Ardmore街二楼的传统印度餐厅，2026年米其林必比登推介。露台正对瓦纳卡湖，咖喱和烤饼味道扎实、价格亲民，午市12:30-15:00，适合想换口味的一餐。",
+      "booking": "晴天露台很抢手，建议提前订位并备注露台座。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "Level 1, 145 Ardmore Street, Wānaka",
+      "website": "",
+      "sources": [
+        "https://guide.michelin.com/en/south-island/wanaka_2306683/restaurant/bombay-palace-wanaka",
+        "https://joinpearl.co/restaurants/wanaka/bombay-palace-wanaka",
+        "https://www.enprimeurclub.com/restaurants/bombay-palace-w-naka-wanaka-restaurant"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-relishes-cafe-wanaka",
+      "name": "Relishes Cafe",
+      "nameZh": "",
+      "town": "wanaka",
+      "categoryLabel": "咖啡早午餐",
+      "categoryShort": "早午餐",
+      "price": "$$",
+      "badges": [
+        "Tripadvisor 旅行者之选"
+      ],
+      "tags": [
+        "湖畔",
+        "早餐",
+        "咖啡好"
+      ],
+      "intro": "Ardmore湖滨街上的老牌咖啡馆，Tripadvisor约1500条评价，2026年仍好评不断。班尼迪克蛋、炖梨燕麦粥受推崇，咖啡出色，部分座位隔着马路可望湖。",
+      "booking": "早餐通常无需订位；想坐窗边看湖请早点到（约7:00-7:30开门）。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "99 Ardmore Street, Wānaka",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurant_Review-g612500-d724829-Reviews-Relishes_Cafe-Wanaka_Otago_Region_South_Island.html",
+        "https://www.tripadvisor.com/Restaurants-g612500-zfp2-Wanaka_Otago_Region_South_Island.html",
+        "https://wanderlog.com/place/details/1154343/relishes-cafe"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-fergburger-queenstown",
+      "name": "Fergburger",
+      "nameZh": "弗格汉堡",
+      "town": "queenstown",
+      "categoryLabel": "汉堡",
+      "price": "$",
+      "badges": [],
+      "tags": [
+        "排队名店",
+        "电话点餐",
+        "营业到凌晨"
+      ],
+      "intro": "皇后镇最出名的汉堡店，Tripadvisor约1.5万条评价，2026年8-10月仍有大量好评。招牌Fergburger牛肉堡分量惊人，另有羊肉、鹿肉等口味；隔壁Ferg Baker可买派和甜点。",
+      "booking": "不接受订位。午晚餐高峰常排队30-60分钟；可先打03 441 1232电话点餐，到店直接去左侧Phone Order Pickup窗口取餐（电话有时难打通）；付款后小票二维码可追踪出餐进度；早上9点前或深夜人最少。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "42 Shotover Street, Queenstown",
+      "website": "https://www.fergburger.com",
+      "sources": [
+        "https://www.tripadvisor.com.au/Restaurant_Review-g255122-d1102295-Reviews-Fergburger-Queenstown_Otago_Region_South_Island.html",
+        "https://www.crazyandco.uk/2026/06/25/burger-joints-of-the-world-fergburger-the-legendary-queenstown-burger/",
+        "https://www.fergburger.com/",
+        "https://destinationlesstravel.com/best-burger-in-queenstown",
+        "https://kidsonboard.co.nz/?p=674"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-essence-roki-queenstown",
+      "name": "Essence (ROKI Collection)",
+      "nameZh": "",
+      "town": "queenstown",
+      "categoryLabel": "新西兰精致菜",
+      "categoryShort": "精致菜",
+      "price": "$$$$",
+      "badges": [
+        "米其林二星 2026（全新西兰唯一）",
+        "Cuisine 2026 年度餐厅",
+        "Cuisine 2026 三顶帽"
+      ],
+      "tags": [
+        "米其林二星",
+        "湖景",
+        "纪念日"
+      ],
+      "intro": "ROKI Collection酒店内俯瞰瓦卡蒂普湖的品鉴菜单餐厅，2026年拿下全新西兰唯一的米其林二星及Cuisine年度餐厅。仅供晚餐，分短版A Taste of Essence（约$295/人）和完整版The Journey（约$450/人）。",
+      "booking": "仅周二至周六晚餐，常提前很久订满，请尽快直接联系餐厅（03 442 4112）预订；本行程只能安排在16日或17日。",
+      "meals": [
+        "dinner"
+      ],
+      "address": "ROKI Collection, 2 Brunswick Street, Queenstown",
+      "website": "",
+      "sources": [
+        "https://www.cuisine.co.nz/awards/restaurant-of-the-year-2026/",
+        "https://guide.michelin.com/us/en/south-island/queenstown_2306160/restaurant/essence-1247217",
+        "https://guide.michelin.com/nz/en/article/michelin-guide-ceremony/michelin-guide-new-zealand-2026-restaurant-selection",
+        "https://www.odt.co.nz/otago/queenstown/more-accolades-for-essence-mm7jg8by",
+        "https://experiencequeenstown.com/news/michelin-dining-queenstown-guide"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-sherwood-queenstown",
+      "name": "Sherwood",
+      "nameZh": "",
+      "town": "queenstown",
+      "categoryLabel": "新西兰菜",
+      "price": "$$$",
+      "badges": [
+        "米其林一星 2026",
+        "Cuisine 2026 两顶帽"
+      ],
+      "tags": [
+        "湖景",
+        "自家菜园",
+        "米其林一星"
+      ],
+      "intro": "Frankton路山坡上的精品酒店餐厅，俯瞰瓦卡蒂普湖与Remarkables山。2026年获米其林一星，许多食材来自自家菜园，柴火烤饼和分享盘是亮点，傍晚边看湖景边吃最惬意。",
+      "booking": "早午晚餐每天营业；晚餐建议提前1-2周订位，并备注想要看湖的座位（电话+64 3 450 1090）。",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "address": "554 Frankton Road, Queenstown",
+      "website": "",
+      "sources": [
+        "https://experiencequeenstown.com/eat-drink/restaurants/sherwood",
+        "https://indagare.com/lodging/sherwood-queenstown",
+        "https://lwb.co.nz/content/queenstown-restaurants-take-home-the-countrys-first-michelin-star/",
+        "https://www.cuisine.co.nz/awards/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-botswana-butchery-queenstown",
+      "name": "Botswana Butchery",
+      "nameZh": "",
+      "town": "queenstown",
+      "categoryLabel": "牛排",
+      "price": "$$$",
+      "badges": [
+        "米其林指南 2026 入选"
+      ],
+      "tags": [
+        "湖畔",
+        "牛排羊肉",
+        "生蚝"
+      ],
+      "intro": "湖滨Marine Parade上的老牌牛排馆，入选2026米其林指南，窗外就是瓦卡蒂普湖。招牌是各式牛排、鹿肉和慢烤羊肩，米其林还推荐生蚝和当日鲜鱼，主菜约35-94纽币。",
+      "booking": "午晚餐每天营业；晚餐建议提前几天订位（03 442 6994），备注想要湖景窗边座。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "17 Marine Parade, Queenstown",
+      "website": "https://www.botswanabutchery.co.nz",
+      "sources": [
+        "https://guide.michelin.com/en/south-island/queenstown_2306160/restaurant/botswana-butchery",
+        "https://www.cuisine.co.nz/botswana-butchery-qt/",
+        "https://www.queenstownnz.co.nz/stories/post/discover-queenstowns-michelin-guide-restaurants/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-bespoke-kitchen-queenstown",
+      "name": "Bespoke Kitchen",
+      "nameZh": "",
+      "town": "queenstown",
+      "categoryLabel": "咖啡早午餐",
+      "categoryShort": "早午餐",
+      "price": "$$",
+      "badges": [
+        "2015 新西兰年度咖啡馆"
+      ],
+      "tags": [
+        "早午餐",
+        "近缆车站",
+        "素食友好"
+      ],
+      "intro": "靠近天空缆车站的人气早午餐店，Tripadvisor约4.6分、千余条评价，曾获2015年新西兰年度咖啡馆。每天现做柜台点心，松饼、班尼迪克蛋和素食版班尼迪克都受好评。",
+      "booking": "高峰常需排队，建议8点左右到；约7:30开门，16:00或17:00打烊（各来源不一）。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "9 Isle Street, Queenstown",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurants-g255122-zfp10606-Queenstown_Otago_Region_South_Island.html",
+        "https://allpressespresso.com/find/bespoke-kitchen",
+        "https://www.queenstownnz.co.nz/stories/post/72-food-filled-hours-in-queenstown/",
+        "https://www.neatplaces.co.nz/places/queenstown/eat-drink/bespoke-kitchen"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-sundays-frankton",
+      "name": "Sundays",
+      "nameZh": "",
+      "town": "queenstown",
+      "categoryLabel": "披萨",
+      "price": "$$",
+      "badges": [
+        "米其林指南 2026 必比登推介"
+      ],
+      "tags": [
+        "老教堂",
+        "柴火披萨",
+        "自驾顺路"
+      ],
+      "intro": "Frankton一座1933年老教堂改建的餐厅，2026年米其林必比登推介。柴火窑烤酸种那不勒斯披萨配分享小盘，价格实在；离机场近，去箭镇或克伦威尔都顺路，适合自驾午餐。",
+      "booking": "周三至周日中午起营业，周一、周二休息（14日不营业）；周末建议提前订位。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "26 Hansen Road, Frankton, Queenstown",
+      "website": "",
+      "sources": [
+        "https://experiencequeenstown.com/eat-drink/restaurants/sundays",
+        "https://neatplaces.co.nz/places/queenstown/eat-drink/sundays",
+        "https://www.queenstownnz.co.nz/stories/post/discover-queenstowns-michelin-guide-restaurants/",
+        "https://eglobaltravelmedia.com.au/2026/07/02/queenstown-wanaka-shine-in-michelin-guide-debut/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-rata-queenstown",
+      "name": "Rātā",
+      "nameZh": "",
+      "town": "queenstown",
+      "categoryLabel": "新西兰菜",
+      "price": "$$$",
+      "badges": [
+        "米其林一星 2026"
+      ],
+      "tags": [
+        "米其林一星",
+        "市中心",
+        "时令食材"
+      ],
+      "intro": "米其林星级名厨Josh Emett在市中心开的现代新西兰菜餐厅，2026年获米其林一星。主打南岛时令食材，氛围比Essence轻松；曾推出两道/三道式午市套餐，性价比高，出发前请确认。",
+      "booking": "晚餐建议提前约一周在官网订位；午市套餐是否仍供应请出发前确认。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "43 Ballarat Street, Queenstown",
+      "website": "https://ratadining.co.nz",
+      "sources": [
+        "https://www.queenstownnz.co.nz/explore/listing/rata",
+        "https://ratadining.co.nz/about-us/",
+        "https://lwb.co.nz/content/queenstown-restaurants-take-home-the-countrys-first-michelin-star/",
+        "https://www.gourmettraveller.com.au/dining-out/michelin-new-zealand-2026/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-tanoshi-cow-lane-queenstown",
+      "name": "Tanoshi Cow Lane",
+      "nameZh": "",
+      "town": "queenstown",
+      "categoryLabel": "日料",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "日式小盘",
+        "适合分享",
+        "价格亲民"
+      ],
+      "intro": "Cow Lane小巷里的日式小盘料理，Tripadvisor 2026年约4.6分。姜汁猪肉乌冬、大阪烧、刺身和煎饺常被点名，也可选主厨发办（Trust the Chef），价格亲民，吃腻西餐时换换口味。",
+      "booking": "可现场排队；晚餐高峰建议先打电话03 441 8397订位。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "Cow Lane, Queenstown",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurants-g255122-c3-Queenstown_Otago_Region_South_Island.html",
+        "https://wanderlog.com/place/details/544106/tanoshi-cow-lane",
+        "https://sa.trip.com/travel-guide/foods/Queenstown-684-restaurant/Tanoshi%20Teppan%20and%20Sake%20Bar-28170512",
+        "https://lwb.co.nz/content/tanoshi-expands-to-christchurch"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-aosta-arrowtown",
+      "name": "Aosta",
+      "nameZh": "",
+      "town": "arrowtown",
+      "categoryLabel": "意大利菜",
+      "price": "$$$",
+      "badges": [
+        "Cuisine 2025 年度地区餐厅",
+        "Cuisine 2026 两顶帽",
+        "米其林指南 2026 必比登推介"
+      ],
+      "tags": [
+        "北意菜",
+        "必比登",
+        "晚餐首选"
+      ],
+      "intro": "箭镇主街上的北意大利餐厅，Cuisine 2025年度地区餐厅、2026年米其林必比登推介。从小食、意面到主菜都用本地食材做北意风味，主菜约22-48纽币，同级别里很划算。",
+      "booking": "晚餐每晚营业，午餐仅周末（各来源为周五或周六起）；可现场等位，但晚餐建议提前预订。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "18 Buckingham Street, Arrowtown",
+      "website": "",
+      "sources": [
+        "https://www.cuisine.co.nz/awards/regional-restaurant-of-the-year-2025/",
+        "https://www.cuisine.co.nz/awards/",
+        "https://experiencequeenstown.com/eat-drink/restaurants/aosta",
+        "https://neatplaces.co.nz/stories/arrowtown-food-drink-guide",
+        "https://www.odt.co.nz/lifestyle/food-wine/tip-your-hat-great-foodies"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-fork-and-tap-arrowtown",
+      "name": "The Fork and Tap",
+      "nameZh": "",
+      "town": "arrowtown",
+      "categoryLabel": "酒馆餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "酒馆午餐",
+        "精酿啤酒",
+        "炸鱼薯条"
+      ],
+      "intro": "箭镇主街上的人气酒馆，Tripadvisor约4.5分、全镇排名第二。猪肉三明治、炸鱼薯条等酒馆菜分量足，配精酿啤酒，逛完小镇随意吃顿午餐很合适；2026年也有评价认为一般。",
+      "booking": "午餐一般无需订位，到店点餐即可。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "51 Buckingham Street, Arrowtown",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurant_Review-g257473-d726329-Reviews-The_Fork_and_Tap-Arrowtown_Otago_Region_South_Island.html",
+        "https://www.tripadvisor.com/Restaurants-g257473-zfp30-Arrowtown_Otago_Region_South_Island.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-provisions-arrowtown",
+      "name": "Provisions of Arrowtown",
+      "nameZh": "",
+      "town": "arrowtown",
+      "categoryLabel": "咖啡早午餐",
+      "categoryShort": "早午餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "早午餐",
+        "简餐",
+        "人气咖啡馆"
+      ],
+      "intro": "箭镇主街上的人气咖啡馆，Tripadvisor近600条评价4.3分，Restaurant Guru逾1600条评价4.4分。牛胸肉等热食受好评，适合箭镇半日游时吃早午餐或简单午餐。",
+      "booking": "无需订位，午间高峰可能要等座。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "65 Buckingham Street, Arrowtown",
+      "website": "",
+      "sources": [
+        "https://airial.travel/restaurants/new-zealand/queenstown/provisions-of-arrowtown-Q-LARXjy",
+        "https://www.tripadvisor.com/Restaurants-g257473-zfp30-Arrowtown_Otago_Region_South_Island.html",
+        "https://restaurantguru.com/lunch-Arrowtown-m9622"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-te-anau-the-fat-duck",
+      "name": "The Fat Duck",
+      "nameZh": "",
+      "town": "te-anau",
+      "categoryLabel": "餐酒馆",
+      "price": "$$",
+      "badges": [
+        "2025新西兰餐酒馆50强总冠军",
+        "TripAdvisor 4.2★（约1,880条评价）"
+      ],
+      "tags": [
+        "午晚餐皆可",
+        "需订位"
+      ],
+      "intro": "2025年新西兰餐酒馆评选总冠军，菜单选择多，牛排、汉堡、炸鱼薯条、意面和素食都有。午餐和晚餐都营业，适合15日任选一餐，晚餐人多需订位。",
+      "booking": "晚餐务必提前订位（03 249 8480），午餐一般可直接去；周二是否营业请出发前确认。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "124 Town Centre, Te Anau",
+      "website": "",
+      "sources": [
+        "https://www.1news.co.nz/2025/03/27/new-zealands-best-gastropub-named/",
+        "https://www.tripadvisor.co.uk/Restaurant_Review-g255124-d1023269-Reviews-The_Fat_Duck-Te_Anau_Fiordland_National_Park_Murihiku_Southland_South_Island.html",
+        "https://hikingnewzealand.com/blog/best-restaurants-and-activities-in-te-anau"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-te-anau-miles-better-pies",
+      "name": "Miles Better Pies",
+      "nameZh": "",
+      "town": "te-anau",
+      "categoryLabel": "烘焙派",
+      "price": "$",
+      "badges": [
+        "TripAdvisor 4.4★（约1,100条评价）"
+      ],
+      "tags": [
+        "6点开门",
+        "外带午餐",
+        "鹿肉派"
+      ],
+      "intro": "蒂阿瑙知名派店，清晨6点开门，正好在开往米尔福德峡湾前买早餐。鹿肉派、羊肉薄荷派、牛排芝士派都受好评，可多买几个当路上的午餐。",
+      "booking": "无需预订；16日6点开门就去买，7点前出发。米尔福德公路沿途几乎没有补给，午餐一并带上。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "1 Lakefront Drive, Te Anau",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com.au/Restaurant_Review-g255124-d1549924-Reviews-Miles_Better_Pies-Te_Anau_Fiordland_National_Park_Murihiku_Southland_South_Island.html",
+        "https://www.airbnb.pl/things-to-do/places/924bcfd9-8147-4b25-8cba-dabca1ab6259",
+        "https://seethesouthisland.com/top-12-pies-in-the-south-island-new-zealand/",
+        "https://tasteatlas.com/miles-better-pies"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-te-anau-sandfly-cafe",
+      "name": "Sandfly Cafe",
+      "nameZh": "",
+      "town": "te-anau",
+      "categoryLabel": "咖啡早午餐",
+      "categoryShort": "早午餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "松饼",
+        "户外座位"
+      ],
+      "intro": "镇中心小巷里的本地人气咖啡馆，咖啡和松饼口碑好，天气好可以坐在户外。适合15日午间轻食；16日若想坐下吃早餐，需先确认开门时间。",
+      "booking": "无需预订；开门时间有7点和8点两种说法，16日早餐请提前一天致电03 249 9529确认。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "9 The Lane, Te Anau",
+      "website": "",
+      "sources": [
+        "https://en.wikivoyage.org/wiki/Te_Anau",
+        "https://www.frommers.com/destinations/te-anau/restaurants",
+        "https://www.millenniumhotels.com/en/attractions/new-zealand/te-anau/sandfly-cafe/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-te-anau-redcliff",
+      "name": "Redcliff Restaurant & Bar",
+      "nameZh": "",
+      "town": "te-anau",
+      "categoryLabel": "新西兰菜",
+      "price": "$$$",
+      "badges": [
+        "Fodor's推荐"
+      ],
+      "tags": [
+        "鹿肉野味",
+        "温馨小屋",
+        "需订位"
+      ],
+      "intro": "蒂阿瑙经营多年的口碑餐厅，开在质朴温馨的小屋里，主打本地鹿肉、野兔、羊排和蓝鳕鱼，是镇上好好吃一顿晚餐的首选，价格偏高。",
+      "booking": "12月旺季务必提前通过官网或电话订位，建议订18点左右。",
+      "meals": [
+        "dinner"
+      ],
+      "address": "12 Mokonui Street, Te Anau",
+      "website": "https://www.theredcliff.co.nz",
+      "sources": [
+        "https://hikingnewzealand.com/blog/best-restaurants-and-activities-in-te-anau",
+        "https://cdn.fodors.com/world/australia-and-the-pacific/new-zealand/the-southern-alps-and-fiordland/places/te-anau/restaurants",
+        "https://au.trip.com/restaurant/te-anau-1862-detail/redcliff-restaurant-and-bar-61114683.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-mt-difficulty-bannockburn",
+      "name": "Mt Difficulty Wines Cellar Door & Restaurant",
+      "nameZh": "难山酒庄",
+      "town": "cromwell",
+      "categoryLabel": "酒庄餐厅",
+      "price": "$$$",
+      "badges": [],
+      "tags": [
+        "酒庄午餐",
+        "黑皮诺",
+        "需预订"
+      ],
+      "intro": "克伦威尔旁Bannockburn的知名酒庄餐厅，Tripadvisor约600条评价4.6分，当地午餐排名第一。鸭肉、鹿肉主菜常获好评，可配自家中奥塔哥黑皮诺，午餐12:00-15:00供应。",
+      "booking": "午餐须提前预订（03 445 3445）；部分资料称仅周三至周日营业，18日是周五，不受影响。",
+      "meals": [
+        "lunch"
+      ],
+      "address": "73 Felton Road, Bannockburn, Cromwell",
+      "website": "https://www.mtdifficulty.co.nz",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurants-g7692392-zfp30-Bannockburn_Cromwell_Central_Otago_Otago_Region_South_Island.html",
+        "https://www.newzealand.com/nz/plan/business/mt-difficulty-wines-cellar-door-and-restaurant/",
+        "https://foleywines.co.nz/contact"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-wrinkly-rams-omarama",
+      "name": "The Wrinkly Rams",
+      "nameZh": "",
+      "town": "omarama",
+      "categoryLabel": "咖啡简餐",
+      "price": "$",
+      "badges": [],
+      "tags": [
+        "公路休息站",
+        "羊肉三明治",
+        "剪羊毛表演"
+      ],
+      "intro": "奥马拉马主路旁的咖啡馆兼礼品店，Tripadvisor约540条评价、镇上排名第一。柜台三明治和热食选择多，羊肉开放三明治最受好评；夏季常有剪羊毛表演，正好在皇后镇去奥马鲁途中。",
+      "booking": "无需订位；夏季约6:30-16:30营业。剪羊毛表演需另行预订。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "24–30 Omarama Avenue (SH8), Ōmārama",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com.au/Restaurant_Review-g609166-d1576406-Reviews-The_Wrinkly_Rams-Omarama_Canterbury_Region_South_Island.html",
+        "https://www.tripadvisor.com/Restaurants-g609166-zfp30-Omarama_Canterbury_Region_South_Island.html",
+        "https://www.newzealand.com/au/plan/business/the-wrinkly-ram/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-oamaru-cucina",
+      "name": "Cucina",
+      "nameZh": "",
+      "town": "oamaru",
+      "categoryLabel": "阿根廷·地中海融合菜",
+      "categoryShort": "融合菜",
+      "price": "$$$",
+      "badges": [
+        "Cuisine美食指南2025入选",
+        "2024奥塔哥餐饮大奖·年度最佳餐厅",
+        "TripAdvisor 4.4★（约650条评价）"
+      ],
+      "tags": [
+        "主厨套餐",
+        "熟成牛排",
+        "17点开门"
+      ],
+      "intro": "奥马鲁屡获大奖的餐厅，融合阿根廷巴塔哥尼亚与地中海风味，招牌是自制意面和55天熟成肋眼牛排，也可以选主厨套餐。17点开门，吃完正好去看企鹅。",
+      "booking": "务必提前订周五17点左右的位子，并说明需在20点前离开去看企鹅；电话03 434 5696。",
+      "meals": [
+        "dinner"
+      ],
+      "address": "1 Tees Street, Oamaru",
+      "website": "",
+      "sources": [
+        "https://www.cuisine.co.nz/restaurant-list-2025/",
+        "https://www.cuisine.co.nz/cgfg2023-cucina/",
+        "https://www.restaurantnz.co.nz/2024/07/28/oamarus-cucina-takes-the-lead-dominating-otagos-top-dining-spots/",
+        "https://www.odt.co.nz/regions/north-otago/eatery-sweeps-hospitality-awards",
+        "https://neatplaces.co.nz/places/oamaru-waitaki/eat-drink/cucina",
+        "https://www.tripadvisor.com/Restaurants-g255677-zfp58-Oamaru_Otago_Region_South_Island.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "nz-oamaru-tees-st-cafe",
+      "name": "Tees St Café",
+      "nameZh": "",
+      "town": "oamaru",
+      "categoryLabel": "咖啡早午餐",
+      "categoryShort": "早午餐",
+      "price": "$$",
+      "badges": [],
+      "tags": [
+        "丰盛早餐",
+        "Cucina姊妹店",
+        "周六8:30开门"
+      ],
+      "intro": "Cucina的姊妹咖啡馆，早餐分量足，墨西哥牧场煎蛋（huevos rancheros）和咖啡口碑好。店面小、容易满座，适合19日出发去莫拉基前吃早餐。",
+      "booking": "无需预订；周六8:30开门，店小，建议开门就到。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "3 Tees Street, Oamaru",
+      "website": "",
+      "sources": [
+        "https://neatplaces.co.nz/places/oamaru-waitaki/eat-drink/tees-st",
+        "https://www.tripadvisor.com/Restaurant_Review-g255677-d7303953-Reviews-Tees_Street_Cafe-Oamaru_Otago_Region_South_Island.html",
+        "https://neatplaces.co.nz/stories/best-brunch-oamaru-waitaki"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-oamaru-harbour-street-bakery",
+      "name": "Harbour Street Bakery",
+      "nameZh": "",
+      "town": "oamaru",
+      "categoryLabel": "欧式烘焙",
+      "price": "$",
+      "badges": [
+        "TripAdvisor 4.6★（76条评价）"
+      ],
+      "tags": [
+        "欧式面包",
+        "肉派",
+        "历史街区"
+      ],
+      "intro": "维多利亚历史街区里的欧式面包房，以面包和肉派出名，不少游客说这是在新西兰吃过最好的肉派。适合买早点和路上的零食，周一休息。",
+      "booking": "无需预订；周六约9点或10点开门，热门肉派卖完即止。",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "address": "4 Harbour Street, Oamaru",
+      "website": "",
+      "sources": [
+        "https://neatplaces.co.nz/places/oamaru/eat-drink/harbour-street-bakery",
+        "https://www.tripadvisor.co.nz/Restaurant_Review-g255677-d9590727-Reviews-Harbour_Street_Bakery_Oamaru-Oamaru_Otago_Region_South_Island.html",
+        "https://nzpocketguide.com/the-foodie-guide-to-oamaru/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-oamaru-scotts-brewing-co",
+      "name": "Scotts Brewing Co.",
+      "nameZh": "",
+      "town": "oamaru",
+      "categoryLabel": "精酿披萨",
+      "price": "$$",
+      "badges": [
+        "TripAdvisor 4.4★（约500条评价）"
+      ],
+      "tags": [
+        "精酿啤酒",
+        "石窑披萨",
+        "近企鹅中心"
+      ],
+      "intro": "港口边的精酿啤酒厂，自酿啤酒配石窑披萨，气氛轻松，离蓝企鹅栖息地很近。如果Cucina订不到位，这里是看企鹅前最方便的晚餐备选。",
+      "booking": "周五晚上较忙，建议提前致电03 434 2244订位，或17:30前到。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "1 Wansbeck Street, Oamaru",
+      "website": "https://scottsbrewing.co.nz",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurants-g255677-Oamaru_Otago_Region_South_Island.html",
+        "https://nzpocketguide.com/the-foodie-guide-to-oamaru/",
+        "https://vymaps.com/NZ/Scotts-Brewing-Co--503380/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-moeraki-the-fishwife",
+      "name": "The FishWife",
+      "nameZh": "",
+      "town": "moeraki",
+      "categoryLabel": "海鲜",
+      "price": "$$",
+      "badges": [
+        "TripAdvisor 4.7★（约70条评价）"
+      ],
+      "tags": [
+        "蓝鳕鱼薯条",
+        "龙虾",
+        "码头外带"
+      ],
+      "intro": "莫拉基码头旁的海鲜小店，由第四代渔民经营，蓝鳕鱼薯条最受好评，蒜香煎龙虾也值得一试。半露天外带形式，只在周五到周日营业，19日正好是周六。",
+      "booking": "无需预订；夏季周末人多，可先致电0274 352 907确认当天营业和龙虾供应。",
+      "meals": [
+        "lunch"
+      ],
+      "address": "145 Haven Street, Moeraki",
+      "website": "",
+      "sources": [
+        "https://neatplaces.co.nz/places/oamaru-waitaki/eat-drink/the-fishwife",
+        "https://nzmcd.co.nz/stories/guides/8-great-fish-chip-shops",
+        "https://www.tripadvisor.com.au/Restaurant_Review-g2136969-d19313871-Reviews-The_FishWife-Moeraki_Otago_Region_South_Island.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nz-moeraki-tavern",
+      "name": "Moeraki Tavern",
+      "nameZh": "",
+      "town": "moeraki",
+      "categoryLabel": "酒馆菜",
+      "price": "$$",
+      "badges": [
+        "TripAdvisor 4.5★（约420条评价）"
+      ],
+      "tags": [
+        "乡村酒馆",
+        "炸蓝鳕鱼",
+        "有纯素菜单"
+      ],
+      "intro": "莫拉基村里的酒馆，供应经典新西兰酒吧菜，炸蓝鳕鱼外酥里嫩，另有纯素菜单。每天11点开门，天气不好时是FishWife之外的室内午餐选择。",
+      "booking": "一般无需预订；周末午餐高峰可能要等位，可致电03 439 4705。",
+      "meals": [
+        "lunch",
+        "dinner"
+      ],
+      "address": "144 Haven Street, Moeraki",
+      "website": "",
+      "sources": [
+        "https://www.tripadvisor.com/Restaurant_Review-g2136969-d2074909-Reviews-Moeraki_Tavern-Moeraki_Otago_Region_South_Island.html",
+        "https://www.waitaki.govt.nz/Public-Notices/Alcohol-Licensing/On-and-Off-licence-Moeraki-Tavern",
+        "https://www.happycow.net/oceania/new_zealand/moeraki/print"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

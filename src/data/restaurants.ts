@@ -28,8 +28,12 @@ export function restaurantsIn(id: CategoryId): Restaurant[] {
   return RESTAURANTS.filter((r) => r.category === id).sort((a, b) => a.rank - b.rank);
 }
 
+export function mapsSearchUrl(query: string): string {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
 export function mapsUrl(name: string, place: string): string {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name} ${place}`)}`;
+  return mapsSearchUrl(`${name} ${place}`);
 }
 
 /** Words that name a whole category, so a match only says "this kind of place". */

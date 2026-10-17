@@ -1,5 +1,5 @@
 import { RESTAURANTS } from '../data/restaurants';
-import { STORAGE_KEY, loadPicks, parsePicks, savePicks } from './storage';
+import { STORAGE_KEY, loadPicks, loadWishlist, parsePicks, parseWishlist, savePicks, saveWishlist } from './storage';
 
 const id = RESTAURANTS[0].id;
 
@@ -33,5 +33,30 @@ describe('storage', () => {
     });
     expect(loadPicks()).toEqual({});
     spy.mockRestore();
+  });
+});
+
+describe('storage of reservations and the wishlist', () => {
+  it('keeps valid reservations and drops malformed ones', () => {
+    expect(
+      parsePicks(
+        JSON.stringify({
+          4: { dinner: { kind: 'restaurant', id, reserved: { time: '19:30', note: '2 位' } } },
+          5: { dinner: { kind: 'restaurant', id, reserved: { time: '7pm' } } },
+          6: { lunch: { kind: 'custom', name: '小馆', note: '', reserved: { time: '12:15' } } },
+        }),
+      ),
+    ).toEqual({
+      4: { dinner: { kind: 'restaurant', id, reserved: { time: '19:30', note: '2 位' } } },
+      5: { dinner: { kind: 'restaurant', id } },
+      6: { lunch: { kind: 'custom', name: '小馆', note: '', reserved: { time: '12:15', note: '' } } },
+    });
+  });
+
+  it('round-trips the wishlist and ignores unknown ids', () => {
+    saveWishlist([id, id, 'gone']);
+    expect(loadWishlist()).toEqual([id]);
+    expect(parseWishlist('{"a":1}')).toEqual([]);
+    expect(parseWishlist('oops')).toEqual([]);
   });
 });

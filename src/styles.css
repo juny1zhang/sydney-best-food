@@ -508,7 +508,10 @@ p {
 .row__action {
   flex: 1 1 150px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .sources {
@@ -1142,6 +1145,305 @@ button.cell:hover {
   font-size: 14px;
 }
 
+/* ---------- search, wishlist ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: 14px;
+  padding: 0 6px 0 16px;
+  color: var(--muted);
+}
+.search:focus-within {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(31, 95, 166, 0.18);
+}
+.search input {
+  flex: 1;
+  min-width: 0;
+  min-height: 52px;
+  border: 0;
+  background: transparent;
+  font-size: 16px;
+  color: var(--ink);
+}
+.search input:focus,
+.search input:focus-visible {
+  outline: none;
+}
+.search input::-webkit-search-cancel-button {
+  display: none;
+}
+.search__clear {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.search__clear:hover {
+  background: var(--soft);
+  color: var(--ink);
+}
+.tab--wish svg {
+  color: var(--first);
+}
+.tab--wish[aria-pressed='true'] svg {
+  color: #ffb98f;
+}
+.btn--wish {
+  border-color: var(--line-2);
+  background: var(--surface);
+  color: var(--ink);
+}
+.btn--wish svg {
+  color: var(--first);
+}
+.btn--wish:hover {
+  border-color: var(--first);
+}
+.btn--wish[aria-pressed='true'] {
+  background: #fff1e5;
+  border-color: var(--first);
+  color: #8a3a0c;
+}
+.block__wish {
+  display: inline-flex;
+  vertical-align: 1px;
+  margin-left: 6px;
+  color: var(--first);
+}
+.chip-cat--plain {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+/* ---------- reservations, picker extras ---------- */
+.btn--reserve {
+  border-color: var(--booked);
+  background: #fff7ef;
+  color: #7a3410;
+}
+.btn--reserve:hover {
+  background: #ffe9d4;
+}
+.reserve {
+  background: #fff7ef;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.reserve__fields {
+  display: grid;
+  grid-template-columns: minmax(130px, 160px) minmax(0, 1fr);
+  gap: 12px;
+}
+.reserve .field input {
+  width: 100%;
+}
+.picker__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+.picker__bar .linkish {
+  padding: 0;
+}
+.picker__list li.picker__lucky {
+  box-shadow: inset 0 0 0 2px var(--blue);
+}
+.picker__flag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  margin-right: 6px;
+  border-radius: 6px;
+  background: var(--blue-tint);
+  color: var(--blue-ink);
+  vertical-align: 2px;
+}
+.picker__flag--wish {
+  background: #fff1e5;
+  color: #8a3a0c;
+}
+
+/* ---------- my plan ---------- */
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.plan__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.plan__summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: var(--ink-2);
+}
+.plan__count {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.plan__count--booked {
+  background: var(--booked);
+  color: var(--ink);
+}
+.plan__count--picked {
+  background: var(--blue-tint);
+  color: var(--blue-ink);
+}
+.plan__days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.plan__day {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: minmax(150px, 190px) minmax(0, 1fr) auto;
+  gap: 12px 20px;
+  align-items: start;
+}
+.plan__date {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.plan__date-main {
+  font-size: 17px;
+  font-weight: 800;
+}
+.plan__meals {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.plan__meal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--blue-tint);
+}
+.plan__meal--booked {
+  background: #fff1e5;
+}
+.plan__meal-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+.plan__meal-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink-2);
+}
+.plan__meal-name {
+  font-size: 16px;
+  font-weight: 800;
+}
+.plan__meal .pill {
+  margin-left: auto;
+}
+
+/* ---------- dialogs ---------- */
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 4px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.dialog h2 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.dialog__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dialog__preview {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--ground);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dialog__preview li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+.dialog__preview-name {
+  font-weight: 700;
+}
+/* Two classes so this beats the base .sheet rules further down. */
+@media (min-width: 721px) and (min-height: 501px) {
+  .sheet.sheet--dialog {
+    top: 50%;
+    bottom: auto;
+    max-width: 560px;
+    border-radius: 22px;
+    transform: translateY(-50%);
+    padding-bottom: 24px;
+    animation: none;
+  }
+  .sheet--dialog .sheet__handle {
+    display: none;
+  }
+}
+
 /* ---------- bottom sheet ---------- */
 .sheet-layer {
   position: fixed;
@@ -1336,6 +1638,22 @@ button.cell:hover {
   }
   .panel__head h3 {
     font-size: 26px;
+  }
+  .row__action {
+    justify-content: flex-start;
+  }
+  .plan__day {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px;
+  }
+  .plan__go {
+    justify-self: start;
+  }
+  .reserve__fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .plan__meal .pill {
+    margin-left: 0;
   }
 }
 

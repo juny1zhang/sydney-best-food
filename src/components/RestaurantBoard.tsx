@@ -1,13 +1,15 @@
 import { useRef, useState } from 'react';
-import { CATEGORIES, categoryOf, restaurantsIn } from '../data/restaurants';
+import { CATEGORIES, RESTAURANT_BY_ID, categoryOf, restaurantsIn, searchRestaurants } from '../data/restaurants';
 import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
 import type { CategoryId, Meal, Price, Restaurant } from '../data/types';
 import { dateLabel } from '../lib/calendar';
 import { MEALS, freeSydneyDays, servesMeal, type Picks } from '../lib/plan';
-import { PlusIcon } from './Icons';
+import { CloseIcon, HeartIcon, PlusIcon, SearchIcon } from './Icons';
 import { Segmented } from './Segmented';
+import { Sources } from './Sources';
 
-export type BoardCategory = 'all' | CategoryId;
+/** What the board shows: the overview, the saved list, or one category. */
+export type BoardCategory = 'all' | 'wish' | CategoryId;
 type PriceFilter = 'all' | Price;
 
 const PRICE_OPTIONS: { value: PriceFilter; label: string }[] = [
@@ -41,19 +43,25 @@ interface BoardProps {
   category: BoardCategory;
   onCategory: (c: BoardCategory) => void;
   picks: Picks;
+  wishlist: string[];
+  onToggleWish: (id: string) => void;
   onAdd: (restaurant: Restaurant, day: number, meal: Meal) => void;
 }
 
-export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardProps) {
+export function RestaurantBoard({ category, onCategory, picks, wishlist, onToggleWish, onAdd }: BoardProps) {
   const [price, setPrice] = useState<PriceFilter>('all');
+  const [query, setQuery] = useState('');
   const [expanded, setExpanded] = useState(false);
   const [addingId, setAddingId] = useState<string | null>(null);
   const [addMeal, setAddMeal] = useState<Meal>('dinner');
   const sectionRef = useRef<HTMLElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
 
   const priceOk = (r: Restaurant) => price === 'all' || r.price === price;
   const countIn = (id: CategoryId) => restaurantsIn(id).filter(priceOk).length;
   const total = CATEGORIES.reduce((n, c) => n + countIn(c.id), 0);
+  const wished = wishlist.map((id) => RESTAURANT_BY_ID.get(id)).filter((r): r is Restaurant => !!r);
+  const searching = query.trim().length > 0;
 
   /** The list height changes a lot between views; bring the board's top back into view. */
   const settle = (focusSelector?: string) => {
@@ -66,14 +74,40 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
 
   const pickCategory = (c: BoardCategory, fromBlock = false) => {
     onCategory(c);
+    setQuery('');
     setExpanded(false);
     setAddingId(null);
     settle(fromBlock ? '.tabs [aria-pressed="true"]' : undefined);
   };
 
-  const list = category === 'all' ? [] : restaurantsIn(category).filter(priceOk);
+  let list: Restaurant[] = [];
+  let heading = '';
+  let mixed = false;
+  if (searching) {
+    list = searchRestaurants(query).filter(priceOk);
+    heading = `搜索“${query.trim()}”`;
+    mixed = true;
+  } else if (category === 'wish') {
+    list = wished.filter(priceOk);
+    heading = '想去的店';
+    mixed = true;
+  } else if (category !== 'all') {
+    list = restaurantsIn(category).filter(priceOk);
+    heading = `${categoryOf(category).name}排名`;
+  }
   const visible = expanded ? list : list.slice(0, COLLAPSED_ROWS);
   const listHeadingId = 'list-cat-h';
+  const showOverview = !searching && category === 'all';
+
+  const emptyText = searching
+    ? `没找到“${query.trim()}”${price !== 'all' ? `（${price}）` : ''}，换个关键词试试，比如“烤鸭”“pizza”“Surry Hills”。`
+    : category === 'wish'
+      ? wished.length
+        ? `想去的店里暂时没有 ${price} 的。`
+        : '还没有想去的店。在榜单里点「想去」收藏，挑日子时它们会排在最前面。'
+      : category !== 'all'
+        ? `这个价位暂时没有${categoryOf(category).name}。`
+        : '';
 
   return (
     <section id="list" ref={sectionRef} aria-labelledby="list-h" className="board">
@@ -97,20 +131,58 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
         />
       </div>
 
+      <div className="search" role="search">
+        <label htmlFor="board-q" className="sr-only">
+          搜索榜单
+        </label>
+        <SearchIcon />
+        <input
+          ref={searchRef}
+          id="board-q"
+          type="search"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setExpanded(false);
+            setAddingId(null);
+          }}
+          placeholder="搜店名、菜系或区域，比如：烤鸭、pizza、Surry Hills"
+          autoComplete="off"
+        />
+        {searching && (
+          <button
+            type="button"
+            className="search__clear"
+            aria-label="清除搜索"
+            onClick={() => {
+              setQuery('');
+              searchRef.current?.focus();
+            }}
+          >
+            <CloseIcon size={16} />
+          </button>
+        )}
+      </div>
+
       <div role="group" aria-label="按类别查看" className="tabs">
-        <button type="button" className="tab" aria-pressed={category === 'all'} onClick={() => pickCategory('all')}>
+        <button type="button" className="tab" aria-pressed={!searching && category === 'all'} onClick={() => pickCategory('all')}>
           <span>全部</span>
           <span className="tab__count">{total}</span>
         </button>
+        <button type="button" className="tab tab--wish" aria-pressed={!searching && category === 'wish'} onClick={() => pickCategory('wish')}>
+          <HeartIcon size={14} filled={wished.length > 0} />
+          <span>想去</span>
+          <span className="tab__count">{wished.filter(priceOk).length}</span>
+        </button>
         {CATEGORIES.map((c) => (
-          <button key={c.id} type="button" className="tab" aria-pressed={category === c.id} onClick={() => pickCategory(c.id)}>
+          <button key={c.id} type="button" className="tab" aria-pressed={!searching && category === c.id} onClick={() => pickCategory(c.id)}>
             <span>{c.name}</span>
             <span className="tab__count">{countIn(c.id)}</span>
           </button>
         ))}
       </div>
 
-      {category === 'all' ? (
+      {showOverview ? (
         <div className="blocks">
           {CATEGORIES.map((c) => {
             const all = restaurantsIn(c.id);
@@ -128,7 +200,15 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                       <li key={r.id}>
                         <span className={`rank${r.rank === 1 ? ' rank--first' : ''}`}>{rankLabel(r.rank)}</span>
                         <div className="block__item">
-                          <span className="block__name">{r.name}</span>
+                          <span className="block__name">
+                            {r.name}
+                            {wishlist.includes(r.id) && (
+                              <span className="block__wish">
+                                <HeartIcon size={13} filled />
+                                <span className="sr-only">（想去）</span>
+                              </span>
+                            )}
+                          </span>
                           <span className="muted">
                             {r.suburb} · {r.price}
                           </span>
@@ -152,8 +232,11 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
       ) : (
         <>
           <h2 id={listHeadingId} className="list-heading">
-            {categoryOf(category).name}排名
-            {price !== 'all' && <span className="muted"> · {price}</span>}
+            {heading}
+            <span className="muted">
+              {' '}
+              · {list.length} 家{price !== 'all' ? ` · ${price}` : ''}
+            </span>
           </h2>
           {visible.length ? (
             <ol className="rows" aria-labelledby={listHeadingId}>
@@ -161,6 +244,9 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
                 <RestaurantRow
                   key={r.id}
                   restaurant={r}
+                  mixed={mixed}
+                  wished={wishlist.includes(r.id)}
+                  onToggleWish={() => onToggleWish(r.id)}
                   placements={placementsOf(r.id, picks)}
                   adding={addingId === r.id}
                   onToggleAdd={() => setAddingId(addingId === r.id ? null : r.id)}
@@ -177,19 +263,21 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
             </ol>
           ) : (
             <div className="empty">
-              <p>这个价位暂时没有{categoryOf(category).name}。</p>
-              <button
-                type="button"
-                className="btn btn--outline"
-                onClick={() => {
-                  setPrice('all');
-                  requestAnimationFrame(() =>
-                    sectionRef.current?.querySelector<HTMLElement>('.segmented--pill [aria-pressed="true"]')?.focus({ preventScroll: true }),
-                  );
-                }}
-              >
-                查看全部价位
-              </button>
+              <p>{emptyText}</p>
+              {price !== 'all' && (category !== 'wish' || wished.length > 0 || searching) && (
+                <button
+                  type="button"
+                  className="btn btn--outline"
+                  onClick={() => {
+                    setPrice('all');
+                    requestAnimationFrame(() =>
+                      sectionRef.current?.querySelector<HTMLElement>('.segmented--pill [aria-pressed="true"]')?.focus({ preventScroll: true }),
+                    );
+                  }}
+                >
+                  查看全部价位
+                </button>
+              )}
             </div>
           )}
           {list.length > COLLAPSED_ROWS && (
@@ -215,6 +303,10 @@ export function RestaurantBoard({ category, onCategory, picks, onAdd }: BoardPro
 
 interface RowProps {
   restaurant: Restaurant;
+  /** The list mixes categories (search, saved), so say which category each row is from. */
+  mixed: boolean;
+  wished: boolean;
+  onToggleWish: () => void;
   placements: string[];
   adding: boolean;
   onToggleAdd: () => void;
@@ -224,7 +316,8 @@ interface RowProps {
   onPickDay: (day: number) => void;
 }
 
-function RestaurantRow({ restaurant: r, placements, adding, onToggleAdd, addMeal, onAddMeal, freeDays, onPickDay }: RowProps) {
+function RestaurantRow(props: RowProps) {
+  const { restaurant: r, mixed, wished, onToggleWish, placements, adding, onToggleAdd, addMeal, onAddMeal, freeDays, onPickDay } = props;
   const popId = `add-${r.id}`;
   const mealLabel = MEALS.find((m) => m.key === addMeal)!.label;
   return (
@@ -240,6 +333,7 @@ function RestaurantRow({ restaurant: r, placements, adding, onToggleAdd, addMeal
             </span>
           </div>
           <div className="chips">
+            {mixed && <span className="chip-cat chip-cat--plain">{`${categoryOf(r.category).short}第 ${r.rank} 名`}</span>}
             {r.badges.map((b) => (
               <span key={b} className="badge">
                 {b}
@@ -254,29 +348,13 @@ function RestaurantRow({ restaurant: r, placements, adding, onToggleAdd, addMeal
           <p className="row__intro">{r.intro}</p>
           <span className="muted small">订位：{r.booking}</span>
           {placements.length > 0 && <span className="placed">已在日历：{placements.join('、')}</span>}
-          {r.sources.length > 0 && (
-            <details className="sources">
-              <summary>评价依据（{r.sources.length}）</summary>
-              {r.accolades.length > 0 && (
-                <ul>
-                  {r.accolades.map((a) => (
-                    <li key={a}>{a}</li>
-                  ))}
-                </ul>
-              )}
-              <ul className="sources__links">
-                {r.sources.map((s) => (
-                  <li key={s}>
-                    <a href={s} target="_blank" rel="noreferrer">
-                      {hostOf(s)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </details>
-          )}
+          <Sources sources={r.sources} accolades={r.accolades} />
         </div>
         <div className="row__action">
+          <button type="button" className="btn btn--wish" aria-pressed={wished} aria-label={`想去：${r.name}`} onClick={onToggleWish}>
+            <HeartIcon filled={wished} />
+            <span>想去</span>
+          </button>
           <button
             id={`addbtn-${r.id}`}
             type="button"
@@ -317,12 +395,4 @@ function RestaurantRow({ restaurant: r, placements, adding, onToggleAdd, addMeal
       )}
     </li>
   );
-}
-
-function hostOf(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    return url;
-  }
 }

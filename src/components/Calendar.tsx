@@ -1,25 +1,13 @@
 import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
-import { categoryOf } from '../data/restaurants';
 import type { Meal } from '../data/types';
 import { WEEK_HEADERS, dateLabel, monthGrid } from '../lib/calendar';
-import { MEALS, mealEntry, type MealEntry, type Picks } from '../lib/plan';
+import { MEALS, entryCategory, entryName, isReserved, mealEntry, reservedTime, type MealEntry, type Picks } from '../lib/plan';
 
 type CellLook = 'plain' | 'nz' | 'travel' | 'picked' | 'booked';
 
-export function entryName(e: MealEntry): string {
-  if (e.status === 'booked') return e.booking.venue.name;
-  if (e.status === 'picked') return e.restaurant.name;
-  return e.pick.name;
-}
-
-function entryCategory(e: MealEntry): string {
-  if (e.status === 'booked') return e.booking.venue.categoryLabel;
-  if (e.status === 'picked') return categoryOf(e.restaurant.category).short;
-  return '自己记的';
-}
-
 function entryStatus(e: MealEntry): string {
-  return e.status === 'booked' ? `已预订 ${e.booking.time}` : '已选好';
+  const time = reservedTime(e);
+  return isReserved(e) ? `已预订${time ? ` ${time}` : ''}` : '已选好，未订位';
 }
 
 /** The calendar button for a day, used to put focus back on the calendar. */
@@ -77,7 +65,7 @@ function DayCell({ day, picks, selected, onSelect }: CellProps) {
   const meals = MEALS.map((m) => ({ meal: m, entry: mealEntry(day, m.key, picks) })).filter(
     (x): x is { meal: (typeof MEALS)[number]; entry: MealEntry } => x.entry !== null,
   );
-  const booked = meals.some((m) => m.entry.status === 'booked');
+  const booked = meals.some((m) => isReserved(m.entry));
   let look: CellLook = info.region === 'nz' ? 'nz' : info.region === 'travel' ? 'travel' : 'plain';
   if (meals.length) look = booked ? 'booked' : 'picked';
   const loc = info.region === 'syd' ? '悉尼' : (info.loc ?? '');
@@ -108,7 +96,7 @@ function DayCell({ day, picks, selected, onSelect }: CellProps) {
       {meals.map(({ meal, entry }) => (
         <span key={meal.key} className="cell__meal">
           <span className="cell__meal-name" title={`${meal.label} · ${entryName(entry)}`}>
-            {entry.status === 'booked' && <CheckIcon />}
+            {isReserved(entry) && <CheckIcon />}
             {meal.short} · {entryName(entry)}
           </span>
           <span className="cell__chip">{entryCategory(entry)}</span>

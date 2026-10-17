@@ -6,13 +6,15 @@ interface SheetProps {
   onClose: () => void;
   /** Where focus goes on close when the element that opened the sheet is gone. */
   fallbackFocus: () => HTMLElement | null;
+  /** "dialog" centres the panel on wider screens instead of docking it to the bottom. */
+  variant?: 'sheet' | 'dialog';
   children: ReactNode;
 }
 
 const FOCUSABLE = 'button:not([disabled]), a[href], input, textarea, select, summary';
 
 /** Modal sheet that slides up from the bottom on phones and tablets. */
-export function BottomSheet({ labelledBy, onClose, fallbackFocus, children }: SheetProps) {
+export function BottomSheet({ labelledBy, onClose, fallbackFocus, variant = 'sheet', children }: SheetProps) {
   const ref = useRef<HTMLDivElement>(null);
   const fallbackRef = useRef(fallbackFocus);
   fallbackRef.current = fallbackFocus;
@@ -65,7 +67,7 @@ export function BottomSheet({ labelledBy, onClose, fallbackFocus, children }: Sh
   return (
     <div className="sheet-layer">
       <div className="sheet-scrim" onClick={onClose} aria-hidden="true" />
-      <div ref={ref} className="sheet" role="dialog" aria-modal="true" aria-labelledby={labelledBy} tabIndex={-1}>
+      <div ref={ref} className={`sheet${variant === 'dialog' ? ' sheet--dialog' : ''}`} role="dialog" aria-modal="true" aria-labelledby={labelledBy} tabIndex={-1}>
         <div className="sheet__bar">
           <span className="sheet__handle" aria-hidden="true" />
           <button type="button" className="icon-btn" aria-label="关闭" onClick={onClose}>
