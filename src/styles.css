@@ -1391,6 +1391,11 @@ button.cell:hover {
 .detail__card .btn--primary {
   align-self: flex-start;
 }
+.detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 .detail__fine {
   font-size: 12px;
   line-height: 1.6;

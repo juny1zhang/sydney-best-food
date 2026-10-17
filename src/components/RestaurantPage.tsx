@@ -5,7 +5,7 @@ import type { Meal, Restaurant, ServiceMeal } from '../data/types';
 import { freeSydneyDays, placementsOf, type Picks } from '../lib/plan';
 import { hostOf } from '../lib/url';
 import { AddPopover } from './AddPopover';
-import { BackIcon, PlusIcon } from './Icons';
+import { BackIcon, HeartIcon, PlusIcon } from './Icons';
 import { ReviewsSection, TaChip, XhsChip } from './Reviews';
 
 const SERVICE_LABEL: Record<ServiceMeal, string> = { breakfast: '早餐', lunch: '午餐', dinner: '晚餐' };
@@ -57,12 +57,15 @@ function Gallery({ photos, name }: { photos: Photo[]; name: string }) {
 interface PageProps {
   id: string;
   picks: Picks;
+  /** Whether this place is on the 想去 list. */
+  wished: boolean;
+  onToggleWish: () => void;
   onAdd: (restaurant: Restaurant, day: number, meal: Meal) => void;
   onClose: () => void;
 }
 
 /** One restaurant's own page: what to order, how the menu works, and putting it on the calendar. */
-export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
+export function RestaurantPage({ id, picks, wished, onToggleWish, onAdd, onClose }: PageProps) {
   const r = RESTAURANT_BY_ID.get(id)!;
   const [file, setFile] = useState<DetailFile | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -170,16 +173,22 @@ export function RestaurantPage({ id, picks, onAdd, onClose }: PageProps) {
             <span className="detail__card-title">订位</span>
             <p>{r.booking}</p>
             {placements.length > 0 && <span className="placed">已在日历：{placements.join('、')}</span>}
-            <button
-              type="button"
-              className="btn btn--primary"
-              aria-expanded={adding}
-              aria-controls={popId}
-              onClick={() => setAdding(!adding)}
-            >
-              <PlusIcon />
-              <span>加入日历</span>
-            </button>
+            <div className="detail__actions">
+              <button
+                type="button"
+                className="btn btn--primary"
+                aria-expanded={adding}
+                aria-controls={popId}
+                onClick={() => setAdding(!adding)}
+              >
+                <PlusIcon />
+                <span>加入日历</span>
+              </button>
+              <button type="button" className="btn btn--wish" aria-pressed={wished} aria-label={`想去：${r.name}`} onClick={onToggleWish}>
+                <HeartIcon filled={wished} />
+                <span>想去</span>
+              </button>
+            </div>
             {adding && (
               <AddPopover
                 id={popId}

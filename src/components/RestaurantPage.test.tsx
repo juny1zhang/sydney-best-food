@@ -1,6 +1,7 @@
 import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
+import { WISHLIST_KEY } from '../lib/storage';
 
 describe('restaurant page', () => {
   it('opens from the list and comes back to the same category', async () => {
@@ -33,6 +34,18 @@ describe('restaurant page', () => {
     await user.click(within(page).getByRole('button', { name: '12月4日 周五' }));
     expect(within(page).getByText('已在日历：12月4日 晚餐')).toBeInTheDocument();
     expect(screen.getByText('已选 1 餐')).toBeInTheDocument();
+  });
+
+  it('saves the restaurant to 想去 from its own page', async () => {
+    const user = userEvent.setup();
+    window.history.replaceState(null, '', '/#r/kisuke');
+    render(<App />);
+    const page = screen.getByRole('main', { name: 'Kisuke' });
+    const wish = within(page).getByRole('button', { name: '想去：Kisuke' });
+    expect(wish).toHaveAttribute('aria-pressed', 'false');
+    await user.click(wish);
+    expect(wish).toHaveAttribute('aria-pressed', 'true');
+    expect(JSON.parse(localStorage.getItem(WISHLIST_KEY)!)).toEqual(['kisuke']);
   });
 
   it('sends a link opened directly back to the list', async () => {

@@ -246,7 +246,17 @@ export default function App() {
         </div>
       </header>
 
-      {route.id && <RestaurantPage key={route.id} id={route.id} picks={picks} onAdd={addFromList} onClose={route.close} />}
+      {route.id && (
+        <RestaurantPage
+          key={route.id}
+          id={route.id}
+          picks={picks}
+          wished={wishlist.has(route.id)}
+          onToggleWish={() => wishlist.toggle(route.id!)}
+          onAdd={addFromList}
+          onClose={route.close}
+        />
+      )}
 
       <main className="page" data-sheet-inert="" hidden={route.id !== null}>
         <RestaurantBoard
