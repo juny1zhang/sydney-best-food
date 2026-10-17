@@ -6,6 +6,8 @@ import { CATEGORIES, categoryOf, mapsSearchUrl, mapsUrl, restaurantsIn, searchRe
 import type { Meal, Place } from '../data/types';
 import { dateLabel } from '../lib/calendar';
 import { MEALS, mealEntry, mealLabel, servesMeal, type MealEntry, type Pick, type Picks, type Reservation } from '../lib/plan';
+import { detailHref } from '../lib/route';
+import { RESERVATION_NOTE_MAX } from '../lib/storage';
 import type { BoardCategory } from './RestaurantBoard';
 import { mealsLeft } from './Calendar';
 import { PinIcon } from './Icons';
@@ -352,6 +354,7 @@ function MealSlot(props: SlotProps) {
       {!servesMeal(p, meal) && <p className="warn">提示：这家通常不做{label}，去之前确认一下营业时间。</p>}
       <Sources sources={p.sources} accolades={p.accolades} />
       <div className="slot__links">
+        {p.region === 'syd' && <a href={detailHref(p.id)}>菜单和招牌菜</a>}
         <a href={mapsSearchUrl(p.mapsQuery)} target="_blank" rel="noreferrer">
           在地图中打开
         </a>
@@ -395,7 +398,13 @@ function ReserveForm({ day, meal, initial, onSave, onCancel }: ReserveProps) {
         </label>
         <label className="field reserve__note" htmlFor={noteId}>
           备注（可选）
-          <input id={noteId} value={note} onChange={(e) => setNote(e.target.value)} maxLength={200} placeholder="比如：2 位，订位号 1234" />
+          <input
+            id={noteId}
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            maxLength={RESERVATION_NOTE_MAX}
+            placeholder="比如：2 位，订位号 1234"
+          />
         </label>
       </div>
       <div className="custom__actions">

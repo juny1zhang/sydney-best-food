@@ -6,8 +6,8 @@ interface PlanProps {
   items: PlanItem[];
   onShowDay: (day: number) => void;
   onExport: () => void;
-  onShare: () => void;
-  canShare: boolean;
+  /** Absent when the plan only lives on this device, so there is nothing to share. */
+  onShare?: () => void;
 }
 
 function whereLabel(day: number): string {
@@ -18,7 +18,7 @@ function whereLabel(day: number): string {
 }
 
 /** Every planned meal in date order, with what still needs a booking. */
-export function PlanOverview({ items, onShowDay, onExport, onShare, canShare }: PlanProps) {
+export function PlanOverview({ items, onShowDay, onExport, onShare }: PlanProps) {
   const days = [...new Set(items.map((i) => i.day))];
   const booked = items.filter((i) => isReserved(i.entry)).length;
   const pending = items.length - booked;
@@ -27,16 +27,18 @@ export function PlanOverview({ items, onShowDay, onExport, onShare, canShare }: 
     <section id="plan" aria-labelledby="plan-h" className="plan">
       <div className="section-head">
         <div className="section-head__text">
-          <h2 id="plan-h">我的十二月计划</h2>
+          <h2 id="plan-h">十二月计划总览</h2>
           <p>按日期列出每一餐。订好位的是橙色；只选好、还没订位的是蓝色，后面附订位提示。</p>
         </div>
         <div className="plan__actions">
           <button type="button" className="btn btn--outline" onClick={onExport} disabled={!items.length}>
             导出到手机日历
           </button>
-          <button type="button" className="btn btn--primary" onClick={onShare} disabled={!canShare}>
-            分享给家人
-          </button>
+          {onShare && (
+            <button type="button" className="btn btn--primary" onClick={onShare}>
+              分享给家人
+            </button>
+          )}
         </div>
       </div>
 

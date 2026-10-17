@@ -7,15 +7,20 @@ export const WISHLIST_KEY = 'sydney-eats:wishlist:v1';
 
 const MEAL_KEYS: Meal[] = ['lunch', 'dinner'];
 const TIME = /^([01]\d|2[0-3]):[0-5]\d$/;
+/**
+ * Short enough that a custom pick with the longest name and note plus a reservation still fits
+ * the shared plan's 1 KB limit per meal (supabase/migrations), even in Chinese.
+ */
+export const RESERVATION_NOTE_MAX = 24;
 
 function cleanReservation(value: unknown): Reservation | undefined {
   if (!value || typeof value !== 'object') return undefined;
   const v = value as Record<string, unknown>;
   if (typeof v.time !== 'string' || !TIME.test(v.time)) return undefined;
-  return { time: v.time, note: typeof v.note === 'string' ? v.note.slice(0, 200) : '' };
+  return { time: v.time, note: typeof v.note === 'string' ? v.note.slice(0, RESERVATION_NOTE_MAX) : '' };
 }
 
-function cleanPick(value: unknown): Pick | null {
+export function cleanPick(value: unknown): Pick | null {
   if (!value || typeof value !== 'object') return null;
   const v = value as Record<string, unknown>;
   const reserved = cleanReservation(v.reserved);
@@ -29,8 +34,8 @@ function cleanPick(value: unknown): Pick | null {
   return null;
 }
 
-/** Turns untrusted data (storage, a shared link) into picks, dropping anything malformed or unknown. */
-export function cleanPicks(data: unknown): Picks {
+/** Keeps only well-formed picks for real days, meals and places (from storage or the shared plan). */
+export function sanitizePicks(data: unknown): Picks {
   if (!data || typeof data !== 'object' || Array.isArray(data)) return {};
   const out: Picks = {};
   for (const [key, meals] of Object.entries(data as Record<string, unknown>)) {
@@ -48,7 +53,7 @@ export function cleanPicks(data: unknown): Picks {
 export function parsePicks(text: string | null): Picks {
   if (!text) return {};
   try {
-    return cleanPicks(JSON.parse(text));
+    return sanitizePicks(JSON.parse(text));
   } catch {
     return {};
   }

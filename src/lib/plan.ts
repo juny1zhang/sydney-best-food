@@ -126,3 +126,15 @@ export function countMeals(picks: Picks): { booked: number; picked: number } {
   }
   return { booked, picked };
 }
+
+/** Where a restaurant already sits on the calendar, e.g. "12月3日 晚餐". */
+export function placementsOf(id: string, picks: Picks): string[] {
+  const out: string[] = [];
+  for (const [day, meals] of Object.entries(picks)) {
+    for (const m of MEALS) {
+      const p = meals?.[m.key];
+      if (p?.kind === 'restaurant' && p.id === id) out.push(`12月${day}日 ${m.label}`);
+    }
+  }
+  return out;
+}

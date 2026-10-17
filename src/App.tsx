@@ -1,26 +1,30 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type MouseEvent } from 'react';
 import { BottomSheet } from './components/BottomSheet';
 import { Legend, MonthGrid, dayCellElement } from './components/Calendar';
 import { DayPanel } from './components/DayPanel';
 import { CloseIcon } from './components/Icons';
-import { ImportDialog, ShareDialog } from './components/PlanDialogs';
+import { ShareDialog } from './components/PlanDialogs';
 import { PlanOverview } from './components/PlanOverview';
 import { RestaurantBoard, type BoardCategory } from './components/RestaurantBoard';
+import { RestaurantPage } from './components/RestaurantPage';
+import { SiteFooter } from './components/SiteFooter';
 import { MONTH_INDEX, NZ_TRIP_DAYS, YEAR, dayInfo } from './data/december';
+import { loadDetails } from './data/details';
 import { NZ_VERIFIED_ON } from './data/nz';
 import { placeById } from './data/places';
 import { VERIFIED_ON } from './data/restaurants';
-import type { Meal } from './data/types';
-import { usePicks } from './hooks/usePicks';
+import type { Meal, Restaurant } from './data/types';
+import { usePicks, type SyncState } from './hooks/usePicks';
 import { useMediaQuery } from './hooks/useMediaQuery';
+import { useRestaurantRoute } from './hooks/useRestaurantRoute';
 import { useWishlist } from './hooks/useWishlist';
 import { dateLabel } from './lib/calendar';
 import { downloadIcs } from './lib/ics';
 import { countMeals, mealLabel, planItems, removePick, setPick, setReservation, type Pick, type Reservation } from './lib/plan';
-import { countPicks, decodePlan, mergePicks, shareUrl, type SharedPlan } from './lib/share';
 
 const FIRST_SYDNEY_DAY = 3;
 const TOAST_MS = 6000;
+const PREFETCH_MS = 1500;
 /** Below this width the day panel can't sit beside the calendar, so it opens as a sheet. */
 const SHEET_QUERY = '(max-width: 1047px), (max-height: 500px)';
 
@@ -40,31 +44,42 @@ interface Toast {
   returnTo?: string;
 }
 
+const SYNC_LABEL: Record<Exclude<SyncState, 'local'>, string> = {
+  connecting: '连接中…',
+  live: '实时同步',
+  error: '未同步',
+};
+
+const SYNC_HINT: Record<Exclude<SyncState, 'local'>, string> = {
+  connecting: '正在连接共享日历',
+  live: '打开这个网站的人看到的是同一份日历，改动会马上同步',
+  error: '刚才的改动还没存到共享日历，会自动重试',
+};
+
 function formatVerified(iso: string): string {
   const [y, m, d] = iso.split('-').map(Number);
   return `${y} 年 ${m} 月 ${d} 日`;
 }
 
-function pageBase(): string {
+/** The site's address without a restaurant page or section, for sending to family. */
+function siteUrl(): string {
   return `${window.location.origin}${window.location.pathname}`;
 }
 
-function clearHash(): void {
-  window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
-}
-
 export default function App() {
-  const [picks, setPicks] = usePicks();
+  const [picks, setPicks, sync] = usePicks();
   const wishlist = useWishlist();
   const [day, setDay] = useState(() => initialDay());
   const [category, setCategory] = useState<BoardCategory>('all');
   const [sheetOpen, setSheetOpen] = useState(false);
   const [toast, setToast] = useState<Toast | null>(null);
   const [toastHeld, setToastHeld] = useState(false);
-  const [sharing, setSharing] = useState<string | null>(null);
-  const [incoming, setIncoming] = useState<SharedPlan | null>(() => decodePlan(window.location.hash));
+  const [sharing, setSharing] = useState(false);
   const narrow = useMediaQuery(SHEET_QUERY);
   const calendarRef = useRef<HTMLElement>(null);
+  const route = useRestaurantRoute();
+  /** A day to show once the restaurant page has closed. */
+  const pendingDay = useRef<number | null>(null);
 
   // Auto-dismiss the toast, but never while the pointer or focus is on it.
   useEffect(() => {
@@ -72,16 +87,6 @@ export default function App() {
     const t = window.setTimeout(() => setToast(null), TOAST_MS);
     return () => window.clearTimeout(t);
   }, [toast, toastHeld]);
-
-  // A share link pasted into an open tab.
-  useEffect(() => {
-    const onHash = () => {
-      const plan = decodePlan(window.location.hash);
-      if (plan) setIncoming(plan);
-    };
-    window.addEventListener('hashchange', onHash);
-    return () => window.removeEventListener('hashchange', onHash);
-  }, []);
 
   const sheetVisible = narrow && sheetOpen;
 
@@ -126,6 +131,12 @@ export default function App() {
   };
 
   const showDay = (d: number) => {
+    if (route.id) {
+      pendingDay.current = d;
+      setToast(null);
+      route.goTo('calendar');
+      return;
+    }
     // Move focus before the control that asked for it (e.g. the toast button) disappears.
     dayCellElement(d)?.focus({ preventScroll: true });
     setDay(d);
@@ -142,9 +153,34 @@ export default function App() {
     setToastHeld(false);
   };
 
+  // Fetch the menus once the first page is up, so a restaurant page opens with them ready.
+  useEffect(() => {
+    const t = window.setTimeout(() => void loadDetails().catch(() => {}), PREFETCH_MS);
+    return () => window.clearTimeout(t);
+  }, []);
+
+  // The day sheet belongs to the main page; a restaurant page replaces it.
+  useEffect(() => {
+    if (route.id) setSheetOpen(false);
+  }, [route.id]);
+
+  // "Show in calendar" pressed on a restaurant page finishes once the main page is back.
+  useEffect(() => {
+    if (route.id || pendingDay.current === null) return;
+    const d = pendingDay.current;
+    pendingDay.current = null;
+    showDay(d);
+  }, [route.id]);
+
+  const addFromList = (r: Restaurant, d: number, meal: Meal) => choose(d, meal, { kind: 'restaurant', id: r.id }, true);
+  const toSection = (e: MouseEvent<HTMLAnchorElement>, section: string) => {
+    if (!route.id) return;
+    e.preventDefault();
+    route.goTo(section);
+  };
+
   const items = planItems(picks);
   const summary = countMeals(picks);
-  const myPickCount = countPicks(picks);
 
   const exportPlan = () => {
     downloadIcs(items);
@@ -152,17 +188,6 @@ export default function App() {
       text: `已生成日历文件（${items.length} 餐），打开它就能加进手机或电脑的日历`,
       short: `已生成日历文件，${items.length} 餐`,
     });
-  };
-
-  const finishImport = (plan: SharedPlan | null, mode: 'merge' | 'replace' | 'cancel') => {
-    clearHash();
-    setIncoming(null);
-    if (!plan || mode === 'cancel') return;
-    setPicks((mine) => (mode === 'replace' ? plan.picks : mergePicks(mine, plan.picks)));
-    // Saved places are only ever added to, never wiped by someone else's link.
-    wishlist.setIds((mine) => [...new Set([...mine, ...plan.wishlist])]);
-    const n = countPicks(plan.picks);
-    showToast({ text: `已导入 ${n} 餐安排`, short: `已导入 ${n} 餐` });
   };
 
   const panel = (
@@ -188,9 +213,15 @@ export default function App() {
             <span className="brand__sub">SYDNEY EATS · 2026.12</span>
           </div>
           <nav aria-label="页面导航" className="masthead__nav">
-            <a href="#list">餐厅榜单</a>
-            <a href="#calendar">十二月日历</a>
-            <a href="#plan">我的计划</a>
+            <a href="#list" onClick={(e) => toSection(e, 'list')}>
+              餐厅榜单
+            </a>
+            <a href="#calendar" onClick={(e) => toSection(e, 'calendar')}>
+              十二月日历
+            </a>
+            <a href="#plan" onClick={(e) => toSection(e, 'plan')}>
+              计划总览
+            </a>
           </nav>
           <ul className="masthead__stats" aria-label="十二月概况">
             <li>
@@ -205,18 +236,26 @@ export default function App() {
               <span className="swatch swatch--nz" />
               新西兰 {NZ_TRIP_DAYS} 天
             </li>
+            {sync !== 'local' && (
+              <li className={`sync sync--${sync}`} title={SYNC_HINT[sync]}>
+                <span className="sync__dot" />
+                <span aria-live="polite">{SYNC_LABEL[sync]}</span>
+              </li>
+            )}
           </ul>
         </div>
       </header>
 
-      <main className="page" data-sheet-inert="">
+      {route.id && <RestaurantPage key={route.id} id={route.id} picks={picks} onAdd={addFromList} onClose={route.close} />}
+
+      <main className="page" data-sheet-inert="" hidden={route.id !== null}>
         <RestaurantBoard
           category={category}
           onCategory={setCategory}
           picks={picks}
           wishlist={wishlist.ids}
           onToggleWish={wishlist.toggle}
-          onAdd={(r, d, meal) => choose(d, meal, { kind: 'restaurant', id: r.id }, true)}
+          onAdd={addFromList}
         />
 
         <section id="calendar" ref={calendarRef} aria-labelledby="cal-h" className="calendar">
@@ -241,15 +280,16 @@ export default function App() {
           items={items}
           onShowDay={showDay}
           onExport={exportPlan}
-          onShare={() => setSharing(shareUrl({ picks, wishlist: wishlist.ids }, pageBase()))}
-          canShare={myPickCount > 0 || wishlist.ids.length > 0}
+          onShare={sync === 'local' ? undefined : () => setSharing(true)}
         />
-
-        <footer className="foot">
-          排名依据 2026 年公开榜单与媒体推荐整理，营业状态核对于 {formatVerified(VERIFIED_ON)}
-          ；新西兰沿途推荐整理于 {formatVerified(NZ_VERIFIED_ON)}，营业时间出发前请再确认。每家店的“评价依据”里有来源链接。你的安排保存在这台设备的浏览器里，用「分享给家人」可以发到另一台手机。
-        </footer>
       </main>
+
+      <SiteFooter
+        page={route.id ? `restaurant:${route.id}` : 'main'}
+        verifiedOn={formatVerified(VERIFIED_ON)}
+        nzVerifiedOn={formatVerified(NZ_VERIFIED_ON)}
+        shared={sync !== 'local'}
+      />
 
       {sheetVisible && (
         <BottomSheet labelledBy="day-h" onClose={closeSheet} fallbackFocus={selectedCell}>
@@ -257,18 +297,7 @@ export default function App() {
         </BottomSheet>
       )}
 
-      {sharing && <ShareDialog url={sharing} onClose={() => setSharing(null)} fallbackFocus={planHeading} />}
-
-      {incoming && (
-        <ImportDialog
-          plan={incoming}
-          myCount={myPickCount}
-          onMerge={() => finishImport(incoming, 'merge')}
-          onReplace={() => finishImport(incoming, 'replace')}
-          onCancel={() => finishImport(null, 'cancel')}
-          fallbackFocus={planHeading}
-        />
-      )}
+      {sharing && <ShareDialog url={siteUrl()} onClose={() => setSharing(false)} fallbackFocus={planHeading} />}
 
       <div className="toast-region" aria-live="polite">
         {toast && (

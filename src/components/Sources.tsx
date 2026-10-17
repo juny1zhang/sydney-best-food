@@ -1,14 +1,8 @@
+import { hostOf } from '../lib/url';
+
 interface Props {
   sources: string[];
   accolades?: string[];
-}
-
-export function hostOf(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    return url;
-  }
 }
 
 /** Collapsed list of where a place's rating comes from. */
