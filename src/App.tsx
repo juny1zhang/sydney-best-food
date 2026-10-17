@@ -187,6 +187,7 @@ export default function App() {
     showToast({
       text: `已生成日历文件（${items.length} 餐），打开它就能加进手机或电脑的日历`,
       short: `已生成日历文件，${items.length} 餐`,
+      returnTo: 'plan-export',
     });
   };
 

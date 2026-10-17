@@ -91,6 +91,19 @@ export function RestaurantBoard({ category, onCategory, picks, wishlist, onToggl
     heading = `${categoryOf(category).name}排名`;
   }
   const visible = expanded ? list : list.slice(0, COLLAPSED_ROWS);
+
+  const toggleWish = (id: string) => {
+    // Un-saving in the 想去 view removes the row with the focused button; hand focus to a neighbour.
+    if (!searching && category === 'wish' && wishlist.includes(id)) {
+      const i = visible.findIndex((r) => r.id === id);
+      const next = visible[i + 1] ?? visible[i - 1];
+      requestAnimationFrame(() => {
+        const target = next ? document.getElementById(`wish-${next.id}`) : sectionRef.current?.querySelector<HTMLElement>('.tab--wish');
+        target?.focus({ preventScroll: true });
+      });
+    }
+    onToggleWish(id);
+  };
   const listHeadingId = 'list-cat-h';
   const showOverview = !searching && category === 'all';
 
@@ -261,7 +274,7 @@ export function RestaurantBoard({ category, onCategory, picks, wishlist, onToggl
                   restaurant={r}
                   mixed={mixed}
                   wished={wishlist.includes(r.id)}
-                  onToggleWish={() => onToggleWish(r.id)}
+                  onToggleWish={() => toggleWish(r.id)}
                   placements={placementsOf(r.id, picks)}
                   adding={addingId === r.id}
                   onToggleAdd={() => setAddingId(addingId === r.id ? null : r.id)}
@@ -369,7 +382,14 @@ function RestaurantRow(props: RowProps) {
           <Sources sources={r.sources} accolades={r.accolades} />
         </div>
         <div className="row__action">
-          <button type="button" className="btn btn--wish" aria-pressed={wished} aria-label={`想去：${r.name}`} onClick={onToggleWish}>
+          <button
+            id={`wish-${r.id}`}
+            type="button"
+            className="btn btn--wish"
+            aria-pressed={wished}
+            aria-label={`想去：${r.name}`}
+            onClick={onToggleWish}
+          >
             <HeartIcon filled={wished} />
             <span>想去</span>
           </button>

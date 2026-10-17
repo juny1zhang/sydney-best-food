@@ -179,4 +179,6 @@ export interface DayInfo {
   plan?: string;
   holiday?: string;
   booked?: Partial<Record<Meal, Booking>>;
+  /** Usual meal times moved to fit the day's fixed plans, e.g. an early dinner before a flight. */
+  mealTimes?: Partial<Record<Meal, string>>;
 }

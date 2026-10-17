@@ -16,8 +16,12 @@ const FOCUSABLE = 'button:not([disabled]), a[href], input, textarea, select, sum
 /** Modal sheet that slides up from the bottom on phones and tablets. */
 export function BottomSheet({ labelledBy, onClose, fallbackFocus, variant = 'sheet', children }: SheetProps) {
   const ref = useRef<HTMLDivElement>(null);
+  // Callers pass fresh functions on every render; the setup below must run only once per opening,
+  // or each re-render would bounce focus to the opener and back and briefly un-inert the page.
   const fallbackRef = useRef(fallbackFocus);
   fallbackRef.current = fallbackFocus;
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
 
   useEffect(() => {
     const active = document.activeElement as HTMLElement | null;
@@ -33,7 +37,7 @@ export function BottomSheet({ labelledBy, onClose, fallbackFocus, variant = 'she
       const sheet = ref.current;
       if (!sheet) return;
       if (e.key === 'Escape') {
-        onClose();
+        onCloseRef.current();
         return;
       }
       if (e.key !== 'Tab') return;
@@ -62,7 +66,7 @@ export function BottomSheet({ labelledBy, onClose, fallbackFocus, variant = 'she
       const target = opener && opener.isConnected ? opener : fallbackRef.current();
       target?.focus({ preventScroll: true });
     };
-  }, [onClose]);
+  }, []);
 
   return (
     <div className="sheet-layer">

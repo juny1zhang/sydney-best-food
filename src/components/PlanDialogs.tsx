@@ -18,7 +18,9 @@ export function ShareDialog({ url, onClose, fallbackFocus }: ShareProps) {
       await navigator.clipboard.writeText(url);
       setStatus('已复制，可以粘贴给家人了。');
     } catch {
-      inputRef.current?.select();
+      const input = inputRef.current;
+      input?.focus();
+      input?.setSelectionRange(0, url.length);
       setStatus('没能自动复制，链接已选中，请手动复制。');
     }
   };

@@ -2,6 +2,7 @@ import { SYDNEY_DAYS } from '../data/december';
 import { RESTAURANTS } from '../data/restaurants';
 import {
   countMeals,
+  defaultTime,
   entryName,
   freeSydneyDays,
   isReserved,
@@ -84,5 +85,12 @@ describe('plan', () => {
   it('lists every planned meal in date order', () => {
     const picks = setPick(setPick({}, 22, 'lunch', { kind: 'restaurant', id: first.id }), 4, 'dinner', { kind: 'custom', name: 'x', note: '' });
     expect(planItems(picks).map((i) => `${i.day}-${i.meal}`)).toEqual(['4-dinner', '6-dinner', '12-dinner', '22-lunch']);
+  });
+
+  it('moves usual meal times to fit the day', () => {
+    expect(defaultTime(4, 'dinner')).toBe('19:00');
+    expect(defaultTime(18, 'dinner')).toBe('17:00');
+    expect(defaultTime(6, 'lunch')).toBe('13:30');
+    expect(defaultTime(6, 'dinner')).toBe('19:00');
   });
 });

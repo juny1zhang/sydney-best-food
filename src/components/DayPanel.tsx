@@ -5,7 +5,7 @@ import { PLACE_BY_ID } from '../data/places';
 import { CATEGORIES, categoryOf, mapsSearchUrl, mapsUrl, restaurantsIn, searchRestaurants } from '../data/restaurants';
 import type { Meal, Place } from '../data/types';
 import { dateLabel } from '../lib/calendar';
-import { MEALS, mealEntry, mealLabel, servesMeal, type MealEntry, type Pick, type Picks, type Reservation } from '../lib/plan';
+import { MEALS, defaultTime, mealEntry, mealLabel, servesMeal, type MealEntry, type Pick, type Picks, type Reservation } from '../lib/plan';
 import { detailHref } from '../lib/route';
 import { RESERVATION_NOTE_MAX } from '../lib/storage';
 import type { BoardCategory } from './RestaurantBoard';
@@ -378,7 +378,7 @@ interface ReserveProps {
 }
 
 function ReserveForm({ day, meal, initial, onSave, onCancel }: ReserveProps) {
-  const [time, setTime] = useState(initial?.time ?? MEALS.find((m) => m.key === meal)!.defaultTime);
+  const [time, setTime] = useState(initial?.time ?? defaultTime(day, meal));
   const [note, setNote] = useState(initial?.note ?? '');
   const valid = /^([01]\d|2[0-3]):[0-5]\d$/.test(time);
   const timeId = `reserve-time-${day}-${meal}`;

@@ -21,6 +21,8 @@ describe('ics', () => {
 
   it('escapes text and folds long lines on character boundaries', () => {
     expect(escapeText('a,b;c\\d\ne')).toBe('a\\,b\\;c\\\\d\\ne');
+    // Text from the shared plan can't smuggle in extra lines or control characters.
+    expect(escapeText('x\rEND:VEVENT\r\nY\u0000\u001b')).toBe('x\\nEND:VEVENT\\nY');
     const long = `DESCRIPTION:${'悉尼吃什么'.repeat(20)}`;
     const folded = foldLine(long);
     for (const line of folded.split('\r\n')) expect(new TextEncoder().encode(line).length).toBeLessThanOrEqual(75);
@@ -44,6 +46,14 @@ describe('ics', () => {
     expect(ics).toContain('SUMMARY:午餐 · 楼下\\, 面馆（未订位）');
     expect(ics).toContain('DTSTAMP:20261017T010200Z');
     expect(ics).toContain('SUMMARY:晚餐 · Advieh');
+  });
+
+  it('starts unbooked meals at times that fit the day', () => {
+    // 18 Dec: dinner before the 20:15 penguin check-in, 17:00 NZDT = 04:00Z.
+    const picks = setPick({}, 18, 'dinner', { kind: 'restaurant', id: 'nz-oamaru-cucina' });
+    const ics = unfold(buildIcs(planItems(picks)));
+    expect(ics).toContain('DTSTART:20261218T040000Z');
+    expect(ics).toContain('SUMMARY:晚餐 · Cucina（未订位）');
     expect(ics).not.toMatch(/[^\r]\n/);
   });
 });

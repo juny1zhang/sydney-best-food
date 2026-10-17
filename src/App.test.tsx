@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 import { STORAGE_KEY, WISHLIST_KEY } from './lib/storage';
@@ -212,6 +212,18 @@ describe('App', () => {
     expect(first).toHaveTextContent('Kisuke');
   });
 
+  it('keeps focus in the 想去 list while un-saving places', async () => {
+    const user = userEvent.setup();
+    localStorage.setItem(WISHLIST_KEY, JSON.stringify(['kisuke', 'mr-wong']));
+    render(<App />);
+    await user.click(screen.getByRole('button', { name: /^想去\s*2$/ }));
+    await user.click(screen.getByRole('button', { name: '想去：Kisuke' }));
+    await waitFor(() => expect(screen.getByRole('button', { name: '想去：Mr. Wong' })).toHaveFocus());
+    await user.click(screen.getByRole('button', { name: '想去：Mr. Wong' }));
+    await waitFor(() => expect(screen.getByRole('button', { name: /^想去\s*0$/ })).toHaveFocus());
+    expect(screen.getByText(/还没有想去的店/)).toBeInTheDocument();
+  });
+
   it('searches the whole board', async () => {
     const user = userEvent.setup();
     render(<App />);
@@ -262,6 +274,8 @@ describe('App', () => {
     expect(blobs[0].type).toBe('text/calendar;charset=utf-8');
     expect(await readBlob(blobs[0])).toContain('SUMMARY:晚餐 · Kika');
     expect(screen.getByText('已生成日历文件（2 餐），打开它就能加进手机或电脑的日历')).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: '关闭提示' }));
+    expect(screen.getByRole('button', { name: '导出到手机日历' })).toHaveFocus();
     click.mockRestore();
   });
 });

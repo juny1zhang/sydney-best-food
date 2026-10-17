@@ -1,7 +1,7 @@
 import { MONTH_INDEX, YEAR, dayInfo } from '../data/december';
 import { mapsSearchUrl, mapsUrl } from '../data/restaurants';
 import type { Meal } from '../data/types';
-import { MEALS, entryName, isReserved, mealLabel, reservedTime, type PlanItem } from './plan';
+import { defaultTime, entryName, isReserved, mealLabel, reservedTime, type PlanItem } from './plan';
 
 /**
  * UTC offsets for December 2026: Sydney is on AEDT (UTC+11) from 4 Oct 2026 to 4 Apr 2027,
@@ -32,8 +32,18 @@ export function eventTimes(day: number, meal: Meal, time: string): { start: stri
   return { start: stamp(new Date(startMs), !!zone), end: stamp(new Date(endMs), !!zone) };
 }
 
+/** TEXT value escaping (RFC 5545 §3.3.11); control characters are not allowed, so they are dropped. */
 export function escapeText(s: string): string {
-  return s.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+  return (
+    s
+      .replace(/\r\n?/g, '\n')
+      // Shared plans carry text other people typed; keep tabs and line breaks, drop other control characters.
+      .replace(/[\u0000-\u0008\u000B-\u001F\u007F]/g, '')
+      .replace(/\\/g, '\\\\')
+      .replace(/;/g, '\\;')
+      .replace(/,/g, '\\,')
+      .replace(/\n/g, '\\n')
+  );
 }
 
 const encoder = new TextEncoder();
@@ -61,7 +71,7 @@ export function foldLine(line: string): string {
 function eventLines(item: PlanItem, now: Date): string[] {
   const { day, meal, entry } = item;
   const reserved = isReserved(entry);
-  const time = reservedTime(entry) ?? MEALS.find((m) => m.key === meal)!.defaultTime;
+  const time = reservedTime(entry) ?? defaultTime(day, meal);
   const { start, end } = eventTimes(day, meal, time);
   const name = entryName(entry);
 

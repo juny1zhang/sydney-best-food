@@ -7,6 +7,11 @@ export const MEALS: { key: Meal; label: string; short: string; defaultTime: stri
   { key: 'dinner', label: '晚餐', short: '晚', defaultTime: '19:00' },
 ];
 
+/** When a meal usually starts on a day: the day's own time if its plans need one, else the usual time. */
+export function defaultTime(day: number, meal: Meal): string {
+  return dayInfo(day).mealTimes?.[meal] ?? MEALS.find((m) => m.key === meal)!.defaultTime;
+}
+
 export function mealLabel(meal: Meal): string {
   return MEALS.find((m) => m.key === meal)!.label;
 }

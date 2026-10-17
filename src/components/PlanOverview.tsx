@@ -27,11 +27,13 @@ export function PlanOverview({ items, onShowDay, onExport, onShare }: PlanProps)
     <section id="plan" aria-labelledby="plan-h" className="plan">
       <div className="section-head">
         <div className="section-head__text">
-          <h2 id="plan-h">十二月计划总览</h2>
+          <h2 id="plan-h" tabIndex={-1}>
+            十二月计划总览
+          </h2>
           <p>按日期列出每一餐。订好位的是橙色；只选好、还没订位的是蓝色，后面附订位提示。</p>
         </div>
         <div className="plan__actions">
-          <button type="button" className="btn btn--outline" onClick={onExport} disabled={!items.length}>
+          <button id="plan-export" type="button" className="btn btn--outline" onClick={onExport} disabled={!items.length}>
             导出到手机日历
           </button>
           {onShare && (
@@ -43,7 +45,7 @@ export function PlanOverview({ items, onShowDay, onExport, onShare }: PlanProps)
       </div>
 
       {items.length > 0 && (
-        <p className="plan__summary" aria-live="polite">
+        <p className="plan__summary">
           共 {items.length} 餐：<strong className="plan__count plan__count--booked">已订位 {booked}</strong>
           <strong className="plan__count plan__count--picked">还没订位 {pending}</strong>
         </p>
